@@ -352,5 +352,5 @@ Existe un EDA anterior (`Fuentes/Trabajo - Otro Compañero/[Vibe]EDA_Corpus_NLP.
 **Cuántos bloques caben (estimado):**
 - Parte general utilizable ≈ **751** oraciones → **5 bloques** de 140.
 - Parte médica utilizable (frases ≤ 20 palabras, sin léxico ni repetidos) ≈ **948** → alcanzaría para 15 bloques de 60, pero la mitad debe ser del paciente, así que el límite real lo pone lo que se redacte en F5.
-- **La parte general es la que limita: ~5 bloques** con el material actual. Para más, habría que decidir P4 (AmericasNLP) con Juan.
+- **La parte general es la que limita: ~5 bloques** con el material actual. Para más, habría que decidir P4 (AmericasNLP) con la coordinación del proyecto.
 - El diccionario MINEDU en PDF tiene texto y se usó para P6: las frases del Grupo 2 **no** aparecen como ejemplos del diccionario (solo 2 coinciden). Son frases del equipo con vocabulario chanka; se usan igual, con `Origen_verificado = No`.

@@ -1,6 +1,6 @@
 # F5 – Llenar huecos (español redactado por Claude)
 
-Generado por `scripts/05_huecos.py` (2026-10-15). Todo lo de aquí es **español redactado por Claude** para que Juan lo revise; el quechua lo pone el traductor.
+Generado por `scripts/05_huecos.py` (2026-10-15). Todo lo de aquí es **español redactado por Claude** para que el equipo lo revise; el quechua lo pone el traductor.
 
 ## Plan médico por bloque
 

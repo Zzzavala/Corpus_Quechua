@@ -95,9 +95,9 @@
     "sha256": "924e4b12f041380ee70a40cbab8ce1042aed5d5f347553bae2e044149a575ee8"
   },
   "Fuentes/Corpus_Equipos (1).xlsx": {
-    "bytes": 98547,
-    "modificado": "2026-10-14T14:01:40",
-    "sha256": "e357021d43e5a23e439c97c6031e67be27f8549ae164fb65a3499f6ad2dd2945"
+    "bytes": 98159,
+    "modificado": "2026-10-16T13:17:46",
+    "sha256": "75e781ffece8df6ab81417cedf0ee44f10b793c77c3ae840be674610c9d96d2e"
   },
   "Fuentes/entrevistaquechua_spa.pdf": {
     "bytes": 18586038,
@@ -145,13 +145,13 @@
     "sha256": "e362250a7f88adc22a5e28c7a231b2a9f1b6779aaa1425c44b5a03cb845b52fe"
   },
   "Estrategia/CLAUDE.md": {
-    "bytes": 55170,
-    "modificado": "2026-10-14T15:17:51",
-    "sha256": "375067e30eb9ff74bd1972b54accc950ff80cac91b293b0e4237c7fe84b90160"
+    "bytes": 55695,
+    "modificado": "2026-10-16T13:19:00",
+    "sha256": "47b247a80f1b97ea95601798123c9f65ee7aac3abf3e406dfab17cc8e8b060b2"
   },
   "Estrategia/INF657_CLAUDE_corpus.md": {
-    "bytes": 54411,
-    "modificado": "2026-10-14T15:11:57",
-    "sha256": "b9207784ad73b16925d37d63a737f0b23dae79f96973c0aafb59047bff110260"
+    "bytes": 54931,
+    "modificado": "2026-10-16T13:19:00",
+    "sha256": "9d3d42aa4f84aba6092346a98fc1bde8e3c2f4c9df85865ab0ef7f40f54c870f"
   }
 }

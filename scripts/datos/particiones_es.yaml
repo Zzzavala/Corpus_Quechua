@@ -1,5 +1,5 @@
 # Oraciones de más de 20 palabras (§10.1). Se parten en unidades de 15 palabras o menos, redactadas por Claude
-# a partir del original (Estado = Revisar_Juan). Si no se pueden partir limpiamente → descartar con motivo.
+# a partir del original (Estado = Por_revisar). Si no se pueden partir limpiamente → descartar con motivo.
 # `qu` solo se pone cuando es un trozo LITERAL del borrador original (el script lo comprueba); nunca se redacta quechua.
 
 QCH-0478:

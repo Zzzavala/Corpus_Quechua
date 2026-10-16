@@ -1,15 +1,15 @@
 # CLAUDE.md — Corpus quechua chanka médico (INF657, PUCP)
 
 > **Lee este archivo completo antes de hacer cualquier cosa.**
-> Resume todo lo acordado con Juan en una conversación previa (14 de octubre de 2026), donde se revisaron los Excel, el manual SOCEMURP y se definió la estrategia. Aquí no debe perderse nada.
-> Si algo de este archivo no coincide con lo que encuentres en los archivos reales, **no adivines**: anótalo en `04_reportes/DECISIONES_TOMADAS.md` y, si cambia la composición de los bloques, pregúntale a Juan antes de seguir.
+> Resume los acuerdos de la estrategia del proyecto (14 de octubre de 2026), donde se revisaron los Excel, el manual SOCEMURP y se definió la estrategia. Aquí no debe perderse nada.
+> Si algo de este archivo no coincide con lo que encuentres en los archivos reales, **no adivines**: anótalo en `04_reportes/DECISIONES_TOMADAS.md` y, si cambia la composición de los bloques, pregúntale a la coordinación del proyecto antes de seguir.
 
 ---
 
 ## Índice
 
 1. El proyecto
-2. El problema y las preocupaciones de Juan
+2. Problemas y criterios del proyecto
 3. Decisiones tomadas (definitivas)
 4. Decisiones pendientes (con valor por defecto)
 5. Inventario de fuentes y hallazgos
@@ -41,13 +41,13 @@
 
 | Grupo 1 – Traducción Principito | Grupo 2 – Corpus Quechua | Grupo 3 – Corpus Médico |
 |---|---|---|
-| Jorge Fatama | Christian Rosales | **Juan Zavala** (coordina) |
+| Jorge Fatama | Christian Rosales | **Coordinación del proyecto** |
 | Neftali Tejada | Gustavo Elmer | Marshall |
 | Andres Flores | Jose Avalos | María De La Guarda |
 | | Ronny Huerta | Kimberly Chávez |
 | | Fernando De La Cruz | Flavio Huaman |
 
-En el vocabulario unificado aparecen las columnas "Marshall", "Kim 1" y "Kim 2": son tres archivos de revisión del Grupo 3 que se fusionaron. Juan les dio a Kim y a Marshall el mismo prompt para revisar el corpus y extraer lo útil del libro de semiología; luego otro compañero unificó los tres Excel.
+En el vocabulario unificado aparecen las columnas "Marshall", "Kim 1" y "Kim 2": son tres archivos de revisión del Grupo 3 que se fusionaron. En las revisiones de Kim y Marshall se utilizó el mismo prompt para revisar el corpus y extraer lo útil del libro de semiología; luego otro compañero unificó los tres Excel.
 
 ### Colaboradores externos (cuello de botella)
 
@@ -56,25 +56,25 @@ En el vocabulario unificado aparecen las columnas "Marshall", "Kim 1" y "Kim 2":
   - **No traduce en vivo:** recibe el bloque con anticipación y llega a la sesión con todo traducido.
 - **Grabador:** lee en voz alta cada oración **primero en español y luego en quechua**. Idealmente solo graba; puede anotar observaciones.
 
-### Sobre Juan
+### Entorno de trabajo y comunicación
 
-- Escribe en español. Responde en español, simple y directo, sin jerga innecesaria.
-- Estudiante de Ingeniería Informática (PUCP), sabe Python.
-- Trabaja en Windows. Tiene otros entornos de Python (`inf659_env`, `.venvs`) de otro curso: **no los uses ni los modifiques**.
+- Idioma de trabajo: español. Responde de forma simple y directa, sin jerga innecesaria.
+- Conocimientos de trabajo: Python.
+- Entorno de trabajo: Windows. Existen otros entornos de Python (`inf659_env`, `.venvs`) ajenos al proyecto: **no los uses ni los modifiques**.
 
 ---
 
-## 2. El problema y las preocupaciones de Juan
+## 2. Problemas y criterios del proyecto
 
 Por qué existe este trabajo:
 
 1. **Todo está suelto.** Cada grupo avanzó por su cuenta. Nada está consolidado ni dividido para sesiones reales de 3–4 horas con el traductor y el grabador.
-2. **Sesgo y "gold".** Parte del quechua viene de un **traductor automático** (Grupo 1) o de **normalizar con reglas quechua cusqueño, collao o boliviano** (Grupo 3). Eso NO es dato "gold". Juan quiere un corpus que no esté sesgado por traducciones automáticas.
+2. **Sesgo y "gold".** Parte del quechua viene de un **traductor automático** (Grupo 1) o de **normalizar con reglas quechua cusqueño, collao o boliviano** (Grupo 3). Eso NO es dato "gold". El corpus debe evitar el sesgo de las traducciones automáticas.
 3. **La prosa bíblica no sirve para grabar.** Al Grupo 2 le dijeron que oraciones de la Biblia (AmericasNLP) no aportan para esto.
 4. **Poco tiempo.** Hay que trabajar por bloques en paralelo: con un bloque ya se avanza el modelo mientras se traduce y graba el siguiente.
-5. **Excels gigantes que no ayudan a la vista.** Juan quiere conservar el registro de dónde sale cada cosa, pero los bloques deben verse limpios. El origen va en otra pestaña (ver §8).
+5. **Excels gigantes que no ayudan a la vista.** Se debe conservar la trazabilidad de cada elemento, pero los bloques deben verse limpios. El origen va en otra pestaña (ver §8).
 6. **El traductor solo maneja Word**, y el resultado tiene que volver al Excel.
-7. El equipo discutió si dar los borradores automáticos al traductor. Juan: no son gold. Compañeros: ayudan si coinciden. **Decisión: sí se dan, con las reglas de §3.**
+7. El equipo discutió si dar los borradores automáticos al traductor. Criterio de calidad: no son gold. Utilidad para la revisión: ayudan si coinciden. **Decisión: sí se dan, con las reglas de §3.**
 
 ---
 
@@ -94,29 +94,29 @@ Por qué existe este trabajo:
 | D10 | **Fuente médica principal = vocabulario unificado** | `Vocabulario_Quechua_Chanka_unificado_2.xlsx` es la última versión: toma todo el Grupo 3 de `Corpus_Equipos` y agrega cosas. `Corpus_Construido.xlsx` y la hoja Grupo 3 de `Corpus_Equipos_1.xlsx` quedan **solo como referencia** (están superados). |
 | D11 | **Fuente general = Grupo 1 (Principito) + Grupo 2** | El profesor dice que las oraciones del Principito "valen bastante": **tienen prioridad**. El unificado NO trae estas hojas; se sacan de `Corpus_Equipos_1.xlsx`. AmericasNLP 2021 **no se graba tal cual** (ver P4). |
 | D12 | **Bloques limpios + origen en otra pestaña** | Ver §8. Nada de columnas ocultas ni Excels de 30 columnas en la vista principal. |
-| D13 | **Dónde se ejecuta** | Claude Code en la PC de Juan (Windows), dentro de esta carpeta. La conversación de estrategia fue en otra sesión. Este archivo es el traspaso. |
+| D13 | **Dónde se ejecuta** | Claude Code en el equipo de trabajo (Windows), dentro de esta carpeta. La conversación de estrategia fue en otra sesión. Este archivo es el traspaso. |
 
 ---
 
 ## 4. Decisiones pendientes (con valor por defecto)
 
-Si Juan no responde, **usa el valor por defecto** y regístralo en `DECISIONES_TOMADAS.md`.
+Si no hay respuesta de la coordinación del proyecto, **usa el valor por defecto** y regístralo en `DECISIONES_TOMADAS.md`.
 
 | # | Pendiente | Por defecto |
 |---|---|---|
-| P1 | **¿Se aparta un conjunto de prueba?** El profesor dijo "todo es train". Se recomendó igual apartar un conjunto que el modelo no vea. | Todas las filas con `Split = train`. Además, una columna `Test_sugerido` (Sí/No) que marca un **10 % estratificado** de cada bloque (14 generales + 6 médicas) para poder activarlo si Juan lo confirma. |
+| P1 | **¿Se aparta un conjunto de prueba?** El profesor dijo "todo es train". Se recomendó igual apartar un conjunto que el modelo no vea. | Todas las filas con `Split = train`. Además, una columna `Test_sugerido` (Sí/No) que marca un **10 % estratificado** de cada bloque (14 generales + 6 médicas) para poder activarlo si se confirma. |
 | P2 | Fecha de la primera sesión y con cuántos días de anticipación recibe el traductor el Word. | Desconocido. Generar B01 y B02 lo antes posible. |
 | P3 | ¿El traductor usa el alfabeto oficial (3 vocales)? | Asumir que sí. Las instrucciones del Word se lo piden explícitamente. |
-| P4 | ¿Se usan oraciones de AmericasNLP 2021 para la parte general? | **No**, solo como léxico de referencia. Si la parte general no alcanza para los bloques planificados, **pregúntale a Juan** antes de usarlas, y solo con oraciones cortas no religiosas filtradas. |
+| P4 | ¿Se usan oraciones de AmericasNLP 2021 para la parte general? | **No**, solo como léxico de referencia. Si la parte general no alcanza para los bloques planificados, **pregúntale a la coordinación del proyecto** antes de usarlas, y solo con oraciones cortas no religiosas filtradas. |
 | P5 | Formato de audio. | WAV, 16 kHz, mono, 16 bits (habitual en reconocimiento de voz). Confirmar con el equipo de modelo. |
 | P6 | Origen real de las filas del Grupo 2 (¿ejemplos del diccionario MINEDU o ejercicios generados?). | Clasificar con la heurística de §5.2 y verificar contra el PDF del diccionario si está en la carpeta. Si no se puede verificar, marcar `Origen_verificado = No`. |
-| P7 | Audios de Allin Kawsay (`*.mp3`). | **Resuelto: no se usan** (decisión de Juan). No inventariarlos ni procesarlos. |
+| P7 | Audios de Allin Kawsay (`*.mp3`). | **Resuelto: no se usan** (decisión del proyecto). No inventariarlos ni procesarlos. |
 
 ---
 
 ## 5. Inventario de fuentes y hallazgos
 
-Cifras verificadas en la revisión anterior. **Úsalas para comprobar que estás leyendo la misma versión de cada archivo.** Si difieren mucho, avisa a Juan.
+Cifras verificadas en la revisión anterior. **Úsalas para comprobar que estás leyendo la misma versión de cada archivo.** Si difieren mucho, avisa a la coordinación del proyecto.
 
 > ⚠️ Varios Excel usan **fórmulas** en la columna N° (`=A2+1`, `=CONCATENATE("S1-",B2)`). Al leerlos con openpyxl o pandas pueden salir como texto de fórmula o vacíos. **No dependas de esas columnas**: genera tus propios IDs. Las cifras de la hoja `Resumen` del unificado también son fórmulas (`COUNTIF`): recalcúlalas tú.
 
@@ -146,7 +146,7 @@ Cifras verificadas en la revisión anterior. **Úsalas para comprobar que estás
 
 | Fuente | Filas | Nota |
 |---|---|---|
-| Lopera Quiroga (2020), *Manual de Semiología en Quechua* | 566 | **Quechua de Puno / collao.** Juan creía que de aquí solo se tomó el español, pero **409 filas tienen quechua derivado de este libro** (287 "corregidas a chanka" por reglas + 122 "compatibles"). Son borradores, no chanka real. |
+| Lopera Quiroga (2020), *Manual de Semiología en Quechua* | 566 | **Quechua de Puno / collao.** Se había supuesto que de aquí solo se tomó el español, pero **409 filas tienen quechua derivado de este libro** (287 "corregidas a chanka" por reglas + 122 "compatibles"). Son borradores, no chanka real. |
 | Allin Kawsay (INS/MINSA) | 510 | **Fuente confiable según el equipo** (es una sola página web). Variedad sin confirmar. Igual se revisan posibles errores de transcripción (las 521 filas "Validar escritura" del Grupo 3 original, ver §5.2). |
 | OPS/OMS Bolivia (2013), *Diálogo médico paciente en quechua* | 234 | **Solo español** (bien: no se tomó el quechua boliviano). El español tiene giros bolivianos que hay que adaptar. |
 | Corpus original del equipo | 117 | Es la extracción del **manual SOCEMURP** (= `Corpus_Construido`). |
@@ -233,7 +233,7 @@ Cifras verificadas en la revisión anterior. **Úsalas para comprobar que estás
 
 En la carpeta `Trabajo - Otro Compañero/` hay un EDA anterior: `[Vibe]EDA_Corpus_NLP.ipynb` + `Corpus_Recopilado.xlsx` (y quizá `flashcards.xlsx` y `resultados_vibe/`).
 
-- **Decisión de Juan: es solo un precedente.** No es lo acordado y **será reevaluado**. Tu EDA es el que manda: hazlo con tus propios criterios (§9.1), no copies sus decisiones, filtros ni su preselección.
+- **Decisión del proyecto: es solo un precedente.** No es lo acordado y **será reevaluado**. Tu EDA es el que manda: hazlo con tus propios criterios (§9.1), no copies sus decisiones, filtros ni su preselección.
 - Contexto para que no te confunda: `Corpus_Recopilado.xlsx` son las 3 hojas de `Corpus_Equipos_1.xlsx` con la **hoja médica antigua** (no el unificado), y su preselección fue 100 + 100 + 100 por cobertura de palabras del español de unas flashcards. Nada de eso aplica (D1–D4, D10).
 - Uso permitido: como mucho, mencionarlo en `EDA.md` en un párrafo ("existe un EDA previo; diferencias principales: …"). No lo uses como fuente de datos ni de alertas.
 
@@ -278,7 +278,7 @@ Tus chequeos automáticos deberían detectar casos como estos. Úsalos como **pr
 
 ## 7. Estructura de la carpeta
 
-### 7.1 Lo que Juan puso (estado real al 14-oct-2026, unidad `D:`)
+### 7.1 Archivos disponibles (estado real al 14-oct-2026, unidad `D:`)
 
 ```
 D:.
@@ -309,7 +309,7 @@ D:.
         [Vibe]EDA_Corpus_NLP.ipynb
 ```
 
-- **Todos los archivos de arriba son FUENTES: solo lectura.** No los muevas, renombres ni modifiques. (Juan no usó la subcarpeta `00_fuentes/`; las fuentes están en la raíz. Trátalas igual que si estuvieran ahí.)
+- **Todos los archivos de arriba son FUENTES: solo lectura.** No los muevas, renombres ni modifiques. (No se utilizó la subcarpeta `00_fuentes/`; las fuentes están en la raíz. Trátalas igual que si estuvieran ahí.)
 - Los nombres tienen sufijos como "(1)" o "(2)": son las mismas versiones descritas en §5. Verifica por contenido y cifras.
 - Los archivos marcados "verificar por contenido" ábrelos y confirma qué son; anótalo en `INVENTARIO.md`.
 - La carpeta "Trabajo - Otro Compañero" tiene caracteres especiales (ñ, espacios): usa `pathlib` y comillas.
@@ -347,7 +347,7 @@ D:.
 
 ### 8.2 `02_maestro/corpus_maestro.xlsx` — la única fuente de verdad
 
-Una sola persona es dueña de este archivo: Juan, o quien él designe. Nadie trabaja sobre copias propias.
+La coordinación del proyecto designa una única persona responsable de este archivo. Nadie trabaja sobre copias propias.
 
 | Pestaña | Contenido |
 |---|---|
@@ -430,7 +430,7 @@ Una sola persona es dueña de este archivo: Juan, o quien él designe. Nadie tra
   - (a) falta una fuente esencial;
   - (b) las cifras de §5 difieren mucho, lo que indicaría otra versión;
   - (c) hay una contradicción que cambia la composición de los bloques.
-- Todo lo demás: decide con el valor por defecto documentado y regístralo en `04_reportes/DECISIONES_TOMADAS.md`. Juan revisa al final.
+- Todo lo demás: decide con el valor por defecto documentado y regístralo en `04_reportes/DECISIONES_TOMADAS.md`. La coordinación del proyecto revisa al final.
 
 | Fase | Qué hacer | Salida |
 |---|---|---|
@@ -439,7 +439,7 @@ Una sola persona es dueña de este archivo: Juan, o quien él designe. Nadie tra
 | **F2 – Ingesta al maestro** | Cargar todas las fuentes en un esquema único. Asignar `Tipo_borrador`, `Variedad_fuente`, `Rol` y `Etapa_consulta`. Clasificar el Grupo 2 (diccionario vs. ejercicio) y verificar contra el PDF si existe (P6). | Maestro preliminar |
 | **F3 – EDA** | Describir el corpus con números **antes** de limpiar (lista en §9.1). | `04_reportes/EDA.md` + figuras en `04_reportes/fig/` |
 | **F4 – Limpieza** | Aplicar §10. Todo cambio va a `Cambios` y todo descarte a `Descartes`. Revisión automática §12 → pestaña `QA`. | Maestro limpio |
-| **F5 – Llenar huecos** | (a) Para cada pregunta del médico de los bloques planificados sin respuesta, **redactar en español** 1–3 respuestas típicas del paciente. (b) Convertir palabras sueltas prioritarias en frases portadoras (§10.2). Todo lo redactado por ti va con `Tipo_borrador = redactado por Claude (solo español)` y queda marcado para revisión de Juan. **Nunca redactes quechua como si fuera válido.** | Filas nuevas marcadas |
+| **F5 – Llenar huecos** | (a) Para cada pregunta del médico de los bloques planificados sin respuesta, **redactar en español** 1–3 respuestas típicas del paciente. (b) Convertir palabras sueltas prioritarias en frases portadoras (§10.2). Todo lo redactado por ti va con `Tipo_borrador = redactado por Claude (solo español)` y queda marcado para revisión de la coordinación del proyecto. **Nunca redactes quechua como si fuera válido.** | Filas nuevas marcadas |
 | **F6 – Priorización y bloques** | Aplicar §11. Planificar todos los bloques que permita el material (pestaña `Bloques`). **Generar archivos completos solo para B01 y B02** (D5): Word del traductor, Excel de trabajo y control en B01. Además: `GUIA_GRABACION.docx` y los scripts 06, 07 y 08 **probados con datos simulados**. | `03_bloques/B01/`, `03_bloques/B02/` |
 | **F7 – Verificación final** | Ejecutar el checklist de §13. Abrir cada `.docx` y `.xlsx` generado y comprobar que se ven bien. Escribir el reporte de entrega. | `04_reportes/ENTREGA.md` |
 
@@ -472,7 +472,7 @@ Una sola persona es dueña de este archivo: Juan, o quien él designe. Nadie tra
   - «Vómitar» → «Vomitar»
   - «¿Estas estreñido?» → «¿Estás estreñido?»
   - …
-- **Giros bolivianos o poco naturales** (OPS/OMS Bolivia y otros): proponer una versión en español peruano neutro. Ejemplos: «¿Te ha bajado como mucha agua?», «¿Cómo punzado te está doliendo?», «¿Siente que le ronda o le silba el pecho?». Guardar el original en `Cambios` y marcar `Revisar_Juan`.
+- **Giros bolivianos o poco naturales** (OPS/OMS Bolivia y otros): proponer una versión en español peruano neutro. Ejemplos: «¿Te ha bajado como mucha agua?», «¿Cómo punzado te está doliendo?», «¿Siente que le ronda o le silba el pecho?». Guardar el original en `Cambios` y marcar `Por_revisar`.
 - **Oraciones largas** (más de 20 palabras): partir en unidades de 15 palabras o menos si son listas de instrucciones. Si no se pueden partir limpiamente → `Descartes` (motivo: larga).
 - Mantener la variación natural (tú/usted, paráfrasis). No uniformizar de más.
 
@@ -642,10 +642,10 @@ Valida tus reglas con los casos de §6: deben salir marcados.
 - [ ] Scripts 06, 07 y 08 **probados con datos simulados** (ida y vuelta Word → Excel funciona por ID).
 - [ ] `GUIA_GRABACION.docx` creada.
 - [ ] `DECISIONES_TOMADAS.md`: cada valor por defecto usado y cada decisión propia, con su porqué.
-- [ ] `ENTREGA.md` para Juan, en lenguaje simple:
+- [ ] `ENTREGA.md` para la coordinación del proyecto, en lenguaje simple:
   - qué está listo;
   - **qué enviar a quién** (el Word de B01 y B02 al traductor);
-  - qué debe revisar Juan (frases redactadas por Claude, adaptaciones del español marcadas `Revisar_Juan`);
+  - qué debe revisar el equipo (frases redactadas por Claude, adaptaciones del español marcadas `Por_revisar`);
   - pendientes P1–P7;
   - cuántos bloques caben con el material actual.
 
@@ -656,15 +656,15 @@ Valida tus reglas con los casos de §6: deben salir marcados.
 - **No modifiques ninguna fuente (§7.1).** Trabaja sobre copias en memoria y escribe solo en `02_`–`06_`, `scripts/` y la raíz para config.
 - **No inventes quechua válido.** Puedes redactar español; el quechua lo pone el traductor.
 - **No borres sin rastro.**
-- **No envíes nada a nadie.** Juan entrega el Word al traductor.
-- No uses ni modifiques `inf659_env`, `.venvs` u otros entornos de Juan.
+- **No envíes nada a nadie.** La coordinación del proyecto entrega el Word al traductor.
+- No uses ni modifiques `inf659_env`, `.venvs` u otros entornos ajenos al proyecto.
 - Scripts **deterministas e idempotentes**: volver a correrlos desde las fuentes (§7.1) produce lo mismo. Toda la configuración en `config.yaml`.
 - Windows:
   - usa `pathlib` y UTF-8;
-  - si un `.xlsx` está abierto en Excel, la escritura falla: pide a Juan que lo cierre;
+  - si un `.xlsx` está abierto en Excel, la escritura falla: pide a la coordinación del proyecto que lo cierre;
   - lee con `openpyxl` (`data_only=True` cuando haya fórmulas).
-- Explica a Juan en español simple. Muestra el avance con la lista de tareas. Al terminar, un resumen breve y la ruta de `ENTREGA.md`.
-- Si Juan pide cambiar un parámetro (tamaño de bloque, cuotas, 70/30), cámbialo en `config.yaml`, regenera y registra el cambio.
+- Explica a la coordinación del proyecto en español simple. Muestra el avance con la lista de tareas. Al terminar, un resumen breve y la ruta de `ENTREGA.md`.
+- Si la coordinación del proyecto pide cambiar un parámetro (tamaño de bloque, cuotas, 70/30), cámbialo en `config.yaml`, regenera y registra el cambio.
 
 ### 14.1 Puntos de retorno (si la sesión se corta por límites)
 
@@ -675,7 +675,7 @@ El trabajo es largo y la sesión puede terminar a la mitad. **Siempre debe poder
 - Dentro de la fase en curso: subpasos hechos y el **siguiente paso exacto** ("siguiente: generar B02_traductor.docx").
 - Archivos generados en cada fase (ruta) y el script que los produce.
 - Decisiones tomadas en esta sesión que aún no estén en `DECISIONES_TOMADAS.md`.
-- Problemas abiertos o dudas para Juan.
+- Problemas abiertos o dudas para la coordinación del proyecto.
 
 **Reglas:**
 1. **Actualiza `PROGRESO.md` al terminar cada subpaso**, no solo al final de la fase. Es lo primero que se escribe después de producir algo.
@@ -684,19 +684,19 @@ El trabajo es largo y la sesión puede terminar a la mitad. **Siempre debe poder
 4. **Escritura segura:** escribe primero a un archivo temporal y renómbralo al final, para no dejar archivos a medias si se corta.
 5. **Scripts reanudables:** cada script detecta si su salida ya existe y es válida; si es así, la salta (salvo que se pida `--forzar`). Nunca renumeres IDs al reanudar.
 6. **Al retomar (en el mismo chat tras un límite, o si la conversación se compactó y perdiste detalle):** relee `PROGRESO.md` antes de seguir; no confíes solo en lo que recuerdas de la conversación. Continúa desde el siguiente paso indicado.
-7. **Al iniciar cualquier sesión nueva:** lee este CLAUDE.md, luego `PROGRESO.md`, verifica que los archivos listados existan y **continúa desde el siguiente paso indicado**. No empieces de cero. Dile a Juan en una línea desde dónde retomas.
+7. **Al iniciar cualquier sesión nueva:** lee este CLAUDE.md, luego `PROGRESO.md`, verifica que los archivos listados existan y **continúa desde el siguiente paso indicado**. No empieces de cero. Dile a la coordinación del proyecto en una línea desde dónde retomas.
 8. Si un paso quedó a medias (archivo incompleto o temporal), rehaz **solo ese paso**.
 
-**Para Juan:** lo normal es seguir **en el mismo chat**: cuando se libere el límite, escribe *"Continúa desde PROGRESO.md"*. Solo si el chat ya no sirve, abre uno nuevo en la misma carpeta con el mismo mensaje.
+**Para la coordinación del proyecto:** lo normal es seguir **en el mismo chat**: cuando se libere el límite, escribe *"Continúa desde PROGRESO.md"*. Solo si el chat ya no sirve, abre uno nuevo en la misma carpeta con el mismo mensaje.
 
-### 14.2 Nivel de esfuerzo y ultracode (decisión de Juan)
+### 14.2 Nivel de esfuerzo y ultracode (decisión del proyecto)
 
 - **Trabajo principal (F0–F7): esfuerzo `xhigh`, sin ultracode.** Es una cadena de fases dependientes; los workflows multiagente no aportan aquí y gastan los límites más rápido. `max` no se usa (rendimientos decrecientes, tiende a sobrepensar).
 - **No lances workflows por tu cuenta** durante F0–F7. Trabaja turno a turno con la lista de tareas y `PROGRESO.md`.
-- **Revisión final (después de F7):** Juan la pedirá con la palabra `ultracode` para ese único pedido. En ese caso sí: verificación independiente de todo lo generado contra el checklist de §13, con agentes que se revisan entre sí, y una lista de problemas ordenada por gravedad. Corrige solo lo que Juan apruebe y actualiza `PROGRESO.md` y `ENTREGA.md`.
+- **Revisión final (después de F7):** La coordinación del proyecto la pedirá con la palabra `ultracode` para ese único pedido. En ese caso sí: verificación independiente de todo lo generado contra el checklist de §13, con agentes que se revisan entre sí, y una lista de problemas ordenada por gravedad. Corrige solo lo que la coordinación del proyecto apruebe y actualiza `PROGRESO.md` y `ENTREGA.md`.
 - Si un workflow llega al límite de uso, se pausa y continúa solo al liberarse; el resto del trabajo se retoma con §14.1.
 
-**Para Juan:**
+**Para la coordinación del proyecto:**
 1. Al abrir la sesión: `/effort xhigh` y luego el prompt de arranque.
 2. Al terminar F7: *"ultracode: revisa de forma independiente todo lo generado contra CLAUDE.md (checklist de la sección 13), verifica cada hallazgo antes de reportarlo y dame una lista de problemas ordenada por gravedad."*
 
@@ -713,7 +713,7 @@ El trabajo es largo y la sesión puede terminar a la mitad. **Siempre debe poder
 
 ---
 
-## 16. Glosario (términos que usa Juan)
+## 16. Glosario (términos del proyecto)
 
 | Término | Significado |
 |---|---|

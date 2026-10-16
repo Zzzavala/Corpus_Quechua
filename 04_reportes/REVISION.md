@@ -1,6 +1,6 @@
-# Revisión de Juan — español redactado o adaptado por Claude (B01, B02, B03, B04, B05)
+# Revisión del español — español redactado o adaptado por Claude (B01, B02, B03, B04, B05)
 
-Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word al traductor. Si cambias algo, edita el archivo de `scripts/datos/` indicado y vuelve a correr `04_limpieza` → `05_huecos` → `f6_armar_bloques` (con `--forzar`). Las oraciones nuevas van al traductor SOLO en español: él escribe el quechua.
+Estas filas tienen Estado = **Por_revisar**. Revísalas antes de enviar el Word al traductor. Si cambias algo, edita el archivo de `scripts/datos/` indicado y vuelve a correr `04_limpieza` → `05_huecos` → `f6_armar_bloques` (con `--forzar`). Las oraciones nuevas van al traductor SOLO en español: él escribe el quechua.
 
 ## B01: 72 filas
 
@@ -15,7 +15,7 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 27 | GEN-0824 | — | Mañana cosecharemos la papa. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 33 | GEN-0918 | — | Vamos a la chacra. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 38 | GEN-0998 | — | Como llovió mucho, no salimos. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 41 | CLI-0033 | Médico | ¿Desde cuándo estás enferma? | ¿Desde cuándo estás enfermo? · adaptación (en B01 la paciente es mujer («enfermo» → «enferma»)) – Revisar_Juan | ¿Haykapmanta unquchkanki? | `adaptaciones_es.yaml` |
+| 41 | CLI-0033 | Médico | ¿Desde cuándo estás enferma? | ¿Desde cuándo estás enfermo? · adaptación (en B01 la paciente es mujer («enfermo» → «enferma»)) – Por_revisar | ¿Haykapmanta unquchkanki? | `adaptaciones_es.yaml` |
 | 42 | CLI-0979 | Paciente | Desde hace tres días. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 43 | GEN-0747 | — | Ayer mis tíos llegaron de Lima. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 47 | CLI-0980 | Paciente | Empezó de repente, después de comer. | — (frase nueva de F5) | — | `plan_b01.yaml` |
@@ -43,38 +43,38 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 113 | GEN-0901 | — | Antes yo caminaba dos horas hasta la escuela. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 118 | CLI-0989 | Paciente | Sí, vomité dos veces. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 119 | GEN-0743 | — | Anoche llovió mucho en el pueblo. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 121 | GEN-0162 | — | Esta noche hay luna nueva. | La luna está nueva esta noche. · adaptación («La luna está nueva esta noche»: calco) – Revisar_Juan | Kunan tuta killa musuq. | `adaptaciones_es.yaml` |
+| 121 | GEN-0162 | — | Esta noche hay luna nueva. | La luna está nueva esta noche. · adaptación («La luna está nueva esta noche»: calco) – Por_revisar | Kunan tuta killa musuq. | `adaptaciones_es.yaml` |
 | 122 | GEN-0744 | — | Mi abuelo vendió dos ovejas en el mercado. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 124 | CLI-0990 | Paciente | No, no tengo diarrea. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 128 | GEN-0947 | — | Si lloviera, la papa crecería mejor. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 130 | CLI-0991 | Paciente | No, no tengo ganas de comer. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 133 | GEN-0745 | — | Esta mañana tomé leche caliente. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 134 | GEN-0204 | — | Esa palabra suena fuerte. | Esa palabra es resonante . · adaptación («es resonante»: palabra rara; el borrador dice «se oye fuerte») – Revisar_Juan | Chay simi sinchita uyarikun. | `adaptaciones_es.yaml` |
+| 134 | GEN-0204 | — | Esa palabra suena fuerte. | Esa palabra es resonante . · adaptación («es resonante»: palabra rara; el borrador dice «se oye fuerte») – Por_revisar | Chay simi sinchita uyarikun. | `adaptaciones_es.yaml` |
 | 136 | CLI-0992 | Paciente | No, no tengo tos. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 139 | GEN-0869 | — | Mi mamá está tejiendo una manta. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 141 | CLI-0271 | Médico | Voy a examinarte. Me vas a ayudar, ¿está bien? | Voy a examinarte me vas ayudar, ¿esta bien?. · adaptación («Voy a examinarte me vas ayudar, ¿esta bien?.»: puntuación y «vas a ayudar»; se deja «¿está bien?», que está en el borrador y lo contesta la paciente) – Revisar_Juan | Qawaykusaykim, yanapawankim, ¿allinchu? | `adaptaciones_es.yaml` |
+| 141 | CLI-0271 | Médico | Voy a examinarte. Me vas a ayudar, ¿está bien? | Voy a examinarte me vas ayudar, ¿esta bien?. · adaptación («Voy a examinarte me vas ayudar, ¿esta bien?.»: puntuación y «vas a ayudar»; se deja «¿está bien?», que está en el borrador y lo contesta la paciente) – Por_revisar | Qawaykusaykim, yanapawankim, ¿allinchu? | `adaptaciones_es.yaml` |
 | 142 | CLI-0993 | Paciente | Está bien, doctor. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 145 | GEN-0948 | — | Quisiera aprender a tejer. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 147 | CLI-0193 | Médico | A ver, échate. | A ver échate · adaptación (coma tras «A ver») – Revisar_Juan | Sirikuy | `adaptaciones_es.yaml` |
+| 147 | CLI-0193 | Médico | A ver, échate. | A ver échate · adaptación (coma tras «A ver») – Por_revisar | Sirikuy | `adaptaciones_es.yaml` |
 | 149 | GEN-0870 | — | Estamos esperando el bus. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 152 | GEN-0866 | — | Ahora estoy cocinando el almuerzo. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 156 | GEN-1021 | — | La mamá hace dormir al bebé. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 161 | CLI-0994 | Paciente | Sí, ahí me duele mucho. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 162 | GEN-0742 | — | La semana pasada sembramos papa en la chacra. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 166 | CLI-0097 | Médico | Respira hondo. | Respire hondo. · adaptación («Respire» (usted) en una consulta que va en «tú») – Revisar_Juan | Samay ukumanta. | `adaptaciones_es.yaml` |
+| 166 | CLI-0097 | Médico | Respira hondo. | Respire hondo. · adaptación («Respire» (usted) en una consulta que va en «tú») – Por_revisar | Samay ukumanta. | `adaptaciones_es.yaml` |
 | 167 | GEN-0967 | — | ¿Vendrás a la fiesta del pueblo? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 170 | GEN-0997 | — | Después de comer, fuimos a la chacra. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 172 | CLI-0995 | Paciente | ¿Es grave, doctor? | — (frase nueva de F5) | — | `plan_b01.yaml` |
-| 173 | CLI-0924 | Médico | No es nada grave. | No estás tan enfermo (no es nada grave) · adaptación («No estás tan enfermo (no es nada grave)» → una sola idea) – Revisar_Juan | — | `adaptaciones_es.yaml` |
+| 173 | CLI-0924 | Médico | No es nada grave. | No estás tan enfermo (no es nada grave) · adaptación («No estás tan enfermo (no es nada grave)» → una sola idea) – Por_revisar | — | `adaptaciones_es.yaml` |
 | 177 | GEN-0797 | — | Cuentan que antes aquí había una laguna. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 178 | CLI-0916 | Médico | Al despertar vas a tomar dos pastillas. | Al despertar vas a tragar dos pastillas · adaptación («tragar» (Bolivia) → «tomar») – Revisar_Juan | — | `adaptaciones_es.yaml` |
+| 178 | CLI-0916 | Médico | Al despertar vas a tomar dos pastillas. | Al despertar vas a tragar dos pastillas · adaptación («tragar» (Bolivia) → «tomar») – Por_revisar | — | `adaptaciones_es.yaml` |
 | 179 | CLI-0996 | Paciente | Bueno, dos pastillas en la mañana. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 182 | GEN-0968 | — | ¿Qué estás haciendo? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 185 | CLI-0997 | Paciente | Sí, voy a tomar bastante agua. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 188 | GEN-0746 | — | El año pasado mi hermana terminó la secundaria. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 191 | CLI-0998 | Paciente | Bueno, regreso en una semana. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 194 | GEN-0826 | — | Tú cuidarás a las ovejas esta semana. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 195 | GEN-0179 | — | Quiero escucharte cuando hablas. | Quiero escuchar cuando hablas. · adaptación («Quiero escuchar cuando hablas»: falta el objeto) – Revisar_Juan | Rimaptiyki uyariyta munani. | `adaptaciones_es.yaml` |
+| 195 | GEN-0179 | — | Quiero escucharte cuando hablas. | Quiero escuchar cuando hablas. · adaptación («Quiero escuchar cuando hablas»: falta el objeto) – Por_revisar | Rimaptiyki uyariyta munani. | `adaptaciones_es.yaml` |
 | 196 | CLI-0999 | Médico | ¿Entendiste lo que tienes que hacer? | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 197 | CLI-1000 | Paciente | Sí, entendí. Gracias, doctor. | — (frase nueva de F5) | — | `plan_b01.yaml` |
 | 199 | GEN-0969 | — | ¿Dónde vive tu abuela? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -86,14 +86,14 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 2 | GEN-0903 | — | Mi abuela siempre hacía pan los domingos. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 6 | CLI-1001 | Paciente | Sí, tengo frío y me tiembla el cuerpo. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 7 | GEN-1024 | — | Le cociné una sopa a mi abuela. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 10 | GEN-0156 | — | Mira, esa mariposa es azul. | Mira, una mariposa que es azul. · adaptación («una mariposa que es azul»: poco natural y casi igual a F-0048) – Revisar_Juan | Qaway, huk pillpintu anka kachkan. | `adaptaciones_es.yaml` |
+| 10 | GEN-0156 | — | Mira, esa mariposa es azul. | Mira, una mariposa que es azul. · adaptación («una mariposa que es azul»: poco natural y casi igual a F-0048) – Por_revisar | Qaway, huk pillpintu anka kachkan. | `adaptaciones_es.yaml` |
 | 12 | CLI-1002 | Paciente | Sí, en la noche me sacude todo el cuerpo. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 13 | GEN-0828 | — | Mañana te devolveré tu libro. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 16 | GEN-0750 | — | Mi papá arregló el techo de la casa. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 18 | CLI-1003 | Paciente | Sí, tengo escalofríos desde ayer. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 21 | GEN-0751 | — | Ayer no encontré mi sombrero. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 24 | CLI-1004 | Paciente | Sí, siento mucho calor en la cabeza. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
-| 26 | GEN-0007 | — | Esta persona mayor vive en Francia, donde pasa hambre y frío, y necesita mucho consuelo. | Esta persona mayor vive en Francia donde siente hambre, frío y tiene gran necesidad de ser consolada. · adaptación («siente hambre, frío y tiene gran necesidad de ser consolada»: redacción) – Revisar_Juan | Kay machu runaqa Francia nacionpim yachan, chaypim yarqaywan, chiriwan hinaspa consuelasqa kayta anchata munan. | `adaptaciones_es.yaml` |
+| 26 | GEN-0007 | — | Esta persona mayor vive en Francia, donde pasa hambre y frío, y necesita mucho consuelo. | Esta persona mayor vive en Francia donde siente hambre, frío y tiene gran necesidad de ser consolada. · adaptación («siente hambre, frío y tiene gran necesidad de ser consolada»: redacción) – Por_revisar | Kay machu runaqa Francia nacionpim yachan, chaypim yarqaywan, chiriwan hinaspa consuelasqa kayta anchata munan. | `adaptaciones_es.yaml` |
 | 28 | GEN-0921 | — | Ayúdame a cargar la leña. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 30 | CLI-1005 | Paciente | Sí, sudo mucho en las noches. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 33 | GEN-0752 | — | Cocinamos sopa de trigo para la faena. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -101,7 +101,7 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 39 | GEN-0972 | — | ¿Cuántas ovejas tienes? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 42 | CLI-1007 | Paciente | Sí, boto flema. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 44 | GEN-1026 | — | Tráeme un vaso de agua. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 46 | CLI-0090 | Médico | ¿De qué color es la flema: blanca, verde, amarilla o con sangre? | ¿De qué color, blanco, verde, amarillo, con sangre? · adaptación («¿De qué color, blanco, verde, amarillo, con sangre?»: pregunta incompleta) – Revisar_Juan | ¿Imallimpitataq, yuraq, qumir, qillu, yawarwan? | `adaptaciones_es.yaml` |
+| 46 | CLI-0090 | Médico | ¿De qué color es la flema: blanca, verde, amarilla o con sangre? | ¿De qué color, blanco, verde, amarillo, con sangre? · adaptación («¿De qué color, blanco, verde, amarillo, con sangre?»: pregunta incompleta) – Por_revisar | ¿Imallimpitataq, yuraq, qumir, qillu, yawarwan? | `adaptaciones_es.yaml` |
 | 47 | CLI-1008 | Paciente | Es amarilla, sin sangre. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 49 | GEN-0951 | — | Podrías ayudarme con la cosecha. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 52 | GEN-0748 | — | Compré pan y azúcar en la tienda. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -109,7 +109,7 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 57 | CLI-1009 | Paciente | Sí, cuando toso me duele la espalda. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 62 | GEN-0949 | — | Si tuviera dinero, compraría una vaca. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 64 | CLI-1010 | Paciente | Sí, en la noche me silba el pecho. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
-| 65 | GEN-0010 | — | Cuando tenía apenas seis años, solo había aprendido a dibujar boas cerradas y boas abiertas. | Cuando tenía apenas seis años, habiendo sólo aprendido a dibujar las boas cerradas y las boas abiertas. · adaptación (fragmento («habiendo sólo aprendido…») → oración completa) – Revisar_Juan | Suqta watayuqllaraq kachkaptiymi, boas cerradakunatawan boas abiertaskunata dibujayta yacharuspay. | `adaptaciones_es.yaml` |
+| 65 | GEN-0010 | — | Cuando tenía apenas seis años, solo había aprendido a dibujar boas cerradas y boas abiertas. | Cuando tenía apenas seis años, habiendo sólo aprendido a dibujar las boas cerradas y las boas abiertas. · adaptación (fragmento («habiendo sólo aprendido…») → oración completa) – Por_revisar | Suqta watayuqllaraq kachkaptiymi, boas cerradakunatawan boas abiertaskunata dibujayta yacharuspay. | `adaptaciones_es.yaml` |
 | 67 | GEN-0872 | — | El agua está hirviendo en la olla. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 71 | CLI-1011 | Paciente | Hago cuatro o cinco veces al día. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 72 | GEN-1000 | — | Si llueve mañana, no iremos a la feria. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -134,7 +134,7 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 128 | GEN-0873 | — | Mis hermanos están estudiando para el examen. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 130 | CLI-1020 | Paciente | Sale delgadito y con poca fuerza. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 133 | GEN-0831 | — | Mañana no habrá clases en la escuela. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 135 | CLI-0287 | Médico | ¿Después del nacimiento lo hospitalizaron? Si fue así, ¿por cuánto tiempo? | ¿Después del nacimiento, se ha hospitalizado? ¿Si o no? ¿Si se hospitalizo por cuánto tiempo? · adaptación (pregunta múltiple «¿Si o no? ¿Si se hospitalizo…?») – Revisar_Juan | ¿Unqukuruspan hospitalizasqachu kara hayka punchawtataq hospitalizasqa kara? | `adaptaciones_es.yaml` |
+| 135 | CLI-0287 | Médico | ¿Después del nacimiento lo hospitalizaron? Si fue así, ¿por cuánto tiempo? | ¿Después del nacimiento, se ha hospitalizado? ¿Si o no? ¿Si se hospitalizo por cuánto tiempo? · adaptación (pregunta múltiple «¿Si o no? ¿Si se hospitalizo…?») – Por_revisar | ¿Unqukuruspan hospitalizasqachu kara hayka punchawtataq hospitalizasqa kara? | `adaptaciones_es.yaml` |
 | 136 | CLI-1021 | Paciente | Sí, estuvo dos días en el hospital. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 139 | GEN-0874 | — | Cuando llegaste, yo estaba durmiendo. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 142 | CLI-1022 | Paciente | Tomo una pastilla para la presión. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
@@ -151,14 +151,14 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 173 | GEN-0971 | — | ¿Cuándo vas a regresar? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 176 | GEN-0950 | — | Deberías descansar un poco. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 178 | CLI-1027 | Paciente | No, vomita solo a veces. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
-| 180 | GEN-0122 | — | Todos nosotros comemos cada noche. | Comemos todos nosotros cada noche. · adaptación («Comemos todos nosotros cada noche»: orden poco natural) – Revisar_Juan | Llapanchik sapa tuta mikunchik. | `adaptaciones_es.yaml` |
+| 180 | GEN-0122 | — | Todos nosotros comemos cada noche. | Comemos todos nosotros cada noche. · adaptación («Comemos todos nosotros cada noche»: orden poco natural) – Por_revisar | Llapanchik sapa tuta mikunchik. | `adaptaciones_es.yaml` |
 | 182 | GEN-0753 | — | La vaca se escapó al cerro. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 184 | CLI-1140 | Paciente | Ya, le voy a dar mate de a poquitos. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 188 | GEN-1001 | — | Mientras yo cocinaba, él barría la casa. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 190 | CLI-1028 | Paciente | Sí, estoy embarazada de cuatro meses. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 193 | GEN-0754 | — | Ella lavó la ropa en el río. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 196 | CLI-1029 | Paciente | No, este es mi segundo hijo. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
-| 197 | GEN-0191 | — | Hoy hace buen día. | Hoy buen día. · adaptación («Hoy buen día.» no es una oración completa en español) – Revisar_Juan | Kunan allin punchaw. | `adaptaciones_es.yaml` |
+| 197 | GEN-0191 | — | Hoy hace buen día. | Hoy buen día. · adaptación («Hoy buen día.» no es una oración completa en español) – Por_revisar | Kunan allin punchaw. | `adaptaciones_es.yaml` |
 | 199 | GEN-0755 | — | Ayer conversé con la profesora de mi hijo. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 
 ## B03: 109 filas
@@ -195,7 +195,7 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 54 | GEN-0756 | — | Mi vecino cosechó mucho maíz este año. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 55 | GEN-0952 | — | Si vinieras temprano, iríamos juntos. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 57 | CLI-1038 | Paciente | Sí, me cuesta respirar, sobre todo en las noches. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
-| 59 | GEN-0063 | — | Las espinas son pura maldad de las flores. | Son pura maldad de las flores. · adaptación («Son pura maldad…»: sin sujeto fuera del libro) – Revisar_Juan | Waytakunapa mana allin kayninmi. | `adaptaciones_es.yaml` |
+| 59 | GEN-0063 | — | Las espinas son pura maldad de las flores. | Son pura maldad de las flores. · adaptación («Son pura maldad…»: sin sujeto fuera del libro) – Por_revisar | Waytakunapa mana allin kayninmi. | `adaptaciones_es.yaml` |
 | 60 | GEN-0835 | — | Ustedes ayudarán en la faena del lunes. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 61 | GEN-1003 | — | Fui al mercado para comprar sal. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 64 | CLI-1039 | Paciente | Sí, me agito cuando subo la cuesta. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
@@ -205,7 +205,7 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 72 | GEN-1004 | — | Aunque hacía frío, salimos a pastear. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 73 | GEN-0761 | — | Mis primos construyeron una casa nueva. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 76 | GEN-0954 | — | Sería bueno arreglar el camino. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 77 | CLI-0462 | Médico | ¿Se cansa o se agita aunque camine poco, o solo cuando camina mucho? | ¿Se cansa o se agita cuando camina poca distancia o gran distancia? · adaptación («cuando camina poca distancia o gran distancia»: poco natural) – Revisar_Juan | ¿Purinki hina saykunkichu o pisita purinki hinachu? | `adaptaciones_es.yaml` |
+| 77 | CLI-0462 | Médico | ¿Se cansa o se agita aunque camine poco, o solo cuando camina mucho? | ¿Se cansa o se agita cuando camina poca distancia o gran distancia? · adaptación («cuando camina poca distancia o gran distancia»: poco natural) – Por_revisar | ¿Purinki hina saykunkichu o pisita purinki hinachu? | `adaptaciones_es.yaml` |
 | 78 | CLI-1041 | Paciente | Me agito aunque camine poquito. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 79 | GEN-0804 | — | Mi abuela contaba que antes no había carretera. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 82 | GEN-0763 | — | Ayer no fui a trabajar. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -220,7 +220,7 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 100 | GEN-1032 | — | Ellos se pelearon por un terreno. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 101 | GEN-0923 | — | Escucha con atención. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 104 | GEN-0906 | — | Antes tomábamos agua del manantial. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 105 | CLI-0517 | Médico | Si le viene sangre antes de la fecha de su regla, avise al médico. | La mujer que pierde sangre antes de la fecha de regla debe avisar al médico porque no es bueno que ocurra ello. · partir oración larga (1/2) – Revisar_Juan | Yawarniyki hamun mana tukasunki hinaqa willanayki doctorman | `particiones_es.yaml` |
+| 105 | CLI-0517 | Médico | Si le viene sangre antes de la fecha de su regla, avise al médico. | La mujer que pierde sangre antes de la fecha de regla debe avisar al médico porque no es bueno que ocurra ello. · partir oración larga (1/2) – Por_revisar | Yawarniyki hamun mana tukasunki hinaqa willanayki doctorman | `particiones_es.yaml` |
 | 106 | GEN-0757 | — | El domingo bailamos en la fiesta del pueblo. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 109 | GEN-0924 | — | Llévale esta comida a tu abuela. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 111 | CLI-1045 | Paciente | Sí, después de toser boté un poco de sangre. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
@@ -235,17 +235,17 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 128 | CLI-1048 | Paciente | No sé, solo veo sangre en el papel. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 130 | GEN-1005 | — | Antes de dormir, apago la luz. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 131 | GEN-0840 | — | Vamos a sembrar maíz en septiembre. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 132 | CLI-0198 | Médico | Aquí le escribo cómo lo va a tomar. | Aqui estoy escribiendo como va tomar · adaptación («Aqui estoy escribiendo como va tomar»: tildes y redacción) – Revisar_Juan | Kaypi qillqachkani imayna tomanata. | `adaptaciones_es.yaml` |
+| 132 | CLI-0198 | Médico | Aquí le escribo cómo lo va a tomar. | Aqui estoy escribiendo como va tomar · adaptación («Aqui estoy escribiendo como va tomar»: tildes y redacción) – Por_revisar | Kaypi qillqachkani imayna tomanata. | `adaptaciones_es.yaml` |
 | 133 | CLI-1049 | Paciente | Gracias, voy a guardar el papel. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 136 | GEN-0955 | — | Si supiera leer, leería el periódico. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 138 | GEN-0765 | — | Mi hermano compró una radio nueva. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 139 | GEN-0882 | — | Los pájaros están cantando en el árbol. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 140 | GEN-0123 | — | El niño ríe con su hermano. | niño ríe con su hermano. · adaptación (falta el artículo) – Revisar_Juan | Qari warma wawqinwan asin. | `adaptaciones_es.yaml` |
-| 141 | CLI-0265 | Médico | Vas a tomar esta pastilla. | Tomas esta pastilla · adaptación («Tomas esta pastilla.»: como indicación se dice «vas a tomar» (igual que el borrador «tomanki»)) – Revisar_Juan | Kay pastillata tomanki. | `adaptaciones_es.yaml` |
+| 140 | GEN-0123 | — | El niño ríe con su hermano. | niño ríe con su hermano. · adaptación (falta el artículo) – Por_revisar | Qari warma wawqinwan asin. | `adaptaciones_es.yaml` |
+| 141 | CLI-0265 | Médico | Vas a tomar esta pastilla. | Tomas esta pastilla · adaptación («Tomas esta pastilla.»: como indicación se dice «vas a tomar» (igual que el borrador «tomanki»)) – Por_revisar | Kay pastillata tomanki. | `adaptaciones_es.yaml` |
 | 142 | CLI-1050 | Paciente | Está bien, la voy a tomar después de comer. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 144 | GEN-0979 | — | ¿Cómo se llama tu pueblo? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 145 | GEN-0767 | — | La helada quemó las plantas de papa. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 146 | CLI-0266 | Médico | Vas a tomar este jarabe. | Tomas este jarabe · adaptación («Tomas este jarabe.»: como indicación se dice «vas a tomar» (igual que el borrador «tomanki»)) – Revisar_Juan | Kay jarabeta tomanki. | `adaptaciones_es.yaml` |
+| 146 | CLI-0266 | Médico | Vas a tomar este jarabe. | Tomas este jarabe · adaptación («Tomas este jarabe.»: como indicación se dice «vas a tomar» (igual que el borrador «tomanki»)) – Por_revisar | Kay jarabeta tomanki. | `adaptaciones_es.yaml` |
 | 147 | CLI-1051 | Paciente | Ya, voy a tomar el jarabe. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 150 | GEN-0929 | — | Pásame la sal, por favor. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 151 | GEN-1002 | — | Cuando era niño, vivía con mis abuelos. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -255,7 +255,7 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 163 | CLI-1052 | Paciente | Gracias, doctor, no puedo caminar sola. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 164 | GEN-0836 | — | Mañana temprano saldremos al mercado. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 166 | GEN-0878 | — | Ellos estaban bailando en la plaza. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 168 | GEN-0033 | — | Los mayores creen que todo se conoce con cifras. | Los mayores creen conocer con cifras. · adaptación («creen conocer con cifras»: incompleta fuera del libro) – Revisar_Juan | Machu runakunaqa yupaykunawan riqsisqankuta piensanku. | `adaptaciones_es.yaml` |
+| 168 | GEN-0033 | — | Los mayores creen que todo se conoce con cifras. | Los mayores creen conocer con cifras. · adaptación («creen conocer con cifras»: incompleta fuera del libro) – Por_revisar | Machu runakunaqa yupaykunawan riqsisqankuta piensanku. | `adaptaciones_es.yaml` |
 | 169 | GEN-0760 | — | El perro ladró toda la noche. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 172 | GEN-0879 | — | El sol se está escondiendo detrás del cerro. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 176 | CLI-1053 | Paciente | Tengo mucho miedo, doctor. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
@@ -318,12 +318,12 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 53 | GEN-0769 | — | Nosotros llevamos las llamas al cerro. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 54 | GEN-1008 | — | Al salir el sol, empezamos a trabajar. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 55 | GEN-0911 | — | Antes jugábamos en el río todas las tardes. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 56 | CLI-0298 | Médico | ¿Te duele el tobillo? | ¿Duele el tobillo? · adaptación («¿Duele el tobillo?»: falta «te») – Revisar_Juan | ¿Chakimuquyki nananchu? | `adaptaciones_es.yaml` |
+| 56 | CLI-0298 | Médico | ¿Te duele el tobillo? | ¿Duele el tobillo? · adaptación («¿Duele el tobillo?»: falta «te») – Por_revisar | ¿Chakimuquyki nananchu? | `adaptaciones_es.yaml` |
 | 57 | CLI-1068 | Paciente | Sí, me torcí el tobillo ayer. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 59 | GEN-0771 | — | La reunión de la comunidad terminó tarde. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 60 | GEN-0958 | — | Si hiciera sol, secaríamos el maíz. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 62 | GEN-0982 | — | ¿Qué vas a vender en la feria? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 63 | CLI-0299 | Médico | ¿Te duele la rodilla? | ¿Duele la rodilla? · adaptación («¿Duele la rodilla?»: falta «te») – Revisar_Juan | ¿Chankamuquyki nananchu? | `adaptaciones_es.yaml` |
+| 63 | CLI-0299 | Médico | ¿Te duele la rodilla? | ¿Duele la rodilla? · adaptación («¿Duele la rodilla?»: falta «te») – Por_revisar | ¿Chankamuquyki nananchu? | `adaptaciones_es.yaml` |
 | 64 | CLI-1069 | Paciente | Sí, me duele la rodilla cuando subo. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 65 | GEN-0912 | — | Mi tío tocaba el arpa en las fiestas. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 66 | GEN-0774 | — | Pagué la luz en la municipalidad. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -352,12 +352,12 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 101 | GEN-0844 | — | Ella tejerá una chompa para su nieto. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 102 | GEN-0845 | — | Pasado mañana iremos a visitar a mi tía. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 104 | GEN-1033 | — | Le compré un regalo a mi hijo. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 105 | CLI-0086 | Médico | ¿Comes con dolor, con dificultad o con tos? | ¿Tú comes con dolor, dificultad o le produce la tos? · adaptación («¿Tú comes con dolor, dificultad o le produce la tos?»: mezcla tú/usted; se deja la tos, que está en el borrador) – Revisar_Juan | ¿Nanaywanchu sasawanchu uhuwanchu mikunki? | `adaptaciones_es.yaml` |
+| 105 | CLI-0086 | Médico | ¿Comes con dolor, con dificultad o con tos? | ¿Tú comes con dolor, dificultad o le produce la tos? · adaptación («¿Tú comes con dolor, dificultad o le produce la tos?»: mezcla tú/usted; se deja la tos, que está en el borrador) – Por_revisar | ¿Nanaywanchu sasawanchu uhuwanchu mikunki? | `adaptaciones_es.yaml` |
 | 106 | CLI-1075 | Paciente | Sí, me duele la garganta al tragar. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 107 | GEN-0846 | — | La reunión empezará a las diez. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 108 | GEN-0886 | — | Estoy buscando a mi perro. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 110 | GEN-0772 | — | Mi abuela tejió una manta para mí. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 111 | CLI-0087 | Médico | ¿Siente ardor o punzadas en el cuello? | ¿Tiene ardor punzado en el cuello? · adaptación («ardor punzado»: poco natural) – Revisar_Juan | ¿Sansanyan icha nananchu kunkayki? | `adaptaciones_es.yaml` |
+| 111 | CLI-0087 | Médico | ¿Siente ardor o punzadas en el cuello? | ¿Tiene ardor punzado en el cuello? · adaptación («ardor punzado»: poco natural) – Por_revisar | ¿Sansanyan icha nananchu kunkayki? | `adaptaciones_es.yaml` |
 | 112 | CLI-1076 | Paciente | No, en el cuello no siento ardor. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 113 | GEN-0848 | — | Esta semana trabajaré en la construcción. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 114 | GEN-0808 | — | Dicen que la escuela nueva ya está lista. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -374,12 +374,12 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 131 | GEN-1012 | — | Después de la lluvia, salió el arco iris. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 132 | GEN-0854 | — | Mañana limpiaremos la acequia. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 133 | GEN-0855 | — | Mi papá te enseñará a arar. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 135 | CLI-0348 | Médico | ¿Puedes abrir las piernas? | ¿Te abre las piernas? · adaptación («¿Te abre las piernas?» es ambiguo y poco apropiado) – Revisar_Juan | ¿Kicharikunchu chakikikuna? | `adaptaciones_es.yaml` |
+| 135 | CLI-0348 | Médico | ¿Puedes abrir las piernas? | ¿Te abre las piernas? · adaptación («¿Te abre las piernas?» es ambiguo y poco apropiado) – Por_revisar | ¿Kicharikunchu chakikikuna? | `adaptaciones_es.yaml` |
 | 136 | CLI-1080 | Paciente | Sí, pero me duele un poco. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 137 | GEN-1013 | — | Si no estudias, no aprenderás. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 138 | GEN-0893 | — | Las ovejas están durmiendo en el corral. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 139 | GEN-0783 | — | Vendimos queso en la feria del domingo. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 141 | CLI-0297 | Médico | ¿Te duele cuando golpeo aquí atrás? | ¿Duele cuando golpeo aqui atras? · adaptación («¿Duele cuando…?»: falta «te») – Revisar_Juan | ¿Kay qipapi tupati nananchu? | `adaptaciones_es.yaml` |
+| 141 | CLI-0297 | Médico | ¿Te duele cuando golpeo aquí atrás? | ¿Duele cuando golpeo aqui atras? · adaptación («¿Duele cuando…?»: falta «te») – Por_revisar | ¿Kay qipapi tupati nananchu? | `adaptaciones_es.yaml` |
 | 142 | CLI-1081 | Paciente | Sí, me duele cuando golpea ahí. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 143 | GEN-0812 | — | Parece que la vaca se comió las flores. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 144 | GEN-0988 | — | ¿Sabes nadar? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -390,17 +390,17 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 151 | GEN-0884 | — | Ayer a esta hora estaba caminando al pueblo. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 153 | GEN-0957 | — | Tú podrías ser profesora. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 154 | GEN-0885 | — | El bebé está llorando de hambre. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 155 | CLI-0460 | Médico | Al tocarle el pecho, ¿siente un cosquilleo? | ¿Al tocarle el pecho, siente como un cosquilleo en su mano? · adaptación (puntuación y «como un cosquilleo en su mano») – Revisar_Juan | ¿Pechuyki hapiptiy siqsisunkichu makiyki? | `adaptaciones_es.yaml` |
+| 155 | CLI-0460 | Médico | Al tocarle el pecho, ¿siente un cosquilleo? | ¿Al tocarle el pecho, siente como un cosquilleo en su mano? · adaptación (puntuación y «como un cosquilleo en su mano») – Por_revisar | ¿Pechuyki hapiptiy siqsisunkichu makiyki? | `adaptaciones_es.yaml` |
 | 156 | CLI-1083 | Paciente | No, no siento nada. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 157 | GEN-0807 | — | Cuentan que ese cerro tiene dueño. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 159 | GEN-0931 | — | Apaga la radio, por favor. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 160 | GEN-1009 | — | Como no había bus, fuimos caminando. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 161 | CLI-0586 | Médico | Cuando respira hondo, ¿le duele? ¿De qué lado? | Si respira hondo o profundo, ¿le duele?, ¿qué lado? · adaptación («Si respira hondo o profundo, ¿le duele?, ¿qué lado?»: puntuación y redacción) – Revisar_Juan | Samanki hina ¿mayqin lado nanan? | `adaptaciones_es.yaml` |
+| 161 | CLI-0586 | Médico | Cuando respira hondo, ¿le duele? ¿De qué lado? | Si respira hondo o profundo, ¿le duele?, ¿qué lado? · adaptación («Si respira hondo o profundo, ¿le duele?, ¿qué lado?»: puntuación y redacción) – Por_revisar | Samanki hina ¿mayqin lado nanan? | `adaptaciones_es.yaml` |
 | 162 | CLI-1084 | Paciente | Sí, me duele el lado izquierdo. | — (frase nueva de F5) | — | `respuestas_paciente.yaml` |
 | 164 | GEN-0887 | — | Mi hermana está lavando la ropa. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 165 | GEN-0932 | — | Que nadie salga de la casa. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 166 | GEN-0959 | — | Me gustaría que vinieras a mi casa. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 167 | CLI-0157 | Médico | Orina apenas amanezca. | Orina al amanecer · adaptación («Orina al amanecer.» se puede leer como descripción; el borrador es una indicación) – Revisar_Juan | Yakuta ispay achikyaptin | `adaptaciones_es.yaml` |
+| 167 | CLI-0157 | Médico | Orina apenas amanezca. | Orina al amanecer · adaptación («Orina al amanecer.» se puede leer como descripción; el borrador es una indicación) – Por_revisar | Yakuta ispay achikyaptin | `adaptaciones_es.yaml` |
 | 169 | GEN-0775 | — | Mi tía preparó chicha para el cumpleaños. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 170 | GEN-0913 | — | Antes cocinábamos con leña. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 171 | GEN-0984 | — | ¿Te gusta la sopa de quinua? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
@@ -516,7 +516,7 @@ Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word
 | 126 | GEN-0994 | — | ¿Quieres un poco de chicha? | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 127 | GEN-1047 | — | El sábado arreglamos la puerta del corral. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 128 | GEN-0944 | — | Sigan caminando por este camino. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
-| 129 | CLI-0144 | Médico | Frota tus manos con jabón al menos veinte segundos. | Frota tus manos con jabón mínimo 20 segundos. · adaptación («mínimo 20 segundos»: número en letras para leer en voz alta) – Revisar_Juan | Makikita jabunwan qatuy iskay chunka segundo hinallapas. | `adaptaciones_es.yaml` |
+| 129 | CLI-0144 | Médico | Frota tus manos con jabón al menos veinte segundos. | Frota tus manos con jabón mínimo 20 segundos. · adaptación («mínimo 20 segundos»: número en letras para leer en voz alta) – Por_revisar | Makikita jabunwan qatuy iskay chunka segundo hinallapas. | `adaptaciones_es.yaml` |
 | 131 | GEN-1048 | — | Mi hermano menor ganó un premio en la escuela. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 132 | GEN-1049 | — | Anoche escuchamos música en la radio. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |
 | 134 | GEN-1059 | — | Mañana regaremos la chacra de maíz. | — (oración general nueva, varios tiempos) | — | `oraciones_generales.yaml` |

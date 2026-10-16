@@ -11,7 +11,7 @@ ENCABEZADO = PatternFill("solid", fgColor="DCE8F7")
 COLOR_DOMINIO = {"General": PatternFill("solid", fgColor="F4F7FB"), "Médico": PatternFill("solid", fgColor="FDF4EC")}
 LINEA = Side(style="thin", color="D9D9D9")
 BORDE = Border(bottom=LINEA)
-ESTADOS = ["Borrador", "Sin borrador", "Revisar_Juan", "Enviado", "Validado", "Grabado"]
+ESTADOS = ["Borrador", "Sin borrador", "Por_revisar", "Enviado", "Validado", "Grabado"]
 ANCHOS = {"N°": 6, "ID": 11, "Sublote": 9, "Dominio": 10, "Rol": 10, "Español": 55, "Quechua": 55, "Estado": 14,
           "Grabado_ES": 13, "Grabado_QU": 13, "Notas": 30, "Comentario_traductor": 40, "Avisos_ortografía_traductor": 40, "Quechua_borrador": 50, "Quechua_validado": 50,
           "Escenario": 40, "Etapa_consulta": 24, "Prioridad": 9, "Bloque": 8, "Split": 7, "Test_sugerido": 12,

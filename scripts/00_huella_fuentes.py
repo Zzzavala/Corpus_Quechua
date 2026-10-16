@@ -43,7 +43,7 @@ def main() -> int:
     if a.verificar:
         antes = json.loads(DESTINO.read_text(encoding="utf-8"))
         ahora = tomar_huella()
-        # CLAUDE.md se editó a pedido de Juan (regla de instalación); se reporta pero no es una fuente de datos.
+        # CLAUDE.md se editó a requisito del proyecto (regla de instalación); se reporta pero no es una fuente de datos.
         problemas = []
         for k, v in antes.items():
             if k not in ahora:
@@ -69,7 +69,7 @@ def main() -> int:
             print("Las fuentes cambiaron desde la huella guardada; no se rehace. Revisa con --verificar.")
             for k in distintos:
                 print("  ", k)
-            print("Si el cambio es legítimo (p. ej. Juan agregó una fuente), usa --forzar --aceptar-cambios: la huella vieja "
+            print("Si el cambio es legítimo (p. ej. se agregó una fuente), usa --forzar --aceptar-cambios: la huella vieja "
                   "se guarda con fecha al lado.")
             return 1
         if distintos:

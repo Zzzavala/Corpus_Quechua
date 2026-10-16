@@ -1,6 +1,6 @@
 # Respuestas del paciente redactadas por Claude (F5), SOLO en español (§9 F5, §10.2).
 # Clave = código original de la pregunta del médico (QCH-xxxx; si la pregunta salió de partir una oración: QCH-xxxx/n).
-# Se crean como filas nuevas con Tipo_borrador = "redactado por Claude (solo español)" y Estado = Revisar_Juan.
+# Se crean como filas nuevas con Tipo_borrador = "redactado por Claude (solo español)" y Estado = Por_revisar.
 # También puede haber respuesta a una orden o explicación del médico (opcional).
 # Quien responde puede ser el paciente o quien lo acompaña (p. ej. la mamá de un niño).
 

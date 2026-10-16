@@ -192,8 +192,8 @@ def main() -> int:
     chequear("06 escribe el quechua final POR ID en el maestro", not malos and len(esperado) > 120, f"({len(esperado)} filas; mal: {malos[:5]})")
     chequear("06 no valida la fila borrada ni la vacía",
              corpus2[borrada_id]["Quechua_validado"] == "" and corpus2[vacia_id]["Quechua_validado"] == "", f"({borrada_id}, {vacia_id})")
-    chequear("06: español cambiado por el traductor → Revisar_Juan, sin validar (H1)",
-             corpus2[cambia_id]["Estado"] == "Revisar_Juan" and corpus2[cambia_id]["Quechua_validado"] == "", f"({cambia_id})")
+    chequear("06: español cambiado por el traductor → Por_revisar, sin validar (H1)",
+             corpus2[cambia_id]["Estado"] == "Por_revisar" and corpus2[cambia_id]["Quechua_validado"] == "", f"({cambia_id})")
     pend = [i for i in sin_tocar if corpus2[i]["Estado"] == "Validado"]
     chequear(f"06: sublote devuelto sin ningún cambio ({subs[3]}) no se valida solo (H7)", not pend and len(sin_tocar) >= 10,
              f"({len(sin_tocar)} filas; validadas por error: {len(pend)})")

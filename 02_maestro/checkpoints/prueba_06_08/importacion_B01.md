@@ -9,7 +9,7 @@ Archivo leído: `B01_traductor_devuelto.docx` (201 filas con ID en el Word).
 - Sobrantes: GEN-9999
 - Duplicadas: GEN-0100 (se usó la primera aparición)
 - Sin quechua en el Word devuelto: GEN-0966
-- El traductor cambió el español en: GEN-0184 (no se validan: quedan Revisar_Juan; la propuesta está en Cambios y en el Excel de trabajo)
+- El traductor cambió el español en: GEN-0184 (no se validan: quedan Por_revisar; la propuesta está en Cambios y en el Excel de trabajo)
 
 ## Métricas (Traductor_metricas)
 
@@ -38,7 +38,7 @@ Archivo leído: `B01_traductor_devuelto.docx` (201 filas con ID en el Word).
 - reescrito: 3
 - vacío: 1
 
-## Español cambiado por el traductor (decide Juan)
+## Español cambiado por el traductor (decide la coordinación del proyecto)
 
 | ID | Español actual | Propuesta | Quechua |
 |---|---|---|---|

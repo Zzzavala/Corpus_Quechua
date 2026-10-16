@@ -1,9 +1,9 @@
-# Oraciones GENERALES redactadas por Claude, SOLO en español (pedido de Juan, 15-oct-2026).
+# Oraciones GENERALES redactadas por Claude, SOLO en español (requisito del proyecto, 15-oct-2026).
 # Objetivo: que el 70 % general enseñe al modelo distintos tiempos y sufijos del quechua (D1), porque desde B03
 # el material de las fuentes son casi solo ejercicios en presente del Grupo 2.
 # Vida cotidiana andina, sin tema médico ni religioso, frases cortas (≤ 12 palabras) y naturales.
 # Cada grupo apunta a un rasgo gramatical (entre paréntesis, la forma que se espera en quechua; la decide el traductor).
-# Se crean como filas nuevas con Tipo_borrador = "redactado por Claude (solo español)" y Estado = Revisar_Juan.
+# Se crean como filas nuevas con Tipo_borrador = "redactado por Claude (solo español)" y Estado = Por_revisar.
 # El quechua lo pone el traductor. Nunca se redacta quechua.
 
 pasado_rqa:

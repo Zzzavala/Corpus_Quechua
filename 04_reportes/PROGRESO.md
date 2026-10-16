@@ -27,7 +27,7 @@
 - **5 bloques con archivos** (B01–B05): 200 = 140 + 60, sublotes 34–36 + 14–16, médico/paciente 32/28 en B01 y 30/30 en B02–B05. Parte general con varios tiempos (presente 44–65 %), gracias a 375 oraciones generales redactadas por Claude en español (361 en bloques).
 - **Pruebas:** `test_qa.py` 0 fallos; `test_ida_vuelta.py` todos PASA (`PRUEBA_06_07_08.md`); verificación F7 en `VERIFICACION_F7.md`.
 
-**Siguiente paso (para Juan):** revisar `04_reportes/REVISION_JUAN.md` (B01 y B02 primero), enviar `B01_traductor.docx` + `B02_traductor.docx` al traductor y marcarlos con `06_importar_traductor.py B01 --marcar-enviado` (ver `04_reportes/ENTREGA.md`).
+**Siguiente paso (para la coordinación del proyecto):** revisar `04_reportes/REVISION.md` (B01 y B02 primero), enviar `B01_traductor.docx` + `B02_traductor.docx` al traductor y marcarlos con `06_importar_traductor.py B01 --marcar-enviado` (ver `04_reportes/ENTREGA.md`).
 
 ## Archivos generados
 
@@ -47,7 +47,7 @@
 | F5 | `02_maestro/checkpoints/F5_huecos_20261015.xlsx` (+538 filas en español), `04_reportes/F5_huecos.md` | `scripts/05_huecos.py` + `scripts/plan_medico.py` + `scripts/datos/{plan_b01,respuestas_paciente,frases_portadoras,oraciones_generales}.yaml` |
 | F6 | `02_maestro/corpus_maestro.xlsx` (2 254 oraciones), `F6_bloques_20261015.xlsx` | `scripts/f6_armar_bloques.py` (+ `excel_formato.py`, `docs_word.py`) |
 | F6 | `03_bloques/B01…B05/BXX_traductor.docx`, `BXX_trabajo.xlsx`, `03_bloques/GUIA_GRABACION.docx` | `scripts/f6_armar_bloques.py` |
-| F6 | `04_reportes/REVISION_JUAN.md` | `scripts/f6_armar_bloques.py` |
+| F6 | `04_reportes/REVISION.md` | `scripts/f6_armar_bloques.py` |
 | F6 | `scripts/06_importar_traductor.py`, `07_hoja_grabacion.py`, `08_manifest.py` (+ `planilla.py`) | — |
 | F6 | `04_reportes/PRUEBA_06_07_08.md` (copias en `02_maestro/checkpoints/prueba_06_08/`) | `scripts/test_ida_vuelta.py` |
 | F7 | `04_reportes/VERIFICACION_F7.md`, `04_reportes/revision_visual/*.pdf, *.png` | `scripts/f7_verificacion.py`, `scripts/render_revision.py` |
@@ -57,6 +57,6 @@
 
 - (todas pasadas)
 
-## Problemas abiertos / dudas para Juan
+## Problemas abiertos / dudas para la coordinación del proyecto
 
 - Ninguno bloqueante. Por confirmar: «chicha punta» (B01) y el calco «no + una» en algunos ejercicios (ver ENTREGA, «Qué debes revisar»).

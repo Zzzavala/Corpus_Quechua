@@ -1,6 +1,6 @@
 # ENTREGA — Corpus quechua chanka médico (F0–F7 + revisión ultracode)
 
-Para: Juan Zavala · Fecha: 2026-10-15 · Preparado por Claude (Claude Code) en `D:\Corpus_Quechua`
+Para: equipo del proyecto · Fecha: 2026-10-15 · Preparado por Claude (Claude Code) en `D:\Corpus_Quechua`
 
 ## En 5 líneas
 
@@ -8,7 +8,7 @@ Para: Juan Zavala · Fecha: 2026-10-15 · Preparado por Claude (Claude Code) en 
 2. **Los 5 bloques (B01–B05) tienen su Word para el traductor y su Excel de trabajo.** B01 es una consulta completa de punta a punta (dolor de barriga) con 15 oraciones de control.
 3. **La parte general (70 %) ahora enseña distintos tiempos:** en cada bloque hay entre 40 y 105 oraciones que redacté en español (pasado, futuro, progresivo, condicional, imperativo, preguntas, subordinadas). El presente quedó entre 44 % y 65 % según el bloque.
 4. **Se hizo la revisión ultracode:** 3 revisores, 39 hallazgos, todos atendidos y probados (detalle en `DECISIONES_TOMADAS.md`). **Los IDs cambiaron** respecto de los archivos del 14-oct (no se había enviado nada).
-5. Antes de enviar, **revisa el español que redacté o adapté** (`Revisar_Juan`): 72 filas en B01 y 77 en B02. Ningún quechua es «gold»: todo lo prellenado es borrador y yo no escribí quechua.
+5. Antes de enviar, **revisa el español que redacté o adapté** (`Por_revisar`): 72 filas en B01 y 77 en B02. Ningún quechua es «gold»: todo lo prellenado es borrador y yo no escribí quechua.
 
 ## Qué está listo
 
@@ -18,7 +18,7 @@ Para: Juan Zavala · Fecha: 2026-10-15 · Preparado por Claude (Claude Code) en 
 | **Word para el traductor de B01–B05** (A4 horizontal, instrucciones, 4 tablas de 50, borrador prellenado, 1 aviso breve por fila como máximo) | `03_bloques/B0X/B0X_traductor.docx` |
 | Excel de trabajo de B01–B05 (pestañas Bloque / Detalle / Resumen) | `03_bloques/B0X/B0X_trabajo.xlsx` |
 | Guía de grabación (protocolo, regla D8, nombres de archivo, formato de audio) | `03_bloques/GUIA_GRABACION.docx` |
-| **Español para tu revisión** (antes de enviar), con el archivo donde se corrige cada fila | `04_reportes/REVISION_JUAN.md` |
+| **Español para tu revisión** (antes de enviar), con el archivo donde se corrige cada fila | `04_reportes/REVISION.md` |
 | Reportes: inventario, EDA, decisiones, verificación final, prueba de scripts, huecos de F5 | `04_reportes/INVENTARIO.md`, `EDA.md`, `DECISIONES_TOMADAS.md`, `VERIFICACION_F7.md`, `PRUEBA_06_07_08.md`, `F5_huecos.md` |
 | Scripts reproducibles (todo se regenera desde las fuentes) | `scripts/` + `config.yaml` |
 | Scripts de operación probados con datos simulados | `scripts/06_importar_traductor.py`, `07_hoja_grabacion.py`, `08_manifest.py` |
@@ -27,22 +27,22 @@ La verificación final (`04_reportes/VERIFICACION_F7.md`) revisa cada punto del 
 
 ## Qué enviar a quién
 
-1. **Tú (Juan) primero:** revisa `04_reportes/REVISION_JUAN.md` (B01 y B02 son lo urgente). Si cambias algo, edita el archivo de `scripts/datos/` que indica la tabla y vuelve a generar (ver «Cómo regenerar»).
+1. **Revisión del equipo primero:** revisa `04_reportes/REVISION.md` (B01 y B02 son lo urgente). Si cambias algo, edita el archivo de `scripts/datos/` que indica la tabla y vuelve a generar (ver «Cómo regenerar»).
 2. **Al traductor:** envía **`B01_traductor.docx` y `B02_traductor.docx`** juntos (D5: siempre un bloque adelante). Pídele que devuelva **el mismo archivo**, sin mover filas, sin tocar la columna ID y sin «Control de cambios». Yo no envié nada a nadie.
 3. **Al enviarlos, márcalos como enviados:** `.venv\Scripts\python.exe scripts\06_importar_traductor.py B01 --marcar-enviado` (y lo mismo con B02). Desde ahí esos bloques quedan **congelados**: al regenerar, no cambian sus filas, N° ni sublotes.
 4. **Cuando vuelva cada Word:** guárdalo como `03_bloques/B01/B01_traductor_devuelto.docx` y corre `.venv\Scripts\python.exe scripts\06_importar_traductor.py B01` (con los Excel cerrados). Escribe el quechua validado en el maestro y en el Excel de trabajo, registra todo en Cambios, separa los comentarios, calcula las métricas y el análisis de control, y deja `04_reportes/importacion_B01.md`. Protecciones:
    - Si el Word trae Control de cambios sin aceptar, no lo importa y te dice cómo aceptarlos.
-   - Si el traductor cambió el español de una fila, esa fila no se valida: queda `Revisar_Juan` y decides tú.
+   - Si el traductor cambió el español de una fila, esa fila no se valida: queda `Por_revisar` y decides tú.
    - Si un sublote vuelve sin ningún cambio, sus filas no se validan solas: confirma con el traductor que lo revisó y reimporta con `--confirmar-sublotes B01-S2`.
 5. **Para la sesión de grabación:** `scripts\07_hoja_grabacion.py B01` → `03_bloques/B01/B01_grabacion.docx`. Dale al grabador esa hoja y `GUIA_GRABACION.docx`.
 6. **Después de grabar:** pon los audios en `05_audio/` (`{ID}_es.wav`, `{ID}_qu.wav`) y corre `scripts\08_manifest.py B01` → `06_dataset/manifest_B01.csv`, con el control de formato, duración y nombres repetidos.
 
 ## Qué debes revisar
 
-- **Español redactado o adaptado por mí (`Revisar_Juan`):** 72 filas en B01, 77 en B02, 109 en B03, 144 en B04 y 136 en B05. Son:
+- **Español redactado o adaptado por mí (`Por_revisar`):** 72 filas en B01, 77 en B02, 109 en B03, 144 en B04 y 136 en B05. Son:
   - oraciones generales nuevas en varios tiempos (`oraciones_generales.yaml`);
   - respuestas del paciente y frases portadoras (no existían en las fuentes);
-  - adaptaciones de giros bolivianos o frases poco naturales, y oraciones largas partidas. En estas, `REVISION_JUAN.md` muestra el original y el borrador quechua, para que veas si siguen diciendo lo mismo.
+  - adaptaciones de giros bolivianos o frases poco naturales, y oraciones largas partidas. En estas, `REVISION.md` muestra el original y el borrador quechua, para que veas si siguen diciendo lo mismo.
 - **El guion de B01** (`scripts/datos/plan_b01.yaml`): paciente mujer de 20 años de Ayacucho con dolor de barriga, fiebre y vómitos. Cambié una respuesta que sugería apendicitis («ahora me duele más abajo, al lado derecho») y no cuadraba con «No es nada grave».
 - **Por confirmar:**
   - «Mi tía hace chicha punta» (B01): no sé qué significa «punta» aquí; por eso no se usa como oración de control.

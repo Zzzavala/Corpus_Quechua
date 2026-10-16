@@ -103,11 +103,11 @@ Generado por `scripts/f7_verificacion.py`. **123 de 123 puntos PASAN.**
 | B05 | Excel de trabajo: encabezado inmovilizado, autofiltro y lista en Estado | PASA |  |
 | B05 | Excel de trabajo: solo valores (sin fórmulas) | PASA |  |
 | Bloques | Ningún español repetido entre las filas de los bloques (§10.4) | PASA | (repetidos: []) |
-| B01 | Parte general con varios tiempos (presente ≤ 65 %; pedido de Juan) | PASA | presente 80 · pasado 31 · progresivo 9 · futuro 8 · imperativo 6 · condicional 6 |
-| B02 | Parte general con varios tiempos (presente ≤ 65 %; pedido de Juan) | PASA | presente 91 · pasado 17 · futuro 13 · imperativo 7 · progresivo 7 · condicional 5 |
-| B03 | Parte general con varios tiempos (presente ≤ 65 %; pedido de Juan) | PASA | presente 77 · pasado 33 · futuro 12 · progresivo 9 · imperativo 5 · condicional 4 |
-| B04 | Parte general con varios tiempos (presente ≤ 65 %; pedido de Juan) | PASA | presente 63 · pasado 29 · futuro 21 · progresivo 13 · condicional 8 · imperativo 6 |
-| B05 | Parte general con varios tiempos (presente ≤ 65 %; pedido de Juan) | PASA | presente 61 · pasado 34 · futuro 18 · progresivo 14 · condicional 7 · imperativo 6 |
+| B01 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 80 · pasado 31 · progresivo 9 · futuro 8 · imperativo 6 · condicional 6 |
+| B02 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 91 · pasado 17 · futuro 13 · imperativo 7 · progresivo 7 · condicional 5 |
+| B03 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 77 · pasado 33 · futuro 12 · progresivo 9 · imperativo 5 · condicional 4 |
+| B04 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 63 · pasado 29 · futuro 21 · progresivo 13 · condicional 8 · imperativo 6 |
+| B05 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 61 · pasado 34 · futuro 18 · progresivo 14 · condicional 7 · imperativo 6 |
 | Scripts | Pruebas de la revisión automática y la limpieza (test_qa) | PASA | (0 fallas) |
 | Scripts | 06, 07 y 08 probados ahora con datos simulados (ida y vuelta por ID) | PASA | (0 fallas) |
 | Scripts | Existen 06_importar_traductor.py, 07_hoja_grabacion.py y 08_manifest.py | PASA |  |

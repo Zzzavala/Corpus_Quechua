@@ -67,7 +67,7 @@ bloque:
   medicas_paciente_tolerancia: 4    # se acepta 26–34 paciente
   # El médico pone (medicas − medicas_paciente_objetivo) frases por bloque desde B02. B01 está curado a mano para
   # 60 médicas (scripts/datos/plan_b01.yaml): si cambias «medicas», ajusta también ese archivo.
-  bloques_con_archivos: [B01, B02, B03, B04, B05]  # D5 pedía B01+B02; Juan pidió todos los bloques (14-oct-2026)
+  bloques_con_archivos: [B01, B02, B03, B04, B05]  # D5 pedía B01+B02; se solicitaron todos los bloques (14-oct-2026)
   # Bloques ya enviados al traductor: su composición, N°, sublotes y control quedan congelados al regenerar.
   # Además se congela solo cualquier bloque que tenga filas en Estado Enviado / Validado / Grabado en el maestro.
   congelados: []
@@ -77,7 +77,7 @@ general:
   cuotas_por_bloque:               # objetivo; si un pool se agota, el resto se completa en el orden de orden_relleno
     principito: 35
     g2_diccionario: 70
-    g_claude_min: 40               # oraciones redactadas por Claude en varios tiempos (pedido de Juan: 70 % con tiempos variados;
+    g_claude_min: 40               # oraciones redactadas por Claude en varios tiempos (requisito del proyecto: 70 % con tiempos variados;
                                    # con 25, B02 quedaba con 76 % en presente)
     g2_ejercicio_max: 35
   orden_pools: [principito, g2_diccionario, g2_ejercicio]          # desempate en la selección voraz
@@ -117,7 +117,7 @@ control:
   n_medico: 5
   calidad_max_medico: 4            # solo borradores médicos de buena calidad (1–4) sirven de control
   similitud_max_hermana: 75        # no se elige de control una fila con una «hermana» visible tan parecida (D7)
-  excluir_codigos: [F-0052]        # español dudoso sin borrador a la vista («Mi tía hace chicha punta»: Juan confirma «punta»)
+  excluir_codigos: [F-0052]        # español dudoso sin borrador a la vista («Mi tía hace chicha punta»: la coordinación del proyecto confirma «punta»)
 
 # Conjunto de prueba sugerido (P1): todo es train; se marca un 10 % estratificado
 test_sugerido:

@@ -1,9 +1,9 @@
 # Decisiones tomadas
 
-> Cada valor por defecto usado (CLAUDE.md §4) y cada decisión propia, con su porqué. Juan revisa al final.
+> Cada valor por defecto usado (CLAUDE.md §4) y cada decisión propia, con su porqué. La coordinación del proyecto revisa al final.
 > Formato: **[Fase] Decisión** — porqué.
 
-## Instalaciones (regla de Juan: instalar lo necesario, nada de simulaciones)
+## Instalaciones (regla del proyecto: instalar lo necesario, nada de simulaciones)
 
 | Qué | Versión | Para qué |
 |---|---|---|
@@ -18,8 +18,8 @@
 - **[F0] `Estrategia/INF657_CLAUDE_corpus.md`** es una copia idéntica de CLAUDE.md anterior a la regla de instalación. No se usa ni se modifica.
 - **[F0] Python 3.14** (el más nuevo instalado; también hay 3.10). Todos los paquetes tienen ruedas para 3.14.
 - **[F0] Fecha fija en `config.yaml` (`fecha_generacion`)** para checkpoints, Cambios y la pestaña LEEME: así volver a correr los scripts produce exactamente lo mismo (§14, idempotencia). Era `2026-10-14`; pasó a `2026-10-15` al regenerar todo tras la revisión ultracode (los checkpoints del 14 quedan como historia).
-- **[F0] LibreOffice instalado** porque la PC no tiene Word ni Excel y F7 exige abrir cada archivo generado (regla de Juan: instalar, no simular).
-- **[F0] Huella de las fuentes** (`04_reportes/huella_fuentes_F0.json`: tamaño, fecha y sha256 de los 31 archivos de `Fuentes/` y `Estrategia/`) para comprobar en F7 que no se tocaron. Se tomó **después** de agregar la regla de instalación a CLAUDE.md (pedido de Juan).
+- **[F0] LibreOffice instalado** porque la PC no tiene Word ni Excel y F7 exige abrir cada archivo generado (regla del proyecto: instalar, no simular).
+- **[F0] Huella de las fuentes** (`04_reportes/huella_fuentes_F0.json`: tamaño, fecha y sha256 de los 31 archivos de `Fuentes/` y `Estrategia/`) para comprobar en F7 que no se tocaron. Se tomó **después** de agregar la regla de instalación a CLAUDE.md (requisito del proyecto).
 
 ## F1 – Inventario
 
@@ -47,10 +47,10 @@
 
 ## F4 – Limpieza
 
-- **[F4] Datos revisados a mano** en `scripts/datos/`: `erratas_es.yaml` (erratas evidentes y tildes, sacadas de las palabras que no están en el léxico español de referencia), `adaptaciones_es.yaml` (giros bolivianos del OPS/OMS, preguntas múltiples, notas entre paréntesis → Revisar_Juan) y `particiones_es.yaml` (oraciones de más de 20 palabras). Todo cambio queda en `Cambios` con su regla.
-- **[F4] Oraciones largas:** 15 se partieron en unidades de ≤ 15 palabras (Revisar_Juan) y 2 se descartaron (QCH-0520: datos administrativos de 2020; QCH-0544: cortada en la fuente a 255 caracteres). Las piezas solo llevan borrador si es un trozo **literal** del borrador original (el script lo comprueba); si no, quedan sin borrador.
+- **[F4] Datos revisados a mano** en `scripts/datos/`: `erratas_es.yaml` (erratas evidentes y tildes, sacadas de las palabras que no están en el léxico español de referencia), `adaptaciones_es.yaml` (giros bolivianos del OPS/OMS, preguntas múltiples, notas entre paréntesis → Por_revisar) y `particiones_es.yaml` (oraciones de más de 20 palabras). Todo cambio queda en `Cambios` con su regla.
+- **[F4] Oraciones largas:** 15 se partieron en unidades de ≤ 15 palabras (Por_revisar) y 2 se descartaron (QCH-0520: datos administrativos de 2020; QCH-0544: cortada en la fuente a 255 caracteres). Las piezas solo llevan borrador si es un trozo **literal** del borrador original (el script lo comprueba); si no, quedan sin borrador.
 - **[F4] Varias celdas del unificado están cortadas a 255 caracteres** (QCH-0478, QCH-0483, QCH-0544): defecto de la fuente. Al partirlas se completó la idea en español.
-- **[F4] Notas entre paréntesis** («(hablando de otra persona)», «(tórax)», «(deseo de comer)») se quitan del español porque no se leen en voz alta. Cuando cambiaban el sentido («Tiene que quedarse en el hospital (hablando de otra persona)»), se reescribió con el pronombre («Él tiene que quedarse…», Revisar_Juan).
+- **[F4] Notas entre paréntesis** («(hablando de otra persona)», «(tórax)», «(deseo de comer)») se quitan del español porque no se leen en voz alta. Cuando cambiaban el sentido («Tiene que quedarse en el hospital (hablando de otra persona)»), se reescribió con el pronombre («Él tiene que quedarse…», Por_revisar).
 - **[F4] Coletilla «¿sí o no?»** al final de preguntas (indicación al entrevistador) se quita.
 - **[F4] Léxico:** van a `Lexico` las filas médicas de 1 palabra y las de 2–3 palabras de secciones de vocabulario que no son preguntas. Prioritarias = categorías «Signos y síntomas», «Cuerpo humano», «Enfermedades…», «Fluidos…», «Funciones…». Reciben IDs `LEX-0001…` (decisión propia; §8.1 solo define GEN/CLI).
 - **[F4] Duplicados exactos (mismo español normalizado):** queda el de mejor borrador; entre dominios gana el médico («Buenos días», «¿Cuántos años tienes?» del Principito/Grupo 2 se descartan a favor de las del unificado). Los otros borradores distintos quedan en `Origen` (Otros_borradores) y en QA (DUP/BAJA).
@@ -65,7 +65,7 @@
 - **[F5] B02–B05 por tema** (`scripts/plan_medico.py`), en el orden por defecto de §11.2: B02 fiebre, respiratorio, digestivo, urinario, antecedentes básicos (medicamentos, alergias), niño enfermo (fiebre, diarrea, vómitos: «¿Su niño puede beber o mamar?»), embarazo («¿Estás embarazada?», que antes quedaba en B05); B03 pérdida de conocimiento, dolor de pecho, falta de aire, embarazo con señales de alarma (sangrado, líquido, el bebé se mueve menos, hinchazón), sangrados, tratamiento, seguimiento, tranquilizar; B04 cabeza/nervios, huesos, ojos/oídos, otros síntomas, examen físico, diagnóstico; B05 salud reproductiva, anticoncepción, salud mental, violencia (frases neutras), promoción, hospitalización, antecedentes y entorno. En cada tema: primero preguntas y luego mejor borrador; reparto en ronda para que cada tema tenga voz. 30 frases del médico por bloque.
 - **[F5] Datos de morbilidad:** se buscó en la web el ranking de consulta externa de Ayacucho/Apurímac/Huancavelica (MINSA/CDC). No se encontró un ranking regional publicado en línea; solo cifras regionales de IRA (Diresa Ayacucho, ~25 000 casos de IRA a la semana 18 de 2024, según elbuho.pe) y el ranking nacional de consulta externa (Rev. Med. Herediana). Se usó el orden por defecto de §11.2, que pone respiratorio y digestivo primero (B02), coherente con esos datos.
 - **[F5] Respuestas del paciente** (`scripts/datos/respuestas_paciente.yaml`): 1 por pregunta (a veces 2), en español peruano sencillo; también respuestas breves a algunas indicaciones o diagnósticos («¿Por eso me arde al orinar?»). 111 filas en B02–B05 (más 22 del paciente en B01). Ninguna repite otra frase del corpus (F5 lo controla y con `--estricto` no escribe nada si hay repetidas o preguntas sin respuesta).
-- **[F5] Oraciones generales redactadas por Claude** (`scripts/datos/oraciones_generales.yaml`, pool `g_claude`), a pedido de Juan («el 70 % general en distintos tiempos para que aprenda el modelo»; «puedes redactar algunas para enviarlas al traductor»): 375 oraciones cortas de vida cotidiana andina, solo en español, en 10 grupos (pasado -rqa-, pasado narrativo/«dicen que», futuro, progresivo, pasado habitual, imperativo, condicional, preguntas, subordinadas, derivación verbal). El quechua lo pone el traductor. Quedan con Estado Revisar_Juan.
+- **[F5] Oraciones generales redactadas por Claude** (`scripts/datos/oraciones_generales.yaml`, pool `g_claude`), a requisito del proyecto («el 70 % general en distintos tiempos para que aprenda el modelo»; «puedes redactar algunas para enviarlas al traductor»): 375 oraciones cortas de vida cotidiana andina, solo en español, en 10 grupos (pasado -rqa-, pasado narrativo/«dicen que», futuro, progresivo, pasado habitual, imperativo, condicional, preguntas, subordinadas, derivación verbal). El quechua lo pone el traductor. Quedan con Estado Por_revisar.
 - **[F5] Frases portadoras** (`scripts/datos/frases_portadoras.yaml`): 9 dentro de B03–B05 y 20 más que quedan en el corpus para bloques futuros; cada una enlazada a su palabra en `Lexico` (columna Frase_portadora).
 - **[F5] Rol de las filas nuevas**: lo pone Claude (Paciente / Médico), no la heurística. Quien responde puede ser el acompañante (p. ej. la mamá).
 - **[F5] Excluidas a mano** del plan QCH-0588 «¿Esta su hijo o hija o la señora gestante?» (redacción confusa) y QCH-0607 «¿Miras bien?» (mismo borrador que «¿Ves bien?»; en el mismo bloque se contradecían). Siguen en el corpus.
@@ -73,7 +73,7 @@
 
 ## F6 – Priorización y bloques
 
-- **[F6] Bloques planificados: 5** (B01–B05), los 5 con Word y Excel (Juan los pidió todos). Límite: la parte general de las fuentes (739 tras la limpieza) más las 375 redactadas por Claude; con el tope de 35 ejercicios por bloque no alcanza para un sexto bloque (quedan 14 redactadas y 400 ejercicios). La parte médica tiene material de sobra (840 frases sin asignar), pero cada bloque necesita voz del paciente redactada.
+- **[F6] Bloques planificados: 5** (B01–B05), los 5 con Word y Excel (se solicitaron todos). Límite: la parte general de las fuentes (739 tras la limpieza) más las 375 redactadas por Claude; con el tope de 35 ejercicios por bloque no alcanza para un sexto bloque (quedan 14 redactadas y 400 ejercicios). La parte médica tiene material de sobra (840 frases sin asignar), pero cada bloque necesita voz del paciente redactada.
 - **[F6] Selección voraz (§11.1)** con cobertura **dentro de cada bloque** (el conjunto cubierto se reinicia en cada bloque, para que cada bloque sea por sí mismo variado). Puntaje = (3 × sufijos nuevos + 1 × bigramas nuevos + 0.5 × palabras nuevas) ÷ (palabras del quechua)^0.5. Empates: Principito > frases variadas > ejercicios, luego la más corta. Determinista (sin azar).
 - **[F6] B01 general con oraciones de ≤ 12 palabras** en español (§11.1).
 - **[F6] Cuotas de la parte general** (`config.yaml` → `general.cuotas_por_bloque`): Principito ~35, frases variadas ~70, **al menos 40 oraciones redactadas por Claude en varios tiempos** y como máximo 35 ejercicios del Grupo 2 (todos en presente). Si un origen se acaba, se completa en el orden Principito → frases variadas → redactadas → ejercicios. Resultado (Principito / frases variadas / ejercicios / redactadas): B01 35/65/0/40, B02 35/56/9/40, B03 34/0/35/71, B04 0/0/35/105, B05 0/0/35/105. El mínimo era 25 y se subió a 40 porque con 25 B02 quedaba con 76 % de la parte general en presente (medido sobre el verbo en español, igual para todas las filas).
@@ -83,14 +83,14 @@
 - **[F6] Test_sugerido (P1):** 20 filas por bloque (14 generales proporcionales a cada origen + 3 pares completos pregunta/respuesta), sin tocar las de control ni filas con una casi gemela (≥ 85 %) en los bloques. Semilla fija. Todo sigue con Split = train.
 - **[F6] Prioridad** = número del bloque planificado (1–5); vacío si aún no tiene bloque.
 - **[F6] Columnas extra en Corpus** (al final): Control, Responde_a, N_bloque. Origen lleva además Códigos_unidos, Otros_borradores, Propuestas_equipo, Parte_de, Evidencia_P6, Fuente_detalle.
-- **[F6] Estados:** Borrador, Sin borrador, Revisar_Juan, Enviado, Validado, Grabado (lista desplegable). «Enviado» se pone con `06_importar_traductor.py BXX --marcar-enviado` al mandar el Word (queda en Cambios).
+- **[F6] Estados:** Borrador, Sin borrador, Por_revisar, Enviado, Validado, Grabado (lista desplegable). «Enviado» se pone con `06_importar_traductor.py BXX --marcar-enviado` al mandar el Word (queda en Cambios).
 - **[F6] Bloques congelados:** un bloque con filas Enviado/Validado/Grabado (o listado en `bloque.congelados`) ya no se rearma: f6 copia su composición, N°, sublotes, control y test del maestro anterior y no regenera su Word ni su Excel. Si una de sus filas desaparece del corpus, f6 se detiene y lo dice.
 - **[F6] Word del traductor:** A4 horizontal, Calibri 11, instrucciones y tabla de ortografía en la página 1, una tabla por sublote con encabezado repetido y filas que no se parten entre páginas; **1 aviso ALTA por fila**, en letra 11, cursiva gris (§8.4: una línea breve). Instrucción de no usar Control de cambios. Sin fuentes, estados ni columnas técnicas.
-- **[F6] Al regenerar el maestro** se conserva lo que ya devolvió el traductor (Quechua_validado, Estado, Traductor_metricas y los registros de 06 en Cambios) **solo si el español de la fila sigue igual**; si cambió, la fila vuelve a Revisar_Juan con una nota (hay que reenviarla). Del Excel de trabajo se conservan las casillas de grabación, Notas, % de edición y comentarios del traductor.
+- **[F6] Al regenerar el maestro** se conserva lo que ya devolvió el traductor (Quechua_validado, Estado, Traductor_metricas y los registros de 06 en Cambios) **solo si el español de la fila sigue igual**; si cambió, la fila vuelve a Por_revisar con una nota (hay que reenviarla). Del Excel de trabajo se conservan las casillas de grabación, Notas, % de edición y comentarios del traductor.
 - **[F6] Marca de corrida completa:** el checkpoint F6 se escribe al final; si algo falla antes (p. ej. un Word abierto), la siguiente corrida rehace todo aunque no se pase `--forzar`.
 - **[F6] Archivo devuelto por el traductor:** se guarda como `03_bloques/BXX/BXX_traductor_devuelto.docx` y se importa con `06_importar_traductor.py BXX`.
 - **[F6] Métricas del traductor:** distancia de edición normalizada (Levenshtein, rapidfuzz) entre borrador y final: 0 = sin cambios; ≤ 0.5 = editado; > 0.5 = reescrito. Anclaje (D7): razón entre la distancia media con borrador y la distancia entre el borrador oculto y la traducción libre de las oraciones de control; < 0.5 = posible anclaje. Si reescribe más del 50 % → recomendar dejar de dar borradores.
-- **[F6] Importación del traductor (06):** no importa un Word con Control de cambios sin aceptar; una fila cuyo español cambió el traductor no se valida (queda Revisar_Juan y su propuesta va a Cambios); si un sublote vuelve 100 % igual al borrador (≥ 10 filas) sus filas no se validan solas hasta confirmarlo (`--confirmar-sublotes`); todo lo importado queda en Cambios y reimportar no duplica registros.
+- **[F6] Importación del traductor (06):** no importa un Word con Control de cambios sin aceptar; una fila cuyo español cambió el traductor no se valida (queda Por_revisar y su propuesta va a Cambios); si un sublote vuelve 100 % igual al borrador (≥ 10 filas) sus filas no se validan solas hasta confirmarlo (`--confirmar-sublotes`); todo lo importado queda en Cambios y reimportar no duplica registros.
 - **[F6] Audios:** se buscan por nombre `{ID}_es.wav` / `{ID}_qu.wav` en cualquier subcarpeta de `05_audio/`, sin distinguir mayúsculas; si el mismo nombre aparece en dos carpetas, se avisa. Duración razonable: 0.4–20 s y no más de 2 s por palabra (si dura más de 3 s). Se revisan con el módulo `wave` de Python (no hizo falta instalar nada más).
 
 ## Revisión ultracode (§14.2), 15-oct-2026
@@ -106,10 +106,10 @@ Tres revisores independientes (A: datos y trazabilidad; B: bloques y archivos; C
 | H5 bloques enviados no se congelaban | Congelado automático (ver F6). |
 | H8 reintento tras un fallo | Checkpoint F6 al final. |
 | H9 parámetros fijos en el código | A `config.yaml`: médico por bloque, largo máximo, calidad del control, umbrales de 02/06/08, avisos por fila, formato de audio. |
-| H10, H17, H25, H26 reportes y maestro | REVISION_JUAN apunta al archivo correcto y muestra el borrador de las filas adaptadas; Bloques separa redactadas generales/médicas y calcula «Sin asignar»; LEEME describe todas las pestañas y el prefijo LEX-. |
+| H10, H17, H25, H26 reportes y maestro | REVISION apunta al archivo correcto y muestra el borrador de las filas adaptadas; Bloques separa redactadas generales/médicas y calcula «Sin asignar»; LEEME describe todas las pestañas y el prefijo LEX-. |
 | H11, H12, H29 cifras desactualizadas | Se regeneraron INVENTARIO, EDA, ENTREGA, PROGRESO y estas decisiones con las cifras de la corrida final. |
 | H13 frase repetida entre bloques | F5 compara las frases nuevas con todo el corpus; F7 controla que ningún español se repita en los bloques. |
-| H14, H22 erratas y frases poco naturales | 9 erratas nuevas (`erratas_es.yaml`), 27 adaptaciones (`adaptaciones_es.yaml`, Revisar_Juan) y 9 fragmentos o frases inoportunas descartadas (`descartes_es.yaml`, nuevo). No se cambió el calco «no + una» de algunos ejercicios («Yo no leo una revista»): es opcional y Juan decide. |
+| H14, H22 erratas y frases poco naturales | 9 erratas nuevas (`erratas_es.yaml`), 27 adaptaciones (`adaptaciones_es.yaml`, Por_revisar) y 9 fragmentos o frases inoportunas descartadas (`descartes_es.yaml`, nuevo). No se cambió el calco «no + una» de algunos ejercicios («Yo no leo una revista»): es opcional y la coordinación del proyecto decide. |
 | H15, H23, H24, H27 avisos de QA | Préstamos de fuentes oficiales, médicos o que repiten un sustantivo del español → BAJA; sin pista «(de …)»; sugerencias de transcripción más prudentes; aviso cuando el equipo marcó el borrador como dudoso; 3 avisos puestos a mano (`avisos_manuales.yaml`). |
 | H16, H28, H34 duplicados | La clave conserva la ñ («Año» ≠ «Ano»); el paréntesis del léxico se mantiene; no se agrupan frases con quechua distinto; las oraciones redactadas no pasan por el filtro de casi duplicados. |
 | H18 ejercicios juntos en un sublote | Reparto por origen. |
@@ -123,9 +123,16 @@ Tres revisores independientes (A: datos y trazabilidad; B: bloques y archivos; C
 | # | Valor usado | Dónde se ve |
 |---|---|---|
 | P1 | Todo `Split = train`; `Test_sugerido = Sí` en 20 filas por bloque (10 %, estratificado). | Corpus, Detalle, Resumen |
-| P2 | Fecha desconocida → B01 y B02 listos para enviar ya (D5); por pedido de Juan, también B03–B05 tienen archivos. | `03_bloques/B01` … `B05` |
+| P2 | Fecha desconocida → B01 y B02 listos para enviar ya (D5); por requisito del proyecto, también B03–B05 tienen archivos. | `03_bloques/B01` … `B05` |
 | P3 | Se asume el alfabeto oficial de 3 vocales; el Word se lo pide al traductor con una tabla corta. | Página 1 del Word |
 | P4 | AmericasNLP **no** se usa para oraciones; solo como léxico de referencia (OOV/préstamos). La variedad de tiempos de B03–B05 la dan las oraciones redactadas por Claude; P4 haría falta solo para pasar de 5 bloques. | ENTREGA |
 | P5 | WAV, 16 kHz, mono, 16 bits (en `config.yaml` y en la guía); falta confirmarlo con el equipo de modelo. | GUIA_GRABACION, 08_manifest |
 | P6 | Verificado contra el diccionario MINEDU en PDF: las frases del Grupo 2 no son ejemplos del diccionario (2 de 669). `Origen_verificado = No` salvo esas 2. | Origen |
 | P7 | Audios de Allin Kawsay no se usan (no hay `.mp3` en la carpeta). | INVENTARIO |
+
+
+## Mantenimiento de documentación y etiquetas (2026-10-16)
+
+- Se generalizaron las referencias personales a la coordinación del proyecto. El estado y la columna de revisión se denominan `Por_revisar`, y el informe es `REVISION.md`.
+- Se conservaron las oraciones del corpus, los identificadores, las fórmulas, las cuotas y las reglas de procesamiento. En la fuente `Corpus_Equipos (1).xlsx` solo se generalizó la celda de coordinación de la hoja de equipos.
+- Se actualizan únicamente las huellas de los dos documentos de estrategia y de esa fuente para reflejar este cambio autorizado de presentación.

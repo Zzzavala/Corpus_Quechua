@@ -160,7 +160,7 @@ def main() -> int:
     # ---------------------------------------------------------- 1. descartes iniciales y particiones
     filas: list[dict] = []
     for r in R.to_dict("records"):
-        r["Revisar_Juan"] = ""
+        r["Por_revisar"] = ""
         r["Parte_de"] = ""
         r["Códigos_unidos"] = ""
         r["Otros_borradores"] = ""
@@ -194,9 +194,9 @@ def main() -> int:
                 n["Quechua_borrador"] = qu
                 if not qu:
                     n["Tipo_borrador"] = "ninguno"
-                n["Revisar_Juan"] = "Español partido por Claude"
+                n["Por_revisar"] = "Español partido por Claude"
                 n["Parte_de"] = cod
-                cambio(n["uid"], "Español", r["Español"], pieza["es"], f"partir oración larga ({k}/{len(p)}) – Revisar_Juan")
+                cambio(n["uid"], "Español", r["Español"], pieza["es"], f"partir oración larga ({k}/{len(p)}) – Por_revisar")
                 if r["Quechua_borrador"] and qu != r["Quechua_borrador"]:
                     cambio(n["uid"], "Quechua_borrador", r["Quechua_borrador"], qu,
                            "partir: trozo literal del borrador" if qu else "partir: el borrador no se puede partir con seguridad → sin borrador")
@@ -213,8 +213,8 @@ def main() -> int:
         if r["Código_original"] in adapt and not r["Parte_de"]:
             ad = adapt[r["Código_original"]]
             s = ad["es"]
-            cambio(r["uid"], "Español", s0, s, f"adaptación ({ad['motivo']}) – Revisar_Juan")
-            r["Revisar_Juan"] = "Español adaptado por Claude"
+            cambio(r["uid"], "Español", s0, s, f"adaptación ({ad['motivo']}) – Por_revisar")
+            r["Por_revisar"] = "Español adaptado por Claude"
         antes = s
         s = aplicar_erratas(s, erratas)
         cambio(r["uid"], "Español", antes, s, "errata evidente")
@@ -338,8 +338,8 @@ def main() -> int:
     corpus_rows = []
     for r in gen + med:
         r["ID"] = ids[r["uid"]]
-        if r["Revisar_Juan"]:
-            estado = "Revisar_Juan"
+        if r["Por_revisar"]:
+            estado = "Por_revisar"
         elif r["Quechua_borrador"]:
             estado = "Borrador"
         else:

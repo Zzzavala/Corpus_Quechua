@@ -24,7 +24,7 @@ from heuristicas import tiempo_es
 PY = sys.executable
 R: list[tuple[str, str, bool, str]] = []
 CB = CFG["bloque"]
-MAX_PRESENTE = 0.65          # la parte general no puede ser casi toda presente (aclaración de Juan, 14-oct)
+MAX_PRESENTE = 0.65          # la parte general no puede ser casi toda presente (aclaración del proyecto, 14-oct)
 
 
 def ok(seccion, nombre, cond, detalle=""):
@@ -120,7 +120,7 @@ def main() -> int:
         ok(b, "Word: mismas 200 filas y en el mismo orden (por ID)", [x[0] for x in filas_w] == list(f["ID"]), f"({len(filas_w)})")
         todo = texto + "\n" + "\n".join(c.text for t in doc.tables for row in t.rows for c in row.cells)
         prohibidos = ["Lopera", "Rosettia", "SOCEMURP", "Allin Kawsay", "MINEDU", "OPS/OMS", "Farfán", "unificado", "traductor automático",
-                      "Tipo_borrador", "Estado_unificado", "Revisar_Juan", "Fuente"]
+                      "Tipo_borrador", "Estado_unificado", "Por_revisar", "Fuente"]
         hallados = [p for p in prohibidos if p in todo]
         ok(b, "Word: sin información de origen ni columnas técnicas", not hallados, str(hallados))
         mal_qu = [i for i, q, _ in filas_w if q != ("" if C6.loc[i, "Control"] == "Sí" else C6.loc[i, "Quechua_borrador"])]
@@ -149,7 +149,7 @@ def main() -> int:
         gen = [i for i in FB.loc[FB["Bloque"] == b, "ID"] if C6.loc[i, "Dominio"] == "General"]
         t = Counter(tiempo_es(C6.loc[i, "Español"]) for i in gen)
         pres = t.get("presente", 0) / max(1, len(gen))
-        ok(b, f"Parte general con varios tiempos (presente ≤ {100 * MAX_PRESENTE:.0f} %; pedido de Juan)",
+        ok(b, f"Parte general con varios tiempos (presente ≤ {100 * MAX_PRESENTE:.0f} %; requisito del proyecto)",
            pres <= MAX_PRESENTE and len(t) >= 5, " · ".join(f"{k} {v}" for k, v in t.most_common()))
 
     # ------------------------------------------------------------ scripts, guía, reportes

@@ -4,11 +4,11 @@
 2. A cada pregunta del médico le agrega las respuestas del paciente redactadas por Claude
    (scripts/datos/respuestas_paciente.yaml).
 3. Agrega las frases portadoras de palabras prioritarias del léxico (scripts/datos/frases_portadoras.yaml).
-4. Agrega las oraciones generales en distintos tiempos (scripts/datos/oraciones_generales.yaml) — pedido de Juan.
+4. Agrega las oraciones generales en distintos tiempos (scripts/datos/oraciones_generales.yaml) — requisito del proyecto.
 5. Informa en 04_reportes/F5_huecos.md qué preguntas aún no tienen respuesta.
 
 Nunca se redacta quechua: las filas nuevas quedan sin borrador, con Tipo_borrador = "redactado por Claude (solo español)"
-y Estado = Revisar_Juan. El uid de cada fila nueva lleva una huella del TEXTO (no su posición en el YAML): si alguien
+y Estado = Por_revisar. El uid de cada fila nueva lleva una huella del TEXTO (no su posición en el YAML): si alguien
 edita, inserta o borra una frase, las demás conservan su ID y una frase cambiada recibe un ID nuevo (nunca hereda la
 traducción de otra).
 Salida: 02_maestro/checkpoints/F5_huecos_<fecha>.xlsx
@@ -100,8 +100,8 @@ def main() -> int:
                   "Archivo": f"scripts/datos/{archivo}", "Hoja": "", "Código_original": codigo, "Fila_original": str(posicion),
                   "Español": es, "Quechua_borrador": "", "Tipo_borrador": TIPO_CLAUDE, "Variedad_fuente": "—",
                   "Origen_verificado": "No aplica", "Escenario": escenario, "Etapa_consulta": etapa, "Etapa_B01": etapa_b01,
-                  "Tipo_oración": tipo_oracion(es), "Rol": rol, "Revisar_Juan": "Español redactado por Claude (F5)", "Calidad": "7",
-                  "Estado": "Revisar_Juan", "Split": "train", "Clave": uid, "Parte_de": "", "Grupo_parafrasis": ""})
+                  "Tipo_oración": tipo_oracion(es), "Rol": rol, "Por_revisar": "Español redactado por Claude (F5)", "Calidad": "7",
+                  "Estado": "Por_revisar", "Split": "train", "Clave": uid, "Parte_de": "", "Grupo_parafrasis": ""})
         if lexico:
             f["Observaciones_heredadas"] = f"Frase portadora del léxico {lexico}"
         nuevas.append(f)
@@ -117,7 +117,7 @@ def main() -> int:
                   "Fila_original": str(posicion), "Español": es, "Quechua_borrador": "", "Tipo_borrador": TIPO_CLAUDE,
                   "Variedad_fuente": "—", "Origen_verificado": "No aplica", "Escenario": f"General › redactada por Claude › {rasgo}",
                   "Etapa_consulta": "—", "Etapa_B01": "", "Tipo_oración": tipo_oracion(es), "Rol": "—",
-                  "Revisar_Juan": "Español redactado por Claude (F5, oraciones generales)", "Calidad": "4", "Estado": "Revisar_Juan",
+                  "Por_revisar": "Español redactado por Claude (F5, oraciones generales)", "Calidad": "4", "Estado": "Por_revisar",
                   "Split": "train", "Clave": uid, "Parte_de": "", "Grupo_parafrasis": ""})
         nuevas.append(f)
         fila_de[idn] = f
@@ -257,7 +257,7 @@ def main() -> int:
     # ---------------------------------------------------------- reporte
     md = ["# F5 – Llenar huecos (español redactado por Claude)", "",
           f"Generado por `scripts/05_huecos.py` ({CFG['fecha_generacion']}). Todo lo de aquí es **español redactado por Claude** "
-          "para que Juan lo revise; el quechua lo pone el traductor.", ""]
+          "para que el equipo lo revise; el quechua lo pone el traductor.", ""]
     resumen = []
     for b in ["B01"] + bloques:
         pb = P[P["Bloque"] == b]

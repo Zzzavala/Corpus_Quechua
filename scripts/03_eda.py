@@ -355,7 +355,7 @@ def main() -> int:
            f"- Parte general utilizable ≈ **{gen_util}** oraciones → **{n_bloques_gen} bloques** de 140.",
            f"- Parte médica utilizable (frases ≤ 20 palabras, sin léxico ni repetidos) ≈ **{med_util}** → alcanzaría para {n_bloques_med} bloques de 60, "
            "pero la mitad debe ser del paciente, así que el límite real lo pone lo que se redacte en F5.",
-           f"- **La parte general es la que limita: ~{n_bloques_gen} bloques** con el material actual. Para más, habría que decidir P4 (AmericasNLP) con Juan.",
+           f"- **La parte general es la que limita: ~{n_bloques_gen} bloques** con el material actual. Para más, habría que decidir P4 (AmericasNLP) con la coordinación del proyecto.",
            "- El diccionario MINEDU en PDF tiene texto y se usó para P6: las frases del Grupo 2 **no** aparecen como ejemplos del diccionario "
            f"(solo {int((R['Origen_verificado'] == 'Sí').sum() - int((R['Fuente'].str.startswith('SOCEMURP') & (R['Origen_verificado'] == 'Sí')).sum()))} coinciden). "
            "Son frases del equipo con vocabulario chanka; se usan igual, con `Origen_verificado = No`.", ""]

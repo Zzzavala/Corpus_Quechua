@@ -4,7 +4,7 @@
 - Parte médica (60/bloque): plan de F5 (B01 curado; B02… por tema), unidades pregunta+respuestas indivisibles.
 - 4 sublotes de 50 (≈35 + 15); control en B01 (D7); Test_sugerido 10 % estratificado (P1).
 - Escribe 02_maestro/corpus_maestro.xlsx, 03_bloques/BXX/BXX_trabajo.xlsx y BXX_traductor.docx (bloques con archivos),
-  04_reportes/REVISION_JUAN.md y el checkpoint F6.
+  04_reportes/REVISION.md y el checkpoint F6.
 
 Si el maestro ya tiene quechua validado (devoluciones del traductor), se conserva al regenerar.
 Uso: python scripts/f6_armar_bloques.py [--forzar]
@@ -401,7 +401,7 @@ def excel_trabajo(b: str, filas: list[dict], C: pd.DataFrame, O: pd.DataFrame, Q
                              "Test_sugerido": "Sí" if f["ID"] in test else "No", "Responde_a": r["Responde_a"],
                              "Quechua_borrador": r["Quechua_borrador"], "Quechua_validado": r["Quechua_validado"], "%_edición": "",
                              "Comentario_traductor": "", "Avisos_ortografía_traductor": "",
-                             "Avisos_QA": qa_txt.get(f["ID"], ""), "Revisar_Juan": r["Revisar_Juan"], "Fuente": o["Fuente"],
+                             "Avisos_QA": qa_txt.get(f["ID"], ""), "Por_revisar": r["Por_revisar"], "Fuente": o["Fuente"],
                              "Código_original": o["Código_original"], "Tipo_borrador": o["Tipo_borrador"],
                              "Variedad_fuente": o["Variedad_fuente"], "Origen_verificado": o["Origen_verificado"],
                              "Estado_unificado": o["Estado_unificado"], "Observaciones_heredadas": o["Observaciones_heredadas"],
@@ -473,7 +473,7 @@ def resumen_bloque(b, filas, C, control, test) -> list[tuple]:
                  ("Sufijos del quechua presentes (borradores)", f"{len(sufijos)} de {total_suf} (segmentación aproximada)"),
                  ("Oraciones de control (D7)", f"{len(control & set(ids))} (celda Quechua vacía en el Word)" if b == "B01" else "No aplica (solo B01)"),
                  ("Test sugerido (P1)", f"{len(test & set(ids))} filas marcadas; por ahora todo es train"),
-                 ("Español redactado o adaptado por Claude (Revisar_Juan)", int((info.loc[ids, "Estado"] == "Revisar_Juan").sum())),
+                 ("Español redactado o adaptado por Claude (Por_revisar)", int((info.loc[ids, "Estado"] == "Por_revisar").sum())),
                  ("Sin borrador quechua (el traductor traduce desde cero)", int((info.loc[ids, "Quechua_borrador"] == "").sum())),
                  ("",), ("Por sublote",), ("Sublote", "Generales + médicas = total")]
     for s in sorted(sub):
@@ -538,7 +538,7 @@ def guia_grabacion():
 
 LEEME = [
     ("Corpus quechua chanka médico — archivo maestro",),
-    ("Qué es", "La única fuente de verdad del corpus (INF657, PUCP). Dueño: Juan Zavala o quien él designe. Nadie trabaja sobre copias propias."),
+    ("Qué es", "La única fuente de verdad del corpus (INF657, PUCP). Responsable: el equipo del proyecto. Nadie trabaja sobre copias propias."),
     ("Generado", "Por los scripts de D:\\Corpus_Quechua\\scripts (cadena 00→05, f6). Fecha de los datos: {fecha}."),
     ("",),
     ("Pestañas",),
@@ -552,7 +552,7 @@ LEEME = [
            "ALTA/MEDIA/BAJA. Son sospechas, no correcciones. Al Word del traductor solo pasa 1 aviso ALTA por fila."),
     ("Bloques", "Una fila por bloque planificado: conteos (generales/médicas, médico/paciente, origen de la parte general, "
                 "oraciones redactadas por Claude), mezcla de tiempos, reparto por sublote, temas médicos, control, test sugerido, "
-                "filas para Revisar_Juan y estado (Planificado · Archivos generados · Congelado). La última fila («Sin asignar») "
+                "filas para Por_revisar y estado (Planificado · Archivos generados · Congelado). La última fila («Sin asignar») "
                 "dice cuánto material queda y si alcanza para otro bloque."),
     ("Traductor_metricas", "Una fila por bloque devuelto (scripts/06_importar_traductor.py): % sin cambios / editado / reescrito, "
                            "distancia al borrador, prueba de anclaje con las oraciones de control y la recomendación de seguir o "
@@ -566,11 +566,11 @@ LEEME = [
     ("Rol", "Médico / Paciente / — (sin hablante)."),
     ("Quechua_borrador", "Borrador NO validado (traductor automático, normalizado de otra variedad, libro…). Nunca es gold."),
     ("Quechua_validado", "Lo que devolvió el traductor. Gold = validado y grabado (D8)."),
-    ("Estado", "Borrador · Sin borrador · Revisar_Juan (español redactado o adaptado por Claude) · Enviado · Validado · Grabado."),
+    ("Estado", "Borrador · Sin borrador · Por_revisar (español redactado o adaptado por Claude) · Enviado · Validado · Grabado."),
     ("Prioridad", "Número del bloque planificado (1 = B01 … 5 = B05); vacío = aún sin bloque."),
     ("Bloque / Sublote / N_bloque", "B01…; B01-S1…B01-S4; posición 1–200 dentro del bloque."),
     ("Split", "train (todo es entrenamiento, P1)."),
-    ("Test_sugerido", "Sí = parte del 10 % estratificado que se podría apartar como prueba si Juan lo confirma (P1)."),
+    ("Test_sugerido", "Sí = parte del 10 % estratificado que se podría apartar como prueba si se confirma (P1)."),
     ("Control", "Sí = oración de control de B01 (D7): va al traductor con la celda Quechua vacía."),
     ("Responde_a", "En respuestas del paciente: ID de la pregunta del médico (van en el mismo sublote)."),
     ("",),
@@ -640,18 +640,18 @@ def bloques_congelados(viejo: dict[str, pd.DataFrame]) -> dict[str, dict]:
 def conservar_validados(C: pd.DataFrame, viejo: dict[str, pd.DataFrame]) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Si el maestro ya existe, conserva Quechua_validado, Estado (Enviado, Validado, Grabado) y Traductor_metricas.
     H1: el quechua validado solo se conserva si el español de la fila sigue igual; si el español cambió después de enviarlo,
-    la fila vuelve a Revisar_Juan con una nota (hay que reenviarla al traductor)."""
+    la fila vuelve a Por_revisar con una nota (hay que reenviarla al traductor)."""
     TM = pd.DataFrame(columns=COLS_TM)
     if "Corpus" in viejo:
         v = viejo["Corpus"].drop_duplicates("ID").set_index("ID")
         col = lambda campo: C["ID"].map(v[campo]).fillna("") if campo in v else pd.Series([""] * len(C), index=C.index)
         es_v, qu_v, est_v = col("Español"), col("Quechua_validado"), col("Estado")
-        qv, est, nota = list(C["Quechua_validado"]), list(C["Estado"]), list(C["Revisar_Juan"])
+        qv, est, nota = list(C["Quechua_validado"]), list(C["Estado"]), list(C["Por_revisar"])
         cam = viejo.get("Cambios", pd.DataFrame(columns=["ID", "Campo"]))
         propuesta = set(cam.loc[cam["Campo"] == "Español (propuesta del traductor)", "ID"])
         for k, (i, es, e0, q0, s0) in enumerate(zip(C["ID"], C["Español"], es_v, qu_v, est_v)):
-            if s0 == "Revisar_Juan" and i in propuesta and e0 == es:
-                est[k] = "Revisar_Juan"            # el traductor propuso otro español (06) y Juan aún no decide
+            if s0 == "Por_revisar" and i in propuesta and e0 == es:
+                est[k] = "Por_revisar"            # el traductor propuso otro español (06) y la coordinación del proyecto aún no decide
                 nota[k] = "El traductor propuso otro español al devolver el bloque: ver la pestaña Cambios."
                 continue
             if s0 not in ESTADOS_ENVIADOS:
@@ -660,16 +660,16 @@ def conservar_validados(C: pd.DataFrame, viejo: dict[str, pd.DataFrame]) -> tupl
                 qv[k] = qv[k] or q0
                 est[k] = s0
             else:
-                est[k] = "Revisar_Juan"
+                est[k] = "Por_revisar"
                 nota[k] = (f"El español cambió después de enviarlo al traductor (antes: «{e0}»"
                            + (f"; quechua validado de entonces: «{q0}»" if q0 else "") + "): reenviar esta fila.")
-        C["Quechua_validado"], C["Estado"], C["Revisar_Juan"] = qv, est, nota
+        C["Quechua_validado"], C["Estado"], C["Por_revisar"] = qv, est, nota
     if "Traductor_metricas" in viejo and len(viejo["Traductor_metricas"]):
         TM = viejo["Traductor_metricas"]
     return C, TM
 
 
-# ======================================================================= lista para Juan
+# ======================================================================= lista para la coordinación del proyecto
 
 
 DONDE_F5 = {"B01": "`plan_b01.yaml`", "resp": "`respuestas_paciente.yaml`", "port": "`frases_portadoras.yaml`",
@@ -680,24 +680,24 @@ def celda_md(s: str) -> str:
     return str(s).replace("|", "\\|").replace("\n", " ")
 
 
-def revision_juan(C: pd.DataFrame, cam: pd.DataFrame, filas_bloque: dict[str, list[dict]]):
-    """04_reportes/REVISION_JUAN.md: filas con Estado = Revisar_Juan de los bloques con archivos, con el archivo de
+def revision_equipo(C: pd.DataFrame, cam: pd.DataFrame, filas_bloque: dict[str, list[dict]]):
+    """04_reportes/REVISION.md: filas con Estado = Por_revisar de los bloques con archivos, con el archivo de
     scripts/datos/ donde se corrige cada una. En las adaptadas o partidas se muestra el borrador quechua, para ver si
     sigue diciendo lo mismo que el español nuevo (H17)."""
     info = C.set_index("ID")
-    md = [f"# Revisión de Juan — español redactado o adaptado por Claude ({', '.join(CB['bloques_con_archivos'])})", "",
-          "Estas filas tienen Estado = **Revisar_Juan**. Revísalas antes de enviar el Word al traductor. Si cambias algo, "
+    md = [f"# Revisión del español — español redactado o adaptado por Claude ({', '.join(CB['bloques_con_archivos'])})", "",
+          "Estas filas tienen Estado = **Por_revisar**. Revísalas antes de enviar el Word al traductor. Si cambias algo, "
           "edita el archivo de `scripts/datos/` indicado y vuelve a correr `04_limpieza` → `05_huecos` → `f6_armar_bloques` "
           "(con `--forzar`). Las oraciones nuevas van al traductor SOLO en español: él escribe el quechua.", ""]
     for b in CB["bloques_con_archivos"]:
         ids = [f["ID"] for f in filas_bloque.get(b, [])]
         rj = info.loc[ids]
-        rj = rj[rj["Estado"] == "Revisar_Juan"]
+        rj = rj[rj["Estado"] == "Por_revisar"]
         md += [f"## {b}: {len(rj)} filas", "",
                "| N° | ID | Rol | Español (actual) | Original / motivo | Borrador quechua | Dónde se edita |",
                "|---|---|---|---|---|---|---|"]
         for i, r in rj.iterrows():
-            nota = r["Revisar_Juan"]
+            nota = r["Por_revisar"]
             if nota.startswith("El español cambió"):
                 orig, donde = nota, "reenviar al traductor"
             elif r["uid"].startswith("F5:"):
@@ -712,7 +712,7 @@ def revision_juan(C: pd.DataFrame, cam: pd.DataFrame, filas_bloque: dict[str, li
             qu = r["Quechua_borrador"] if not r["uid"].startswith("F5:") else ""
             md.append("| " + " | ".join(celda_md(x) for x in (r["N_bloque"], i, r["Rol"], r["Español"], orig, qu or "—", donde)) + " |")
         md.append("")
-    escribir_texto(ruta("reportes") / "REVISION_JUAN.md", "\n".join(md))
+    escribir_texto(ruta("reportes") / "REVISION.md", "\n".join(md))
 
 
 # ======================================================================= principal
@@ -792,7 +792,7 @@ def main() -> int:
             "Sublotes (gen+méd)": " | ".join(f"S{k}: {cnt_sub[(f'{b}-S{k}', 'General')]}+{cnt_sub[(f'{b}-S{k}', 'Médico')]}" for k in range(1, CB["sublotes"] + 1)),
             "Etapas/temas": " → ".join(dict.fromkeys(t for t in med["Plan_tema"] if t)),
             "Control": int((sub["Control"] == "Sí").sum()), "Test_sugerido": int((sub["Test_sugerido"] == "Sí").sum()),
-            "Revisar_Juan": int((sub["Estado"] == "Revisar_Juan").sum()),
+            "Por_revisar": int((sub["Estado"] == "Por_revisar").sum()),
             "Sin_borrador": int((sub["Quechua_borrador"] == "").sum()),
             "Estado": ("Congelado (ya salió al traductor; composición fija)" if b in cong else
                        "Archivos generados (Word del traductor y Excel de trabajo)" if b in CB["bloques_con_archivos"] else "Planificado"),
@@ -836,7 +836,7 @@ def main() -> int:
         excel_trabajo(b, filas_bloque[b], C, O, QA, control, test)
         word_traductor(b, filas_bloque[b], C, QA, control)
     guia_grabacion()
-    revision_juan(C, H["Cambios"], filas_bloque)
+    revision_equipo(C, H["Cambios"], filas_bloque)
 
     # El checkpoint se escribe AL FINAL: es la marca de corrida completa (H8). Si algo falla antes (p. ej. un Word abierto),
     # no existe y la siguiente corrida vuelve a hacerlo todo aunque no se pase --forzar.
@@ -847,7 +847,7 @@ def main() -> int:
 
     print(f"OK → maestro, {CK.relative_to(RAIZ)}, archivos de {', '.join(CB['bloques_con_archivos'])}")
     print(BL[["Bloque", "Total", "Generales", "Médicas", "Médico", "Paciente", "Principito", "G2_frases_variadas", "G2_ejercicios",
-              "Generales_Claude", "Médicas_Claude", "Sublotes (gen+méd)", "Control", "Test_sugerido", "Revisar_Juan"]].to_string(index=False))
+              "Generales_Claude", "Médicas_Claude", "Sublotes (gen+méd)", "Control", "Test_sugerido", "Por_revisar"]].to_string(index=False))
     for _, r in BL.iterrows():
         if r["Tiempos_general"]:
             print(f"  {r['Bloque']}: {r['Tiempos_general']}")

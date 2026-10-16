@@ -1,7 +1,7 @@
 # B01 = una consulta completa de punta a punta (§11.2), armada a mano por Claude.
 # Esqueleto: frases del manual SOCEMURP y del unificado (por código original), más líneas nuevas en ESPAÑOL
 # redactadas por Claude (`nuevo`), que quedan con Tipo_borrador = "redactado por Claude (solo español)" y
-# Estado = Revisar_Juan. Nunca se redacta quechua.
+# Estado = Por_revisar. Nunca se redacta quechua.
 #
 # Caso: paciente mujer (Annel, 20 años, de Ayacucho) con dolor de barriga desde hace tres días, fiebre y vómitos.
 # Cada unidad (pregunta + respuestas) va entera en el mismo sublote.

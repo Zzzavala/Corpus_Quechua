@@ -10,7 +10,7 @@
 
 Protecciones:
 - Si el Word tiene «Control de cambios» sin aceptar, no se importa (el texto insertado o borrado se leería mal).
-- Si el traductor cambió el español de una fila, esa fila NO se valida: queda Revisar_Juan para que Juan decida.
+- Si el traductor cambió el español de una fila, esa fila NO se valida: queda Por_revisar para que la coordinación del proyecto decida.
 - Si un sublote vuelve 100 % igual al borrador (con al menos traductor.min_filas_sublote_sin_tocar filas), no se valida
   solo: puede no haberse revisado. Se confirma con el traductor y se reimporta con --confirmar-sublotes B01-S2.
 
@@ -258,7 +258,7 @@ def main() -> int:
         if not x["final"]:
             x["accion"] = "no (vacía)"
         elif x["español_nuevo"]:
-            x["accion"] = "Revisar_Juan (el traductor cambió el español)"
+            x["accion"] = "Por_revisar (el traductor cambió el español)"
         elif x["sublote"] in sin_tocar and x["clase"] == "sin cambios":
             x["accion"] = "no (sublote devuelto sin cambios: confirmar)"   # lo que el traductor escribió (control, vacías) sí vale
         else:
@@ -291,14 +291,14 @@ def main() -> int:
             P.poner(ws_c, fc, "Quechua_validado", x["final"])
             P.poner(ws_c, fc, "Estado", "Validado")
             validados += 1
-        elif x["accion"].startswith("Revisar_Juan"):
+        elif x["accion"].startswith("Por_revisar"):
             registrar(i, "Español (propuesta del traductor)", r["Español"], x["español_nuevo"],
-                      REGLA + " — no se valida hasta que Juan decida")
+                      REGLA + " — no se valida hasta que la coordinación del proyecto decida")
             registrar(i, "Quechua (propuesta del traductor)", r["Quechua_validado"] or r["Quechua_borrador"], x["final"],
                       REGLA + " — corresponde al español propuesto")
-            if r["Estado"] != "Revisar_Juan":
-                agregar_cambio(ws_cam, i, codigos.get(i, ""), "Estado", r["Estado"], "Revisar_Juan", REGLA, fecha)
-            P.poner(ws_c, fc, "Estado", "Revisar_Juan")
+            if r["Estado"] != "Por_revisar":
+                agregar_cambio(ws_cam, i, codigos.get(i, ""), "Estado", r["Estado"], "Por_revisar", REGLA, fecha)
+            P.poner(ws_c, fc, "Estado", "Por_revisar")
     ws_tm = wb_m["Traductor_metricas"]
     cols_tm = P.columnas(ws_tm)
     fila_dest = None
@@ -322,8 +322,8 @@ def main() -> int:
                 P.poner(ws_b, fb[i], "Quechua", x["final"])
                 P.poner(ws_b, fb[i], "Estado", "Validado")
                 P.poner(ws_d, fd[i], "Quechua_validado", x["final"])
-            elif x["accion"].startswith("Revisar_Juan"):
-                P.poner(ws_b, fb[i], "Estado", "Revisar_Juan")
+            elif x["accion"].startswith("Por_revisar"):
+                P.poner(ws_b, fb[i], "Estado", "Por_revisar")
             if x["d"] is not None:
                 P.poner(ws_d, fd[i], "%_edición", round(100 * x["d"], 1))
             com = x["comentario"]
@@ -350,12 +350,12 @@ def main() -> int:
            f"- Duplicadas: {', '.join(duplicados) or 'ninguna'} (se usó la primera aparición)",
            f"- Sin quechua en el Word devuelto: {', '.join(x['ID'] for x in resultados if x['clase'] == 'vacío') or 'ninguna'}",
            f"- El traductor cambió el español en: {', '.join(x['ID'] for x in es_cambiado) or 'ninguna'} "
-           "(no se validan: quedan Revisar_Juan; la propuesta está en Cambios y en el Excel de trabajo)", "",
+           "(no se validan: quedan Por_revisar; la propuesta está en Cambios y en el Excel de trabajo)", "",
            "## Métricas (Traductor_metricas)", ""]
     md += [f"- {k}: {v}" for k, v in fila_tm.items()]
     md += ["", "## Clases", ""] + [f"- {k}: {v}" for k, v in cl.most_common()]
     if es_cambiado:
-        md += ["", "## Español cambiado por el traductor (decide Juan)", "", "| ID | Español actual | Propuesta | Quechua |", "|---|---|---|---|"]
+        md += ["", "## Español cambiado por el traductor (decide la coordinación del proyecto)", "", "| ID | Español actual | Propuesta | Quechua |", "|---|---|---|---|"]
         md += [f"| {x['ID']} | {corpus[x['ID']]['Español']} | {x['español_nuevo']} | {x['final']} |" for x in es_cambiado]
     md += ["", "## Comentarios del traductor", ""] + ([f"- `{x['ID']}`: {x['comentario']}" for x in resultados if x["comentario"]] or ["- ninguno"])
     md += ["", "## Avisos de ortografía sobre el quechua del traductor (solo informativo, no se corrige nada)", ""]
