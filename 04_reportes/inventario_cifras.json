@@ -1,0 +1,73 @@
+{
+  "unificado": {
+    "filas": 1528,
+    "trazabilidad": 1542,
+    "con_quechua": 1156,
+    "estados": {
+      "Final – coincide en los Excel": 281,
+      "Final – corregido/normalizado a chanka": 522,
+      "Revisar – duda de traducción": 89,
+      "Final – única fuente": 58,
+      "Pendiente – sin traducción chanka": 361,
+      "Pendiente – no usar (ver observación)": 11,
+      "Final – forma del libro compatible con chanka": 122,
+      "Revisar – adaptación propuesta": 72,
+      "Final – fuente chanka oficial": 12
+    },
+    "fuentes": {
+      "YouTube": 9,
+      "SOCEMURP (corpus original del equipo)": 118,
+      "Farfán Cantero (2001), SITUA": 24,
+      "Afiche MINSA/MinCul lavado de manos (chanka)": 6,
+      "MINSA – diabetes (quechua)": 4,
+      "Allin Kawsay (INS/MINSA)": 510,
+      "Lopera Quiroga (2020)": 566,
+      "Kim 1 (pregunta añadida)": 43,
+      "MinCul – manual de justicia (chanka)": 13,
+      "OPS/OMS Bolivia (2013)": 234,
+      "OMS (2009) – lista de verificación": 1
+    },
+    "composicion": {
+      "sueltas": 515,
+      "2_3": 324,
+      "4_mas": 689,
+      "preguntas": 615,
+      "paciente": 46
+    }
+  },
+  "principito": 113,
+  "grupo2": {
+    "con_id": 670,
+    "con_es": 669,
+    "con_qu": 669,
+    "minuscula": 507,
+    "pronombre": 396,
+    "duplicados": [
+      "F-0013"
+    ],
+    "vacias": [
+      "F-0517"
+    ]
+  },
+  "grupo3": {
+    "filas": 685,
+    "validar_escritura": 521,
+    "en_unificado": 672
+  },
+  "terminos": 58,
+  "construido": {
+    "filas": 111,
+    "en_unificado": 111
+  },
+  "americasnlp": {
+    "train (JW300)": 125008,
+    "dev (sureño estándar)": 996,
+    "dict (MINEDU + Dict_misc)": 9643,
+    "es-quy/jw300": 125008,
+    "es-quy/minedu": 643,
+    "es-quy/dict_misc": 9000,
+    "test (solo español)": 1003
+  },
+  "html": "Farfán SITUA",
+  "difieren": []
+}

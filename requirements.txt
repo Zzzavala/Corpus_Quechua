@@ -1,0 +1,10 @@
+# Entorno propio del proyecto (.venv, Python 3.14). No usar inf659_env ni .venvs.
+pandas==3.0.6
+openpyxl==3.1.5
+python-docx==1.2.0
+rapidfuzz==3.14.6
+pypdfium2==5.14.0
+pyyaml==6.0.3
+matplotlib==3.11.2
+numpy==2.5.4        # f6 (matriz de similitud) y gráficos
+pillow==12.3.0      # render_revision.py (PNG de las páginas)

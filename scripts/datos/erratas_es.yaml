@@ -1,0 +1,69 @@
+# Erratas evidentes del español (§10.1). Revisadas a mano por Claude a partir de las palabras que no están en el
+# léxico español de referencia y de las que aparecen sin tilde. Cada cambio queda en la pestaña Cambios.
+#
+# frases: reemplazo literal de un trozo de texto (se aplica primero).
+# palabras: reemplazo de palabra completa, sin importar mayúsculas; se conserva la mayúscula inicial del original.
+
+frases:
+  "¿Dé dónde eres?": "¿De dónde eres?"
+  "¿Estas estreñido?": "¿Estás estreñido?"
+  "cuándo estas de pie": "cuando estás de pie"
+  "¿Donde botan": "¿Dónde botan"
+  "¿Quien es": "¿Quién es"
+  "¿Dónde vota la basura?": "¿Dónde bota la basura?"
+  "Hay PEKes en la canasta.": "Hay peces en la canasta."
+  "Me inqué con una espina.": "Me hinqué con una espina."
+  "Me está doliendo los ojos": "Me están doliendo los ojos"
+  "Desde un mes me duele": "Desde hace un mes me duele"
+  "Esta mal la vesicula": "Está mal la vesícula"
+  "Tienen mal el higado": "Tiene mal el hígado"
+  "un medico especialista": "un médico especialista"
+  "¿Si o no?": "¿Sí o no?"
+  "fuerzuedo": "forzudo"
+  "más cuándo": "más cuando"
+  "de cuando en cuando [que] le falta aire": "de vez en cuando que le falta el aire"
+  "¿De que color": "¿De qué color"
+  "¿Hasta que año": "¿Hasta qué año"
+  "El te va a curar": "Él te va a curar"
+  "nos enseñó a leer libro.": "nos enseñó a leer libros."
+  "Más si todas estas disculpas": "Mas si todas estas disculpas"
+  "¿esta bien?": "¿está bien?"
+  # revisión ultracode (H14, H22): el texto de la fuente va en minúscula y sin tilde
+  "estudiaran mañana": "estudiarán mañana"
+  "estudiara mañana": "estudiará mañana"
+  "importa, ¡Píntame": "importa, ¡píntame"
+  "No pongas duro la barriga": "No pongas dura la barriga"
+  "sin alguien con quien": "sin nadie con quien"
+  "Éste está muy enfermo": "Este está muy enfermo"
+  "dificultad de respirar": "dificultad para respirar"
+  "¿Le sacaron radiografía?": "¿Le sacaron una radiografía?"
+  "Tiene mal de la columna": "Tiene mal la columna"
+
+palabras:
+  aqui: aquí
+  atras: atrás
+  oir: oír
+  acido: ácido
+  folico: fólico
+  arbol: árbol
+  desague: desagüe
+  despues: después
+  dia: día
+  dias: días
+  enfermeria: enfermería
+  evalue: evalúe
+  higado: hígado
+  musica: música
+  prostata: próstata
+  telefono: teléfono
+  traigame: tráigame
+  vesicula: vesícula
+  radiografia: radiografía
+  construen: construyen
+  piensamos: pensamos
+  enjúagate: enjuágate
+  dése: dese
+  erasmo: Erasmo
+  sliba: silba
+  entreñimiento: estreñimiento
+  vómitar: vomitar

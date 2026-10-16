@@ -1,0 +1,84 @@
+# Adaptaciones del español redactadas por Claude (§10.1): giros bolivianos o poco naturales, preguntas
+# múltiples y notas entre paréntesis que no se deben leer en voz alta. El original queda en la pestaña Cambios
+# y la fila queda con Estado = Revisar_Juan. El quechua (si lo hay) NO se toca: el traductor lo revisa.
+# Clave = código original del unificado (QCH-xxxx) o del Grupo 1/2.
+
+# --- OPS/OMS Bolivia (2013): giros bolivianos y notas
+QCH-1297: {es: "Yo soy el doctor.", motivo: "alternativa «el doctor / la doctora...» → una sola forma para grabar"}
+QCH-1303: {es: "¿Haces ejercicio, por ejemplo, juegas fútbol?", motivo: "quitar paréntesis; «actividad física» → «ejercicio»"}
+QCH-1318: {es: "¿Cuántos años tienen tus hijos?", motivo: "«¿De cuántos años? (edad de los hijos)» → pregunta completa"}
+QCH-1349: {es: "¿Hace una hora?", motivo: "giro boliviano «¿Ya es una hora?»"}
+QCH-1360: {es: "¿Te sientes cada vez más enfermo?", motivo: "quitar paréntesis «(¿está empeorando?)»"}
+QCH-1361: {es: "¿Sigue igual?", motivo: "giro «¿Está igual nomás?»"}
+QCH-1364: {es: "¿Te duele sin parar?", motivo: "orden poco natural «¿Sin parar te está doliendo?»"}
+QCH-1365: {es: "¿Se ha calmado?", motivo: "falta el pronombre: «¿Ha calmado?»"}
+QCH-1367: {es: "¿El dolor viene y se va?", motivo: "giro «empieza y se pierde, empieza y se pierde»"}
+QCH-1377: {es: "¿Te duele en la nuca?", motivo: "quitar paréntesis; pregunta directa"}
+QCH-1383: {es: "¿Sientes picazón?", motivo: "quitar paréntesis «(escozor)»"}
+QCH-1386: {es: "¿Él se pone de color morado?", motivo: "nota «(hablando de otra persona)» → se dice con el pronombre"}
+QCH-1388: {es: "¿Él se pone de color amarillo?", motivo: "nota «(hablando de otra persona)» → se dice con el pronombre"}
+QCH-1400: {es: "¿Solo puedes dormir sentado?", motivo: "giro «¿Duermes sentado nomás?»"}
+QCH-1428: {es: "¿Cuándo dejó de venirte la regla?", motivo: "quitar paréntesis «(menopausia)»; giro «se te fue la regla»"}
+QCH-1433: {es: "¿Te ha salido mucho líquido, como agua?", motivo: "giro boliviano «¿Te ha bajado como mucha agua?»"}
+QCH-1449: {es: "¿El sangrado empezó solo, sin ningún golpe?", motivo: "giro «empezó sola (de por sí)»"}
+QCH-1459: {es: "Él tiene que quedarse en el hospital.", motivo: "nota «(hablando de otra persona)» → se dice con el pronombre"}
+QCH-1460: {es: "Él tiene que operarse.", motivo: "nota «(hablando de otra persona)» → se dice con el pronombre"}
+QCH-1465: {es: "Él tiene que tomar este medicamento.", motivo: "nota «(hablando de otra persona)»; orden más natural"}
+QCH-1466: {es: "Tienes que tomar este medicamento.", motivo: "«tragar» (Bolivia) → «tomar»"}
+QCH-1467: {es: "Al despertar vas a tomar dos pastillas.", motivo: "«tragar» (Bolivia) → «tomar»"}
+QCH-1468: {es: "Al mediodía, antes de comer, vas a tomar dos pastillas.", motivo: "«tragar» (Bolivia) → «tomar»"}
+QCH-1469: {es: "En la noche vas a tomar dos pastillas.", motivo: "«tragar» (Bolivia) → «tomar»"}
+QCH-1471: {es: "Se lo vas a dar de tomar a él.", motivo: "«Le vas a hacer tomar (a otra persona)»"}
+QCH-1475: {es: "No es nada grave.", motivo: "«No estás tan enfermo (no es nada grave)» → una sola idea"}
+QCH-1478: {es: "Él se va a sanar.", motivo: "nota «(hablando de otra persona)» → se dice con el pronombre"}
+QCH-1526: {es: "Es una operación pequeña.", motivo: "quitar paréntesis «(no es difícil)»"}
+
+# --- Grupo 2
+F-0082: {es: "Hoy hace buen día.", motivo: "«Hoy buen día.» no es una oración completa en español"}
+
+# --- Otras fuentes: preguntas múltiples, signos y redacción
+QCH-0037: {es: "Desde hace un mes me duele mucho mi estómago.", motivo: "«Desde un mes» → «Desde hace un mes» (el quechua sigue desalineado: lo marca QA)"}
+QCH-0475: {es: "Aquí le escribo cómo lo va a tomar.", motivo: "«Aqui estoy escribiendo como va tomar»: tildes y redacción"}
+QCH-0494: {es: "¿Hay desagüe en tu casa?", motivo: "«Hay desague en tu casa ¿ si o no?»: signos y tilde"}
+QCH-0567: {es: "¿Después del nacimiento lo hospitalizaron? Si fue así, ¿por cuánto tiempo?", motivo: "pregunta múltiple «¿Si o no? ¿Si se hospitalizo…?»"}
+QCH-0581: {es: "¿El niño nació antes de los siete meses de embarazo? Si fue así, ¿cuánto tiempo antes?", motivo: "pregunta múltiple con «¿Si o no?»"}
+QCH-0747: {es: "¿Siente que su corazón palpita rápido, a ratos, siempre o cuando camina?", motivo: "faltaba «¿»; redacción"}
+QCH-0761: {es: "¿Ha notado que desde que perdió el apetito ha bajado de peso?", motivo: "quitar paréntesis «(deseo de comer)»; «es que»"}
+QCH-0806: {es: "¿La ha visto un ginecólogo? ¿Cuándo fue la última vez?", motivo: "pregunta múltiple"}
+QCH-0835: {es: "¿Y durante el día se duerme en su cuarto?", motivo: "«Pero si en el día, en su cuarto se duerme?»: faltaba «¿»"}
+QCH-0195: {es: "Siéntate.", motivo: "quitar nota «(si está echado)»"}
+QCH-0284: {es: "Ponte de costado.", motivo: "«Ladéate (Ponte de costado)» → la forma más clara"}
+QCH-0476: {es: "Buenos días, buenas tardes, buenas noches.", motivo: "tildes y comas"}
+QCH-0549: {es: "Voy a examinarte. Me vas a ayudar, ¿está bien?", motivo: "«Voy a examinarte me vas ayudar, ¿esta bien?.»: puntuación y «vas a ayudar»; se deja «¿está bien?», que está en el borrador y lo contesta la paciente"}
+QCH-0469: {es: "A ver, échate.", motivo: "coma tras «A ver»"}
+QCH-0628: {es: "¿Puedes abrir las piernas?", motivo: "«¿Te abre las piernas?» es ambiguo y poco apropiado"}
+QCH-0089: {es: "¿Comes con dolor, con dificultad o con tos?", motivo: "«¿Tú comes con dolor, dificultad o le produce la tos?»: mezcla tú/usted; se deja la tos, que está en el borrador"}
+
+# --- Revisión ultracode (H22): frases poco naturales o fuera de contexto en los bloques
+QCH-0033: {es: "¿Desde cuándo estás enferma?", motivo: "en B01 la paciente es mujer («enfermo» → «enferma»)"}
+QCH-0102: {es: "Respira hondo.", motivo: "«Respire» (usted) en una consulta que va en «tú»"}
+QCH-0094: {es: "¿De qué color es la flema: blanca, verde, amarilla o con sangre?", motivo: "«¿De qué color, blanco, verde, amarillo, con sangre?»: pregunta incompleta"}
+QCH-0550: {es: "Al nacer, ¿el niño demoró en llorar?", motivo: "puntuación: la pregunta empieza en «¿el niño…»"}
+QCH-0746: {es: "¿Se cansa o se agita aunque camine poco, o solo cuando camina mucho?", motivo: "«cuando camina poca distancia o gran distancia»: poco natural"}
+QCH-0542: {es: "Vas a tomar esta pastilla.", motivo: "«Tomas esta pastilla.»: como indicación se dice «vas a tomar» (igual que el borrador «tomanki»)"}
+QCH-0543: {es: "Vas a tomar este jarabe.", motivo: "«Tomas este jarabe.»: como indicación se dice «vas a tomar» (igual que el borrador «tomanki»)"}
+QCH-0577: {es: "¿Te duele cuando golpeo aquí atrás?", motivo: "«¿Duele cuando…?»: falta «te»"}
+QCH-0578: {es: "¿Te duele el tobillo?", motivo: "«¿Duele el tobillo?»: falta «te»"}
+QCH-0579: {es: "¿Te duele la rodilla?", motivo: "«¿Duele la rodilla?»: falta «te»"}
+QCH-0091: {es: "¿Siente ardor o punzadas en el cuello?", motivo: "«ardor punzado»: poco natural"}
+QCH-0744: {es: "Al tocarle el pecho, ¿siente un cosquilleo?", motivo: "puntuación y «como un cosquilleo en su mano»"}
+QCH-0860: {es: "Cuando respira hondo, ¿le duele? ¿De qué lado?", motivo: "«Si respira hondo o profundo, ¿le duele?, ¿qué lado?»: puntuación y redacción"}
+QCH-0237: {es: "Orina apenas amanezca.", motivo: "«Orina al amanecer.» se puede leer como descripción; el borrador es una indicación"}
+QCH-0153: {es: "Frota tus manos con jabón al menos veinte segundos.", motivo: "«mínimo 20 segundos»: número en letras para leer en voz alta"}
+EL-0012: {es: "Cuando tenía apenas seis años, solo había aprendido a dibujar boas cerradas y boas abiertas.", motivo: "fragmento («habiendo sólo aprendido…») → oración completa"}
+EL-0007: {es: "Esta persona mayor vive en Francia, donde pasa hambre y frío, y necesita mucho consuelo.", motivo: "«siente hambre, frío y tiene gran necesidad de ser consolada»: redacción"}
+EL-0036: {es: "Los mayores creen que todo se conoce con cifras.", motivo: "«creen conocer con cifras»: incompleta fuera del libro"}
+EL-0067: {es: "Las espinas son pura maldad de las flores.", motivo: "«Son pura maldad…»: sin sujeto fuera del libro"}
+F-0048.2: {es: "Mira, esa mariposa es azul.", motivo: "«una mariposa que es azul»: poco natural y casi igual a F-0048"}
+F-0053: {es: "Esta noche hay luna nueva.", motivo: "«La luna está nueva esta noche»: calco"}
+F-0094: {es: "Esa palabra suena fuerte.", motivo: "«es resonante»: palabra rara; el borrador dice «se oye fuerte»"}
+F-0070: {es: "Quiero escucharte cuando hablas.", motivo: "«Quiero escuchar cuando hablas»: falta el objeto"}
+F-0483: {es: "Ellos juegan a varios juegos.", motivo: "«juegan juegos»: repetición"}
+F-0016: {es: "Todos nosotros comemos cada noche.", motivo: "«Comemos todos nosotros cada noche»: orden poco natural"}
+F-0017: {es: "El niño ríe con su hermano.", motivo: "falta el artículo"}
+QCH-0470: {es: "A ver, siéntate.", motivo: "coma tras «A ver»"}

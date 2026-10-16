@@ -1,0 +1,201 @@
+id,bloque,sublote,split,dominio,rol,es,qu,audio_es,audio_qu,dur_es,dur_qu,qa_audio
+GEN-0184,B01,B01-S1,train,General,—,Vamos a sembrar maíz.,,,,,,SIN_VALIDAR: falta el quechua validado | FALTA_ES | FALTA_QU
+GEN-0966,B01,B01-S1,train,General,—,¿Ya comiste tu desayuno?,,,,,,SIN_VALIDAR: falta el quechua validado | FALTA_ES | FALTA_QU
+GEN-0080,B01,B01-S1,train,General,—,"Iba a traerlo, pero no dejas de hablarme.","Apamuyta munarqani, ichaqa hinallam rimapayawanki.",GEN-0080_es.wav,GEN-0080_qu.wav,1.5,1.5,OK
+GEN-0188,B01,B01-S1,train,General,—,¿Tienes hermano?,¿Wawqiyuqchu kanki?,,,,,FALTA_ES | FALTA_QU
+CLI-0745,B01,B01-S1,train,Médico,Médico,Buenos días.,Rimay 1.,,,,,FALTA_ES | FALTA_QU
+CLI-0978,B01,B01-S1,train,Médico,Paciente,"Buenos días, doctor.",Rimay 2.,,,,,FALTA_ES | FALTA_QU
+GEN-0561,B01,B01-S1,train,General,—,Ese perro come rápido.,Chay allqu utqayta mikun.,GEN-0561_es.wav,GEN-0561_qu.wav,1.5,1.5,QU: 44100 Hz (debe ser 16000) | QU: 2 canales (debe ser mono)
+GEN-0946,B01,B01-S1,train,General,—,Me gustaría vivir cerca del río.,Rimay 3.,,,,,FALTA_ES | FALTA_QU
+GEN-0196,B01,B01-S1,train,General,—,Las estrellas brillan mucho.,Quyllurkuna anchata kanchan.,GEN-0196_es.wav,GEN-0196_qu.wav,0.1,1.5,ES: muy corto (0.10 s)
+GEN-0048,B01,B01-S1,train,General,—,Hay que arrancarlos inmediatamente.,Chaylla qurqunanchikmi.,GEN-0048_es.wav,,1.5,,FALTA_QU
+CLI-0001,B01,B01-S1,train,Médico,Médico,¿Cómo estás?,¿Imaynam kachkanki?,sesion2/CLI-0001_es.wav,sesion2/CLI-0001_qu.wav,1.5,1.5,OK
+CLI-0002,B01,B01-S1,train,Médico,Paciente,No estoy bien.,Manam allinchu kani.,CLI-0002_es.wav,CLI-0002_qu.wav,,1.5,ES: no es WAV PCM válido (file does not start with RIFF id)
+GEN-0822,B01,B01-S1,train,General,—,El próximo año estudiaré en la universidad.,Rimay 4.,,,,,FALTA_ES | FALTA_QU
+GEN-0203,B01,B01-S1,train,General,—,El río está crecido.,Mayu hatunyasqa.,GEN-0203_ES.WAV,GEN-0203_qu.wav,1.5,1.5,OK
+GEN-0168,B01,B01-S1,train,General,—,Cantan para llamar la lluvia.,Parata waqyanankupaq takinkulla.,GEN-0168_es.wav,GEN-0168_qu.wav,1.5,1.5,"AUDIO_REPETIDO_QU: 2 archivos con ese nombre (GEN-0168_qu.wav, sesion3/GEN-0168_qu.wav); se usó el primero"
+GEN-0823,B01,B01-S1,train,General,—,Esta tarde va a llover.,Rimay 5.,,,,,FALTA_ES | FALTA_QU
+CLI-0011,B01,B01-S1,train,Médico,Médico,¿Cómo te llamas?,¿Imataq sutiykilla?,,,,,FALTA_ES | FALTA_QU
+CLI-0012,B01,B01-S1,train,Médico,Paciente,Mi nombre es Annel.,Sutiyqa Annellla.,,,,,FALTA_ES | FALTA_QU
+GEN-0068,B01,B01-S1,train,General,—,Estalló en sollozos.,Wiqiyta waqastin qapariyta qallaykurqalla.,,,,,FALTA_ES | FALTA_QU
+GEN-0150,B01,B01-S1,train,General,—,Papá rema la canoa.,Taytay wamputa rimuwan puririchinlla.,,,,,FALTA_ES | FALTA_QU
+GEN-0129,B01,B01-S1,train,General,—,El cielo está nublado.,Hanaq pacha puyuyasqalla.,,,,,FALTA_ES | FALTA_QU
+GEN-1022,B01,B01-S1,train,General,—,Los vecinos se ayudan en la cosecha.,Rimay 6.,,,,,FALTA_ES | FALTA_QU
+CLI-0015,B01,B01-S1,train,Médico,Médico,¿Cuántos años tienes?,¿Haykataq wataykilla?,,,,,FALTA_ES | FALTA_QU
+CLI-0016,B01,B01-S1,train,Médico,Paciente,Yo tengo veinte años.,Ñuqa iskay chunka wataylla.,,,,,FALTA_ES | FALTA_QU
+GEN-0132,B01,B01-S1,train,General,—,Escucho el canto del gallo.,Kikinpa qillqasqan rimay 1.,,,,,FALTA_ES | FALTA_QU
+GEN-0101,B01,B01-S1,train,General,—,Esto parece más divertido.,"Huk rimaymi kayqa, musuqmanta qillqasqa 1.",,,,,FALTA_ES | FALTA_QU
+GEN-0824,B01,B01-S1,train,General,—,Mañana cosecharemos la papa.,Rimay 7.,,,,,FALTA_ES | FALTA_QU
+GEN-0175,B01,B01-S1,train,General,—,El curandero conoce los remedios.,"Huk rimaymi kayqa, musuqmanta qillqasqa 2.",,,,,FALTA_ES | FALTA_QU
+CLI-0019,B01,B01-S1,train,Médico,Médico,¿De dónde eres?,"Huk rimaymi kayqa, musuqmanta qillqasqa 3.",,,,,FALTA_ES | FALTA_QU
+CLI-0020,B01,B01-S1,train,Médico,Paciente,Soy de Ayacucho.,Ayacuchomanta kani.,,,,,FALTA_ES | FALTA_QU
+GEN-0178,B01,B01-S1,train,General,—,El espíritu del agua es fuerte.,Yakupa ispiritun kallpasapa.,,,,,FALTA_ES | FALTA_QU
+GEN-0083,B01,B01-S1,train,General,—,Mi flor perfumaba mi planeta.,Waytaymi kay pachayta musyaykachirqa.,,,,,FALTA_ES | FALTA_QU
+GEN-0918,B01,B01-S1,train,General,—,Vamos a la chacra.,Rimay 8.,,,,,FALTA_ES | FALTA_QU
+GEN-0135,B01,B01-S1,train,General,—,La casa está al lado del río.,Wasi mayu qayllapi kachkan.,,,,,FALTA_ES | FALTA_QU
+CLI-0025,B01,B01-S1,train,Médico,Médico,¿Por qué viniste al hospital?,¿Imaraykutaq kay hampina wasiman hamunki?,,,,,FALTA_ES | FALTA_QU
+CLI-0008,B01,B01-S1,train,Médico,Paciente,Me está doliendo la barriga.,Wiksaymi nanawachkan.,,,,,FALTA_ES | FALTA_QU
+GEN-0157,B01,B01-S1,train,General,—,Estoy aprendiendo tu lengua.,Simiykita yachakuchkani.,,,,,FALTA_ES | FALTA_QU
+GEN-0998,B01,B01-S1,train,General,—,"Como llovió mucho, no salimos.",Rimay 9.,,,,,FALTA_ES | FALTA_QU
+GEN-0053,B01,B01-S1,train,General,—,Estaba animado por un sentimiento de urgencia.,Imapas urgente kasqanwanmi kallpanchasqa karqa.,,,,,FALTA_ES | FALTA_QU
+GEN-0173,B01,B01-S1,train,General,—,Me hinqué con una espina.,Kichkawan nanachikurqani.,,,,,FALTA_ES | FALTA_QU
+CLI-0033,B01,B01-S1,train,Médico,Médico,¿Desde cuándo estás enferma?,¿Haykapmanta unquchkanki?,,,,,FALTA_ES | FALTA_QU
+CLI-0979,B01,B01-S1,train,Médico,Paciente,Desde hace tres días.,Rimay 10.,,,,,FALTA_ES | FALTA_QU
+GEN-0747,B01,B01-S1,train,General,—,Ayer mis tíos llegaron de Lima.,Rimay 11.,,,,,FALTA_ES | FALTA_QU
+GEN-0113,B01,B01-S1,train,General,—,El abuelo cuenta historias.,Awilu willakuykunata willan.,,,,,FALTA_ES | FALTA_QU
+GEN-0189,B01,B01-S1,train,General,—,Este camino es largo.,Kay ñan suni.,,,,,FALTA_ES | FALTA_QU
+CLI-0035,B01,B01-S1,train,Médico,Médico,¿Cómo empezó tu enfermedad?,Kikinpa qillqasqan rimay 3.,,,,,FALTA_ES | FALTA_QU
+CLI-0980,B01,B01-S1,train,Médico,Paciente,"Empezó de repente, después de comer.",Rimay 12.,,,,,FALTA_ES | FALTA_QU
+GEN-0031,B01,B01-S1,train,General,—,Las personas mayores son así.,Machu runakunaqa chaynam kanku.,,,,,FALTA_ES | FALTA_QU
+GEN-0919,B01,B01-S1,train,General,—,"Siéntense aquí, por favor.",Rimay 13.,,,,,FALTA_ES | FALTA_QU
+GEN-0116,B01,B01-S1,train,General,—,La lluvia moja las hojas.,Para raprakunata yakuyachin.,,,,,FALTA_ES | FALTA_QU
+GEN-0128,B01,B01-S2,train,General,—,El fuego está calentando la casa.,Nina wasita quñichichkanlla.,,,,,FALTA_ES | FALTA_QU
+GEN-0741,B01,B01-S2,train,General,—,Ayer fui a la feria con mi mamá.,Rimay 14.,,,,,FALTA_ES | FALTA_QU
+GEN-0032,B01,B01-S2,train,General,—,Luego aceptaron su descubrimiento.,Chaymantañataqmi tarisqankuta chaskirqaku.,,,,,FALTA_ES | FALTA_QU
+GEN-0130,B01,B01-S2,train,General,—,Necesito agua para beber.,Kikinpa qillqasqan rimay 5.,,,,,FALTA_ES | FALTA_QU
+GEN-0916,B01,B01-S2,train,General,—,"Cierra la puerta, por favor.",Rimay 15.,,,,,FALTA_ES | FALTA_QU
+CLI-0028,B01,B01-S2,train,Médico,Médico,¿Cómo te sientes?,¿Imaynataq kachkanki?,,,,,FALTA_ES | FALTA_QU
+CLI-0029,B01,B01-S2,train,Médico,Paciente,Me siento enferma.,,,,,,SIN_VALIDAR: falta el quechua validado | FALTA_ES | FALTA_QU
+GEN-0100,B01,B01-S2,train,General,—,Golpea tus manos una contra otra.,Makiykita hukninmanta hukninman takaykuy.,,,,,FALTA_ES | FALTA_QU
+GEN-0140,B01,B01-S2,train,General,—,El viento mueve las ramas de los árboles.,Wayra sachakunapa kallmankunata kuyuchin.,,,,,FALTA_ES | FALTA_QU
+GEN-0199,B01,B01-S2,train,General,—,Comimos contigo al anochecer.,Qamwan tutayaptin mikurqayku.,,,,,FALTA_ES | FALTA_QU
+GEN-0796,B01,B01-S2,train,General,—,Dicen que ayer nevó en la puna.,Rimay 16.,,,,,FALTA_ES | FALTA_QU
+GEN-0006,B01,B01-S2,train,General,—,Y tengo aún una tercera disculpa.,Kimsa kaq pampachaykuwayniypas kachkanraqmi,,,,,FALTA_ES | FALTA_QU
+CLI-0042,B01,B01-S2,train,Médico,Médico,¿Dónde te duele?,¿Maypitaq nanasunki?,,,,,FALTA_ES | FALTA_QU
+CLI-0981,B01,B01-S2,train,Médico,Paciente,"Aquí, en la boca del estómago.",Rimay 17.,,,,,FALTA_ES | FALTA_QU
+GEN-0154,B01,B01-S2,train,General,—,Esa flor huele bien.,Chay wayta sumaqta asnan.,,,,,FALTA_ES | FALTA_QU
+GEN-0169,B01,B01-S2,train,General,—,Los monos negros están en la cima del árbol.,Yana machinkuna sachapa puntanpi kachkanku.,,,,,FALTA_ES | FALTA_QU
+GEN-0867,B01,B01-S2,train,General,—,Los niños están jugando en el patio.,Rimay 18.,,,,,FALTA_ES | FALTA_QU
+GEN-0043,B01,B01-S2,train,General,—,¿Es verdad que los corderos se comen los arbustos?,¿Chiqanchu carnakunaqa chaprakunata mikunku?,,,,,FALTA_ES | FALTA_QU
+GEN-0579,B01,B01-S2,train,General,—,El tigre caza sigilosamente.,Uturunku upallalla uywata hapin.,,,,,FALTA_ES | FALTA_QU
+CLI-0052,B01,B01-S2,train,Médico,Médico,¿Por dónde caminó tu dolor?,¿Maynintataq nanayniyki purirqa?,,,,,FALTA_ES | FALTA_QU
+CLI-0982,B01,B01-S2,train,Médico,Paciente,"No se ha movido, me duele siempre en el mismo sitio.",Rimay 19.,,,,,FALTA_ES | FALTA_QU
+GEN-0917,B01,B01-S2,train,General,—,Trae agua del río.,Rimay 20.,,,,,FALTA_ES | FALTA_QU
+GEN-0036,B01,B01-S2,train,General,—,Tener un amigo es un verdadero privilegio.,Amistadniyuq kayqa ancha chaninniyuqmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0146,B01,B01-S2,train,General,—,Mañana iremos al mercado.,Paqarin qatuman risaqku.,,,,,FALTA_ES | FALTA_QU
+GEN-0145,B01,B01-S2,train,General,—,El murciélago pasó por aquí.,Maray kaynata pasarqa.,,,,,FALTA_ES | FALTA_QU
+GEN-0868,B01,B01-S2,train,General,—,Está lloviendo desde la mañana.,Rimay 21.,,,,,FALTA_ES | FALTA_QU
+CLI-0141,B01,B01-S2,train,Médico,Médico,¿Te duele mucho?,¿Sinchitachu nanasunki?,,,,,FALTA_ES | FALTA_QU
+CLI-0983,B01,B01-S2,train,Médico,Paciente,"Sí, me duele mucho.",Rimay 22.,,,,,FALTA_ES | FALTA_QU
+GEN-0049,B01,B01-S2,train,General,—,El suelo estaba infestado de semillas.,Allpaqa muhupa huntasqanmi kasqa.,,,,,FALTA_ES | FALTA_QU
+GEN-0208,B01,B01-S2,train,General,—,Enseñemos a cuidar las plantas.,Kikinpa qillqasqan rimay 7.,,,,,FALTA_ES | FALTA_QU
+GEN-0902,B01,B01-S2,train,General,—,De niño cuidaba las ovejas de mi abuelo.,Rimay 23.,,,,,FALTA_ES | FALTA_QU
+GEN-0028,B01,B01-S2,train,General,—,El corderito que te he dado también es pequeño.,Qusqay uchuy malta carneropas uchuychallam.,,,,,FALTA_ES | FALTA_QU
+CLI-0061,B01,B01-S2,train,Médico,Médico,¿Cómo te duele?,¿Imaynatataq nanasunki?,,,,,FALTA_ES | FALTA_QU
+CLI-0984,B01,B01-S2,train,Médico,Paciente,Me duele como si me pincharan.,Rimay 24.,,,,,FALTA_ES | FALTA_QU
+GEN-0207,B01,B01-S2,train,General,—,Mi lengua vive en mi memoria.,Simiy yuyayniypi kawsan.,,,,,FALTA_ES | FALTA_QU
+GEN-0193,B01,B01-S2,train,General,—,El abuelo nos enseñó a leer libros.,Awilu maytu ñawichayta yachachiwarqayku.,,,,,FALTA_ES | FALTA_QU
+GEN-0825,B01,B01-S2,train,General,—,Mi hermana llegará el sábado.,Rimay 25.,,,,,FALTA_ES | FALTA_QU
+GEN-0040,B01,B01-S2,train,General,—,Quizá me creía semejante a él.,Ichapas payman rikchakuq kasqayta piensarqa.,,,,,FALTA_ES | FALTA_QU
+CLI-0058,B01,B01-S2,train,Médico,Médico,¿En la noche te duele?,¿Tutapichu nanasunki?,,,,,FALTA_ES | FALTA_QU
+CLI-0985,B01,B01-S2,train,Médico,Paciente,"Sí, en la noche me duele más.",Rimay 26.,,,,,FALTA_ES | FALTA_QU
+GEN-0171,B01,B01-S2,train,General,—,La tierra está mojada.,Allpa yakuyasqa.,,,,,FALTA_ES | FALTA_QU
+GEN-0534,B01,B01-S2,train,General,—,En el bosque me perdí.,Sachasachapi chinkarqani.,,,,,FALTA_ES | FALTA_QU
+GEN-1023,B01,B01-S2,train,General,—,Mi hermana se peina frente al espejo.,Rimay 27.,,,,,FALTA_ES | FALTA_QU
+GEN-0017,B01,B01-S2,train,General,—,Me puse en pie de un brinco.,Chaprakunapa hawanpi sayarqani.,,,,,FALTA_ES | FALTA_QU
+CLI-0069,B01,B01-S2,train,Médico,Médico,¿Te duele más cuando comes?,¿Mikuptiyki astawanchu nanasunki?,,,,,FALTA_ES | FALTA_QU
+CLI-0986,B01,B01-S2,train,Médico,Paciente,"Sí, cuando como me duele más.",Rimay 28.,,,,,FALTA_ES | FALTA_QU
+GEN-0137,B01,B01-S2,train,General,—,Ayer fuimos al pueblo.,Qaynunchaw llaqtaman rirqayku.,,,,,FALTA_ES | FALTA_QU
+GEN-0798,B01,B01-S2,train,General,—,Dicen que el alcalde viajó a Lima.,Rimay 29.,,,,,FALTA_ES | FALTA_QU
+GEN-0015,B01,B01-S2,train,General,—,Había quedado desilusionado por el fracaso de mis dibujos.,Dibujokuna mana allinpi tukuptinmi hukmanyasqa karqani.,,,,,FALTA_ES | FALTA_QU
+GEN-0190,B01,B01-S2,train,General,—,Bebí agua del manantial.,Pukyumanta yakuta upyarqani.,,,,,FALTA_ES | FALTA_QU
+GEN-0541,B01,B01-S3,train,General,—,¿Qué hacen ustedes por la tarde?,¿Imatam qamkuna chisipi rurankichiklla?,,,,,FALTA_ES | FALTA_QU
+GEN-0821,B01,B01-S3,train,General,—,Mañana iré a la chacra con mi papá.,Rimay 30.,,,,,FALTA_ES | FALTA_QU
+GEN-0021,B01,B01-S3,train,General,—,"No importa, ¡píntame un cordero!","Imayna kaptinpas, ¡wañuta pintaykuway!",,,,,FALTA_ES | FALTA_QU
+GEN-0185,B01,B01-S3,train,General,—,La canoa está rota.,Wampu pakisqa.,,,,,FALTA_ES | FALTA_QU
+CLI-0072,B01,B01-S3,train,Médico,Médico,¿Has tomado algo para aliviar el dolor?,¿Nanayniykita pisiyachinaykipaq hampikunata millpurqankichu?,,,,,FALTA_ES | FALTA_QU
+CLI-0987,B01,B01-S3,train,Médico,Paciente,"Tomé una pastilla, pero no se me pasó.",Rimay 31.,,,,,FALTA_ES | FALTA_QU
+GEN-0996,B01,B01-S3,train,General,—,"Cuando llegué a casa, mi mamá estaba cocinando.",Rimay 32.,,,,,FALTA_ES | FALTA_QU
+GEN-0536,B01,B01-S3,train,General,—,¿Qué hace ella a mediodía?,¿Imatam pay chawpi punchaw ruran?,,,,,FALTA_ES | FALTA_QU
+GEN-0019,B01,B01-S3,train,General,—,El muchachito me observaba gravemente.,Warmachaqa llumpayta qawamuwarqa.,,,,,FALTA_ES | FALTA_QU
+GEN-0118,B01,B01-S3,train,General,—,El pájaro canta al amanecer.,Pisqu punchawyaptin takin.,,,,,FALTA_ES | FALTA_QU
+CLI-0127,B01,B01-S3,train,Médico,Médico,¿Tienes fiebre?,¿Rupapakunkichu?,,,,,FALTA_ES | FALTA_QU
+CLI-0988,B01,B01-S3,train,Médico,Paciente,"Sí, anoche tuve fiebre.",Rimay 33.,,,,,FALTA_ES | FALTA_QU
+GEN-0901,B01,B01-S3,train,General,—,Antes yo caminaba dos horas hasta la escuela.,Rimay 34.,,,,,FALTA_ES | FALTA_QU
+GEN-0022,B01,B01-S3,train,General,—,En mi tierra todo es muy pequeñito.,Llaqtaypiqa lliwmi uchuychallalla.,,,,,FALTA_ES | FALTA_QU
+GEN-0538,B01,B01-S3,train,General,—,Mi mamá cocina caldo de gallina.,Mamay wallpa chupita yanun.,,,,,FALTA_ES | FALTA_QU
+GEN-0125,B01,B01-S3,train,General,—,Hay muchos árboles grandes.,Kikinpa qillqasqan rimay 9.,,,,,FALTA_ES | FALTA_QU
+CLI-0135,B01,B01-S3,train,Médico,Médico,¿Tienes vómitos?,¿Wikchunayasunkichu?,,,,,FALTA_ES | FALTA_QU
+CLI-0989,B01,B01-S3,train,Médico,Paciente,"Sí, vomité dos veces.",Rimay 35.,,,,,FALTA_ES | FALTA_QU
+GEN-0743,B01,B01-S3,train,General,—,Anoche llovió mucho en el pueblo.,Rimay 36.,,,,,FALTA_ES | FALTA_QU
+GEN-0038,B01,B01-S3,train,General,—,Uno saldrá bien y otro quizá no tanto.,"Hukninmi allinta lluqsinqa, hukninñataq manapaschá anchatachu.",,,,,FALTA_ES | FALTA_QU
+GEN-0162,B01,B01-S3,train,General,—,Esta noche hay luna nueva.,Kunan tuta killa musuq.,,,,,FALTA_ES | FALTA_QU
+GEN-0744,B01,B01-S3,train,General,—,Mi abuelo vendió dos ovejas en el mercado.,Rimay 37.,,,,,FALTA_ES | FALTA_QU
+CLI-0375,B01,B01-S3,train,Médico,Médico,¿Tienes diarrea?,¿Kachkanki diarrayawanchu?,,,,,FALTA_ES | FALTA_QU
+CLI-0990,B01,B01-S3,train,Médico,Paciente,"No, no tengo diarrea.",Rimay 38.,,,,,FALTA_ES | FALTA_QU
+GEN-0187,B01,B01-S3,train,General,—,Los pájaros vuelan juntos.,Pisqukuna kuska pawanku.,,,,,FALTA_ES | FALTA_QU
+GEN-0014,B01,B01-S3,train,General,—,Los mayores siempre tienen necesidad de explicaciones.,Machuyaqkunaqa sapa kuti yachachikuyta munanku.,,,,,FALTA_ES | FALTA_QU
+GEN-0147,B01,B01-S3,train,General,—,El bebé ya puede caminar.,Wawa puriytaña atin.,,,,,FALTA_ES | FALTA_QU
+GEN-0947,B01,B01-S3,train,General,—,"Si lloviera, la papa crecería mejor.",Rimay 39.,,,,,FALTA_ES | FALTA_QU
+CLI-0373,B01,B01-S3,train,Médico,Médico,¿Tienes apetito?,¿Mikunayasunkichu?,,,,,FALTA_ES | FALTA_QU
+CLI-0991,B01,B01-S3,train,Médico,Paciente,"No, no tengo ganas de comer.",Rimay 40.,,,,,FALTA_ES | FALTA_QU
+GEN-0532,B01,B01-S3,train,General,—,El doctor cura al paciente.,Hampiq unqusqata hampin.,,,,,FALTA_ES | FALTA_QU
+GEN-0094,B01,B01-S3,train,General,—,"Eso, uno podría hacerlo en cualquier lugar.",Chaytaqa maypipas ruwayta atichwanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0745,B01,B01-S3,train,General,—,Esta mañana tomé leche caliente.,Rimay 41.,,,,,FALTA_ES | FALTA_QU
+GEN-0204,B01,B01-S3,train,General,—,Esa palabra suena fuerte.,Chay simi sinchita uyarikun.,,,,,FALTA_ES | FALTA_QU
+CLI-0387,B01,B01-S3,train,Médico,Médico,¿Tienes tos?,¿Uhuchkankichu?,,,,,FALTA_ES | FALTA_QU
+CLI-0992,B01,B01-S3,train,Médico,Paciente,"No, no tengo tos.",Rimay 42.,,,,,FALTA_ES | FALTA_QU
+GEN-0543,B01,B01-S3,train,General,—,¿Qué hacen los hombres en el río?,¿Imatam qarikuna mayupi ruranku?,,,,,FALTA_ES | FALTA_QU
+GEN-0062,B01,B01-S3,train,General,—,Las espinas no sirven para nada.,Kichkakunaqa manam imapaqpas allinchu.,,,,,FALTA_ES | FALTA_QU
+GEN-0869,B01,B01-S3,train,General,—,Mi mamá está tejiendo una manta.,Rimay 43.,,,,,FALTA_ES | FALTA_QU
+GEN-0198,B01,B01-S3,train,General,—,Cuidado con la serpiente.,¡Amarumanta waqaychakuy!,,,,,FALTA_ES | FALTA_QU
+CLI-0271,B01,B01-S3,train,Médico,Médico,"Voy a examinarte. Me vas a ayudar, ¿está bien?",Kikinpa qillqasqan rimay 11.,,,,,FALTA_ES | FALTA_QU
+CLI-0993,B01,B01-S3,train,Médico,Paciente,"Está bien, doctor.",Rimay 44.,,,,,FALTA_ES | FALTA_QU
+GEN-0034,B01,B01-S3,train,General,—,Me habría gustado decir: érase una vez…,Munaymanchá niyta: huk kutillaraq kachkaptiy...,,,,,FALTA_ES | FALTA_QU
+GEN-0142,B01,B01-S3,train,General,—,"Trae el machete, por favor.","Ama hina kaspa, machitita apamuy.",,,,,FALTA_ES | FALTA_QU
+GEN-0948,B01,B01-S3,train,General,—,Quisiera aprender a tejer.,Rimay 45.,,,,,FALTA_ES | FALTA_QU
+GEN-0143,B01,B01-S3,train,General,—,Esa fruta está dulce.,Chay ruru miski.,,,,,FALTA_ES | FALTA_QU
+CLI-0193,B01,B01-S3,train,Médico,Médico,"A ver, échate.",Sirikuy,,,,,FALTA_ES | FALTA_QU
+GEN-0075,B01,B01-S3,train,General,—,Tengo horror a las corrientes de aire.,Wayrapa puriyninkunataqa millakuni.,,,,,FALTA_ES | FALTA_QU
+GEN-0870,B01,B01-S3,train,General,—,Estamos esperando el bus.,Rimay 46.,,,,,FALTA_ES | FALTA_QU
+GEN-0195,B01,B01-S3,train,General,—,Me gustaría aprender más.,Astawan yachakuyta munayman.,,,,,FALTA_ES | FALTA_QU
+GEN-0124,B01,B01-S4,train,General,—,Voy a pescar con papá.,Taytaywan challwakuq risaq.,,,,,FALTA_ES | FALTA_QU
+GEN-0866,B01,B01-S4,train,General,—,Ahora estoy cocinando el almuerzo.,Rimay 47.,,,,,FALTA_ES | FALTA_QU
+GEN-0069,B01,B01-S4,train,General,—,¡Es tan misterioso el país de las lágrimas!,¡Wiqiypa llaqtanqa manam yachakunapaqchu!,,,,,FALTA_ES | FALTA_QU
+GEN-0155,B01,B01-S4,train,General,—,"Mira, una mariposa azul.","Qaway, anka pillpintu.",,,,,FALTA_ES | FALTA_QU
+CLI-0229,B01,B01-S4,train,Médico,Médico,No pongas dura la barriga.,Wiksaykita ama kallpachaychu,,,,,FALTA_ES | FALTA_QU
+GEN-1021,B01,B01-S4,train,General,—,La mamá hace dormir al bebé.,Rimay 48.,,,,,FALTA_ES | FALTA_QU
+GEN-0106,B01,B01-S4,train,General,—,El niño va corriendo a la chacra.,Qari warma chakraman kallpaspa rin.,,,,,FALTA_ES | FALTA_QU
+GEN-0088,B01,B01-S4,train,General,—,La flor tosió aunque no estaba resfriada.,Waytaqa mana chiriyasqa kachkaspanpas usurparin.,,,,,FALTA_ES | FALTA_QU
+GEN-0138,B01,B01-S4,train,General,—,Los niños juegan con barro.,Warmakuna mituwan pukllanku.,,,,,FALTA_ES | FALTA_QU
+CLI-0352,B01,B01-S4,train,Médico,Médico,¿Te duele aquí?,¿Kaypi nanasunkichu?,,,,,FALTA_ES | FALTA_QU
+CLI-0994,B01,B01-S4,train,Médico,Paciente,"Sí, ahí me duele mucho.",Rimay 49.,,,,,FALTA_ES | FALTA_QU
+GEN-0742,B01,B01-S4,train,General,—,La semana pasada sembramos papa en la chacra.,Rimay 50.,,,,,FALTA_ES | FALTA_QU
+GEN-0087,B01,B01-S4,train,General,—,Adiós –le dijo a la flor.,"Fioramanmi nirqa: Chaynaqa, ripullaykichikyá, nispa.",,,,,FALTA_ES | FALTA_QU
+GEN-0148,B01,B01-S4,train,General,—,¿Quién rompió el cántaro?,¿Pitaq puyñuta pakirqa?,,,,,FALTA_ES | FALTA_QU
+GEN-0141,B01,B01-S4,train,General,—,"Estoy cansado, quiero dormir.","Saykusqa kani, puñuyta munani.",,,,,FALTA_ES | FALTA_QU
+CLI-0097,B01,B01-S4,train,Médico,Médico,Respira hondo.,Samay ukumanta.,,,,,FALTA_ES | FALTA_QU
+GEN-0967,B01,B01-S4,train,General,—,¿Vendrás a la fiesta del pueblo?,Rimay 51.,,,,,FALTA_ES | FALTA_QU
+GEN-0086,B01,B01-S4,train,General,—,Yo era demasiado joven para saber amarla.,Ñuqaqa llumpay wayna kaspaymi kuyananaypaqqa mana yacharqanichu.,,,,,FALTA_ES | FALTA_QU
+GEN-0181,B01,B01-S4,train,General,—,¿Cómo se dice eso en tu lengua?,¿Chayta simiykipi imaynatam nin?,,,,,FALTA_ES | FALTA_QU
+GEN-0997,B01,B01-S4,train,General,—,"Después de comer, fuimos a la chacra.",Rimay 52.,,,,,FALTA_ES | FALTA_QU
+CLI-0254,B01,B01-S4,train,Médico,Médico,Tienes mal el estómago.,Wiksaykim mana allinchu,,,,,FALTA_ES | FALTA_QU
+CLI-0995,B01,B01-S4,train,Médico,Paciente,"¿Es grave, doctor?",Rimay 53.,,,,,FALTA_ES | FALTA_QU
+CLI-0924,B01,B01-S4,train,Médico,Médico,No es nada grave.,Rimay 54.,,,,,FALTA_ES | FALTA_QU
+GEN-0209,B01,B01-S4,train,General,—,¿Quieres contarme tu historia?,¿Willakuyniykita willawayta munankichu?,,,,,FALTA_ES | FALTA_QU
+GEN-0016,B01,B01-S4,train,General,—,"Viví así, solo, sin nadie con quien poder hablar.",Kikinpa qillqasqan rimay 13.,,,,,FALTA_ES | FALTA_QU
+GEN-0160,B01,B01-S4,train,General,—,Coseché yuca por la mañana.,Tutamanta yukata allarqani.,,,,,FALTA_ES | FALTA_QU
+GEN-0797,B01,B01-S4,train,General,—,Cuentan que antes aquí había una laguna.,Rimay 55.,,,,,FALTA_ES | FALTA_QU
+CLI-0916,B01,B01-S4,train,Médico,Médico,Al despertar vas a tomar dos pastillas.,Rimay 56.,,,,,FALTA_ES | FALTA_QU
+CLI-0996,B01,B01-S4,train,Médico,Paciente,"Bueno, dos pastillas en la mañana.",Rimay 57.,,,,,FALTA_ES | FALTA_QU
+GEN-0136,B01,B01-S4,train,General,—,El pez nada en el agua.,Challwa yakupi waytan.,,,,,FALTA_ES | FALTA_QU
+GEN-0058,B01,B01-S4,train,General,—,¡Un día vi ponerse el sol cuarenta y tres veces!,¡Huk punchawmi inti siqaykuyta tawa chunka kimsayuq kutita rikurqani!,,,,,FALTA_ES | FALTA_QU
+GEN-0968,B01,B01-S4,train,General,—,¿Qué estás haciendo?,Rimay 58.,,,,,FALTA_ES | FALTA_QU
+GEN-0161,B01,B01-S4,train,General,—,Mi tía hace chicha punta.,Tiyay punta aqata ruran.,,,,,FALTA_ES | FALTA_QU
+CLI-0153,B01,B01-S4,train,Médico,Médico,Toma líquido.,Yakuta upyay,,,,,FALTA_ES | FALTA_QU
+CLI-0997,B01,B01-S4,train,Médico,Paciente,"Sí, voy a tomar bastante agua.",Rimay 59.,,,,,FALTA_ES | FALTA_QU
+GEN-0120,B01,B01-S4,train,General,—,¿Dónde está tu casa?,¿Maypim wasiyki?,,,,,FALTA_ES | FALTA_QU
+GEN-0066,B01,B01-S4,train,General,—,"Todo lo confundes, todo lo mezclas.","Lliwta pantachinki, lliwta chaqurunki.",,,,,FALTA_ES | FALTA_QU
+GEN-0746,B01,B01-S4,train,General,—,El año pasado mi hermana terminó la secundaria.,Rimay 60.,,,,,FALTA_ES | FALTA_QU
+GEN-0167,B01,B01-S4,train,General,—,¿Has visto a mi hermano?,¿Wawqiyta rikurqankichu?,,,,,FALTA_ES | FALTA_QU
+CLI-0923,B01,B01-S4,train,Médico,Médico,Vas a volver en una semana.,Rimay 61.,,,,,FALTA_ES | FALTA_QU
+CLI-0998,B01,B01-S4,train,Médico,Paciente,"Bueno, regreso en una semana.",Rimay 62.,,,,,FALTA_ES | FALTA_QU
+GEN-0105,B01,B01-S4,train,General,—,¿Qué haces ahí?,¿Imatataq chaypi ruwanki?,,,,,FALTA_ES | FALTA_QU
+GEN-0177,B01,B01-S4,train,General,—,Todos trajeron comida.,Llapanku mikunata apamurqaku.,,,,,FALTA_ES | FALTA_QU
+GEN-0826,B01,B01-S4,train,General,—,Tú cuidarás a las ovejas esta semana.,Rimay 63.,,,,,FALTA_ES | FALTA_QU
+GEN-0179,B01,B01-S4,train,General,—,Quiero escucharte cuando hablas.,Rimaptiyki uyariyta munani.,,,,,FALTA_ES | FALTA_QU
+CLI-0999,B01,B01-S4,train,Médico,Médico,¿Entendiste lo que tienes que hacer?,Rimay 64.,,,,,FALTA_ES | FALTA_QU
+CLI-1000,B01,B01-S4,train,Médico,Paciente,"Sí, entendí. Gracias, doctor.",Rimay 65.,,,,,FALTA_ES | FALTA_QU
+GEN-0060,B01,B01-S4,train,General,—,"Ese día estabas muy triste, ¿verdad?","Chay punchawqa ancha llakisqachá karqanki, ¿aw?",,,,,FALTA_ES | FALTA_QU
+GEN-0969,B01,B01-S4,train,General,—,¿Dónde vive tu abuela?,Rimay 66.,,,,,FALTA_ES | FALTA_QU
+GEN-0114,B01,B01-S4,train,General,—,Me gusta la fruta madura.,Puqusqa ruruta munani.,,,,,FALTA_ES | FALTA_QU

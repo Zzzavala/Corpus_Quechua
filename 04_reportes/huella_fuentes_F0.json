@@ -1,0 +1,157 @@
+{
+  "Fuentes/5660130-manejo-de-paciente-con-diabetes-mellitus-2.pdf": {
+    "bytes": 2374435,
+    "modificado": "2026-10-14T14:52:54",
+    "sha256": "6eabd4a68f36b87f8c5a5c243bf211cabc9a343aa308bfe1c5995dd018683f1c"
+  },
+  "Fuentes/8361447-diabetes_mellitus_quechua.pdf": {
+    "bytes": 657298,
+    "modificado": "2026-10-14T14:52:43",
+    "sha256": "98eb4bffffe1a475e4fe910626488134dfa7b5a7f2a731975c0ad557798ba9e4"
+  },
+  "Fuentes/AFICHE_COVID 19 LAVADO DE MANOS MINSA quechua  chanka.pdf": {
+    "bytes": 407335,
+    "modificado": "2026-10-14T14:52:28",
+    "sha256": "0f6702417dc5632eeff31a6c90504022135318c073c51e0800a321f8c9ff3e4e"
+  },
+  "Fuentes/AmericasNLP/dev.es": {
+    "bytes": 65632,
+    "modificado": "2026-10-14T14:49:01",
+    "sha256": "a09f2c7d93bf2e3b9e9b18d71b279e5554c7cc02db6363f85abdbb231db04da5"
+  },
+  "Fuentes/AmericasNLP/dev.quy": {
+    "bytes": 65872,
+    "modificado": "2026-10-14T14:49:04",
+    "sha256": "0a3af37e96e923e874a1239ce181864bc71ed743f5520c50daaf66111e1e57a0"
+  },
+  "Fuentes/AmericasNLP/dict.es": {
+    "bytes": 226252,
+    "modificado": "2026-10-14T14:49:11",
+    "sha256": "abe24b4f79c4f0307729c717f8af4d96641a94324029ac9484de7348949ee854"
+  },
+  "Fuentes/AmericasNLP/dict.quy": {
+    "bytes": 206518,
+    "modificado": "2026-10-14T14:49:11",
+    "sha256": "525f0c6db9094cf434df2169f685bc1b21d27c65e6d737e0c39b82bfadce737b"
+  },
+  "Fuentes/AmericasNLP/es-quy/dict_misc.quy-es.es": {
+    "bytes": 201884,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "046718eb637ebb72abdc0bfcab1d8059c624bd84c98163f9e7701bf281dec240"
+  },
+  "Fuentes/AmericasNLP/es-quy/dict_misc.quy-es.quy": {
+    "bytes": 184996,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "ffa68412ad3ab3d32b84f3460137b91c10e342f2125894c710253e81d5e5d513"
+  },
+  "Fuentes/AmericasNLP/es-quy/jw300.es-quy.es": {
+    "bytes": 11323668,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "5fb4bd6033ce35ea536216f547f3f0c2fbc54f751d2805e2c7010a53ec72b345"
+  },
+  "Fuentes/AmericasNLP/es-quy/jw300.es-quy.quy": {
+    "bytes": 11019760,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "abb38aa9cf50a717f289da5a6a0c8174539c2f213bb25a493ca04d21f31d36cf"
+  },
+  "Fuentes/AmericasNLP/es-quy/minedu.quy-es.es": {
+    "bytes": 24368,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "92b589ad2d995894cccdaf5878631729f1075a21f34dd38050c7a3e163c7b3f1"
+  },
+  "Fuentes/AmericasNLP/es-quy/minedu.quy-es.quy": {
+    "bytes": 21521,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "be4379112e87bdfac9efac07919d1bc9faed434b66c00d21a37ed54f3efdf7c1"
+  },
+  "Fuentes/AmericasNLP/README.md": {
+    "bytes": 2039,
+    "modificado": "2026-10-14T14:48:33",
+    "sha256": "d6517e48a81b4d0547189d5eb20d24cbbfa43a3ea28152cd03595f228e99a61a"
+  },
+  "Fuentes/AmericasNLP/test.es": {
+    "bytes": 57470,
+    "modificado": "2026-10-14T14:50:05",
+    "sha256": "a30e58fe429dcaeaf17699e38e2e23ffc13722ae530c4c724f9855d26c73aa8f"
+  },
+  "Fuentes/AmericasNLP/train.es": {
+    "bytes": 11323668,
+    "modificado": "2026-10-14T14:48:53",
+    "sha256": "5fb4bd6033ce35ea536216f547f3f0c2fbc54f751d2805e2c7010a53ec72b345"
+  },
+  "Fuentes/AmericasNLP/train.quy": {
+    "bytes": 11019760,
+    "modificado": "2026-10-14T14:48:56",
+    "sha256": "abb38aa9cf50a717f289da5a6a0c8174539c2f213bb25a493ca04d21f31d36cf"
+  },
+  "Fuentes/arbol.txt": {
+    "bytes": 1221,
+    "modificado": "2026-10-14T15:07:41",
+    "sha256": "b158361a1b54f4647acdec133b82fc3e4dd152a21a568e9ec15d843643adb7fe"
+  },
+  "Fuentes/Corpus_Construido (1).xlsx": {
+    "bytes": 11639,
+    "modificado": "2026-10-14T14:38:53",
+    "sha256": "924e4b12f041380ee70a40cbab8ce1042aed5d5f347553bae2e044149a575ee8"
+  },
+  "Fuentes/Corpus_Equipos (1).xlsx": {
+    "bytes": 98547,
+    "modificado": "2026-10-14T14:01:40",
+    "sha256": "e357021d43e5a23e439c97c6031e67be27f8549ae164fb65a3499f6ad2dd2945"
+  },
+  "Fuentes/entrevistaquechua_spa.pdf": {
+    "bytes": 18586038,
+    "modificado": "2026-10-14T14:54:38",
+    "sha256": "74db6520301fee4b743db0907704461cf3d6f2ee2724a54961459f3ea786e6e2"
+  },
+  "Fuentes/manualparaelempleodelquechuachankaenlaadministraciondejusticia.pdf": {
+    "bytes": 1918986,
+    "modificado": "2026-10-14T14:52:16",
+    "sha256": "83c058e94008b97eb011a9551031321d3aa7373480101a720fbb65212dbc3177"
+  },
+  "Fuentes/ManualSemiologiaQuechua-2020.pdf": {
+    "bytes": 921434,
+    "modificado": "2026-10-14T14:53:55",
+    "sha256": "86245e156b00ccf0033e810a107852d9eda06dad2518f278db73d270adb9ade5"
+  },
+  "Fuentes/PDF Manual de Quechua Socemurp Compress _ ILIDE.INFO Platform PDF Viewer (1).pdf": {
+    "bytes": 38580298,
+    "modificado": "2026-10-14T13:43:48",
+    "sha256": "de8ab82d144424e85dff985dcbab9daf3426be76f292863019d3142ac64eddf4"
+  },
+  "Fuentes/Quechua médico.html": {
+    "bytes": 11272,
+    "modificado": "2026-10-14T14:53:30",
+    "sha256": "3ee01fe11de1006c4656f9254d362b93a668b0624c1d632f113006aaa14dddae"
+  },
+  "Fuentes/Trabajo - Otro Compañero/[Vibe]EDA_Corpus_NLP.ipynb": {
+    "bytes": 2196666,
+    "modificado": "2026-10-14T14:38:35",
+    "sha256": "808d36baf63dd7e7f0ad4bc876d1fa08db37852ce60d5948f4e49ecde9332f62"
+  },
+  "Fuentes/Trabajo - Otro Compañero/Corpus_Recopilado.xlsx": {
+    "bytes": 86725,
+    "modificado": "2026-10-14T14:38:31",
+    "sha256": "321ba05888f393fff4fdc1ef4286c6ced4fb1b8c25fe459b27b2738fbb7dfc99"
+  },
+  "Fuentes/Vocabulario_Quechua_Chanka_unificado (2).xlsx": {
+    "bytes": 401453,
+    "modificado": "2026-10-14T13:43:29",
+    "sha256": "5916322c2adfaf3b0982bac88c966618a6dcad8f76b458835ce4830e3123ddc1"
+  },
+  "Fuentes/Yachakuqkunapa simi qullqa. Ayakuchu Chanka Qichwa simipi (1).pdf": {
+    "bytes": 48953811,
+    "modificado": "2026-10-14T14:51:29",
+    "sha256": "e362250a7f88adc22a5e28c7a231b2a9f1b6779aaa1425c44b5a03cb845b52fe"
+  },
+  "Estrategia/CLAUDE.md": {
+    "bytes": 55170,
+    "modificado": "2026-10-14T15:17:51",
+    "sha256": "375067e30eb9ff74bd1972b54accc950ff80cac91b293b0e4237c7fe84b90160"
+  },
+  "Estrategia/INF657_CLAUDE_corpus.md": {
+    "bytes": 54411,
+    "modificado": "2026-10-14T15:11:57",
+    "sha256": "b9207784ad73b16925d37d63a737f0b23dae79f96973c0aafb59047bff110260"
+  }
+}

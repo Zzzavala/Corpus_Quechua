@@ -1,0 +1,60 @@
+# Oraciones de más de 20 palabras (§10.1). Se parten en unidades de 15 palabras o menos, redactadas por Claude
+# a partir del original (Estado = Revisar_Juan). Si no se pueden partir limpiamente → descartar con motivo.
+# `qu` solo se pone cuando es un trozo LITERAL del borrador original (el script lo comprueba); nunca se redacta quechua.
+
+QCH-0478:
+  - {es: "Cuarentena significa que debe quedarse en casa."}
+  - {es: "Esté atento a cualquier síntoma de COVID-19."}
+  - {es: "Use mascarilla todo el tiempo."}
+  - {es: "Lávese las manos con frecuencia."}
+  - {es: "Manténgase al menos a dos metros de otras personas."}
+QCH-0483:
+  - {es: "Tómese la temperatura dos veces al día, en la mañana y en la tarde."}
+  - {es: "Esté atento a otros síntomas de COVID-19."}
+  - {es: "Por ejemplo, tos, dolor de garganta, dolor de cabeza o malestar general."}
+  - {es: "También dolores musculares, pérdida del gusto o del olfato, o nariz tapada."}
+QCH-0513:
+  - {es: "Quédese en casa, lejos de los demás, y vigile su salud."}
+  - {es: "Así protegerá del COVID-19 a su familia, a sus amigos y a otras personas."}
+QCH-0514:
+  - {es: "Usted estuvo en contacto cercano con una persona con COVID-19."}
+  - {es: "Usted podría haberse contagiado."}
+  - {es: "Por eso es importante seguir estas recomendaciones."}
+QCH-0520: {descartar: "larga: datos administrativos de 2020 (app «Perú en tus manos», teléfonos, DIRESA); no sirve para una consulta"}
+QCH-0522:
+  - {es: "Si sus síntomas empeoran o son graves, vaya de emergencia a un establecimiento de salud."}
+  - {es: "Son síntomas graves la dificultad para respirar y el dolor en el pecho."}
+  - {es: "También la confusión y los labios azulados."}
+QCH-0544: {descartar: "larga (45 palabras, cortada en la fuente a 255 caracteres): seguimiento administrativo COVID-19, no se puede partir limpiamente"}
+QCH-0591:
+  - {es: "¿Estuviste en la misma habitación que esa persona, aunque a más de dos metros?"}
+  - {es: "Por ejemplo, en la misma casa, oficina o restaurante."}
+QCH-0718:
+  - {es: "¿Con la tos se agita y no puede respirar bien?"}
+  - {es: "¿Si camina, se agita o le falta el aire?"}
+QCH-0751:
+  - {es: "¿Alguna vez se ha despertado de golpe a media noche por falta de aire?"}
+  - {es: "¿Se despertó tosiendo o agitado?"}
+QCH-0765:
+  - {es: "Cuando le caen mal los alimentos, ¿le dan ganas de vomitar?"}
+  - {es: "¿Le duele o siente que se le hincha el abdomen?"}
+  - {es: "¿Cuánto tiempo dura esta molestia?"}
+QCH-0768:
+  - {es: "¿Ha tenido diarreas?", qu: "¿Qichawanchu kachkanki?"}
+  - {es: "¿Cómo son: aguadas, delgadas como cinta o en pedazos?"}
+  - {es: "¿Tienen sangre roja, o son blancas o negras como la brea?"}
+QCH-0769:
+  - {es: "Cuando tiene diarrea, ¿le duele o le dan retortijones?"}
+  - {es: "¿Siente que quiere volver a hacer, aunque salga poco?"}
+QCH-0770:
+  - {es: "¿Ha tenido dolor en la boca del estómago?", qu: "Wiksa simipi nanasunkichu"}
+  - {es: "¿Luego ese dolor se fue al lado derecho y es muy fuerte?", qu: "¿chay nanay paña wiksapichu, unaytachu nanasunki?"}
+QCH-0771:
+  - {es: "¿A los pocos días se le pusieron amarillos los ojos y la piel?"}
+  - {es: "¿Cambió el color de su orina?"}
+QCH-0793:
+  - {es: "Si le viene sangre antes de la fecha de su regla, avise al médico.", qu: "Yawarniyki hamun mana tukasunki hinaqa willanayki doctorman"}
+  - {es: "Eso no es normal.", qu: "chayqa manam allinchu."}
+QCH-0820:
+  - {es: "¿Ha notado que un lado de la cara no es igual al otro?"}
+  - {es: "¿Se le ha torcido la boca hacia un lado?"}

@@ -1,0 +1,39 @@
+Listado de rutas de carpetas para el volumen Nuevo vol
+El número de serie del volumen es 1CC0-74AB
+D:.
+|   5660130-manejo-de-paciente-con-diabetes-mellitus-2.pdf
+|   8361447-diabetes_mellitus_quechua.pdf
+|   AFICHE_COVID 19 LAVADO DE MANOS MINSA quechua  chanka.pdf
+|   arbol.txt
+|   Corpus_Construido (1).xlsx
+|   Corpus_Equipos (1).xlsx
+|   entrevistaquechua_spa.pdf
+|   manualparaelempleodelquechuachankaenlaadministraciondejusticia.pdf
+|   ManualSemiologiaQuechua-2020.pdf
+|   PDF Manual de Quechua Socemurp Compress _ ILIDE.INFO Platform PDF Viewer (1).pdf
+|   Quechua médico.html
+|   Vocabulario_Quechua_Chanka_unificado (2).xlsx
+|   Yachakuqkunapa simi qullqa. Ayakuchu Chanka Qichwa simipi (1).pdf
+|   
++---AmericasNLP
+|   |   dev.es
+|   |   dev.quy
+|   |   dict.es
+|   |   dict.quy
+|   |   README.md
+|   |   test.es
+|   |   train.es
+|   |   train.quy
+|   |   
+|   \---es-quy
+|           dict_misc.quy-es.es
+|           dict_misc.quy-es.quy
+|           jw300.es-quy.es
+|           jw300.es-quy.quy
+|           minedu.quy-es.es
+|           minedu.quy-es.quy
+|           
+\---Trabajo - Otro Compañero
+        Corpus_Recopilado.xlsx
+        [Vibe]EDA_Corpus_NLP.ipynb
+        

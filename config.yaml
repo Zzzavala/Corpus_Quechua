@@ -1,0 +1,162 @@
+# Configuración única del corpus quechua chanka médico (INF657).
+# Cualquier cambio de parámetros se hace aquí, se regenera y se anota en 04_reportes/DECISIONES_TOMADAS.md.
+
+semilla: 657
+fecha_generacion: "2026-10-15"   # fecha de los datos: checkpoints, Cambios y LEEME (fija para que todo sea reproducible;
+                                 # se actualiza a mano cuando se regenera el corpus con datos nuevos)
+
+rutas:
+  fuentes: Fuentes
+  estrategia: Estrategia
+  maestro: 02_maestro/corpus_maestro.xlsx
+  checkpoints: 02_maestro/checkpoints
+  bloques: 03_bloques
+  reportes: 04_reportes
+  figuras: 04_reportes/fig
+  audio: 05_audio
+  dataset: 06_dataset
+  datos_redactados: scripts/datos   # español redactado por Claude (F4 adaptaciones, F5 respuestas y frases portadoras)
+
+archivos_fuente:          # relativos a rutas.fuentes; solo lectura
+  unificado: "Vocabulario_Quechua_Chanka_unificado (2).xlsx"
+  corpus_equipos: "Corpus_Equipos (1).xlsx"
+  corpus_construido: "Corpus_Construido (1).xlsx"
+  socemurp_pdf: "PDF Manual de Quechua Socemurp Compress _ ILIDE.INFO Platform PDF Viewer (1).pdf"
+  minedu_pdf: "Yachakuqkunapa simi qullqa. Ayakuchu Chanka Qichwa simipi (1).pdf"
+  lopera_pdf: "ManualSemiologiaQuechua-2020.pdf"
+  ops_bolivia_pdf: "entrevistaquechua_spa.pdf"
+  web_html: "Quechua médico.html"
+  mincul_pdf: "manualparaelempleodelquechuachankaenlaadministraciondejusticia.pdf"
+  afiche_pdf: "AFICHE_COVID 19 LAVADO DE MANOS MINSA quechua  chanka.pdf"
+  diabetes_qu_pdf: "8361447-diabetes_mellitus_quechua.pdf"
+  diabetes_es_pdf: "5660130-manejo-de-paciente-con-diabetes-mellitus-2.pdf"
+  arbol: "arbol.txt"
+  americasnlp_dir: "AmericasNLP"
+  otro_companero_dir: "Trabajo - Otro Compañero"
+
+esenciales: [unificado, corpus_equipos]
+
+herramientas:
+  libreoffice: "C:/Program Files/LibreOffice/program/soffice.com"   # instalado con winget en F0 (para revisar .docx/.xlsx en F7)
+
+# Cifras esperadas (CLAUDE.md §5). Tolerancia relativa para considerar "difiere mucho".
+cifras_esperadas:
+  tolerancia_relativa: 0.05
+  unificado_filas: 1528
+  unificado_trazabilidad_filas: 1542
+  unificado_con_quechua: 1156
+  principito_filas: 113
+  grupo2_filas: 676
+  grupo2_con_quechua: 672
+  grupo3_filas: 685
+  grupo3_validar_escritura: 521
+  grupo3_terminos_filas: 58
+  construido_filas: 111
+  socemurp_paginas: 78
+
+# Composición de bloques (D1–D3)
+bloque:
+  tamano: 200
+  generales: 140
+  medicas: 60
+  sublotes: 4
+  tamano_sublote: 50
+  generales_por_sublote: 35
+  medicas_por_sublote: 15
+  medicas_paciente_objetivo: 30     # D4: ~mitad médico, mitad paciente
+  medicas_paciente_tolerancia: 4    # se acepta 26–34 paciente
+  # El médico pone (medicas − medicas_paciente_objetivo) frases por bloque desde B02. B01 está curado a mano para
+  # 60 médicas (scripts/datos/plan_b01.yaml): si cambias «medicas», ajusta también ese archivo.
+  bloques_con_archivos: [B01, B02, B03, B04, B05]  # D5 pedía B01+B02; Juan pidió todos los bloques (14-oct-2026)
+  # Bloques ya enviados al traductor: su composición, N°, sublotes y control quedan congelados al regenerar.
+  # Además se congela solo cualquier bloque que tenga filas en Estado Enviado / Validado / Grabado en el maestro.
+  congelados: []
+
+# Parte general (§11.1)
+general:
+  cuotas_por_bloque:               # objetivo; si un pool se agota, el resto se completa en el orden de orden_relleno
+    principito: 35
+    g2_diccionario: 70
+    g_claude_min: 40               # oraciones redactadas por Claude en varios tiempos (pedido de Juan: 70 % con tiempos variados;
+                                   # con 25, B02 quedaba con 76 % en presente)
+    g2_ejercicio_max: 35
+  orden_pools: [principito, g2_diccionario, g2_ejercicio]          # desempate en la selección voraz
+  orden_relleno: [principito, g2_diccionario, g_claude, g2_ejercicio]  # si faltan oraciones para llegar a 140
+  b01_max_palabras_es: 12
+  max_palabras_es: 20
+  pesos_cobertura:
+    sufijo: 3.0
+    bigrama: 1.0
+    palabra: 0.5
+  penalizacion_longitud_exponente: 0.5   # puntaje = ganancia / (n_palabras_qu ** exponente)
+
+# Parte médica (§11.2)
+medico:
+  b01_etapas:                      # orden y cuota orientativa de la consulta completa en B01
+    - {etapa: "Inicio", cuota: 8}
+    - {etapa: "Motivo de consulta", cuota: 8}
+    - {etapa: "Caracterizar el síntoma", cuota: 16}
+    - {etapa: "Síntomas asociados", cuota: 10}
+    - {etapa: "Examen físico", cuota: 8}
+    - {etapa: "Explicación, plan y cierre", cuota: 10}
+  calidad_borrador:                # de mejor (1) a peor (7)
+    "Final – fuente chanka oficial": 1
+    "Final – coincide en los Excel": 2
+    "Final – única fuente": 3
+    "Final – corregido/normalizado a chanka": 4
+    "Final – forma del libro compatible con chanka": 5
+    "Revisar – duda de traducción": 6
+    "Revisar – adaptación propuesta": 6
+    "Pendiente – sin traducción chanka": 7
+  max_palabras_frase: 15           # frases del médico elegibles para B02 en adelante
+
+# Oraciones de control en B01 (D7)
+control:
+  activo: true
+  n_general: 10
+  n_medico: 5
+  calidad_max_medico: 4            # solo borradores médicos de buena calidad (1–4) sirven de control
+  similitud_max_hermana: 75        # no se elige de control una fila con una «hermana» visible tan parecida (D7)
+  excluir_codigos: [F-0052]        # español dudoso sin borrador a la vista («Mi tía hace chicha punta»: Juan confirma «punta»)
+
+# Conjunto de prueba sugerido (P1): todo es train; se marca un 10 % estratificado
+test_sugerido:
+  activo: true
+  n_general: 14
+  n_medico: 6                      # en unidades completas (pregunta + respuesta)
+  similitud_max_train: 85          # no se sugiere para prueba una frase con una casi gemela en train
+
+# Limpieza (§10)
+limpieza:
+  max_palabras_sin_partir: 20
+  max_palabras_unidad: 15
+  similitud_casi_duplicado: 90     # rapidfuzz, sobre español normalizado
+  max_parafrasis: 2
+
+# Revisión automática (§12)
+qa:
+  ratio_longitud_min: 0.5
+  ratio_longitud_max: 2.0
+  avisos_word_max: 1               # avisos ALTA por fila en el Word (§8.4: «una línea breve»)
+
+# Verificación de P6 (F2)
+ingesta:
+  p6_umbral_similitud: 90          # frase del Grupo 2 = ejemplo del diccionario MINEDU si la similitud es ≥ este valor
+
+# Ida y vuelta con el traductor (§8.5, D7)
+traductor:
+  umbral_sin_cambios: 0.0          # distancia normalizada ≤ este valor → sin cambios
+  umbral_reescrito: 0.5            # distancia normalizada > 0.5 → reescrito
+  umbral_dejar_borradores: 0.5     # si > 50 % de filas con borrador se reescriben, dejar de dar borradores
+  min_filas_sublote_sin_tocar: 10  # si un sublote vuelve 100 % igual al borrador (con al menos estas filas), no se valida solo
+
+# Audio (P5)
+audio:
+  formato: wav
+  frecuencia_hz: 16000
+  canales: 1
+  bits: 16
+  duracion_min_s: 0.4
+  duracion_max_s: 20.0
+  segundos_por_palabra_max: 2.0
+  ritmo_desde_s: 3.0               # el control de segundos por palabra solo se aplica a audios más largos que esto

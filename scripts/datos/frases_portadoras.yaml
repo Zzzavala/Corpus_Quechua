@@ -1,0 +1,41 @@
+# Frases portadoras (§10.2): palabras sueltas prioritarias del léxico (síntomas, partes del cuerpo, enfermedades
+# frecuentes) metidas en una frase en ESPAÑOL redactada por Claude. El quechua lo pone el traductor.
+# lexico = código original de la palabra en la pestaña Lexico. Por bloque o en `sin_bloque` (quedan en el corpus
+# para bloques futuros).
+
+B03:
+  - {lexico: QCH-0202, es: "Me sale sangre de la nariz.", tema: "Alarma"}
+  - {lexico: QCH-1046, es: "Estoy sangrando mucho.", tema: "Alarma"}
+  - {lexico: QCH-0302, es: "Tengo una herida en la pierna.", tema: "Alarma"}
+  - {lexico: QCH-0219, es: "Me quemé la mano con agua hirviendo.", tema: "Alarma"}
+  - {lexico: QCH-0201, es: "Mi hijo tiene mucha sed y la boca seca.", tema: "Alarma"}
+  - {lexico: QCH-0422, es: "Siento que me ahogo.", tema: "Alarma"}
+
+B04:
+  - {lexico: QCH-1021, es: "Me duele un diente.", tema: "Otros síntomas"}
+
+B05:
+  - {lexico: QCH-1167, es: "Siento mucha tristeza.", tema: "Salud mental"}
+  - {lexico: QCH-1088, es: "Me duele el vientre cuando menstrúo.", tema: "Salud reproductiva"}
+
+sin_bloque:
+  - {lexico: QCH-0311, es: "Tengo fiebre desde anoche."}
+  - {lexico: QCH-0183, es: "Tengo tos con flema."}
+  - {lexico: QCH-0344, es: "Mi hijo tiene diarrea."}
+  - {lexico: QCH-0165, es: "Tengo ganas de vomitar."}
+  - {lexico: QCH-0309, es: "Me duele la garganta."}
+  - {lexico: QCH-0245, es: "Me duele el oído."}
+  - {lexico: QCH-1141, es: "Me duele la rodilla cuando camino."}
+  - {lexico: QCH-1029, es: "Me duele la espalda al agacharme."}
+  - {lexico: QCH-1118, es: "Me duele el pecho."}
+  - {lexico: QCH-1080, es: "Tengo mareos en las mañanas."}
+  - {lexico: QCH-1102, es: "Tengo náuseas."}
+  - {lexico: QCH-1007, es: "Tengo catarro."}
+  - {lexico: QCH-0988, es: "Mi hija tiene asma."}
+  - {lexico: QCH-1147, es: "A mi bebé le salió sarpullido."}
+  - {lexico: QCH-1169, es: "Tengo úlcera en el estómago."}
+  - {lexico: QCH-1140, es: "Me duelen los riñones."}
+  - {lexico: QCH-0243, es: "Me pica el ojo."}
+  - {lexico: QCH-1123, es: "Se me hinchan los pies."}
+  - {lexico: QCH-1000, es: "Me dan calambres en las piernas."}
+  - {lexico: QCH-1012, es: "Me duele la cintura."}
