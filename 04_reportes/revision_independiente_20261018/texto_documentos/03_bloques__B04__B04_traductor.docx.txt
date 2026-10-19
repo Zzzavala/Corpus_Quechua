@@ -1,0 +1,230 @@
+Bloque B04 — Traducción al quechua chanka
+Este documento tiene 200 oraciones en 4 sublotes de 50. Gracias por su ayuda.
+Qué hacer
+Lea cada oración en español y revise el quechua de la columna «Quechua». Corríjalo ahí mismo para que sea quechua chanka natural.
+Si la celda de quechua está vacía, escriba la traducción.
+Si una frase en español no se diría así, escriba cómo lo diría naturalmente un hablante y anótelo en «Observaciones».
+Algunas filas traen un aviso en gris en «Observaciones». Es solo una sospecha automática: usted decide. Escriba su comentario después del aviso.
+No borre, mueva ni cambie la columna ID. No agregue ni quite filas ni columnas.
+No use «Control de cambios». Si lo usó, antes de devolver el archivo vaya a Revisar → Aceptar todos los cambios.
+Guarde y devuelva este mismo archivo.
+«Quién habla»: Médico, Paciente, o — cuando es una oración general (sin hablante).
+Convención ortográfica (alfabeto oficial del quechua chanka)
+
+Sublote 1 (filas 1–50)
+
+Sublote 2 (filas 51–100)
+
+Sublote 3 (filas 101–150)
+
+Sublote 4 (filas 151–200)
+Regla | Escriba | No escriba
+Tres vocales en palabras quechuas: a, i, u | unquy, -yuq, qullqi | onqoy, -yoq, qolqe
+Sin glotalizadas ni aspiradas | pacha, qaway, achka | p'acha, qhaway, achkha
+k, w, h en lugar de c, qu, hu, j | wiksa, wasi, hamuy | wicsa, huasi, jamuy
+Formas del chanka | kachkanki, manam, ñuqanchik, -pti- | kashanki, manan, ñoqanchis, -qti-
+Préstamos y nombres propios: como en español | hospital, Ayacucho | —
+N° | ID | Quién habla | Español | Quechua (corrija o escriba aquí) | Observaciones
+1 | GEN-0806 | — | Parece que alguien abrió la puerta del corral. |  | 
+2 | GEN-0980 | — | ¿A qué hora empieza la reunión? |  | 
+3 | GEN-0569 | — | Tú juegas en el patio. | Qam kanchapi pukllanki. | 
+4 | GEN-0930 | — | Saquemos las ovejas al cerro. |  | 
+5 | CLI-0314 | Médico | ¿A veces hablas incoherencias? | ¿Yanqakunata rimankichu? | 
+6 | CLI-1060 | Paciente | No, mi familia dice que hablo normal. |  | 
+7 | GEN-0770 | — | Ustedes llegaron muy temprano hoy. |  | 
+8 | GEN-0981 | — | ¿Ustedes ya terminaron la tarea? |  | 
+9 | GEN-0847 | — | Nosotros llevaremos la comida. |  | 
+10 | GEN-0584 | — | Nosotros pescamos en grupo. | Ñuqayku huñunakuspa challwakuyku. | 
+11 | CLI-0341 | Médico | ¿Se ha adormecido alguna de tus extremidades? | ¿Makichakikuna wañurirachu? | 
+12 | CLI-1061 | Paciente | Sí, se me duerme la mano derecha. |  | 
+13 | GEN-1034 | — | Las vecinas se saludaron en la plaza. |  | 
+14 | GEN-0773 | — | Ellos cruzaron el río a caballo. |  | 
+15 | GEN-0849 | — | Mi vecina venderá sus gallinas. |  | 
+16 | GEN-0983 | — | ¿Dónde compraste ese sombrero? |  | 
+17 | CLI-0343 | Médico | ¿Sientes mareos? | ¿Umamuyuq qusunkichu? | 
+18 | CLI-1062 | Paciente | Sí, me mareo cuando me levanto rápido. |  | 
+19 | GEN-0402 | — | Ellas estudian historia. | Paykuna ñawpa willakuykunata yachakunku. | 
+20 | GEN-0850 | — | Mañana el sol saldrá temprano. |  | 
+21 | GEN-0776 | — | Esa noche no dormimos por el frío. |  | 
+22 | GEN-1011 | — | Cuando vengas, trae tu guitarra. |  | 
+23 | CLI-0358 | Médico | ¿Te duele la cabeza? | ¿Umayki nanasunkichu? | 
+24 | CLI-1063 | Paciente | Sí, me duele la cabeza todas las tardes. |  | 
+25 | GEN-0734 | — | Tú vives con tu familia. | Qam aylluykiwan tiyanki. | 
+26 | GEN-0852 | — | Voy a escribirle a mi hermano. |  | 
+27 | GEN-0985 | — | ¿Quiénes vinieron ayer? |  | 
+28 | GEN-0779 | — | El niño rompió el plato sin querer. |  | 
+29 | CLI-0417 | Médico | ¿Ve luces? | ¿Luztachu rikunki? | Aviso: posible préstamo del español «Luztachu»
+30 | CLI-1064 | Paciente | Sí, antes del dolor veo lucecitas. |  | 
+31 | GEN-0935 | — | Habla más despacio, por favor. |  | 
+32 | GEN-0562 | — | Yo duermo cinco horas al día. | Ñuqa sapa punchaw pichqa urata puñuni. | 
+33 | GEN-0986 | — | ¿Para qué sirve esta herramienta? |  | 
+34 | GEN-0811 | — | Cuentan que un niño se perdió en el monte. |  | 
+35 | CLI-0291 | Médico | ¿Dónde te duele en el codo? | ¿Maylawpitaq kuchusnikipi nanan? | 
+36 | CLI-1065 | Paciente | Me duele aquí, en la parte de afuera del codo. |  | 
+37 | GEN-0915 | — | De joven corría muy rápido. |  | 
+38 | GEN-0856 | — | Algún día viajaré al mar. |  | 
+39 | GEN-0345 | — | Nosotras enseñamos a contar. | Ñuqayku yupayta yachachiyku. | 
+40 | GEN-0937 | — | Ve a comprar pan. |  | 
+41 | CLI-0292 | Médico | ¿Dónde te duele en el pie? | ¿Maylawpitaq chakiki nanachkan? | 
+42 | CLI-1066 | Paciente | Me duele en el talón cuando piso. |  | 
+43 | GEN-1039 | — | Le escribí una carta a mi novia. |  | 
+44 | GEN-0858 | — | Tus primos llegarán con regalos. |  | 
+45 | GEN-0938 | — | Cantemos todos juntos. |  | 
+46 | CLI-0293 | Médico | ¿Dónde te duele la mano? | ¿Maylawpitaq makiki nanachkan? | 
+47 | CLI-1067 | Paciente | Me duelen los dedos de la mano. |  | 
+48 | GEN-0547 | — | Nosotros jugamos fútbol en la calle. | Ñuqayku ñanpi futbulta pukllayku. | 
+49 | GEN-1015 | — | Cuando mi papá llega, comemos todos juntos. |  | 
+50 | GEN-0860 | — | Las clases terminarán en diciembre. |  | 
+N° | ID | Quién habla | Español | Quechua (corrija o escriba aquí) | Observaciones
+51 | GEN-0768 | — | Les di de comer a las gallinas. |  | 
+52 | GEN-0608 | — | Los niños no piensan en su familia. | Warmakuna ayllunmanta mana yuyaykunkuchu. | 
+53 | GEN-0769 | — | Nosotros llevamos las llamas al cerro. |  | 
+54 | GEN-1008 | — | Al salir el sol, empezamos a trabajar. |  | 
+55 | GEN-0911 | — | Antes jugábamos en el río todas las tardes. |  | 
+56 | CLI-0298 | Médico | ¿Te duele el tobillo? | ¿Chakimuquyki nananchu? | 
+57 | CLI-1068 | Paciente | Sí, me torcí el tobillo ayer. |  | 
+58 | GEN-0470 | — | Nosotros leemos una revista. | Ñuqayku huk riwistata ñawichayku. | 
+59 | GEN-0771 | — | La reunión de la comunidad terminó tarde. |  | 
+60 | GEN-0958 | — | Si hiciera sol, secaríamos el maíz. |  | 
+61 | GEN-0662 | — | Ustedes suben a la montaña. | Qamkuna urquman siqankichik. | 
+62 | GEN-0982 | — | ¿Qué vas a vender en la feria? |  | 
+63 | CLI-0299 | Médico | ¿Te duele la rodilla? | ¿Chankamuquyki nananchu? | 
+64 | CLI-1069 | Paciente | Sí, me duele la rodilla cuando subo. |  | 
+65 | GEN-0912 | — | Mi tío tocaba el arpa en las fiestas. |  | 
+66 | GEN-0774 | — | Pagué la luz en la municipalidad. |  | 
+67 | GEN-0396 | — | Yo espero con tranquilidad. | Ñuqa hawkalla suyani. | 
+68 | GEN-1010 | — | Te doy esta manta para que no tengas frío. |  | 
+69 | GEN-0933 | — | Guarda bien tu dinero. |  | 
+70 | CLI-0132 | Médico | ¿Escuchas bien? | ¿Allintachu uyarinki? | 
+71 | CLI-1070 | Paciente | No escucho bien del oído izquierdo. |  | 
+72 | GEN-0889 | — | Estábamos comiendo cuando sonó el teléfono. |  | 
+73 | GEN-0271 | — | El niño camina en la escuela. | Qari warma yachaywasipi purin. | 
+74 | GEN-1036 | — | Mi mamá hizo reír a todos. |  | 
+75 | GEN-0934 | — | Esperen aquí un momento. |  | 
+76 | GEN-0648 | — | Ella sube al segundo piso. | Pay iskay pisuman siqan. | 
+77 | CLI-0131 | Médico | ¿Ves bien? | ¿Allintachu qawanki? | 
+78 | CLI-1071 | Paciente | Sí, veo bien con lentes. |  | 
+79 | GEN-0810 | — | Dicen que este año la cosecha será buena. |  | 
+80 | GEN-0891 | — | Mi tío está vendiendo papas en la feria. |  | 
+81 | GEN-0961 | — | Si no hubiera helada, tendríamos más papa. |  | 
+82 | GEN-0717 | — | Nosotros viajamos al campo. | Ñuqayku chakraman puriyku. | 
+83 | CLI-0578 | Médico | ¿Por la noche ve bien? | ¿Tuta allintachu rikunki? | 
+84 | CLI-1072 | Paciente | En la noche casi no veo. |  | 
+85 | GEN-0892 | — | Estoy pensando en mi familia. |  | 
+86 | GEN-0936 | — | No dejes la puerta abierta. |  | 
+87 | GEN-0353 | — | El niño no escribe su historia. | Qari warma willakuyninta mana qillqanchu. | 
+88 | GEN-0782 | — | Las ovejas comieron toda la cebada. |  | 
+89 | CLI-0730 | Médico | ¿Tiene la vista borrosa? |  | 
+90 | CLI-1073 | Paciente | Sí, veo todo nublado. |  | 
+91 | GEN-0987 | — | ¿Cuánto cuesta un kilo de papa? |  | 
+92 | GEN-0894 | — | Ella estaba barriendo la casa. |  | 
+93 | GEN-0558 | — | Él come frutas por la tarde. | Pay chisipi rurukunata mikun. | 
+94 | GEN-0784 | — | El río creció con las lluvias. |  | 
+95 | CLI-0731 | Médico | ¿Ve bien de lejos? |  | 
+96 | CLI-1074 | Paciente | Con lentes sí; sin lentes, de lejos veo borroso. |  | 
+97 | GEN-0963 | — | Sería mejor salir temprano. |  | 
+98 | GEN-0859 | — | Mañana iré temprano por agua. |  | 
+99 | GEN-0375 | — | Tú escuchas música. | Qam takita uyarinki. | 
+100 | GEN-1040 | — | La profesora hace cantar a los alumnos. |  | 
+N° | ID | Quién habla | Español | Quechua (corrija o escriba aquí) | Observaciones
+101 | GEN-0844 | — | Ella tejerá una chompa para su nieto. |  | 
+102 | GEN-0845 | — | Pasado mañana iremos a visitar a mi tía. |  | 
+103 | GEN-0376 | — | Ustedes escuchan a su maestro. | Qamkuna yachachiqninta uyarinkichik. | 
+104 | GEN-1033 | — | Le compré un regalo a mi hijo. |  | 
+105 | CLI-0086 | Médico | ¿Comes con dolor, con dificultad o con tos? | ¿Nanaywanchu sasawanchu uhuwanchu mikunki? | 
+106 | CLI-1075 | Paciente | Sí, me duele la garganta al tragar. |  | 
+107 | GEN-0846 | — | La reunión empezará a las diez. |  | 
+108 | GEN-0886 | — | Estoy buscando a mi perro. |  | 
+109 | GEN-0411 | — | Las niñas estudiarán mañana. | Warmi warmakuna paqarin yachakunqaku. | 
+110 | GEN-0772 | — | Mi abuela tejió una manta para mí. |  | 
+111 | CLI-0087 | Médico | ¿Siente ardor o punzadas en el cuello? | ¿Sansanyan icha nananchu kunkayki? | 
+112 | CLI-1076 | Paciente | No, en el cuello no siento ardor. |  | 
+113 | GEN-0848 | — | Esta semana trabajaré en la construcción. |  | 
+114 | GEN-0808 | — | Dicen que la escuela nueva ya está lista. |  | 
+115 | GEN-0176 | — | Ella pinta con achiote. | Pay achuwitiwan llimpin. | 
+116 | GEN-0888 | — | La gente está llegando a la reunión. |  | 
+117 | CLI-0274 | Médico | ¿Comes bien? | ¿Mikunki allintachu? | 
+118 | CLI-1077 | Paciente | No, como poquito. |  | 
+119 | GEN-1035 | — | Me puse el poncho porque hacía frío. |  | 
+120 | GEN-0809 | — | Resulta que mi hermano ya había llegado. |  | 
+121 | GEN-0599 | — | Ustedes no olvidan una fecha importante. | Qamkuna huk chaniyuq punchawta mana qunqankichikchu. | 
+122 | GEN-0851 | — | Ellos no vendrán hasta el domingo. |  | 
+123 | CLI-0300 | Médico | ¿Duermes bien? | ¿Allintachu puñunki? | 
+124 | CLI-1078 | Paciente | No, me despierto a cada rato. |  | 
+125 | GEN-0777 | — | Encontré a mi amiga en la plaza. |  | 
+126 | GEN-0890 | — | El viento está soplando muy fuerte. |  | 
+127 | GEN-0853 | — | El próximo mes nacerán los corderitos. |  | 
+128 | GEN-0324 | — | Ellas corren muy rápido. | Paykuna ancha utqayta kallpanku. | 
+129 | CLI-0319 | Médico | ¿Has eliminado gusanos? | ¿Urukunata wischurankichu? | 
+130 | CLI-1079 | Paciente | Sí, he botado gusanos en la caca. |  | 
+131 | GEN-1012 | — | Después de la lluvia, salió el arco iris. |  | 
+132 | GEN-0854 | — | Mañana limpiaremos la acequia. |  | 
+133 | GEN-0855 | — | Mi papá te enseñará a arar. |  | 
+134 | GEN-0358 | — | Nosotras no escribimos una carta. | Ñuqayku huk kartata mana qillqaykuchu. | 
+135 | CLI-0348 | Médico | ¿Puedes abrir las piernas? | ¿Kicharikunchu chakikikuna? | 
+136 | CLI-1080 | Paciente | Sí, pero me duele un poco. |  | 
+137 | GEN-1013 | — | Si no estudias, no aprenderás. |  | 
+138 | GEN-0893 | — | Las ovejas están durmiendo en el corral. |  | 
+139 | GEN-0783 | — | Vendimos queso en la feria del domingo. |  | 
+140 | GEN-0134 | — | Ellos bailan en la fiesta. | Paykuna raymipi tusunku. | 
+141 | CLI-0297 | Médico | ¿Te duele cuando golpeo aquí atrás? | ¿Kay qipapi tupati nananchu? | 
+142 | CLI-1081 | Paciente | Sí, me duele cuando golpea ahí. |  | 
+143 | GEN-0812 | — | Parece que la vaca se comió las flores. |  | 
+144 | GEN-0988 | — | ¿Sabes nadar? |  | 
+145 | GEN-0785 | — | Mi papá me regaló un poncho. |  | 
+146 | CLI-0454 | Médico | ¿Le duele aquí en el lado derecho? | ¿Nanasunkichu kay paña ladupi? | Aviso: posible préstamo del español «ladupi»
+147 | CLI-1082 | Paciente | No, en el lado derecho no me duele. |  | 
+148 | GEN-0448 | — | Ellos lavan la ropa. | Paykuna pachata taqsanku. | 
+149 | GEN-0786 | — | Ayer vi a tu hermano en el camino. |  | 
+150 | GEN-0813 | — | Dicen que en la feria venden papa barata. |  | 
+N° | ID | Quién habla | Español | Quechua (corrija o escriba aquí) | Observaciones
+151 | GEN-0884 | — | Ayer a esta hora estaba caminando al pueblo. |  | 
+152 | GEN-0576 | — | Él caza con su padre. | Pay taytanwan sallqa uywata hapin. | 
+153 | GEN-0957 | — | Tú podrías ser profesora. |  | 
+154 | GEN-0885 | — | El bebé está llorando de hambre. |  | 
+155 | CLI-0460 | Médico | Al tocarle el pecho, ¿siente un cosquilleo? | ¿Pechuyki hapiptiy siqsisunkichu makiyki? | Aviso: posible préstamo del español «Pechuyki»
+156 | CLI-1083 | Paciente | No, no siento nada. |  | 
+157 | GEN-0807 | — | Cuentan que ese cerro tiene dueño. |  | 
+158 | GEN-0443 | — | Yo me llamo Erasmo. | Sutiyqa Irasmum. | 
+159 | GEN-0931 | — | Apaga la radio, por favor. |  | 
+160 | GEN-1009 | — | Como no había bus, fuimos caminando. |  | 
+161 | CLI-0586 | Médico | Cuando respira hondo, ¿le duele? ¿De qué lado? | Samanki hina ¿mayqin lado nanan? | 
+162 | CLI-1084 | Paciente | Sí, me duele el lado izquierdo. |  | 
+163 | GEN-0315 | — | Nosotros no construimos una torre. | Ñuqayku huk turrita mana ruraykuchu. | 
+164 | GEN-0887 | — | Mi hermana está lavando la ropa. |  | 
+165 | GEN-0932 | — | Que nadie salga de la casa. |  | 
+166 | GEN-0959 | — | Me gustaría que vinieras a mi casa. |  | 
+167 | CLI-0157 | Médico | Orina apenas amanezca. | Yakuta ispay achikyaptin | 
+168 | GEN-0408 | — | Ellos estudian el futuro. | Paykuna hamuq pachata yachakunku. | 
+169 | GEN-0775 | — | Mi tía preparó chicha para el cumpleaños. |  | 
+170 | GEN-0913 | — | Antes cocinábamos con leña. |  | 
+171 | GEN-0984 | — | ¿Te gusta la sopa de quinua? |  | 
+172 | CLI-0249 | Médico | Tiene mal la columna. | Wasatullum mana allinchu | 
+173 | CLI-1085 | Paciente | ¿Por eso me duele la espalda? |  | 
+174 | GEN-0269 | — | Él baja al primer piso. | Pay ñawpaq pisuman uraykun. | 
+175 | GEN-0960 | — | Deberían cuidar el agua. |  | 
+176 | GEN-0778 | — | Mi hijo aprendió a leer este año. |  | 
+177 | GEN-0704 | — | Ellas viajan a la ciudad. | Paykuna hatun llaqtaman purinku. | 
+178 | CLI-0250 | Médico | Tiene mal el hígado. | Kipchanmi mana allinchu | 
+179 | CLI-1086 | Paciente | ¿Qué tengo que comer, doctor? |  | 
+180 | GEN-0914 | — | Los domingos íbamos a la feria con mi papá. |  | 
+181 | GEN-1037 | — | Fui a traer leña del monte. |  | 
+182 | GEN-0780 | — | Ayer regresamos tarde de la chacra. |  | 
+183 | GEN-0698 | — | Tú ves una película. | Qam huk pilikulata rikunki. | 
+184 | CLI-0251 | Médico | Tienes anemia. | Anemiawanmi kachkanki | 
+185 | CLI-1087 | Paciente | ¿Por eso me siento tan cansada? |  | 
+186 | GEN-0781 | — | Mi esposo cortó leña en el monte. |  | 
+187 | GEN-1038 | — | Los niños se escondieron detrás de la casa. |  | 
+188 | GEN-0212 | — | Ellas abren el cuaderno. | Paykuna qillqana maytuta kichanku. | 
+189 | GEN-0962 | — | Ella quisiera estudiar en la ciudad. |  | 
+190 | CLI-0252 | Médico | Tienes infección urinaria. | Infeccion orinaria nisqanwanmi kachkanki | 
+191 | CLI-1088 | Paciente | ¿Por eso me arde al orinar? |  | 
+192 | GEN-0857 | — | Esta tarde jugaremos vóley en la plaza. |  | 
+193 | GEN-1014 | — | Mientras caminábamos, cantábamos huaynos. |  | 
+194 | GEN-0423 | — | Ellas no hablan en voz baja. | Paykuna uchuy kunkawan mana rimankuchu. | 
+195 | GEN-1068 | — | Antes mi abuelo hacía sogas de ichu. |  | 
+196 | CLI-1089 | Paciente | Me duele un diente. |  | 
+197 | GEN-0895 | — | Ahora mismo estoy saliendo de la casa. |  | 
+198 | GEN-0989 | — | ¿Por dónde se va al río? |  | 
+199 | GEN-0400 | — | Ella estudia ciencias. | Pay yachaykunata yachakun. | 
+200 | GEN-0896 | — | El maíz está creciendo bien. |  | 

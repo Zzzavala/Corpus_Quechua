@@ -1,0 +1,28 @@
+Guía de grabación — Corpus quechua chanka médico
+Para el grabador y quien acompañe la sesión. Se graba con la hoja BXX_grabacion.docx, que se genera cuando el traductor devuelve el bloque (script 07_hoja_grabacion.py).
+1. Antes de empezar
+Sala silenciosa: puertas y ventanas cerradas, sin ventilador, radio ni televisor; celulares en silencio.
+Micrófono a unos 20 cm de la boca, siempre a la misma distancia. Haga una prueba de 10 segundos y escúchela.
+Formato del audio: WAV, 16 kHz, mono, 16 bits (en Audacity: Frecuencia del proyecto 16000 Hz, 1 canal; Exportar → WAV, PCM 16 bits con signo).
+Tenga a mano la hoja de grabación impresa y un lapicero para marcar y anotar.
+2. Durante la grabación
+Grabe un sublote por vez (50 oraciones, cerca de 1 hora). Si la sesión se corta, se cierran sublotes completos.
+En cada fila lea primero el ESPAÑOL y después el QUECHUA, con una buena pausa (2 segundos) entre ambos.
+Deje 1 segundo de silencio al inicio y al final de cada audio. Hable con voz natural, sin apurarse.
+Si se equivoca, repita la oración completa (no solo la palabra).
+Marque ☐ ES y ☐ QU en la hoja cuando cada audio quede bien grabado.
+3. Si se dice distinto a lo escrito (regla D8)
+No se corrige al hablante. Si al grabar dice la frase de otra manera (otra palabra, otro orden), anote en «Notas» exactamente lo que dijo. Después se transcribe lo que se dijo: la transcripción tiene que coincidir con el audio. Solo es «gold» lo que el traductor validó y luego se grabó.
+4. Nombre de los archivos
+
+Se nombran por ID y no por bloque, porque una fila puede cambiar de bloque antes de grabarse.
+Guarde todo en la carpeta 05_audio (puede usar una subcarpeta por sesión; el script busca por nombre).
+Un archivo por oración e idioma. Si graba seguido, diga el ID en voz alta antes de cada fila para poder cortar después.
+5. Al terminar la sesión
+Copie los audios a 05_audio y una copia de respaldo en otro disco.
+Corra: .venv\Scripts\python.exe scripts\08_manifest.py BXX — revisa que estén todos los audios, con el formato y la duración correctos, y arma 06_dataset/manifest_BXX.csv.
+Pase a limpio las notas de la hoja (frases dichas distinto) al Excel de trabajo del bloque.
+Formato de audio (P5): confirmar con el equipo de modelo antes de la primera sesión.
+Audio | Nombre del archivo | Ejemplo
+Español | {ID}_es.wav | CLI-0011_es.wav
+Quechua | {ID}_qu.wav | CLI-0011_qu.wav

@@ -1,0 +1,22 @@
+{
+  "maestro_sha256": "ca52cc9383e92560a5c95f48b532340c2645ed10977e2df6d4ff7689e8bcac02",
+  "bloque": "B01",
+  "sublote": "B01-S1",
+  "filas": 50,
+  "general": 34,
+  "medico": 16,
+  "medico_roles": {
+    "Médico": 8,
+    "Paciente": 8
+  },
+  "controles_ciegos": 5,
+  "sin_borrador_original": 14,
+  "celdas_quechua_vacias_en_revisor": 19,
+  "desglose_vacias_revisor": "5 controles con borrador oculto + 14 sin borrador original",
+  "quechua_validado": 0,
+  "archivo_revisor_sha256": "b730b0e7303f880ef1ad3c325e75796cbe2f733f6227247bc9064ecf1681e1fd",
+  "archivo_interno_sha256": "96b01563a8a02715949aa0cea9080a9d58760e046274f5e294d0094008ba0886",
+  "borradores_control_expuestos_en_revisor": false,
+  "maestro_modificado": false,
+  "estado": "Preparado; pendiente de revisión humana y conciliación"
+}

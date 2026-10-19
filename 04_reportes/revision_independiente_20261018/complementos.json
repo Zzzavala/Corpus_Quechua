@@ -1,0 +1,317 @@
+{
+  "huellas_historicas": [
+    {
+      "archivo": "Fuentes/5660130-manejo-de-paciente-con-diabetes-mellitus-2.pdf",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/8361447-diabetes_mellitus_quechua.pdf",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/AFICHE_COVID 19 LAVADO DE MANOS MINSA quechua  chanka.pdf",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/dev.es",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/dev.quy",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/dict.es",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/dict.quy",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/es-quy/dict_misc.quy-es.es",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/es-quy/dict_misc.quy-es.quy",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/es-quy/jw300.es-quy.es",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/es-quy/jw300.es-quy.quy",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/es-quy/minedu.quy-es.es",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/es-quy/minedu.quy-es.quy",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/README.md",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/test.es",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/train.es",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/AmericasNLP/train.quy",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/arbol.txt",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/Corpus_Construido (1).xlsx",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/Corpus_Equipos (1).xlsx",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/entrevistaquechua_spa.pdf",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/manualparaelempleodelquechuachankaenlaadministraciondejusticia.pdf",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/ManualSemiologiaQuechua-2020.pdf",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/PDF Manual de Quechua Socemurp Compress _ ILIDE.INFO Platform PDF Viewer (1).pdf",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/Quechua médico.html",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/Trabajo - Otro Compañero/[Vibe]EDA_Corpus_NLP.ipynb",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/Trabajo - Otro Compañero/Corpus_Recopilado.xlsx",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Fuentes/Vocabulario_Quechua_Chanka_unificado (2).xlsx",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Fuentes/Yachakuqkunapa simi qullqa. Ayakuchu Chanka Qichwa simipi (1).pdf",
+      "igual_bytes": true,
+      "igual_normalizando_CRLF_a_LF": false
+    },
+    {
+      "archivo": "Estrategia/CLAUDE.md",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    },
+    {
+      "archivo": "Estrategia/INF657_CLAUDE_corpus.md",
+      "igual_bytes": false,
+      "igual_normalizando_CRLF_a_LF": true
+    }
+  ],
+  "paralelos": [
+    {
+      "es": "Fuentes/AmericasNLP/dev.es",
+      "n_es": 996,
+      "n_qu": 996,
+      "vacias_es": 2,
+      "vacias_qu": 0,
+      "mismo_numero_lineas": true,
+      "nota": "mismo número no demuestra alineación semántica"
+    },
+    {
+      "es": "Fuentes/AmericasNLP/dict.es",
+      "n_es": 9643,
+      "n_qu": 9643,
+      "vacias_es": 2,
+      "vacias_qu": 0,
+      "mismo_numero_lineas": true,
+      "nota": "mismo número no demuestra alineación semántica"
+    },
+    {
+      "es": "Fuentes/AmericasNLP/test.es",
+      "n_es": 1003,
+      "n_qu": 0,
+      "vacias_es": 0,
+      "vacias_qu": 0,
+      "mismo_numero_lineas": false,
+      "nota": "solo español; no inventar pareja"
+    },
+    {
+      "es": "Fuentes/AmericasNLP/train.es",
+      "n_es": 125008,
+      "n_qu": 125008,
+      "vacias_es": 1978,
+      "vacias_qu": 1966,
+      "mismo_numero_lineas": true,
+      "nota": "mismo número no demuestra alineación semántica"
+    },
+    {
+      "es": "Fuentes/AmericasNLP/es-quy/dict_misc.quy-es.es",
+      "n_es": 9000,
+      "n_qu": 9000,
+      "vacias_es": 2,
+      "vacias_qu": 0,
+      "mismo_numero_lineas": true,
+      "nota": "mismo número no demuestra alineación semántica"
+    },
+    {
+      "es": "Fuentes/AmericasNLP/es-quy/jw300.es-quy.es",
+      "n_es": 125008,
+      "n_qu": 125008,
+      "vacias_es": 1978,
+      "vacias_qu": 1966,
+      "mismo_numero_lineas": true,
+      "nota": "mismo número no demuestra alineación semántica"
+    },
+    {
+      "es": "Fuentes/AmericasNLP/es-quy/minedu.quy-es.es",
+      "n_es": 643,
+      "n_qu": 643,
+      "vacias_es": 0,
+      "vacias_qu": 0,
+      "mismo_numero_lineas": true,
+      "nota": "mismo número no demuestra alineación semántica"
+    }
+  ],
+  "pdf_fuentes": [
+    {
+      "archivo": "5660130-manejo-de-paciente-con-diabetes-mellitus-2.pdf",
+      "paginas": 1,
+      "paginas_sin_texto_extraible": 0
+    },
+    {
+      "archivo": "8361447-diabetes_mellitus_quechua.pdf",
+      "paginas": 1,
+      "paginas_sin_texto_extraible": 0
+    },
+    {
+      "archivo": "AFICHE_COVID 19 LAVADO DE MANOS MINSA quechua  chanka.pdf",
+      "paginas": 1,
+      "paginas_sin_texto_extraible": 0
+    },
+    {
+      "archivo": "entrevistaquechua_spa.pdf",
+      "paginas": 96,
+      "paginas_sin_texto_extraible": 2
+    },
+    {
+      "archivo": "manualparaelempleodelquechuachankaenlaadministraciondejusticia.pdf",
+      "paginas": 150,
+      "paginas_sin_texto_extraible": 14
+    },
+    {
+      "archivo": "ManualSemiologiaQuechua-2020.pdf",
+      "paginas": 80,
+      "paginas_sin_texto_extraible": 3
+    },
+    {
+      "archivo": "PDF Manual de Quechua Socemurp Compress _ ILIDE.INFO Platform PDF Viewer (1).pdf",
+      "paginas": 78,
+      "paginas_sin_texto_extraible": 78
+    },
+    {
+      "archivo": "Yachakuqkunapa simi qullqa. Ayakuchu Chanka Qichwa simipi (1).pdf",
+      "paginas": 264,
+      "paginas_sin_texto_extraible": 0
+    }
+  ],
+  "versiones_render": [
+    {
+      "Bloque": "B01",
+      "IDs_Word": 200,
+      "IDs_PDF": 200,
+      "mismos_IDs_en_orden": true,
+      "solo_en_Word": [],
+      "primer_ID_Word": "GEN-0184",
+      "primer_ID_PDF": "GEN-0184"
+    },
+    {
+      "Bloque": "B02",
+      "IDs_Word": 200,
+      "IDs_PDF": 200,
+      "mismos_IDs_en_orden": true,
+      "solo_en_Word": [],
+      "primer_ID_Word": "GEN-0206",
+      "primer_ID_PDF": "GEN-0206"
+    },
+    {
+      "Bloque": "B03",
+      "IDs_Word": 200,
+      "IDs_PDF": 200,
+      "mismos_IDs_en_orden": true,
+      "solo_en_Word": [],
+      "primer_ID_Word": "GEN-0973",
+      "primer_ID_PDF": "GEN-0973"
+    },
+    {
+      "Bloque": "B04",
+      "IDs_Word": 200,
+      "IDs_PDF": 200,
+      "mismos_IDs_en_orden": true,
+      "solo_en_Word": [],
+      "primer_ID_Word": "GEN-0806",
+      "primer_ID_PDF": "GEN-0806"
+    },
+    {
+      "Bloque": "B05",
+      "IDs_Word": 200,
+      "IDs_PDF": 200,
+      "mismos_IDs_en_orden": true,
+      "solo_en_Word": [],
+      "primer_ID_Word": "GEN-0787",
+      "primer_ID_PDF": "GEN-0787"
+    }
+  ],
+  "versiones_raiz": {
+    "B01": true,
+    "B02": true
+  }
+}

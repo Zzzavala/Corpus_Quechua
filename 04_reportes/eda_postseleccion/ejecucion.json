@@ -1,0 +1,25 @@
+{
+  "ejecucion_utc": "2026-10-19T00:30:33.951870+00:00",
+  "maestro_sha256": "ca52cc9383e92560a5c95f48b532340c2645ed10977e2df6d4ff7689e8bcac02",
+  "entradas": {
+    "C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\02_maestro\\corpus_maestro.xlsx": "ca52cc9383e92560a5c95f48b532340c2645ed10977e2df6d4ff7689e8bcac02",
+    "C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\02_maestro\\checkpoints\\F2_ingesta_20261015.xlsx": "8c103eb2555d57906431316ead9eb764bc9c6984b5ee3e2cdf7a2ad1287084fd",
+    "C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\02_maestro\\checkpoints\\F4_limpio_20261015.xlsx": "8ca0b20b040c108f81f9f363dbf1739947f90e3c9cb69c04c3b5875c8a7c2e09",
+    "C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\02_maestro\\checkpoints\\F5_huecos_20261015.xlsx": "037ccdc2e581fc026d162e6704edc7f0e7fb84fe786117e442ce5f35d7f88fe8",
+    "C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\flashcards.xlsx": "be2b0c341447287d9f2b4a1ec69f94fcae044d5e2f6b152fa55980f15c34750c",
+    "C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\flashcards2.xlsx": "3cdde403b48abb5cdb5c7346cf15cf4477373be460a0f036d76ef178740dfba5"
+  },
+  "semilla": 20261018,
+  "max_palabras_alerta": 20,
+  "filas_maestro": 2254,
+  "filas_seleccionadas": 1000,
+  "referencias_unicas": 8247,
+  "vocabulario_objetivo": 4627,
+  "cobertura_seleccion_pct": 20.61811108709747,
+  "tamano_muestra": 119,
+  "validaciones": "IDs, versiones F5/maestro, cobertura acumulada, muestra e integridad de entradas: OK",
+  "versiones": {
+    "pandas": "3.0.1",
+    "numpy": "1.26.4"
+  }
+}

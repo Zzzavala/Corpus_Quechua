@@ -1,0 +1,19 @@
+{
+  "entradas_sha256": {
+    "C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\02_maestro\\corpus_maestro.xlsx": "ca52cc9383e92560a5c95f48b532340c2645ed10977e2df6d4ff7689e8bcac02",
+    "C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\04_reportes\\eda_postseleccion\\EDA_POSTSELECCION.xlsx": "fc1da56d1eae8905dba481ffb52f369cb7fcec8bb13dd3f24276094f6af2b326",
+    "C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\04_reportes\\eda_postseleccion\\REVISION_HUMANA.xlsx": "c1ea1f0294cb50674d51cdbc77c0db5a116a801b1a5cf32b87730376618c9925"
+  },
+  "cuotas_revision": {
+    "General": 21,
+    "Médico": 9
+  },
+  "brechas_literales": 285,
+  "candidatos_con_brechas": 466,
+  "propuestos": 30,
+  "formas_nuevas_priorizadas": 46,
+  "seleccion_actual": 1000,
+  "tamano_hipotetico_si_se_anaden": 1030,
+  "alcance": "Lista de revisión adicional. No sustituciones, ni validación, ni modificación del maestro.",
+  "integridad_entradas": "OK"
+}

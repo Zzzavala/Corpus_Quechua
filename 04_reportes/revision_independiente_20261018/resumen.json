@@ -1,0 +1,42 @@
+{
+  "archivos_inventariados": 173,
+  "hojas_excel": 96,
+  "documentos_word": 11,
+  "corpus": 2254,
+  "origen": 2254,
+  "ids_duplicados": 0,
+  "estados": {
+    "Borrador": 1318,
+    "Por_revisar": 647,
+    "Sin borrador": 289
+  },
+  "splits": {
+    "train": 2254
+  },
+  "quechua_validado_no_vacio": 0,
+  "seleccionados": 1000,
+  "sin_bloque": 1254,
+  "diferencias_word_maestro": 0,
+  "prueba_silencio": {
+    "duracion": 2.0,
+    "avisos": [],
+    "limitacion_confirmada": true
+  },
+  "colisiones_clave": [
+    {
+      "a": "¿Tiene fiebre?",
+      "b": "Tiene fiebre.",
+      "colision": true
+    },
+    {
+      "a": "El médico",
+      "b": "El medicó",
+      "colision": true
+    },
+    {
+      "a": "Sí",
+      "b": "Si",
+      "colision": true
+    }
+  ]
+}

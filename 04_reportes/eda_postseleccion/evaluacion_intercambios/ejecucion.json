@@ -1,0 +1,10 @@
+{
+  "escenario_aplicado_al_maestro": false,
+  "intercambios_evaluados": 6,
+  "recomendacion": "No aplicar todavía: revisar español/quechua y conservar variedad temporal.",
+  "filas_simuladas": 1000,
+  "estructura_200_140_60": "OK",
+  "pares_dialogo": "OK",
+  "control_y_test": "sin cambios",
+  "integridad_entradas": "OK"
+}

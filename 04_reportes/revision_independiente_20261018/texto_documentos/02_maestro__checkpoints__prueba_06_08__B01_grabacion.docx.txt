@@ -1,0 +1,417 @@
+Hoja de grabación — Bloque B01
+Lea primero el ESPAÑOL y después el QUECHUA, con una pausa de 2 segundos entre ambos.
+Archivos: {ID}_es.wav y {ID}_qu.wav (WAV, 16 kHz, mono, 16 bits). Un sublote por vez.
+Si el hablante dice la frase distinto a lo escrito, no se corrige: anote en «Notas» lo que dijo (regla D8).
+Marque ☐ ES y ☐ QU cuando cada audio quede bien grabado.
+
+Sublote 1 (filas 1–50)
+
+Sublote 2 (filas 51–100)
+
+Sublote 3 (filas 101–150)
+
+Sublote 4 (filas 151–200)
+N° | ID | Español | Quechua | Grabado | Notas
+1 | GEN-0184 | Vamos a sembrar maíz. | (FALTA VALIDAR) | ☐ ES
+☐ QU | 
+2 | GEN-0966 | ¿Ya comiste tu desayuno? | (FALTA VALIDAR) | ☐ ES
+☐ QU | 
+3 | GEN-0080 | Iba a traerlo, pero no dejas de hablarme. | Apamuyta munarqani, ichaqa hinallam rimapayawanki. | ☐ ES
+☐ QU | 
+4 | GEN-0188 | ¿Tienes hermano? | ¿Wawqiyuqchu kanki? | ☐ ES
+☐ QU | 
+5 | CLI-0745 | Buenos días. | Rimay 1. | ☐ ES
+☐ QU | 
+6 | CLI-0978 | Buenos días, doctor. | Rimay 2. | ☐ ES
+☐ QU | 
+7 | GEN-0561 | Ese perro come rápido. | Chay allqu utqayta mikun. | ☐ ES
+☐ QU | 
+8 | GEN-0946 | Me gustaría vivir cerca del río. | Rimay 3. | ☐ ES
+☐ QU | 
+9 | GEN-0196 | Las estrellas brillan mucho. | Quyllurkuna anchata kanchan. | ☐ ES
+☐ QU | 
+10 | GEN-0048 | Hay que arrancarlos inmediatamente. | Chaylla qurqunanchikmi. | ☐ ES
+☐ QU | 
+11 | CLI-0001 | ¿Cómo estás? | ¿Imaynam kachkanki? | ☐ ES
+☐ QU | 
+12 | CLI-0002 | No estoy bien. | Manam allinchu kani. | ☐ ES
+☐ QU | 
+13 | GEN-0822 | El próximo año estudiaré en la universidad. | Rimay 4. | ☐ ES
+☐ QU | 
+14 | GEN-0203 | El río está crecido. | Mayu hatunyasqa. | ☐ ES
+☐ QU | 
+15 | GEN-0168 | Cantan para llamar la lluvia. | Parata waqyanankupaq takinkulla. | ☐ ES
+☐ QU | 
+16 | GEN-0823 | Esta tarde va a llover. | Rimay 5. | ☐ ES
+☐ QU | 
+17 | CLI-0011 | ¿Cómo te llamas? | ¿Imataq sutiykilla? | ☐ ES
+☐ QU | 
+18 | CLI-0012 | Mi nombre es Annel. | Sutiyqa Annellla. | ☐ ES
+☐ QU | 
+19 | GEN-0068 | Estalló en sollozos. | Wiqiyta waqastin qapariyta qallaykurqalla. | ☐ ES
+☐ QU | 
+20 | GEN-0150 | Papá rema la canoa. | Taytay wamputa rimuwan puririchinlla. | ☐ ES
+☐ QU | 
+21 | GEN-0129 | El cielo está nublado. | Hanaq pacha puyuyasqalla. | ☐ ES
+☐ QU | 
+22 | GEN-1022 | Los vecinos se ayudan en la cosecha. | Rimay 6. | ☐ ES
+☐ QU | 
+23 | CLI-0015 | ¿Cuántos años tienes? | ¿Haykataq wataykilla? | ☐ ES
+☐ QU | 
+24 | CLI-0016 | Yo tengo veinte años. | Ñuqa iskay chunka wataylla. | ☐ ES
+☐ QU | 
+25 | GEN-0132 | Escucho el canto del gallo. | Kikinpa qillqasqan rimay 1. | ☐ ES
+☐ QU | 
+26 | GEN-0101 | Esto parece más divertido. | Huk rimaymi kayqa, musuqmanta qillqasqa 1. | ☐ ES
+☐ QU | 
+27 | GEN-0824 | Mañana cosecharemos la papa. | Rimay 7. | ☐ ES
+☐ QU | 
+28 | GEN-0175 | El curandero conoce los remedios. | Huk rimaymi kayqa, musuqmanta qillqasqa 2. | ☐ ES
+☐ QU | 
+29 | CLI-0019 | ¿De dónde eres? | Huk rimaymi kayqa, musuqmanta qillqasqa 3. | ☐ ES
+☐ QU | 
+30 | CLI-0020 | Soy de Ayacucho. | Ayacuchomanta kani. | ☐ ES
+☐ QU | 
+31 | GEN-0178 | El espíritu del agua es fuerte. | Yakupa ispiritun kallpasapa. | ☐ ES
+☐ QU | 
+32 | GEN-0083 | Mi flor perfumaba mi planeta. | Waytaymi kay pachayta musyaykachirqa. | ☐ ES
+☐ QU | 
+33 | GEN-0918 | Vamos a la chacra. | Rimay 8. | ☐ ES
+☐ QU | 
+34 | GEN-0135 | La casa está al lado del río. | Wasi mayu qayllapi kachkan. | ☐ ES
+☐ QU | 
+35 | CLI-0025 | ¿Por qué viniste al hospital? | ¿Imaraykutaq kay hampina wasiman hamunki? | ☐ ES
+☐ QU | 
+36 | CLI-0008 | Me está doliendo la barriga. | Wiksaymi nanawachkan. | ☐ ES
+☐ QU | 
+37 | GEN-0157 | Estoy aprendiendo tu lengua. | Simiykita yachakuchkani. | ☐ ES
+☐ QU | 
+38 | GEN-0998 | Como llovió mucho, no salimos. | Rimay 9. | ☐ ES
+☐ QU | 
+39 | GEN-0053 | Estaba animado por un sentimiento de urgencia. | Imapas urgente kasqanwanmi kallpanchasqa karqa. | ☐ ES
+☐ QU | 
+40 | GEN-0173 | Me hinqué con una espina. | Kichkawan nanachikurqani. | ☐ ES
+☐ QU | 
+41 | CLI-0033 | ¿Desde cuándo estás enferma? | ¿Haykapmanta unquchkanki? | ☐ ES
+☐ QU | 
+42 | CLI-0979 | Desde hace tres días. | Rimay 10. | ☐ ES
+☐ QU | 
+43 | GEN-0747 | Ayer mis tíos llegaron de Lima. | Rimay 11. | ☐ ES
+☐ QU | 
+44 | GEN-0113 | El abuelo cuenta historias. | Awilu willakuykunata willan. | ☐ ES
+☐ QU | 
+45 | GEN-0189 | Este camino es largo. | Kay ñan suni. | ☐ ES
+☐ QU | 
+46 | CLI-0035 | ¿Cómo empezó tu enfermedad? | Kikinpa qillqasqan rimay 3. | ☐ ES
+☐ QU | 
+47 | CLI-0980 | Empezó de repente, después de comer. | Rimay 12. | ☐ ES
+☐ QU | 
+48 | GEN-0031 | Las personas mayores son así. | Machu runakunaqa chaynam kanku. | ☐ ES
+☐ QU | 
+49 | GEN-0919 | Siéntense aquí, por favor. | Rimay 13. | ☐ ES
+☐ QU | 
+50 | GEN-0116 | La lluvia moja las hojas. | Para raprakunata yakuyachin. | ☐ ES
+☐ QU | 
+N° | ID | Español | Quechua | Grabado | Notas
+51 | GEN-0128 | El fuego está calentando la casa. | Nina wasita quñichichkanlla. | ☐ ES
+☐ QU | 
+52 | GEN-0741 | Ayer fui a la feria con mi mamá. | Rimay 14. | ☐ ES
+☐ QU | 
+53 | GEN-0032 | Luego aceptaron su descubrimiento. | Chaymantañataqmi tarisqankuta chaskirqaku. | ☐ ES
+☐ QU | 
+54 | GEN-0130 | Necesito agua para beber. | Kikinpa qillqasqan rimay 5. | ☐ ES
+☐ QU | 
+55 | GEN-0916 | Cierra la puerta, por favor. | Rimay 15. | ☐ ES
+☐ QU | 
+56 | CLI-0028 | ¿Cómo te sientes? | ¿Imaynataq kachkanki? | ☐ ES
+☐ QU | 
+57 | CLI-0029 | Me siento enferma. | (FALTA VALIDAR) | ☐ ES
+☐ QU | 
+58 | GEN-0100 | Golpea tus manos una contra otra. | Makiykita hukninmanta hukninman takaykuy. | ☐ ES
+☐ QU | 
+59 | GEN-0140 | El viento mueve las ramas de los árboles. | Wayra sachakunapa kallmankunata kuyuchin. | ☐ ES
+☐ QU | 
+60 | GEN-0199 | Comimos contigo al anochecer. | Qamwan tutayaptin mikurqayku. | ☐ ES
+☐ QU | 
+61 | GEN-0796 | Dicen que ayer nevó en la puna. | Rimay 16. | ☐ ES
+☐ QU | 
+62 | GEN-0006 | Y tengo aún una tercera disculpa. | Kimsa kaq pampachaykuwayniypas kachkanraqmi | ☐ ES
+☐ QU | 
+63 | CLI-0042 | ¿Dónde te duele? | ¿Maypitaq nanasunki? | ☐ ES
+☐ QU | 
+64 | CLI-0981 | Aquí, en la boca del estómago. | Rimay 17. | ☐ ES
+☐ QU | 
+65 | GEN-0154 | Esa flor huele bien. | Chay wayta sumaqta asnan. | ☐ ES
+☐ QU | 
+66 | GEN-0169 | Los monos negros están en la cima del árbol. | Yana machinkuna sachapa puntanpi kachkanku. | ☐ ES
+☐ QU | 
+67 | GEN-0867 | Los niños están jugando en el patio. | Rimay 18. | ☐ ES
+☐ QU | 
+68 | GEN-0043 | ¿Es verdad que los corderos se comen los arbustos? | ¿Chiqanchu carnakunaqa chaprakunata mikunku? | ☐ ES
+☐ QU | 
+69 | GEN-0579 | El tigre caza sigilosamente. | Uturunku upallalla uywata hapin. | ☐ ES
+☐ QU | 
+70 | CLI-0052 | ¿Por dónde caminó tu dolor? | ¿Maynintataq nanayniyki purirqa? | ☐ ES
+☐ QU | 
+71 | CLI-0982 | No se ha movido, me duele siempre en el mismo sitio. | Rimay 19. | ☐ ES
+☐ QU | 
+72 | GEN-0917 | Trae agua del río. | Rimay 20. | ☐ ES
+☐ QU | 
+73 | GEN-0036 | Tener un amigo es un verdadero privilegio. | Amistadniyuq kayqa ancha chaninniyuqmi. | ☐ ES
+☐ QU | 
+74 | GEN-0146 | Mañana iremos al mercado. | Paqarin qatuman risaqku. | ☐ ES
+☐ QU | 
+75 | GEN-0145 | El murciélago pasó por aquí. | Maray kaynata pasarqa. | ☐ ES
+☐ QU | 
+76 | GEN-0868 | Está lloviendo desde la mañana. | Rimay 21. | ☐ ES
+☐ QU | 
+77 | CLI-0141 | ¿Te duele mucho? | ¿Sinchitachu nanasunki? | ☐ ES
+☐ QU | 
+78 | CLI-0983 | Sí, me duele mucho. | Rimay 22. | ☐ ES
+☐ QU | 
+79 | GEN-0049 | El suelo estaba infestado de semillas. | Allpaqa muhupa huntasqanmi kasqa. | ☐ ES
+☐ QU | 
+80 | GEN-0208 | Enseñemos a cuidar las plantas. | Kikinpa qillqasqan rimay 7. | ☐ ES
+☐ QU | 
+81 | GEN-0902 | De niño cuidaba las ovejas de mi abuelo. | Rimay 23. | ☐ ES
+☐ QU | 
+82 | GEN-0028 | El corderito que te he dado también es pequeño. | Qusqay uchuy malta carneropas uchuychallam. | ☐ ES
+☐ QU | 
+83 | CLI-0061 | ¿Cómo te duele? | ¿Imaynatataq nanasunki? | ☐ ES
+☐ QU | 
+84 | CLI-0984 | Me duele como si me pincharan. | Rimay 24. | ☐ ES
+☐ QU | 
+85 | GEN-0207 | Mi lengua vive en mi memoria. | Simiy yuyayniypi kawsan. | ☐ ES
+☐ QU | 
+86 | GEN-0193 | El abuelo nos enseñó a leer libros. | Awilu maytu ñawichayta yachachiwarqayku. | ☐ ES
+☐ QU | 
+87 | GEN-0825 | Mi hermana llegará el sábado. | Rimay 25. | ☐ ES
+☐ QU | 
+88 | GEN-0040 | Quizá me creía semejante a él. | Ichapas payman rikchakuq kasqayta piensarqa. | ☐ ES
+☐ QU | 
+89 | CLI-0058 | ¿En la noche te duele? | ¿Tutapichu nanasunki? | ☐ ES
+☐ QU | 
+90 | CLI-0985 | Sí, en la noche me duele más. | Rimay 26. | ☐ ES
+☐ QU | 
+91 | GEN-0171 | La tierra está mojada. | Allpa yakuyasqa. | ☐ ES
+☐ QU | 
+92 | GEN-0534 | En el bosque me perdí. | Sachasachapi chinkarqani. | ☐ ES
+☐ QU | 
+93 | GEN-1023 | Mi hermana se peina frente al espejo. | Rimay 27. | ☐ ES
+☐ QU | 
+94 | GEN-0017 | Me puse en pie de un brinco. | Chaprakunapa hawanpi sayarqani. | ☐ ES
+☐ QU | 
+95 | CLI-0069 | ¿Te duele más cuando comes? | ¿Mikuptiyki astawanchu nanasunki? | ☐ ES
+☐ QU | 
+96 | CLI-0986 | Sí, cuando como me duele más. | Rimay 28. | ☐ ES
+☐ QU | 
+97 | GEN-0137 | Ayer fuimos al pueblo. | Qaynunchaw llaqtaman rirqayku. | ☐ ES
+☐ QU | 
+98 | GEN-0798 | Dicen que el alcalde viajó a Lima. | Rimay 29. | ☐ ES
+☐ QU | 
+99 | GEN-0015 | Había quedado desilusionado por el fracaso de mis dibujos. | Dibujokuna mana allinpi tukuptinmi hukmanyasqa karqani. | ☐ ES
+☐ QU | 
+100 | GEN-0190 | Bebí agua del manantial. | Pukyumanta yakuta upyarqani. | ☐ ES
+☐ QU | 
+N° | ID | Español | Quechua | Grabado | Notas
+101 | GEN-0541 | ¿Qué hacen ustedes por la tarde? | ¿Imatam qamkuna chisipi rurankichiklla? | ☐ ES
+☐ QU | 
+102 | GEN-0821 | Mañana iré a la chacra con mi papá. | Rimay 30. | ☐ ES
+☐ QU | 
+103 | GEN-0021 | No importa, ¡píntame un cordero! | Imayna kaptinpas, ¡wañuta pintaykuway! | ☐ ES
+☐ QU | 
+104 | GEN-0185 | La canoa está rota. | Wampu pakisqa. | ☐ ES
+☐ QU | 
+105 | CLI-0072 | ¿Has tomado algo para aliviar el dolor? | ¿Nanayniykita pisiyachinaykipaq hampikunata millpurqankichu? | ☐ ES
+☐ QU | 
+106 | CLI-0987 | Tomé una pastilla, pero no se me pasó. | Rimay 31. | ☐ ES
+☐ QU | 
+107 | GEN-0996 | Cuando llegué a casa, mi mamá estaba cocinando. | Rimay 32. | ☐ ES
+☐ QU | 
+108 | GEN-0536 | ¿Qué hace ella a mediodía? | ¿Imatam pay chawpi punchaw ruran? | ☐ ES
+☐ QU | 
+109 | GEN-0019 | El muchachito me observaba gravemente. | Warmachaqa llumpayta qawamuwarqa. | ☐ ES
+☐ QU | 
+110 | GEN-0118 | El pájaro canta al amanecer. | Pisqu punchawyaptin takin. | ☐ ES
+☐ QU | 
+111 | CLI-0127 | ¿Tienes fiebre? | ¿Rupapakunkichu? | ☐ ES
+☐ QU | 
+112 | CLI-0988 | Sí, anoche tuve fiebre. | Rimay 33. | ☐ ES
+☐ QU | 
+113 | GEN-0901 | Antes yo caminaba dos horas hasta la escuela. | Rimay 34. | ☐ ES
+☐ QU | 
+114 | GEN-0022 | En mi tierra todo es muy pequeñito. | Llaqtaypiqa lliwmi uchuychallalla. | ☐ ES
+☐ QU | 
+115 | GEN-0538 | Mi mamá cocina caldo de gallina. | Mamay wallpa chupita yanun. | ☐ ES
+☐ QU | 
+116 | GEN-0125 | Hay muchos árboles grandes. | Kikinpa qillqasqan rimay 9. | ☐ ES
+☐ QU | 
+117 | CLI-0135 | ¿Tienes vómitos? | ¿Wikchunayasunkichu? | ☐ ES
+☐ QU | 
+118 | CLI-0989 | Sí, vomité dos veces. | Rimay 35. | ☐ ES
+☐ QU | 
+119 | GEN-0743 | Anoche llovió mucho en el pueblo. | Rimay 36. | ☐ ES
+☐ QU | 
+120 | GEN-0038 | Uno saldrá bien y otro quizá no tanto. | Hukninmi allinta lluqsinqa, hukninñataq manapaschá anchatachu. | ☐ ES
+☐ QU | 
+121 | GEN-0162 | Esta noche hay luna nueva. | Kunan tuta killa musuq. | ☐ ES
+☐ QU | 
+122 | GEN-0744 | Mi abuelo vendió dos ovejas en el mercado. | Rimay 37. | ☐ ES
+☐ QU | 
+123 | CLI-0375 | ¿Tienes diarrea? | ¿Kachkanki diarrayawanchu? | ☐ ES
+☐ QU | 
+124 | CLI-0990 | No, no tengo diarrea. | Rimay 38. | ☐ ES
+☐ QU | 
+125 | GEN-0187 | Los pájaros vuelan juntos. | Pisqukuna kuska pawanku. | ☐ ES
+☐ QU | 
+126 | GEN-0014 | Los mayores siempre tienen necesidad de explicaciones. | Machuyaqkunaqa sapa kuti yachachikuyta munanku. | ☐ ES
+☐ QU | 
+127 | GEN-0147 | El bebé ya puede caminar. | Wawa puriytaña atin. | ☐ ES
+☐ QU | 
+128 | GEN-0947 | Si lloviera, la papa crecería mejor. | Rimay 39. | ☐ ES
+☐ QU | 
+129 | CLI-0373 | ¿Tienes apetito? | ¿Mikunayasunkichu? | ☐ ES
+☐ QU | 
+130 | CLI-0991 | No, no tengo ganas de comer. | Rimay 40. | ☐ ES
+☐ QU | 
+131 | GEN-0532 | El doctor cura al paciente. | Hampiq unqusqata hampin. | ☐ ES
+☐ QU | 
+132 | GEN-0094 | Eso, uno podría hacerlo en cualquier lugar. | Chaytaqa maypipas ruwayta atichwanmi. | ☐ ES
+☐ QU | 
+133 | GEN-0745 | Esta mañana tomé leche caliente. | Rimay 41. | ☐ ES
+☐ QU | 
+134 | GEN-0204 | Esa palabra suena fuerte. | Chay simi sinchita uyarikun. | ☐ ES
+☐ QU | 
+135 | CLI-0387 | ¿Tienes tos? | ¿Uhuchkankichu? | ☐ ES
+☐ QU | 
+136 | CLI-0992 | No, no tengo tos. | Rimay 42. | ☐ ES
+☐ QU | 
+137 | GEN-0543 | ¿Qué hacen los hombres en el río? | ¿Imatam qarikuna mayupi ruranku? | ☐ ES
+☐ QU | 
+138 | GEN-0062 | Las espinas no sirven para nada. | Kichkakunaqa manam imapaqpas allinchu. | ☐ ES
+☐ QU | 
+139 | GEN-0869 | Mi mamá está tejiendo una manta. | Rimay 43. | ☐ ES
+☐ QU | 
+140 | GEN-0198 | Cuidado con la serpiente. | ¡Amarumanta waqaychakuy! | ☐ ES
+☐ QU | 
+141 | CLI-0271 | Voy a examinarte. Me vas a ayudar, ¿está bien? | Kikinpa qillqasqan rimay 11. | ☐ ES
+☐ QU | 
+142 | CLI-0993 | Está bien, doctor. | Rimay 44. | ☐ ES
+☐ QU | 
+143 | GEN-0034 | Me habría gustado decir: érase una vez… | Munaymanchá niyta: huk kutillaraq kachkaptiy... | ☐ ES
+☐ QU | 
+144 | GEN-0142 | Trae el machete, por favor. | Ama hina kaspa, machitita apamuy. | ☐ ES
+☐ QU | 
+145 | GEN-0948 | Quisiera aprender a tejer. | Rimay 45. | ☐ ES
+☐ QU | 
+146 | GEN-0143 | Esa fruta está dulce. | Chay ruru miski. | ☐ ES
+☐ QU | 
+147 | CLI-0193 | A ver, échate. | Sirikuy | ☐ ES
+☐ QU | 
+148 | GEN-0075 | Tengo horror a las corrientes de aire. | Wayrapa puriyninkunataqa millakuni. | ☐ ES
+☐ QU | 
+149 | GEN-0870 | Estamos esperando el bus. | Rimay 46. | ☐ ES
+☐ QU | 
+150 | GEN-0195 | Me gustaría aprender más. | Astawan yachakuyta munayman. | ☐ ES
+☐ QU | 
+N° | ID | Español | Quechua | Grabado | Notas
+151 | GEN-0124 | Voy a pescar con papá. | Taytaywan challwakuq risaq. | ☐ ES
+☐ QU | 
+152 | GEN-0866 | Ahora estoy cocinando el almuerzo. | Rimay 47. | ☐ ES
+☐ QU | 
+153 | GEN-0069 | ¡Es tan misterioso el país de las lágrimas! | ¡Wiqiypa llaqtanqa manam yachakunapaqchu! | ☐ ES
+☐ QU | 
+154 | GEN-0155 | Mira, una mariposa azul. | Qaway, anka pillpintu. | ☐ ES
+☐ QU | 
+155 | CLI-0229 | No pongas dura la barriga. | Wiksaykita ama kallpachaychu | ☐ ES
+☐ QU | 
+156 | GEN-1021 | La mamá hace dormir al bebé. | Rimay 48. | ☐ ES
+☐ QU | 
+157 | GEN-0106 | El niño va corriendo a la chacra. | Qari warma chakraman kallpaspa rin. | ☐ ES
+☐ QU | 
+158 | GEN-0088 | La flor tosió aunque no estaba resfriada. | Waytaqa mana chiriyasqa kachkaspanpas usurparin. | ☐ ES
+☐ QU | 
+159 | GEN-0138 | Los niños juegan con barro. | Warmakuna mituwan pukllanku. | ☐ ES
+☐ QU | 
+160 | CLI-0352 | ¿Te duele aquí? | ¿Kaypi nanasunkichu? | ☐ ES
+☐ QU | 
+161 | CLI-0994 | Sí, ahí me duele mucho. | Rimay 49. | ☐ ES
+☐ QU | 
+162 | GEN-0742 | La semana pasada sembramos papa en la chacra. | Rimay 50. | ☐ ES
+☐ QU | 
+163 | GEN-0087 | Adiós –le dijo a la flor. | Fioramanmi nirqa: Chaynaqa, ripullaykichikyá, nispa. | ☐ ES
+☐ QU | 
+164 | GEN-0148 | ¿Quién rompió el cántaro? | ¿Pitaq puyñuta pakirqa? | ☐ ES
+☐ QU | 
+165 | GEN-0141 | Estoy cansado, quiero dormir. | Saykusqa kani, puñuyta munani. | ☐ ES
+☐ QU | 
+166 | CLI-0097 | Respira hondo. | Samay ukumanta. | ☐ ES
+☐ QU | 
+167 | GEN-0967 | ¿Vendrás a la fiesta del pueblo? | Rimay 51. | ☐ ES
+☐ QU | 
+168 | GEN-0086 | Yo era demasiado joven para saber amarla. | Ñuqaqa llumpay wayna kaspaymi kuyananaypaqqa mana yacharqanichu. | ☐ ES
+☐ QU | 
+169 | GEN-0181 | ¿Cómo se dice eso en tu lengua? | ¿Chayta simiykipi imaynatam nin? | ☐ ES
+☐ QU | 
+170 | GEN-0997 | Después de comer, fuimos a la chacra. | Rimay 52. | ☐ ES
+☐ QU | 
+171 | CLI-0254 | Tienes mal el estómago. | Wiksaykim mana allinchu | ☐ ES
+☐ QU | 
+172 | CLI-0995 | ¿Es grave, doctor? | Rimay 53. | ☐ ES
+☐ QU | 
+173 | CLI-0924 | No es nada grave. | Rimay 54. | ☐ ES
+☐ QU | 
+174 | GEN-0209 | ¿Quieres contarme tu historia? | ¿Willakuyniykita willawayta munankichu? | ☐ ES
+☐ QU | 
+175 | GEN-0016 | Viví así, solo, sin nadie con quien poder hablar. | Kikinpa qillqasqan rimay 13. | ☐ ES
+☐ QU | 
+176 | GEN-0160 | Coseché yuca por la mañana. | Tutamanta yukata allarqani. | ☐ ES
+☐ QU | 
+177 | GEN-0797 | Cuentan que antes aquí había una laguna. | Rimay 55. | ☐ ES
+☐ QU | 
+178 | CLI-0916 | Al despertar vas a tomar dos pastillas. | Rimay 56. | ☐ ES
+☐ QU | 
+179 | CLI-0996 | Bueno, dos pastillas en la mañana. | Rimay 57. | ☐ ES
+☐ QU | 
+180 | GEN-0136 | El pez nada en el agua. | Challwa yakupi waytan. | ☐ ES
+☐ QU | 
+181 | GEN-0058 | ¡Un día vi ponerse el sol cuarenta y tres veces! | ¡Huk punchawmi inti siqaykuyta tawa chunka kimsayuq kutita rikurqani! | ☐ ES
+☐ QU | 
+182 | GEN-0968 | ¿Qué estás haciendo? | Rimay 58. | ☐ ES
+☐ QU | 
+183 | GEN-0161 | Mi tía hace chicha punta. | Tiyay punta aqata ruran. | ☐ ES
+☐ QU | 
+184 | CLI-0153 | Toma líquido. | Yakuta upyay | ☐ ES
+☐ QU | 
+185 | CLI-0997 | Sí, voy a tomar bastante agua. | Rimay 59. | ☐ ES
+☐ QU | 
+186 | GEN-0120 | ¿Dónde está tu casa? | ¿Maypim wasiyki? | ☐ ES
+☐ QU | 
+187 | GEN-0066 | Todo lo confundes, todo lo mezclas. | Lliwta pantachinki, lliwta chaqurunki. | ☐ ES
+☐ QU | 
+188 | GEN-0746 | El año pasado mi hermana terminó la secundaria. | Rimay 60. | ☐ ES
+☐ QU | 
+189 | GEN-0167 | ¿Has visto a mi hermano? | ¿Wawqiyta rikurqankichu? | ☐ ES
+☐ QU | 
+190 | CLI-0923 | Vas a volver en una semana. | Rimay 61. | ☐ ES
+☐ QU | 
+191 | CLI-0998 | Bueno, regreso en una semana. | Rimay 62. | ☐ ES
+☐ QU | 
+192 | GEN-0105 | ¿Qué haces ahí? | ¿Imatataq chaypi ruwanki? | ☐ ES
+☐ QU | 
+193 | GEN-0177 | Todos trajeron comida. | Llapanku mikunata apamurqaku. | ☐ ES
+☐ QU | 
+194 | GEN-0826 | Tú cuidarás a las ovejas esta semana. | Rimay 63. | ☐ ES
+☐ QU | 
+195 | GEN-0179 | Quiero escucharte cuando hablas. | Rimaptiyki uyariyta munani. | ☐ ES
+☐ QU | 
+196 | CLI-0999 | ¿Entendiste lo que tienes que hacer? | Rimay 64. | ☐ ES
+☐ QU | 
+197 | CLI-1000 | Sí, entendí. Gracias, doctor. | Rimay 65. | ☐ ES
+☐ QU | 
+198 | GEN-0060 | Ese día estabas muy triste, ¿verdad? | Chay punchawqa ancha llakisqachá karqanki, ¿aw? | ☐ ES
+☐ QU | 
+199 | GEN-0969 | ¿Dónde vive tu abuela? | Rimay 66. | ☐ ES
+☐ QU | 
+200 | GEN-0114 | Me gusta la fruta madura. | Puqusqa ruruta munani. | ☐ ES
+☐ QU | 

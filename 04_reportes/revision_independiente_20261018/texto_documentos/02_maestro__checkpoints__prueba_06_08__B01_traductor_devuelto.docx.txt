@@ -1,0 +1,231 @@
+Bloque B01 — Traducción al quechua chanka
+Este documento tiene 200 oraciones en 4 sublotes de 50. Gracias por su ayuda.
+Qué hacer
+Lea cada oración en español y revise el quechua de la columna «Quechua». Corríjalo ahí mismo para que sea quechua chanka natural.
+Si la celda de quechua está vacía, escriba la traducción.
+Si una frase en español no se diría así, escriba cómo lo diría naturalmente un hablante y anótelo en «Observaciones».
+Algunas filas traen un aviso en gris en «Observaciones». Es solo una sospecha automática: usted decide. Escriba su comentario después del aviso.
+No borre, mueva ni cambie la columna ID. No agregue ni quite filas ni columnas.
+No use «Control de cambios». Si lo usó, antes de devolver el archivo vaya a Revisar → Aceptar todos los cambios.
+Guarde y devuelva este mismo archivo.
+«Quién habla»: Médico, Paciente, o — cuando es una oración general (sin hablante).
+Convención ortográfica (alfabeto oficial del quechua chanka)
+
+Sublote 1 (filas 1–50)
+
+Sublote 2 (filas 51–100)
+
+Sublote 3 (filas 101–150)
+
+Sublote 4 (filas 151–200)
+Regla | Escriba | No escriba
+Tres vocales en palabras quechuas: a, i, u | unquy, -yuq, qullqi | onqoy, -yoq, qolqe
+Sin glotalizadas ni aspiradas | pacha, qaway, achka | p'acha, qhaway, achkha
+k, w, h en lugar de c, qu, hu, j | wiksa, wasi, hamuy | wicsa, huasi, jamuy
+Formas del chanka | kachkanki, manam, ñuqanchik, -pti- | kashanki, manan, ñoqanchis, -qti-
+Préstamos y nombres propios: como en español | hospital, Ayacucho | —
+N° | ID | Quién habla | Español | Quechua (corrija o escriba aquí) | Observaciones
+1 | GEN-0184 | — | Vamos a sembrar maíz también. | Sarata tarpuq risun. ari | 
+2 | GEN-0966 | — | ¿Ya comiste tu desayuno? |  | 
+3 | GEN-0080 | — | Iba a traerlo, pero no dejas de hablarme. | Apamuyta munarqani, ichaqa hinallam rimapayawanki. | Mejor decir con -taq.
+4 | GEN-0188 | — | ¿Tienes hermano? | ¿Wawqiyuqchu kanki? | 
+5 | CLI-0745 | Médico | Buenos días. | Rimay 1. | 
+6 | CLI-0978 | Paciente | Buenos días, doctor. | Rimay 2. | 
+7 | GEN-0561 | — | Ese perro come rápido. | Chay allqu utqayta mikun. | 
+8 | GEN-0946 | — | Me gustaría vivir cerca del río. | Rimay 3. | 
+9 | GEN-0196 | — | Las estrellas brillan mucho. | Quyllurkuna anchata kanchan. | 
+10 | GEN-0048 | — | Hay que arrancarlos inmediatamente. | Chaylla qurqunanchikmi. | 
+11 | CLI-0001 | Médico | ¿Cómo estás? | ¿Imaynam kachkanki? | 
+12 | CLI-0002 | Paciente | No estoy bien. | Manam allinchu kani. | 
+13 | GEN-0822 | — | El próximo año estudiaré en la universidad. | Rimay 4. | 
+14 | GEN-0203 | — | El río está crecido. | Mayu hatunyasqa. | 
+15 | GEN-0168 | — | Cantan para llamar la lluvia. | Parata waqyanankupaq takinkulla. | 
+16 | GEN-0823 | — | Esta tarde va a llover. | Rimay 5. | 
+17 | CLI-0011 | Médico | ¿Cómo te llamas? | ¿Imataq sutiykilla? | 
+18 | CLI-0012 | Paciente | Mi nombre es Annel. | Sutiyqa Annellla. | 
+19 | GEN-0068 | — | Estalló en sollozos. | Wiqiyta waqastin qapariyta qallaykurqalla. | 
+20 | GEN-0150 | — | Papá rema la canoa. | Taytay wamputa rimuwan puririchinlla. | 
+21 | GEN-0129 | — | El cielo está nublado. | Hanaq pacha puyuyasqalla. | 
+22 | GEN-1022 | — | Los vecinos se ayudan en la cosecha. | Rimay 6. | 
+23 | CLI-0015 | Médico | ¿Cuántos años tienes? | ¿Haykataq wataykilla? | 
+24 | CLI-0016 | Paciente | Yo tengo veinte años. | Ñuqa iskay chunka wataylla. | 
+25 | GEN-0132 | — | Escucho el canto del gallo. | Kikinpa qillqasqan rimay 1. | 
+26 | GEN-0101 | — | Esto parece más divertido. | Huk rimaymi kayqa, musuqmanta qillqasqa 1. | 
+27 | GEN-0824 | — | Mañana cosecharemos la papa. | Rimay 7. | 
+28 | GEN-0175 | — | El curandero conoce los remedios. | Huk rimaymi kayqa, musuqmanta qillqasqa 2. | 
+29 | CLI-0019 | Médico | ¿De dónde eres? | Huk rimaymi kayqa, musuqmanta qillqasqa 3. | 
+30 | CLI-0020 | Paciente | Soy de Ayacucho. | Ayacuchomanta kani. | 
+31 | GEN-0178 | — | El espíritu del agua es fuerte. | Yakupa ispiritun kallpasapa. | 
+32 | GEN-0083 | — | Mi flor perfumaba mi planeta. | Waytaymi kay pachayta musyaykachirqa. | 
+33 | GEN-0918 | — | Vamos a la chacra. | Rimay 8. | 
+34 | GEN-0135 | — | La casa está al lado del río. | Wasi mayu qayllapi kachkan. | 
+35 | CLI-0025 | Médico | ¿Por qué viniste al hospital? | ¿Imaraykutaq kay hampina wasiman hamunki? | 
+36 | CLI-0008 | Paciente | Me está doliendo la barriga. | Wiksaymi nanawachkan. | 
+37 | GEN-0157 | — | Estoy aprendiendo tu lengua. | Simiykita yachakuchkani. | 
+38 | GEN-0998 | — | Como llovió mucho, no salimos. | Rimay 9. | 
+39 | GEN-0053 | — | Estaba animado por un sentimiento de urgencia. | Imapas urgente kasqanwanmi kallpanchasqa karqa. | 
+40 | GEN-0173 | — | Me hinqué con una espina. | Kichkawan nanachikurqani. | 
+41 | CLI-0033 | Médico | ¿Desde cuándo estás enferma? | ¿Haykapmanta unquchkanki? | 
+42 | CLI-0979 | Paciente | Desde hace tres días. | Rimay 10. | 
+43 | GEN-0747 | — | Ayer mis tíos llegaron de Lima. | Rimay 11. | 
+44 | GEN-0113 | — | El abuelo cuenta historias. | Awilu willakuykunata willan. | 
+45 | GEN-0189 | — | Este camino es largo. | Kay ñan suni. | 
+46 | CLI-0035 | Médico | ¿Cómo empezó tu enfermedad? | Kikinpa qillqasqan rimay 3. | 
+47 | CLI-0980 | Paciente | Empezó de repente, después de comer. | Rimay 12. | 
+48 | GEN-0031 | — | Las personas mayores son así. | Machu runakunaqa chaynam kanku. | 
+49 | GEN-0919 | — | Siéntense aquí, por favor. | Rimay 13. | 
+50 | GEN-0116 | — | La lluvia moja las hojas. | Para raprakunata yakuyachin. | 
+N° | ID | Quién habla | Español | Quechua (corrija o escriba aquí) | Observaciones
+51 | GEN-0128 | — | El fuego está calentando la casa. | Nina wasita quñichichkanlla. | 
+52 | GEN-0741 | — | Ayer fui a la feria con mi mamá. | Rimay 14. | 
+53 | GEN-0032 | — | Luego aceptaron su descubrimiento. | Chaymantañataqmi tarisqankuta chaskirqaku. | 
+54 | GEN-0130 | — | Necesito agua para beber. | Kikinpa qillqasqan rimay 5. | 
+55 | GEN-0916 | — | Cierra la puerta, por favor. | Rimay 15. | 
+56 | CLI-0028 | Médico | ¿Cómo te sientes? | ¿Imaynataq kachkanki? | 
+58 | GEN-0100 | — | Golpea tus manos una contra otra. | Makiykita hukninmanta hukninman takaykuy. | 
+58 | GEN-0100 | — | Golpea tus manos una contra otra. | Makiykita hukninmanta hukninman takaykuy. | 
+59 | GEN-0140 | — | El viento mueve las ramas de los árboles. | Wayra sachakunapa kallmankunata kuyuchin. | 
+60 | GEN-0199 | — | Comimos contigo al anochecer. | Qamwan tutayaptin mikurqayku. | 
+61 | GEN-0796 | — | Dicen que ayer nevó en la puna. | Rimay 16. | 
+62 | GEN-0006 | — | Y tengo aún una tercera disculpa. | Kimsa kaq pampachaykuwayniypas kachkanraqmi | 
+63 | CLI-0042 | Médico | ¿Dónde te duele? | ¿Maypitaq nanasunki? | 
+64 | CLI-0981 | Paciente | Aquí, en la boca del estómago. | Rimay 17. | 
+65 | GEN-0154 | — | Esa flor huele bien. | Chay wayta sumaqta asnan. | 
+66 | GEN-0169 | — | Los monos negros están en la cima del árbol. | Yana machinkuna sachapa puntanpi kachkanku. | 
+67 | GEN-0867 | — | Los niños están jugando en el patio. | Rimay 18. | 
+68 | GEN-0043 | — | ¿Es verdad que los corderos se comen los arbustos? | ¿Chiqanchu carnakunaqa chaprakunata mikunku? | Aviso: escritura castellana (c/qu/j/hu) en «carnakunaqa» Comentario: está bien así, es un préstamo común.
+69 | GEN-0579 | — | El tigre caza sigilosamente. | Uturunku upallalla uywata hapin. | 
+70 | CLI-0052 | Médico | ¿Por dónde caminó tu dolor? | ¿Maynintataq nanayniyki purirqa? | 
+71 | CLI-0982 | Paciente | No se ha movido, me duele siempre en el mismo sitio. | Rimay 19. | 
+72 | GEN-0917 | — | Trae agua del río. | Rimay 20. | 
+73 | GEN-0036 | — | Tener un amigo es un verdadero privilegio. | Amistadniyuq kayqa ancha chaninniyuqmi. | Aviso: posible préstamo del español «Amistadniyuq»
+74 | GEN-0146 | — | Mañana iremos al mercado. | Paqarin qatuman risaqku. | 
+75 | GEN-0145 | — | El murciélago pasó por aquí. | Maray kaynata pasarqa. | 
+76 | GEN-0868 | — | Está lloviendo desde la mañana. | Rimay 21. | 
+77 | CLI-0141 | Médico | ¿Te duele mucho? | ¿Sinchitachu nanasunki? | 
+78 | CLI-0983 | Paciente | Sí, me duele mucho. | Rimay 22. | 
+79 | GEN-0049 | — | El suelo estaba infestado de semillas. | Allpaqa muhupa huntasqanmi kasqa. | 
+80 | GEN-0208 | — | Enseñemos a cuidar las plantas. | Kikinpa qillqasqan rimay 7. | 
+81 | GEN-0902 | — | De niño cuidaba las ovejas de mi abuelo. | Rimay 23. | 
+82 | GEN-0028 | — | El corderito que te he dado también es pequeño. | Qusqay uchuy malta carneropas uchuychallam. | Aviso: posible préstamo del español «carneropas»
+83 | CLI-0061 | Médico | ¿Cómo te duele? | ¿Imaynatataq nanasunki? | 
+84 | CLI-0984 | Paciente | Me duele como si me pincharan. | Rimay 24. | 
+85 | GEN-0207 | — | Mi lengua vive en mi memoria. | Simiy yuyayniypi kawsan. | 
+86 | GEN-0193 | — | El abuelo nos enseñó a leer libros. | Awilu maytu ñawichayta yachachiwarqayku. | 
+87 | GEN-0825 | — | Mi hermana llegará el sábado. | Rimay 25. | 
+88 | GEN-0040 | — | Quizá me creía semejante a él. | Ichapas payman rikchakuq kasqayta piensarqa. | Aviso: posible préstamo del español «piensarqa»
+89 | CLI-0058 | Médico | ¿En la noche te duele? | ¿Tutapichu nanasunki? | 
+90 | CLI-0985 | Paciente | Sí, en la noche me duele más. | Rimay 26. | 
+91 | GEN-0171 | — | La tierra está mojada. | Allpa yakuyasqa. | 
+92 | GEN-0534 | — | En el bosque me perdí. | Sachasachapi chinkarqani. | 
+93 | GEN-1023 | — | Mi hermana se peina frente al espejo. | Rimay 27. | 
+94 | GEN-0017 | — | Me puse en pie de un brinco. | Chaprakunapa hawanpi sayarqani. | Aviso: el borrador parece decir «me paré encima de los arbustos»; el español dice «me puse en pie de un brinco»
+95 | CLI-0069 | Médico | ¿Te duele más cuando comes? | ¿Mikuptiyki astawanchu nanasunki? | 
+96 | CLI-0986 | Paciente | Sí, cuando como me duele más. | Rimay 28. | 
+97 | GEN-0137 | — | Ayer fuimos al pueblo. | Qaynunchaw llaqtaman rirqayku. | 
+98 | GEN-0798 | — | Dicen que el alcalde viajó a Lima. | Rimay 29. | 
+99 | GEN-0015 | — | Había quedado desilusionado por el fracaso de mis dibujos. | Dibujokuna mana allinpi tukuptinmi hukmanyasqa karqani. | 
+100 | GEN-0190 | — | Bebí agua del manantial. | Pukyumanta yakuta upyarqani. | 
+58 | GEN-9999 | — | Golpea tus manos una contra otra. | Makiykita hukninmanta hukninman takaykuy. | 
+N° | ID | Quién habla | Español | Quechua (corrija o escriba aquí) | Observaciones
+101 | GEN-0541 | — | ¿Qué hacen ustedes por la tarde? | ¿Imatam qamkuna chisipi rurankichiklla? | 
+102 | GEN-0821 | — | Mañana iré a la chacra con mi papá. | Rimay 30. | 
+103 | GEN-0021 | — | No importa, ¡píntame un cordero! | Imayna kaptinpas, ¡wañuta pintaykuway! | 
+104 | GEN-0185 | — | La canoa está rota. | Wampu pakisqa. | 
+105 | CLI-0072 | Médico | ¿Has tomado algo para aliviar el dolor? | ¿Nanayniykita pisiyachinaykipaq hampikunata millpurqankichu? | 
+106 | CLI-0987 | Paciente | Tomé una pastilla, pero no se me pasó. | Rimay 31. | 
+107 | GEN-0996 | — | Cuando llegué a casa, mi mamá estaba cocinando. | Rimay 32. | 
+108 | GEN-0536 | — | ¿Qué hace ella a mediodía? | ¿Imatam pay chawpi punchaw ruran? | 
+109 | GEN-0019 | — | El muchachito me observaba gravemente. | Warmachaqa llumpayta qawamuwarqa. | 
+110 | GEN-0118 | — | El pájaro canta al amanecer. | Pisqu punchawyaptin takin. | 
+111 | CLI-0127 | Médico | ¿Tienes fiebre? | ¿Rupapakunkichu? | 
+112 | CLI-0988 | Paciente | Sí, anoche tuve fiebre. | Rimay 33. | 
+113 | GEN-0901 | — | Antes yo caminaba dos horas hasta la escuela. | Rimay 34. | 
+114 | GEN-0022 | — | En mi tierra todo es muy pequeñito. | Llaqtaypiqa lliwmi uchuychallalla. | 
+115 | GEN-0538 | — | Mi mamá cocina caldo de gallina. | Mamay wallpa chupita yanun. | 
+116 | GEN-0125 | — | Hay muchos árboles grandes. | Kikinpa qillqasqan rimay 9. | 
+117 | CLI-0135 | Médico | ¿Tienes vómitos? | ¿Wikchunayasunkichu? | 
+118 | CLI-0989 | Paciente | Sí, vomité dos veces. | Rimay 35. | 
+119 | GEN-0743 | — | Anoche llovió mucho en el pueblo. | Rimay 36. | 
+120 | GEN-0038 | — | Uno saldrá bien y otro quizá no tanto. | Hukninmi allinta lluqsinqa, hukninñataq manapaschá anchatachu. | 
+121 | GEN-0162 | — | Esta noche hay luna nueva. | Kunan tuta killa musuq. | 
+122 | GEN-0744 | — | Mi abuelo vendió dos ovejas en el mercado. | Rimay 37. | 
+123 | CLI-0375 | Médico | ¿Tienes diarrea? | ¿Kachkanki diarrayawanchu? | Aviso: posible préstamo del español «diarrayawanchu»
+124 | CLI-0990 | Paciente | No, no tengo diarrea. | Rimay 38. | 
+125 | GEN-0187 | — | Los pájaros vuelan juntos. | Pisqukuna kuska pawanku. | 
+126 | GEN-0014 | — | Los mayores siempre tienen necesidad de explicaciones. | Machuyaqkunaqa sapa kuti yachachikuyta munanku. | 
+127 | GEN-0147 | — | El bebé ya puede caminar. | Wawa puriytaña atin. | 
+128 | GEN-0947 | — | Si lloviera, la papa crecería mejor. | Rimay 39. | 
+129 | CLI-0373 | Médico | ¿Tienes apetito? | ¿Mikunayasunkichu? | 
+130 | CLI-0991 | Paciente | No, no tengo ganas de comer. | Rimay 40. | 
+131 | GEN-0532 | — | El doctor cura al paciente. | Hampiq unqusqata hampin. | 
+132 | GEN-0094 | — | Eso, uno podría hacerlo en cualquier lugar. | Chaytaqa maypipas ruwayta atichwanmi. | 
+133 | GEN-0745 | — | Esta mañana tomé leche caliente. | Rimay 41. | 
+134 | GEN-0204 | — | Esa palabra suena fuerte. | Chay simi sinchita uyarikun. | 
+135 | CLI-0387 | Médico | ¿Tienes tos? | ¿Uhuchkankichu? | 
+136 | CLI-0992 | Paciente | No, no tengo tos. | Rimay 42. | 
+137 | GEN-0543 | — | ¿Qué hacen los hombres en el río? | ¿Imatam qarikuna mayupi ruranku? | 
+138 | GEN-0062 | — | Las espinas no sirven para nada. | Kichkakunaqa manam imapaqpas allinchu. | 
+139 | GEN-0869 | — | Mi mamá está tejiendo una manta. | Rimay 43. | 
+140 | GEN-0198 | — | Cuidado con la serpiente. | ¡Amarumanta waqaychakuy! | 
+141 | CLI-0271 | Médico | Voy a examinarte. Me vas a ayudar, ¿está bien? | Kikinpa qillqasqan rimay 11. | 
+142 | CLI-0993 | Paciente | Está bien, doctor. | Rimay 44. | 
+143 | GEN-0034 | — | Me habría gustado decir: érase una vez… | Munaymanchá niyta: huk kutillaraq kachkaptiy... | 
+144 | GEN-0142 | — | Trae el machete, por favor. | Ama hina kaspa, machitita apamuy. | 
+145 | GEN-0948 | — | Quisiera aprender a tejer. | Rimay 45. | 
+146 | GEN-0143 | — | Esa fruta está dulce. | Chay ruru miski. | 
+147 | CLI-0193 | Médico | A ver, échate. | Sirikuy | 
+148 | GEN-0075 | — | Tengo horror a las corrientes de aire. | Wayrapa puriyninkunataqa millakuni. | 
+149 | GEN-0870 | — | Estamos esperando el bus. | Rimay 46. | 
+150 | GEN-0195 | — | Me gustaría aprender más. | Astawan yachakuyta munayman. | 
+N° | ID | Quién habla | Español | Quechua (corrija o escriba aquí) | Observaciones
+151 | GEN-0124 | — | Voy a pescar con papá. | Taytaywan challwakuq risaq. | 
+152 | GEN-0866 | — | Ahora estoy cocinando el almuerzo. | Rimay 47. | 
+153 | GEN-0069 | — | ¡Es tan misterioso el país de las lágrimas! | ¡Wiqiypa llaqtanqa manam yachakunapaqchu! | 
+154 | GEN-0155 | — | Mira, una mariposa azul. | Qaway, anka pillpintu. | 
+155 | CLI-0229 | Médico | No pongas dura la barriga. | Wiksaykita ama kallpachaychu | 
+156 | GEN-1021 | — | La mamá hace dormir al bebé. | Rimay 48. | 
+157 | GEN-0106 | — | El niño va corriendo a la chacra. | Qari warma chakraman kallpaspa rin. | 
+158 | GEN-0088 | — | La flor tosió aunque no estaba resfriada. | Waytaqa mana chiriyasqa kachkaspanpas usurparin. | 
+159 | GEN-0138 | — | Los niños juegan con barro. | Warmakuna mituwan pukllanku. | 
+160 | CLI-0352 | Médico | ¿Te duele aquí? | ¿Kaypi nanasunkichu? | 
+161 | CLI-0994 | Paciente | Sí, ahí me duele mucho. | Rimay 49. | 
+162 | GEN-0742 | — | La semana pasada sembramos papa en la chacra. | Rimay 50. | 
+163 | GEN-0087 | — | Adiós –le dijo a la flor. | Fioramanmi nirqa: Chaynaqa, ripullaykichikyá, nispa. | Aviso: posible préstamo del español «Fioramanmi»
+164 | GEN-0148 | — | ¿Quién rompió el cántaro? | ¿Pitaq puyñuta pakirqa? | 
+165 | GEN-0141 | — | Estoy cansado, quiero dormir. | Saykusqa kani, puñuyta munani. | 
+166 | CLI-0097 | Médico | Respira hondo. | Samay ukumanta. | 
+167 | GEN-0967 | — | ¿Vendrás a la fiesta del pueblo? | Rimay 51. | 
+168 | GEN-0086 | — | Yo era demasiado joven para saber amarla. | Ñuqaqa llumpay wayna kaspaymi kuyananaypaqqa mana yacharqanichu. | 
+169 | GEN-0181 | — | ¿Cómo se dice eso en tu lengua? | ¿Chayta simiykipi imaynatam nin? | 
+170 | GEN-0997 | — | Después de comer, fuimos a la chacra. | Rimay 52. | 
+171 | CLI-0254 | Médico | Tienes mal el estómago. | Wiksaykim mana allinchu | 
+172 | CLI-0995 | Paciente | ¿Es grave, doctor? | Rimay 53. | 
+173 | CLI-0924 | Médico | No es nada grave. | Rimay 54. | 
+174 | GEN-0209 | — | ¿Quieres contarme tu historia? | ¿Willakuyniykita willawayta munankichu? | 
+175 | GEN-0016 | — | Viví así, solo, sin nadie con quien poder hablar. | Kikinpa qillqasqan rimay 13. | 
+176 | GEN-0160 | — | Coseché yuca por la mañana. | Tutamanta yukata allarqani. | 
+177 | GEN-0797 | — | Cuentan que antes aquí había una laguna. | Rimay 55. | 
+178 | CLI-0916 | Médico | Al despertar vas a tomar dos pastillas. | Rimay 56. | 
+179 | CLI-0996 | Paciente | Bueno, dos pastillas en la mañana. | Rimay 57. | 
+180 | GEN-0136 | — | El pez nada en el agua. | Challwa yakupi waytan. | 
+181 | GEN-0058 | — | ¡Un día vi ponerse el sol cuarenta y tres veces! | ¡Huk punchawmi inti siqaykuyta tawa chunka kimsayuq kutita rikurqani! | 
+182 | GEN-0968 | — | ¿Qué estás haciendo? | Rimay 58. | 
+183 | GEN-0161 | — | Mi tía hace chicha punta. | Tiyay punta aqata ruran. | 
+184 | CLI-0153 | Médico | Toma líquido. | Yakuta upyay | 
+185 | CLI-0997 | Paciente | Sí, voy a tomar bastante agua. | Rimay 59. | 
+186 | GEN-0120 | — | ¿Dónde está tu casa? | ¿Maypim wasiyki? | 
+187 | GEN-0066 | — | Todo lo confundes, todo lo mezclas. | Lliwta pantachinki, lliwta chaqurunki. | 
+188 | GEN-0746 | — | El año pasado mi hermana terminó la secundaria. | Rimay 60. | 
+189 | GEN-0167 | — | ¿Has visto a mi hermano? | ¿Wawqiyta rikurqankichu? | 
+190 | CLI-0923 | Médico | Vas a volver en una semana. | Rimay 61. | 
+191 | CLI-0998 | Paciente | Bueno, regreso en una semana. | Rimay 62. | 
+192 | GEN-0105 | — | ¿Qué haces ahí? | ¿Imatataq chaypi ruwanki? | 
+193 | GEN-0177 | — | Todos trajeron comida. | Llapanku mikunata apamurqaku. | 
+194 | GEN-0826 | — | Tú cuidarás a las ovejas esta semana. | Rimay 63. | 
+195 | GEN-0179 | — | Quiero escucharte cuando hablas. | Rimaptiyki uyariyta munani. | 
+196 | CLI-0999 | Médico | ¿Entendiste lo que tienes que hacer? | Rimay 64. | 
+197 | CLI-1000 | Paciente | Sí, entendí. Gracias, doctor. | Rimay 65. | 
+198 | GEN-0060 | — | Ese día estabas muy triste, ¿verdad? | Chay punchawqa ancha llakisqachá karqanki, ¿aw? | 
+199 | GEN-0969 | — | ¿Dónde vive tu abuela? | Rimay 66. | 
+200 | GEN-0114 | — | Me gusta la fruta madura. | Puqusqa ruruta munani. | 

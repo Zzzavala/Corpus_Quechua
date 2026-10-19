@@ -1,0 +1,31 @@
+{
+  "ID": "GEN-0006",
+  "cambio_es": {
+    "codigo": 0,
+    "salida": "OK B01: 0 validadas; faltantes 0, sobrantes 0, duplicadas 0; español cambiado 1; sublotes sin tocar ninguno; clases {'reescrito': 1}; reporte → C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\04_reportes\\revision_independiente_20261018\\PRUEBAS_SIMULADAS_NO_GRABAR\\importacion.md\n",
+    "error": ""
+  },
+  "tras_cambio": {
+    "Estado": "Por_revisar",
+    "Quechua_validado": "SIMULADO anterior; NO GRABAR"
+  },
+  "grabacion_con_por_revisar": {
+    "codigo": 0,
+    "salida": "OK → C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\04_reportes\\revision_independiente_20261018\\PRUEBAS_SIMULADAS_NO_GRABAR\\grabacion_SIMULADA_NO_USAR.docx (1 filas; sin validar: 0)\n",
+    "error": ""
+  },
+  "duplicados": {
+    "codigo": 0,
+    "salida": "OK B01: 1 validadas; faltantes 0, sobrantes 0, duplicadas 1; español cambiado 0; sublotes sin tocar ninguno; clases {'reescrito': 1}; reporte → C:\\Users\\PC\\Desktop\\GestionConocimientoTA\\DataRecolectada\\EDA_AnalisisFinal\\Corpus_Quechua\\04_reportes\\revision_independiente_20261018\\PRUEBAS_SIMULADAS_NO_GRABAR\\importacion.md\n",
+    "error": ""
+  },
+  "tras_duplicados": {
+    "Estado": "Validado",
+    "Quechua_validado": "SIMULADO primera opción"
+  },
+  "maestro_original_inalterado": true,
+  "casos_reproducidos": {
+    "estado_por_revisar_pasa_a_hoja": true,
+    "duplicado_conflictivo_valida_primero": true
+  }
+}
