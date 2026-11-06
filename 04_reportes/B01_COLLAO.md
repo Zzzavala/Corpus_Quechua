@@ -51,7 +51,7 @@ Generado por `scripts/congelar_bloque.py`. Las filas 1 a 24 ya las trabajó el t
 | 100 | GEN-0190 | Bebí agua del manantial. | Pukyumanta yakuta upyarqani. | — | — |
 | 101 | GEN-0541 | ¿Qué hacen ustedes por la tarde? | ¿Imatam qamkuna chisipi rurankichik? | — | — |
 | 103 | GEN-0021 | No importa, ¡píntame un cordero! | Imayna kaptinpas, ¡wañuta pintaykuway! | — | — |
-| 104 | GEN-0185 | La canoa está rota. | Wampu pakisqa. | — | — |
+| 104 | GEN-0185 | La soga está rota. | Wampu pakisqa. | — | — |
 | 105 | CLI-0072 | ¿Has tomado algo para aliviar el dolor? | ¿Nanayniykita pisiyachinaykipaq hampikunata millpurqankichu? | — | — |
 | 108 | GEN-0536 | ¿Qué hace ella a mediodía? | ¿Imatam pay chawpi punchaw ruran? | — | — |
 | 109 | GEN-0019 | El muchachito me observaba gravemente. | Warmachaqa llumpayta qawamuwarqa. | — | — |
@@ -80,6 +80,7 @@ Generado por `scripts/congelar_bloque.py`. Las filas 1 a 24 ya las trabajó el t
 | 148 | GEN-0075 | Tengo horror a las corrientes de aire. | Wayrapa puriyninkunataqa millakuni. | — | — |
 | 150 | GEN-0195 | Me gustaría aprender más. | Astawan yachakuyta munayman. | — | — |
 | 151 | GEN-0124 | Voy a pescar con papá. | Taytaywan challwakuq risaq. | — | — |
+| 152 | GEN-0866 | Ahora estoy cocinando mote. | — | — | — |
 | 153 | GEN-0069 | ¡Es tan misterioso el país de las lágrimas! | ¡Wiqiypa llaqtanqa manam yachakunapaqchu! | — | — |
 | 154 | GEN-0155 | Mira, una mariposa azul. | Qaway, anka pillpintu. | — | — |
 | 155 | CLI-0229 | No pongas dura la barriga. | Wiksaykita ama kallpachaychu | — | — |
@@ -98,7 +99,7 @@ Generado por `scripts/congelar_bloque.py`. Las filas 1 a 24 ya las trabajó el t
 | 176 | GEN-0160 | Coseché yuca por la mañana. | Tutamanta yukata allarqani. | — | — |
 | 180 | GEN-0136 | El pez nada en el agua. | Challwa yakupi waytan. | — | — |
 | 181 | GEN-0058 | ¡Un día vi ponerse el sol cuarenta y tres veces! | ¡Huk punchawmi inti siqaykuyta tawa chunka kimsayuq kutita rikurqani! | — | — |
-| 183 | GEN-0161 | Mi tía hace chicha punta. | Tiyay punta aqata ruran. | — | — |
+| 183 | GEN-0161 | Mi tía hace chicha de jora. | Tiyay punta aqata ruran. | — | — |
 | 184 | CLI-0153 | Toma líquido. | Yakuta upyay | — | — |
 | 186 | GEN-0120 | ¿Dónde está tu casa? | ¿Maypim wasiyki? | — | — |
 | 187 | GEN-0066 | Todo lo confundes, todo lo mezclas. | Lliwta pantachinki, lliwta chaqurunki. | — | — |

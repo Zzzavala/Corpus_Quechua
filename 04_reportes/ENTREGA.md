@@ -7,14 +7,15 @@ Para: equipo del proyecto · Fecha: 2026-11-05 · Preparado por Claude (Claude C
 1. **Los 5 bloques están listos en quechua de Cusco (collao), con 5 vocales.** Cada uno tiene 200 oraciones: 140 generales + 60 médicas, en 4 sublotes de 50.
 2. **B01 ya no tiene nada chanka por delante.** Las filas 1 a 24, que trabajó el traductor, no se tocaron. Desde la fila 25, cada fila trae un borrador collao o la celda vacía. También dice «Soy de Cusco.» y lleva la misma tabla de ortografía que los demás bloques.
 3. **B02 a B05 son nuevos:** usan borradores collao en su forma original y traen frases oficiales del Estado en quechua de Cusco (lo más cercano a «data gold» que hay).
-4. **Se extrajeron las fuentes oficiales:** Palabras clave de salud, manual de justicia, glosario PIAS Puno (49 frases de atención) y glosario COVID (135 términos). Además, hay texto paralelo para el equipo de modelo: `06_dataset/texto_paralelo_collao.csv`, 1 881 pares.
+4. **Se extrajeron las fuentes oficiales:** Palabras clave de salud, manual de justicia, glosario PIAS Puno (49 frases de atención) y glosario COVID (135 términos). Además, hay texto paralelo para el equipo de modelo: `06_dataset/texto_paralelo_collao.csv`, 1 883 pares.
 5. **Lo que sigue:** revisar el español de B02, pasar a B01 el Word corregido y enviar B02.
 
 ## Qué está listo
 
 | Qué | Dónde |
 |---|---|
-| Archivo maestro (2 848 oraciones, única fuente de verdad) | `02_maestro/corpus_maestro.xlsx` |
+| **Segunda revisión: qué se corrigió antes de enviar, fila por fila** | `04_reportes/SEGUNDA_REVISION.md` |
+| Archivo maestro (2 847 oraciones, única fuente de verdad) | `02_maestro/corpus_maestro.xlsx` |
 | Word para el traductor de B01–B05 | `03_bloques/B0X/B0X_traductor.docx` |
 | Excel de trabajo de B01–B05 | `03_bloques/B0X/B0X_trabajo.xlsx` |
 | Guía de grabación | `03_bloques/GUIA_GRABACION.docx` |
@@ -36,7 +37,7 @@ Para: equipo del proyecto · Fecha: 2026-11-05 · Preparado por Claude (Claude C
 | 25 a 200, vacías (169) | El traductor escribe desde el español. De ellas, 96 traían borrador chanka: **ninguna fuente collao tiene esas frases y el quechua no se inventa ni se convierte a mano.** Las otras 73 ya estaban vacías. |
 
 - **Más trabajo para el traductor:** esas 96 filas ya no traen borrador, igual que la parte general de B02–B05.
-- **Español:** solo cambió la fila 30, «Soy de Cusco.». Los IDs y el orden son los mismos.
+- **Español:** cambiaron 4 filas aún sin traducir: la 30 («Soy de Cusco.»), la 104 («La soga está rota.»), la 152 («Ahora estoy cocinando mote.») y la 183 («Mi tía hace chicha de jora.»). Los IDs y el orden son los mismos.
 - **Ortografía:** el Word ya pide 5 vocales y no dice «chanka» en ninguna parte.
 - **Control:** B01 ya no tiene oraciones de control, porque su borrador oculto era chanka y no servía para medir. El traductor no nota nada. El anclaje se mide con las 10 de B02.
 - **Lo chanka que queda, solo en lo interno:** los borradores que el traductor vio en las filas 1 a 24, para medir cuánto corrigió, y los nombres de las fuentes del español en la pestaña Detalle del Excel.
@@ -45,14 +46,14 @@ Para: equipo del proyecto · Fecha: 2026-11-05 · Preparado por Claude (Claude C
 ## Qué enviar a quién
 
 1. **B01: pasen al traductor `03_bloques/B01/B01_traductor.docx`.**
-   - **Antes, pregúntenle si avanzó después de la fila 24.** Este Word no tiene lo que haya hecho después de su versión v1.
-   - Si avanzó, no le pasen este archivo. Guarden el suyo como `02_maestro/congelados/B01_original/B01_traductor_v2.docx` y corran el comando de abajo, que deja intacto lo nuevo que hizo.
+   - **Confirmado el 6-nov-2026:** no avanzó después de la fila 24. Debe seguir desde la fila 25 con este archivo, en lugar del anterior.
+   - Si llegara a avanzar antes de recibirlo, no le pasen este archivo. Guarden el suyo como `02_maestro/congelados/B01_original/B01_traductor_v2.docx` y corran el comando de abajo, que deja intacto lo nuevo que hizo.
 
    ```
    .venv\Scripts\python.exe scripts\congelar_bloque.py B01 --word 02_maestro\congelados\B01_original\B01_traductor_v2.docx
    ```
 
-2. **Revisen el español de B02** en `04_reportes/REVISION.md` (77 filas). No hace falta saber quechua: es ver si cada oración en español suena natural y dice lo que debe.
+2. **Revisen el español de B02** en `04_reportes/REVISION.md` (81 filas). No hace falta saber quechua: es ver si cada oración en español suena natural y dice lo que debe.
 3. **Envíen `B02_traductor.docx`.** El traductor siempre va un bloque adelante (D5). Yo no envié nada a nadie.
 4. **Al enviarlo, márquenlo:** desde ahí queda congelado.
 
@@ -64,14 +65,14 @@ Para: equipo del proyecto · Fecha: 2026-11-05 · Preparado por Claude (Claude C
 
 ## Qué debes revisar
 
-- **Español redactado o adaptado (`Por_revisar`):** 77 filas en B02, 104 en B03, 137 en B04 y 135 en B05. En B02 son 40 oraciones generales nuevas, 30 respuestas del paciente nuevas y 7 frases adaptadas. Las escribí o ajusté yo, no salen tal cual de una fuente; por eso una persona debe leerlas antes de que lleguen al traductor.
-- **Avisos en el Word:** 1 en las filas nuevas de B01, 5 en B02, 9 en B03, 9 en B04 y 6 en B05. La mayoría dice que el borrador es boliviano y hay que adaptarlo a Cusco.
+- **Español redactado o adaptado (`Por_revisar`):** 81 filas en B02, 108 en B03, 139 en B04 y 136 en B05. En B02 son 40 oraciones generales nuevas, 30 respuestas del paciente nuevas y 11 frases adaptadas. Las escribí o ajusté yo, no salen tal cual de una fuente; por eso una persona debe leerlas antes de que lleguen al traductor.
+- **Avisos en el Word:** 1 en las filas nuevas de B01, 5 en B02, 11 en B03, 10 en B04 y 5 en B05. Más de la mitad dice que el borrador es boliviano y hay que adaptarlo a Cusco. Cinco los puse a mano porque el borrador no dice lo mismo que el español (por ejemplo, «pulmón» con *kunka*, que es cuello).
 - **Cuánto borrador ve el traductor:** 16 filas en B02, 24 en B03 y 30 en B04 y B05. El resto lo traduce desde el español. B02 tiene además 10 frases de control con la celda vacía.
 - **Lo que comentó el traductor** (`AVANCE_B01.md`):
-  - «desayuno», «remar» y «buenos días» no se dicen así. Quité desayuno y almuerzo de B02–B05, y no quedaba ninguna de las otras;
+  - «desayuno», «remar» y «buenos días» no se dicen así. Quité desayuno y almuerzo de B02–B05, y no quedaba ninguna de las otras. En B01 cambié «canoa» y «almuerzo» en filas que aún no trabajó;
   - el glosario oficial PIAS sí traduce los saludos («Allin p'unchay», «Allin sukha», «Allin tuta»): conviene preguntarle si le parecen forzados;
   - las frases del Principito con cosas que no hay en los Andes (baobabs, boa, elefante) siguen en B02 y B03. El Word ya le pide escribirlas como las diría un hablante.
-- **Por confirmar:** «Mi tía hace chicha punta» y el calco «no + una» de algunos ejercicios (igual que antes).
+- **Por confirmar:** el calco «no + una» de algunos ejercicios (igual que antes).
 
 ## ¿Lo oficial y Lopera son gold?
 
@@ -95,6 +96,8 @@ Para: equipo del proyecto · Fecha: 2026-11-05 · Preparado por Claude (Claude C
 | Nuevo | Cusco y Puno juntos; solo lo boliviano lleva aviso. | Que el traductor confirme si le parece bien. |
 | Nuevo | Sexto bloque: quedan 530 frases oficiales sin bloque, pero no hay generales suficientes. | ¿Redacto ~90 generales más? |
 | Nuevo | OPS/OMS Bolivia: quedan unos 480 pares sin usar. | ¿Los sumamos? Son bolivianos y necesitan adaptación. |
+| Nuevo | 4 fuentes más, validadas (3 cuestionarios de salud en collao y un glosario de Cultura Cusco), aún sin descargar. Detalle en `FUENTES_COLLAO.md`, sección 4. | ¿Se integran? No cambian B01–B05. |
+| Nuevo | Vías HEARTS del MINSA en Cusco Collao: gob.pe no dejó abrirlas de forma automática. | Que alguien del equipo guarde los PDF desde su navegador. |
 
 La guía de señalética no se extrajo: sus tablas cambian de una página a otra y salía mezclada con aimara, y son ~40 letreros, casi ninguno médico. Guardar un par equivocado como «oficial» haría más daño que ayuda.
 
@@ -108,7 +111,7 @@ La guía de señalética no se extrajo: sus tablas cambian de una página a otra
 | B04 | 0 / 0 / 35 / 105 | 42 % | 30 / 30 | 30 | — |
 | B05 | 0 / 0 / 35 / 105 | 39 % | 30 / 30 | 30 | — |
 
-**Caben 5 bloques.** Sobran 431 generales (416 ejercicios y 15 redactadas) y 1 417 médicas. Para un sexto bloque hacen falta ~90 oraciones generales más.
+**Caben 5 bloques.** Sobran 431 generales (416 ejercicios y 15 redactadas) y 1 416 médicas. Para un sexto bloque hacen falta ~90 oraciones generales más.
 
 ## Cómo regenerar
 

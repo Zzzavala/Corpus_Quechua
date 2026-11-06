@@ -353,6 +353,8 @@ def es_prestamo_o_propio(t: str, inicio_oracion: bool = False) -> tuple[bool, st
         return True, "préstamo común"
     if tiene_laringal(t):
         return False, ""                             # una glotalizada o aspirada es señal clara de palabra quechua
+    if re.search(r"[aeiou]jti", w):
+        return False, ""                             # subordinador -jti- («purijtiyki»): es quechua de otra zona, no español
     if set(w) & set("bdfgvxz"):
         return True, "préstamo"
     # también con 5 vocales: «tomani» y «piensani» siguen siendo préstamos; «qolqe» no, porque su raíz no es española
@@ -620,7 +622,7 @@ NUM_ES = {"dos": 2, "tres": 3, "cuatro": 4, "cinco": 5, "seis": 6, "siete": 7, "
           "sesenta": 60, "setenta": 70, "ochenta": 80, "noventa": 90, "cien": 100, "ciento": 100, "mil": 1000,
           "segundo": 2, "segunda": 2, "tercero": 3, "tercera": 3, "tercer": 3, "quinto": 5, "quinta": 5}
 # («cuarto» no se cuenta: casi siempre es la habitación)
-NUMEROS_QU = {"2": ["iskay"], "3": ["kimsa"], "4": ["tawa"], "5": ["pichqa", "pisqa", "phisqa"], "6": ["suqta", "soqta"],
+NUMEROS_QU = {"2": ["iskay"], "3": ["kimsa", "kinsa"], "4": ["tawa"], "5": ["pichqa", "pisqa", "phisqa"], "6": ["suqta", "soqta"],
               "7": ["qanchis"], "8": ["pusaq"], "9": ["isqun", "isqon", "iskun"], "10": ["chunka"],
               "100": ["pachak", "pachaq"], "1000": ["waranqa"]}
 SUF_NUM = re.compile(r"^(kaq|ta|pi|man|manta|yuq|yuqta|ntin|chu|mi|m|lla|llata|wan|kama|niyuq|kuti|kutita|pa|qa|taq|ña|raq|y|yki|n)*$")
@@ -682,7 +684,9 @@ def detectar_alineacion(es: str, qu: str, cfg_qa: dict) -> list[tuple[str, str]]
         hall.append(("MEDIA", f"longitud quechua/español = {r:.2f} (fuera de [{cfg_qa['ratio_longitud_min']}, {cfg_qa['ratio_longitud_max']}])"))
     ne, nq = numeros_es(es), numeros_qu(qu)
     if (ne or nq) and ne != nq:
-        hall.append(("ALTA", f"números distintos: español {sorted(ne, key=int) or '—'} vs quechua {sorted(nq, key=int) or '—'}"))
+        def decir(numeros: set[str]) -> str:      # este texto llega al Word: sin corchetes ni comillas de programa
+            return "dice " + ", ".join(sorted(numeros, key=int)) if numeros else "no da ningún número"
+        hall.append(("ALTA", f"números distintos: el español {decir(ne)} y el quechua {decir(nq)}"))
     if ("?" in es or "¿" in es) and "?" not in qu and not MARCAS_PREGUNTA_QU.search(norm(qu)):
         hall.append(("MEDIA", "pregunta en español sin marca interrogativa en quechua (-chu, -taq, ima-, pi-, may-, hayk'a-)"))
     return hall

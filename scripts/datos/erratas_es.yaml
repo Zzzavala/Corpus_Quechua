@@ -42,6 +42,23 @@ frases:
   "¿Cómo estas?": "¿Cómo estás?"
   "El hígado me deule": "El hígado me duele"
   "Temgo mareos": "Tengo mareos"
+  # segunda revisión (5-nov-2026): leyendo los bloques fila por fila y buscando lo mismo en todo el maestro
+  "¿A que tiempo": "¿A qué tiempo"
+  "¿A que edad": "¿A qué edad"
+  "¿Que edad": "¿Qué edad"
+  "¿Que tratamiento": "¿Qué tratamiento"
+  "¿Cuando fue tu última regla?": "¿Cuándo fue tu última regla?"
+  "¿Como se enteró": "¿Cómo se enteró"
+  "¿Con cuantas personas": "¿Con cuántas personas"
+  "¿Hace cuantos días": "¿Hace cuántos días"
+  "¿Cada cuanto tiempo menstruo?": "¿Cada cuánto tiempo menstrúo?"
+  "¿Donde te duele, se hincha?": "Donde te duele, ¿se hincha?"
+  "Cuando el pené esta duro": "Cuando el pene está duro"
+  "Tu mama traerá": "Tu mamá traerá"
+  "tiene vomito": "tiene vómito"
+  "le dolía a orinar": "le dolía al orinar"
+  "Necesario hacer un examen": "Es necesario hacer un examen"
+  "¿Dónde quieres llevarte mi cordero?": "¿A dónde quieres llevarte mi cordero?"
 
 palabras:
   aqui: aquí
@@ -72,3 +89,5 @@ palabras:
   entreñimiento: estreñimiento
   vómitar: vomitar
   medico: médico
+  pulmon: pulmón
+  estomago: estómago

@@ -128,7 +128,9 @@ control:
     B02: {general: 0, medico: 10}   # las de B02 miden el anclaje con borradores collao
   calidad_max_medico: 4            # solo borradores médicos de buena calidad (1–4) sirven de control
   similitud_max_hermana: 75        # no se elige de control una fila con una «hermana» visible tan parecida (D7)
-  excluir_codigos: [F-0052]        # español dudoso sin borrador a la vista («Mi tía hace chicha punta»: la coordinación del proyecto confirma «punta»)
+  # F-0052: estaba por confirmar «chicha punta»; ya se cambió en B01 a «chicha de jora» y no entra en B02–B05
+  # QCH-0708: su borrador está desalineado en el libro («¿Sorq'an nanan ¿Uhunki…»): no sirve para medir el anclaje
+  excluir_codigos: [F-0052, QCH-0708]
 
 # Conjunto de prueba sugerido (P1): todo es train; se marca un 10 % estratificado
 test_sugerido:

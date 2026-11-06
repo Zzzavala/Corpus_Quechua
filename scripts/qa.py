@@ -94,5 +94,5 @@ def aviso_word(avisos: list[tuple[str, str, str]], maximo: int | None = None) ->
             altas.append(d)
     if not altas:
         return ""
-    txt = "; ".join(altas[:maximo]) + (" (y otros)" if len(altas) > maximo else "")
-    return "Aviso: " + txt
+    # sin «(y otros)»: el traductor no puede ver esos otros avisos y solo le confundía
+    return "Aviso: " + "; ".join(altas[:maximo])

@@ -14,9 +14,11 @@ import sys
 from collections import Counter
 
 import pandas as pd
+import yaml
 from docx import Document
 from docx.oxml.ns import qn
 from openpyxl import load_workbook
+from rapidfuzz import fuzz
 
 from avance_traductor import avance
 from comun import CFG, RAIZ, cargar_checkpoint, clave_normalizada, escribir_texto, ruta
@@ -158,12 +160,29 @@ def main() -> int:
             ok(b, "Word: filas siguientes sin borradores chanka (solo de fuentes collao)", not no_collao,
                f"({sum(1 for x in pend if x[4])} con borrador, {sum(1 for x in pend if not x[4])} vacías; chanka: {no_collao[:5]})")
             es_camb = [x[1] for x, y in zip(filas_hoy, filas_orig) if x[3] != y[3]]
-            ok(b, "Word: el español solo cambió donde se pidió", es_camb == list(ESPAÑOL_CAMBIADO.get(b, {})), str(es_camb))
+            # lo que el traductor ya trabajó no se cambia, aunque esté en la lista: si avanzó hasta esa fila, se queda como la tiene
+            es_pedido = [x[1] for x in pend if x[1] in ESPAÑOL_CAMBIADO.get(b, {})]
+            ok(b, "Word: el español solo cambió donde se pidió", es_camb == es_pedido, str(es_camb))
         else:
             mal_qu = [i for i, q, _ in filas_w if q != ("" if C6.loc[i, "Control"] == "Sí" else C6.loc[i, "Quechua_borrador"])]
             ok(b, "Word: celda Quechua = borrador; vacía en control y en filas sin borrador", not mal_qu, f"(distintas: {mal_qu[:5]})")
             obs_mal = [i for i, _, o in filas_w if o and not o.startswith("Aviso:")]
             ok(b, "Word: Observaciones solo con «Aviso:» (ALTA) o vacía", not obs_mal, f"({sum(1 for x in filas_w if x[2])} avisos)")
+            # Lo que se le escapó a la primera verificación y se encontró leyendo los bloques (segunda revisión, 5-nov-2026)
+            feos = [o for _, _, o in filas_w if re.search(r"[\[\]]|\(y otros\)", o)]
+            ok(b, "Word: avisos legibles (sin corchetes ni «y otros»)", not feos, str(feos[:2]))
+            es_b = [row.cells[3].text for t in tablas for row in t.rows[1:]]
+            sin_tilde = [e for e in es_b if re.search(r"¿\s*(A que|Que|Quien|Quienes|Como|Donde|Cual|Cuales|Cuanto|Cuanta|Cuantos|Cuantas)\b", e)]
+            ok(b, "Word: español sin interrogativos sin tilde", not sin_tilde, str(sin_tilde[:3]))
+            clave_es = [re.sub(r"[^a-záéíóúñü ]", "", e.lower()).strip() for e in es_b]
+            casi = [(x, y) for n, x in enumerate(clave_es) for y in clave_es[n + 1:] if fuzz.ratio(x, y) >= 93]
+            ok(b, "Word: sin oraciones casi iguales dentro del bloque", not casi, str(casi[:2]))
+            cod_manual = set(yaml.safe_load((RAIZ / "scripts" / "datos" / "avisos_manuales.yaml").read_text(encoding="utf-8")) or {})
+            cods = F6["Origen"].set_index("ID")["Código_original"]
+            ctrl_mal = [i for i, _, _ in filas_w if C6.loc[i, "Control"] == "Sí" and cods[i] in cod_manual]
+            ok(b, "Control: ninguna fila con el borrador marcado a mano como desalineado", not ctrl_mal, str(ctrl_mal))
+            sin_aviso = [i for i, q, o in filas_w if q and cods[i] in cod_manual and not o]
+            ok(b, "Word: los avisos puestos a mano llegan al Word", not sin_aviso, str(sin_aviso))
 
         # Excel de trabajo
         wb = load_workbook(ruta("bloques") / b / f"{b}_trabajo.xlsx")

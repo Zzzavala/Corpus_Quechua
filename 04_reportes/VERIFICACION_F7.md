@@ -1,6 +1,6 @@
 # Verificación final (F7) — checklist de CLAUDE.md §13
 
-Generado por `scripts/f7_verificacion.py`. **136 de 136 puntos PASAN.**
+Generado por `scripts/f7_verificacion.py`. **156 de 156 puntos PASAN.**
 
 | Sección | Punto | Resultado | Detalle |
 |---|---|---|---|
@@ -8,11 +8,11 @@ Generado por `scripts/f7_verificacion.py`. **136 de 136 puntos PASAN.**
 | Fuentes | Fuentes intactas (tamaño y sha256 iguales a F0) | PASA | {   "archivos": 40,   "problemas": [] } |
 | Fuentes | Cifras de §5 verificadas (0 «✖ DIFIERE» en INVENTARIO.md) | PASA |  |
 | Maestro | corpus_maestro.xlsx con todas sus pestañas | PASA | LEEME, Corpus, Origen, Cambios, Descartes, Lexico, QA, Bloques, Traductor_metricas |
-| Maestro | IDs únicos y con formato GEN-/CLI- | PASA | (2848 filas) |
+| Maestro | IDs únicos y con formato GEN-/CLI- | PASA | (2847 filas) |
 | Maestro | Toda fila de Corpus tiene su fila en Origen | PASA |  |
 | Maestro | Corpus tiene las columnas de §8.2 | PASA |  |
-| Maestro | Todo descarte tiene motivo | PASA | (289 descartes) |
-| Maestro | Cambios registrados | PASA | (2288 cambios) |
+| Maestro | Todo descarte tiene motivo | PASA | (290 descartes) |
+| Maestro | Cambios registrados | PASA | (2321 cambios) |
 | Maestro | Nada se borra sin rastro (cada registro de F2 está en Corpus, Léxico o Descartes) | PASA | (3553 registros; sin rastro: []) |
 | Bloques | Ninguna fila repetida entre bloques | PASA | (1000 filas en 5 bloques) |
 | B01 | 200 filas = 140 generales + 60 médicas | PASA | (200: 140 + 60) |
@@ -33,7 +33,7 @@ Generado por `scripts/f7_verificacion.py`. **136 de 136 puntos PASAN.**
 | B01 | Word: mismos IDs y en el mismo orden que el archivo del traductor | PASA |  |
 | B01 | Word: filas siguientes = borrador del maestro o vacía | PASA | (distintas: []) |
 | B01 | Word: filas siguientes sin borradores chanka (solo de fuentes collao) | PASA | (7 con borrador, 169 vacías; chanka: []) |
-| B01 | Word: el español solo cambió donde se pidió | PASA | ['CLI-0020'] |
+| B01 | Word: el español solo cambió donde se pidió | PASA | ['CLI-0020', 'GEN-0185', 'GEN-0866', 'GEN-0161'] |
 | B01 | Excel de trabajo: pestañas Bloque / Detalle / Resumen (Bloque activa) | PASA | ['Bloque', 'Detalle', 'Resumen'] |
 | B01 | Excel de trabajo: columnas de §8.3 | PASA | ['N°', 'ID', 'Sublote', 'Dominio', 'Rol', 'Español', 'Quechua', 'Estado', 'Grabado_ES', 'Grabado_QU', 'Notas'] |
 | B01 | Excel de trabajo: encabezado inmovilizado, autofiltro y lista en Estado | PASA |  |
@@ -54,6 +54,11 @@ Generado por `scripts/f7_verificacion.py`. **136 de 136 puntos PASAN.**
 | B02 | Word: tabla de ortografía de 5 vocales, igual en todos los bloques | PASA |  |
 | B02 | Word: celda Quechua = borrador; vacía en control y en filas sin borrador | PASA | (distintas: []) |
 | B02 | Word: Observaciones solo con «Aviso:» (ALTA) o vacía | PASA | (5 avisos) |
+| B02 | Word: avisos legibles (sin corchetes ni «y otros») | PASA | [] |
+| B02 | Word: español sin interrogativos sin tilde | PASA | [] |
+| B02 | Word: sin oraciones casi iguales dentro del bloque | PASA | [] |
+| B02 | Control: ninguna fila con el borrador marcado a mano como desalineado | PASA | [] |
+| B02 | Word: los avisos puestos a mano llegan al Word | PASA | [] |
 | B02 | Excel de trabajo: pestañas Bloque / Detalle / Resumen (Bloque activa) | PASA | ['Bloque', 'Detalle', 'Resumen'] |
 | B02 | Excel de trabajo: columnas de §8.3 | PASA | ['N°', 'ID', 'Sublote', 'Dominio', 'Rol', 'Español', 'Quechua', 'Estado', 'Grabado_ES', 'Grabado_QU', 'Notas'] |
 | B02 | Excel de trabajo: encabezado inmovilizado, autofiltro y lista en Estado | PASA |  |
@@ -72,7 +77,12 @@ Generado por `scripts/f7_verificacion.py`. **136 de 136 puntos PASAN.**
 | B03 | Word: ninguna referencia al chanka ni a Ayacucho (título, instrucciones, ortografía, español y avisos) | PASA |  |
 | B03 | Word: tabla de ortografía de 5 vocales, igual en todos los bloques | PASA |  |
 | B03 | Word: celda Quechua = borrador; vacía en control y en filas sin borrador | PASA | (distintas: []) |
-| B03 | Word: Observaciones solo con «Aviso:» (ALTA) o vacía | PASA | (9 avisos) |
+| B03 | Word: Observaciones solo con «Aviso:» (ALTA) o vacía | PASA | (11 avisos) |
+| B03 | Word: avisos legibles (sin corchetes ni «y otros») | PASA | [] |
+| B03 | Word: español sin interrogativos sin tilde | PASA | [] |
+| B03 | Word: sin oraciones casi iguales dentro del bloque | PASA | [] |
+| B03 | Control: ninguna fila con el borrador marcado a mano como desalineado | PASA | [] |
+| B03 | Word: los avisos puestos a mano llegan al Word | PASA | [] |
 | B03 | Excel de trabajo: pestañas Bloque / Detalle / Resumen (Bloque activa) | PASA | ['Bloque', 'Detalle', 'Resumen'] |
 | B03 | Excel de trabajo: columnas de §8.3 | PASA | ['N°', 'ID', 'Sublote', 'Dominio', 'Rol', 'Español', 'Quechua', 'Estado', 'Grabado_ES', 'Grabado_QU', 'Notas'] |
 | B03 | Excel de trabajo: encabezado inmovilizado, autofiltro y lista en Estado | PASA |  |
@@ -91,7 +101,12 @@ Generado por `scripts/f7_verificacion.py`. **136 de 136 puntos PASAN.**
 | B04 | Word: ninguna referencia al chanka ni a Ayacucho (título, instrucciones, ortografía, español y avisos) | PASA |  |
 | B04 | Word: tabla de ortografía de 5 vocales, igual en todos los bloques | PASA |  |
 | B04 | Word: celda Quechua = borrador; vacía en control y en filas sin borrador | PASA | (distintas: []) |
-| B04 | Word: Observaciones solo con «Aviso:» (ALTA) o vacía | PASA | (9 avisos) |
+| B04 | Word: Observaciones solo con «Aviso:» (ALTA) o vacía | PASA | (10 avisos) |
+| B04 | Word: avisos legibles (sin corchetes ni «y otros») | PASA | [] |
+| B04 | Word: español sin interrogativos sin tilde | PASA | [] |
+| B04 | Word: sin oraciones casi iguales dentro del bloque | PASA | [] |
+| B04 | Control: ninguna fila con el borrador marcado a mano como desalineado | PASA | [] |
+| B04 | Word: los avisos puestos a mano llegan al Word | PASA | [] |
 | B04 | Excel de trabajo: pestañas Bloque / Detalle / Resumen (Bloque activa) | PASA | ['Bloque', 'Detalle', 'Resumen'] |
 | B04 | Excel de trabajo: columnas de §8.3 | PASA | ['N°', 'ID', 'Sublote', 'Dominio', 'Rol', 'Español', 'Quechua', 'Estado', 'Grabado_ES', 'Grabado_QU', 'Notas'] |
 | B04 | Excel de trabajo: encabezado inmovilizado, autofiltro y lista en Estado | PASA |  |
@@ -110,14 +125,19 @@ Generado por `scripts/f7_verificacion.py`. **136 de 136 puntos PASAN.**
 | B05 | Word: ninguna referencia al chanka ni a Ayacucho (título, instrucciones, ortografía, español y avisos) | PASA |  |
 | B05 | Word: tabla de ortografía de 5 vocales, igual en todos los bloques | PASA |  |
 | B05 | Word: celda Quechua = borrador; vacía en control y en filas sin borrador | PASA | (distintas: []) |
-| B05 | Word: Observaciones solo con «Aviso:» (ALTA) o vacía | PASA | (6 avisos) |
+| B05 | Word: Observaciones solo con «Aviso:» (ALTA) o vacía | PASA | (5 avisos) |
+| B05 | Word: avisos legibles (sin corchetes ni «y otros») | PASA | [] |
+| B05 | Word: español sin interrogativos sin tilde | PASA | [] |
+| B05 | Word: sin oraciones casi iguales dentro del bloque | PASA | [] |
+| B05 | Control: ninguna fila con el borrador marcado a mano como desalineado | PASA | [] |
+| B05 | Word: los avisos puestos a mano llegan al Word | PASA | [] |
 | B05 | Excel de trabajo: pestañas Bloque / Detalle / Resumen (Bloque activa) | PASA | ['Bloque', 'Detalle', 'Resumen'] |
 | B05 | Excel de trabajo: columnas de §8.3 | PASA | ['N°', 'ID', 'Sublote', 'Dominio', 'Rol', 'Español', 'Quechua', 'Estado', 'Grabado_ES', 'Grabado_QU', 'Notas'] |
 | B05 | Excel de trabajo: encabezado inmovilizado, autofiltro y lista en Estado | PASA |  |
 | B05 | Excel de trabajo: solo valores (sin fórmulas) | PASA |  |
 | Bloques | Ningún español repetido entre las filas de los bloques (§10.4) | PASA | (repetidos: []) |
 | B01 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 72 · pasado 39 · progresivo 9 · futuro 8 · imperativo 6 · condicional 6 |
-| B02 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 82 · pasado 26 · futuro 12 · progresivo 8 · imperativo 7 · condicional 5 |
+| B02 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 81 · pasado 28 · futuro 12 · progresivo 8 · imperativo 7 · condicional 4 |
 | B03 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 74 · pasado 37 · futuro 12 · progresivo 8 · imperativo 5 · condicional 4 |
 | B04 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 59 · pasado 32 · futuro 22 · progresivo 13 · condicional 8 · imperativo 6 |
 | B05 | Parte general con varios tiempos (presente ≤ 65 %; requisito del proyecto) | PASA | presente 54 · pasado 40 · futuro 18 · progresivo 15 · condicional 7 · imperativo 6 |
@@ -139,6 +159,6 @@ Generado por `scripts/f7_verificacion.py`. **136 de 136 puntos PASAN.**
 | LibreOffice | B05_traductor.docx abre y se convierte a PDF | PASA | (9 páginas) |
 | LibreOffice | B05_trabajo.xlsx abre y se convierte a PDF | PASA | (8 páginas) |
 | LibreOffice | GUIA_GRABACION.docx abre y se convierte a PDF | PASA | (1 páginas) |
-| LibreOffice | corpus_maestro.xlsx abre y se convierte a PDF | PASA | (195 páginas) |
+| LibreOffice | corpus_maestro.xlsx abre y se convierte a PDF | PASA | (197 páginas) |
 
 Las páginas convertidas por LibreOffice están en `04_reportes/revision_visual/` (PDF + PNG de la primera página de cada archivo).

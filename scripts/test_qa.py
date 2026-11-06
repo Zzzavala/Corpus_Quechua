@@ -152,8 +152,15 @@ def main() -> int:
     print("\n== Aviso del Word: 1 línea, solo ALTA (H15, §8.4) ==")
     av = [("ORTO", "ALTA", "uno"), ("PRESTAMO", "ALTA", "dos"), ("OOV", "BAJA", "tres")]
     w = aviso_word(av, maximo=1)
-    caso("aviso_word deja 1 aviso ALTA y avisa que hay más", w.startswith("Aviso:") and "uno" in w and "dos" not in w and "tres" not in w, f"«{w}»")
+    caso("aviso_word deja 1 aviso ALTA", w.startswith("Aviso:") and "uno" in w and "dos" not in w and "tres" not in w and "otros" not in w, f"«{w}»")
     caso("aviso_word vacío si no hay ALTA", aviso_word([("OOV", "BAJA", "x")]) == "", "")
+    print("\n== Segunda revisión: avisos falsos o ilegibles que no deben volver ==")
+    av = revisar_fila("Dele de mamar a su hijo cada tres horas.", "Wawaykita ñuñuchiy sapa kinsa horas.", "Médico")
+    caso("«kinsa» cuenta como tres", not [x for x in av if "números" in x[2]], str(av)[:160])
+    av = revisar_fila("¿Le duele el pecho cuando camina?", "¿Purijtiyki nansunki?", "Médico")
+    caso("«Purijtiyki» no es un préstamo del español", not [x for x in av if x[0] == "PRESTAMO"], str(av)[:160])
+    av = [x[2] for x in revisar_fila("¿Se ha hinchado?", "¿Punkirkanchu iskay killata?", "Médico") if "números" in x[2]]
+    caso("El aviso de números se puede leer (sin corchetes)", bool(av) and "[" not in av[0], str(av))
     print("\n== Borrador marcado como dudoso por el equipo (H27) ==")
     av = revisar_fila("¿Tienen que curar sus heridas?", "¡Kiriykikunatam hampinanku!", "Médico",
                       estado_unificado="Revisar – duda de traducción")

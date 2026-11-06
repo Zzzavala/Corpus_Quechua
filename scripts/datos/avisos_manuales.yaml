@@ -5,4 +5,11 @@
 #
 # 5-nov-2026: se quitaron los 3 avisos que había (EL-0019, QCH-0567, EL-0060) porque eran sobre borradores chanka,
 # que ya no se usan (el corpus pasó a quechua collao).
-{}
+#
+# Segunda revisión (5-nov-2026): se leyeron a mano los borradores de B01–B05 contra su español. Los pares de abajo
+# vienen desalineados desde el libro de Lopera (se comprobó en el PDF: son del libro, no de la extracción).
+QCH-0707: {tipo: SENTIDO, severidad: ALTA, detalle: "el borrador parece decir «¿Le duele el cuello?» (kunka = cuello); el español dice «pulmón»"}
+QCH-0708: {tipo: SENTIDO, severidad: ALTA, detalle: "«¿Sorq'an nanan» parece sobrar aquí: sería de la frase «¿Le duele el pulmón?»"}
+QCH-0721: {tipo: SENTIDO, severidad: ALTA, detalle: "el borrador parece preguntar si se cansa «mucho o poco»; el español dice «por momentos o todo el día»"}
+QCH-0798: {tipo: SENTIDO, severidad: ALTA, detalle: "el borrador menciona «tekne» (cadera) e «iskay» (dos meses); el español no dice qué parte ni cuántos meses"}
+QCH-0814: {tipo: SENTIDO, severidad: ALTA, detalle: "el borrador parece preguntar por mareo («muyun»); el español dice «náuseas»"}

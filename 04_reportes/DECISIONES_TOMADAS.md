@@ -3,6 +3,18 @@
 > Cada valor por defecto usado (CLAUDE.md §4) y cada decisión propia, con su porqué. La coordinación del proyecto revisa al final.
 > Formato: **[Fase] Decisión** — porqué.
 
+## Segunda revisión antes de enviar (5-nov-2026, cuarta parte) — manda sobre lo de abajo
+
+Pedido de la coordinación: «¿Podrías darle una segunda revisada antes de enviar los bloques?». Detalle, fila por fila, en `04_reportes/SEGUNDA_REVISION.md`.
+
+- **[B01] Solo 3 frases más, a pedido de la coordinación** («Cámbialas tú»): «La soga está rota.» (fila 104), «Ahora estoy cocinando mote.» (152) y «Mi tía hace chicha de jora.» (183). Están después de la fila 24, tenían el quechua vacío y conservan ID y lugar. Las frases nuevas son redacción de Claude, y el traductor puede cambiarlas. Si avanzó hasta alguna de esas filas, queda su versión (`ESPAÑOL_CAMBIADO` en `congelar_bloque.py`).
+- **[Español] Faltas de la fuente sí se corrigen** (`erratas_es.yaml`); lo que es redacción mía va a `adaptaciones_es.yaml` y queda `Por_revisar`. Esto incluye frases de fuentes oficiales: la fuente oficial se respeta en su quechua, no en sus faltas de tipeo en español.
+- **[Quechua] Lo desalineado no se corrige a mano: se avisa** (`avisos_manuales.yaml`, 5 avisos). Claude no es hablante. La excepción es la regla mecánica de siempre (§10.3): «Purijtiyki» ya no se confunde con un préstamo, así que su «j» pasa a «h».
+- **[Control] Se excluye QCH-0708** (`control.excluir_codigos`): su borrador trae un trozo de otra frase y daría una medida falsa de anclaje.
+- **[Selva] Se cambian solo 3 frases** sin sentido en Cusco (barbasco, achiote, arco y flecha), porque el traductor ya comentó «no hay remar». Jaguar, tigre, yuca, plátano y bosque se quedan: se pueden decir en quechua y yuca y plátano se dan en el valle de La Convención.
+- **[Fuentes] Segunda búsqueda: nada entra sin decisión de la coordinación** (`FUENTES_COLLAO.md`, sección 4). Solo cuenta como validado lo que se abrió. B01–B05 ya están completos y sus borradores no cambian por esto. El bloqueo de gob.pe no se intentó saltar.
+- **[Verificación] Pasar F7 no bastaba.** Había avisos falsos, faltas de tilde y un borrador con otro significado (pulmón con *kunka*, que es cuello) que F7 no medía. Se agregaron esos puntos a F7 y a `test_qa.py`, pero la lectura fila por fila no se reemplaza con un script.
+
 ## B01 a collao, 5 vocales y glosarios (5-nov-2026, tercera parte) — manda sobre lo de abajo
 
 Respuestas de la coordinación: «Si el traductor usó 5, son 5»; «Mejor Cusco. Si es posible también cambia las oraciones del bloque 1 a collao»; pasarle al traductor el Word corregido; «¿por qué no lo extrajiste?» (glosarios).

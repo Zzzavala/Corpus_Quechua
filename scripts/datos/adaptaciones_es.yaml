@@ -34,7 +34,7 @@ QCH-1478: {es: "Él se va a sanar.", motivo: "nota «(hablando de otra persona)�
 QCH-1526: {es: "Es una operación pequeña.", motivo: "quitar paréntesis «(no es difícil)»"}
 
 # --- Grupo 2
-F-0082: {es: "Hoy hace buen día.", motivo: "«Hoy buen día.» no es una oración completa en español"}
+F-0082: {es: "Hoy amaneció con sol.", motivo: "«Hoy buen día.» no es una oración completa; «Hoy hace buen día.» quedaba casi igual a «Hoy es un buen día.» en el mismo bloque"}
 
 # --- Otras fuentes: preguntas múltiples, signos y redacción
 QCH-0037: {es: "Desde hace un mes me duele mucho mi estómago.", motivo: "«Desde un mes» → «Desde hace un mes» (el quechua sigue desalineado: lo marca QA)"}
@@ -96,3 +96,20 @@ FA-37: {es: "¿Es la primera vez que te enfermas?", motivo: "«¿Primera vez que
 FA-39: {es: "¿Te has enfermado antes?", motivo: "errata «enfermemado»"}
 FA-45: {es: "¿Por qué caminas tan decaída?", motivo: "«toda mustia»: poco claro"}
 FA-47: {es: "Anda donde el médico.", motivo: "«¿Anda dónde el médico?»: es una indicación, no una pregunta (el quechua es «Riy…»)"}
+
+# --- Segunda revisión (5-nov-2026): leyendo B02–B05 fila por fila
+QCH-0712: {es: "¿Le funciona bien el intestino?", motivo: "«…el intestino y formado?»: la frase del libro queda rota"}
+QCH-0719: {es: "Cuando tose, ¿le duele alguna parte de la espalda?", motivo: "«¿La tos se acompaña de dolor hacia alguna parte de la espalda?»: poco natural; el borrador dice «cuando toses»"}
+QCH-0095: {es: "Cuando tose, ¿le duele alguna parte de la espalda?", motivo: "misma frase que QCH-0719, a la que está unida: debe cambiar igual para seguir siendo una sola"}
+QCH-0782: {es: "¿Alguna vez ha orinado sangre con dolor?", motivo: "«sangre y con olor»: el libro dice «olor», pero su quechua dice «nanay» (dolor)"}
+QCH-0861: {es: "Cuando tose fuerte, ¿le duele? ¿De qué lado?", motivo: "«¿le duele?, ¿qué lado?»: igual que su frase hermana QCH-0860"}
+QCH-0501: {es: "Necesitamos que lo examine un médico.", motivo: "«Necesitamos examen por un médico.»: poco natural"}
+PCS-043-08: {es: "¿Los abortos fueron espontáneos?", motivo: "«¿Fueron espontáneos?»: sola no se entiende; en la fuente sigue a «¿Tuviste abortos?»"}
+EL-0013: {es: "Los adultos me desanimaron de ser pintor cuando tenía seis años.", motivo: "«…cuando yo quería serlo, a la edad en que decidí dedicarme a ello»: larga y enredada para traducir y leer"}
+F-0448: {es: "Mi mamá cocina trucha con papas.", motivo: "«Mi mamá cocina pescado.» quedaba casi igual a «Mamá cocina pescado.» en el mismo bloque"}
+F-0461: {es: "Ellos pescan truchas en la laguna.", motivo: "«con veneno de barbasco»: práctica de la selva, sin sentido en Cusco"}
+F-0067: {es: "Ella tiñe la lana con cochinilla.", motivo: "«pinta con achiote»: planta de la selva; el tinte andino es la cochinilla"}
+F-0486: {es: "Yo cazo vizcachas con mi perro.", motivo: "«con arco y flecha»: de la selva, sin sentido en Cusco"}
+# --- Pedido del proyecto (5-nov-2026), filas de B01 que el traductor aún no trabajó (también en congelar_bloque.py)
+F-0076: {es: "La soga está rota.", motivo: "«La canoa está rota.»: el traductor comentó «no hay remar»; la canoa tampoco es de la sierra de Cusco"}
+F-0052: {es: "Mi tía hace chicha de jora.", motivo: "«Mi tía hace chicha punta.»: estaba por confirmar"}

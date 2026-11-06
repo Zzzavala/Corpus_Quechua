@@ -1,6 +1,8 @@
 """Ayudas para los Word (python-docx): A4 horizontal, letra legible, tablas con encabezado repetido."""
 from __future__ import annotations
 
+from datetime import datetime
+
 from docx import Document
 from docx.enum.section import WD_ORIENT
 from docx.enum.table import WD_TABLE_ALIGNMENT
@@ -13,8 +15,17 @@ GRIS = RGBColor(0x6B, 0x72, 0x80)
 FONDO_ENCABEZADO = "DCE8F7"
 
 
+def _propiedades(doc: Document) -> None:
+    """Propiedades del archivo: sin «python-docx» como autor ni la fecha de 2013 de la plantilla."""
+    p = doc.core_properties
+    p.author = p.last_modified_by = "Equipo del proyecto (INF657, PUCP)"
+    p.comments = ""
+    p.created = p.modified = datetime.now()
+
+
 def documento_horizontal(margen_cm: float = 1.2, letra: str = "Calibri", tamano: int = 11) -> Document:
     doc = Document()
+    _propiedades(doc)
     sec = doc.sections[0]
     sec.orientation = WD_ORIENT.LANDSCAPE
     sec.page_width, sec.page_height = Cm(29.7), Cm(21.0)
@@ -29,6 +40,7 @@ def documento_horizontal(margen_cm: float = 1.2, letra: str = "Calibri", tamano:
 
 def documento_vertical(margen_cm: float = 2.0, letra: str = "Calibri", tamano: int = 11) -> Document:
     doc = Document()
+    _propiedades(doc)
     sec = doc.sections[0]
     sec.page_width, sec.page_height = Cm(21.0), Cm(29.7)
     for lado in ("left_margin", "right_margin", "top_margin", "bottom_margin"):

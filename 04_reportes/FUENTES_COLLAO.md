@@ -58,3 +58,42 @@ Todo quedó en `Fuentes/` como solo lectura, con su huella en `04_reportes/huell
 No se descargó el dataset de Hugging Face (#7): parece salir del mismo JW300 quz, que ya está, y su licencia no se confirmó.
 
 **Para el equipo de modelo:** `06_dataset/texto_paralelo_collao.csv` (`scripts/09_texto_paralelo.py`) junta en un solo archivo los pares español–quechua collao con su confiabilidad: oficial, borrador collao o borrador boliviano. El JW300 quz queda aparte.
+
+## 4. Segunda búsqueda (5-nov-2026): lo que se abrió y se comprobó
+
+Una fuente cuenta como **validada** solo si se abrió su contenido, no por su título. **Nada de esto entró al proyecto:** no se descargó a `Fuentes/`, no cambia ningún bloque y espera la decisión de la coordinación. Ninguna es gold (D8): el traductor las revisa igual.
+
+### Validadas
+
+| Fuente | Variedad | Qué trae | Validación de la fuente | Licencia | Archivo |
+|---|---|---|---|---|---|
+| **WAST Quechua Collao**, detección de violencia de pareja (Calsina-Rosa et al., 2025). [Zenodo](https://doi.org/10.5281/zenodo.15226607) · [artículo](https://pmc.ncbi.nlm.nih.gov/articles/PMC12377885/) | Collao, Puno y Cusco; 5 vocales (*qosayki*, *otaq*) | 8 preguntas con su español al lado, opciones de respuesta y 17 términos | 4 traductores (ida y vuelta), 5 jueces, grupo focal de 13 mujeres, 521 participantes | CC BY 4.0 | `ANEXOS (vf).docx`, 20,9 kB |
+| **GAD-7 Quechua Collao**, ansiedad (Cjuno et al., 2024). [Zenodo](https://doi.org/10.5281/zenodo.11658614) | Collao de Puno; escribe a veces a la castellana (*otaj*, *jina*) | 7 preguntas con su español al lado, instrucción y opciones | Adaptación cultural con panel; 660 participantes (206 + 454) | CC BY 4.0 | `rpmesp-41-02-13373.pdf`, 147 kB |
+| **PHQ-9 Quechua Cuzco-Collao**, depresión (Cjuno et al., 2023). [Zenodo](https://doi.org/10.5281/zenodo.8312191) · [artículo](https://pmc.ncbi.nlm.nih.gov/articles/PMC10959517/) | Cuzco-Collao en la página 1; las otras páginas son Chanka y Central y no se usarían | 9 preguntas **solo en quechua**: habría que emparejarlas con el PHQ-9 en español | 525 participantes en esta variedad | CC BY 4.0 | `PHQ-9 Quechua (Instrumentos).pdf`, 69,9 kB |
+| **Glosario básico «Kuska runa siminchista yachasunchis»**, Dirección Desconcentrada de Cultura de Cusco (autoría: H. Cañari Loayza). [PDF](https://www.culturacusco.gob.pe/wp-content/uploads/2025/07/Material_linguistico_QUECHUA_GLOSARIO_BASICO.pdf) | Cusco oficial, pero con **3 vocales y -chka-** (63 casos de -chka-, ninguno de -sha-) | Diccionario; ~100 partes del cuerpo (pp. 104–106); ~70 frases (pp. 148–153); 7 diálogos (pp. 155–162), varios sobre medicinas o dolores | Su presentación dice que salió de escuchar el habla en los hospitales (traducción mía). Sin datos de validación | No declara licencia | PDF de 1,3 MB, con texto extraíble |
+
+**Para qué servirían:**
+- **Los tres cuestionarios** son frases médicas con la mejor validación encontrada hasta ahora. Servirían para un bloque futuro y para el texto paralelo. No hacen falta en B02–B05, que ya están completos.
+- **El glosario** serviría sobre todo como léxico de referencia. Sus formas con -chka- y 3 vocales no siguen la tabla del Word, así que no conviene usarlo como borrador sin que lo vea el traductor.
+
+**Comprobación cruzada de los avisos puestos a mano:** el glosario confirma *kunka* = cuello y *surq'an* = pulmón (B03, fila 29; B02, fila 46), *tiqni* = cadera, que es la palabra que el borrador escribe *tekne* (B03, fila 83), y *pisi* = poco (B03, fila 56). No trae *muyuy* como «marearse», solo *muyuykuy*, «dar la vuelta»: el aviso de B04, fila 29, sigue siendo una sospecha.
+
+### Sin validar: no se pudieron abrir
+
+| Fuente | Qué pasó | Qué falta |
+|---|---|---|
+| **MINSA, [Vías de Abordaje HEARTS en quechua Cusco Collao](https://www.gob.pe/institucion/minsa/informes-publicaciones/8361412-vias-de-abordaje-hearts-en-el-idioma-quechua-cusco-collao)** (hipertensión, diabetes, enfermedad renal). Puede ser la más útil: es del MINSA y es médica | gob.pe rechazó el acceso automatizado (error 418), incluso desde el navegador de la app. Solo se vio lo que dice el buscador; no se intentó saltar el bloqueo | Que alguien del equipo abra la página en su navegador y guarde los PDF |
+| Chuquimamani, *Yachakuqkunapa Simi Qullqa – Qusqu Qullaw* (MINEDU; copia en Internet Archive) | Conexión rechazada | Reintentar más tarde o buscar otra copia |
+| PHQ-4, WHO-5 y SWLS en quechua Collao ([lista en esta revisión](https://pmc.ncbi.nlm.nih.gov/articles/PMC12685624/)) | No se abrieron sus preguntas | Abrir cada artículo; no se sabe si las publican |
+
+### Descartadas
+
+| Fuente | Por qué |
+|---|---|
+| [Corpus Collao de la Universidad Andina del Cusco](https://aclanthology.org/2025.globalnlp-1.1/) (libros de la Academia Mayor, 2025) | El artículo sí se leyó: son 5 libros con OCR, pero no da enlace ni licencia. Solo se podría pedir a sus autores |
+| [REPUcs 2021](https://github.com/Ceviche98/REPUcs-AmericasNLP2021) (Constitución y reglamento en quz) | Tema legal, sin licencia en el repositorio; su español parece paráfrasis. No aporta a lo médico |
+| Guía de SIL para personal de salud | Otra copia indica Callejón de Huaylas (Áncash), no collao; la página de SIL rechazó el acceso |
+| Tesis UPCH sobre barreras lingüísticas en Cusco | Se revisó su texto: es un proyecto de investigación; no se hallaron frases en quechua |
+| Artículo UCSP 2025 (AmericasNLP) | Se revisó su texto: amplía datos con frases sintéticas y no menciona Cusco |
+| Cartillas del Ministerio de Cultura (2020) | Por su ficha son datos sobre pueblos indígenas, no traducciones. No se abrieron |
+| Materiales de SUSALUD en ocho lenguas | Una presentación los menciona, pero no se encontró el documento |

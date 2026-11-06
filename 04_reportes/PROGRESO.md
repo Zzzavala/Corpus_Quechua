@@ -9,16 +9,17 @@
 
 - **Hecho:**
   - **P3 decidido: 5 vocales**, en todos los bloques.
-  - **B01 pasado a collao** (`scripts/congelar_bloque.py`, detalle en `B01_COLLAO.md`): filas 1–24 del traductor intactas; desde la 25, borrador collao (7) o vacía (169). «Soy de Cusco.» Sin control. Marcado `Enviado` en el maestro.
+  - **B01 pasado a collao** (`scripts/congelar_bloque.py`, detalle en `B01_COLLAO.md`): filas 1–24 del traductor intactas; desde la 25, borrador collao (7) o vacía (169). «Soy de Cusco.» y otras 3 frases cambiadas (filas 104, 152 y 183). Sin control. Marcado `Enviado` en el maestro.
   - **B02–B05 rearmados en collao**, sin repetir el español de B01.
   - Fuentes descargadas a `Fuentes/collao/` y `Fuentes/AmericasNLP/es-quz/`; Palabras clave, justicia y PIAS integrados (calidad 1); glosario COVID en léxico y texto paralelo; señalética descartada; léxico collao de ~39 000 palabras.
-  - `06_dataset/texto_paralelo_collao.csv` (1 881 pares) para el equipo de modelo; `04_reportes/AVANCE_B01.md` con lo que comentó el traductor.
+  - `06_dataset/texto_paralelo_collao.csv` (1 883 pares) para el equipo de modelo; `04_reportes/AVANCE_B01.md` con lo que comentó el traductor.
   - `ENTREGA.md`, `DECISIONES_TOMADAS.md`, `FUENTES_COLLAO.md` y CLAUDE.md §0 actualizados.
+  - **Segunda revisión antes de enviar** (`SEGUNDA_REVISION.md`): se leyeron a mano las 1 000 oraciones y los borradores; 21 frases en español corregidas, 5 avisos de sentido puestos a mano, avisos falsos o ilegibles arreglados, control sin el borrador desalineado. En B01, solo 3 frases que pidió la coordinación (filas 104, 152 y 183).
 - **Siguiente paso (para la coordinación del proyecto):**
-  1. Preguntar al traductor si avanzó después de la fila 24 de B01. Si no avanzó, pasarle el Word corregido; si avanzó, guardar su archivo como `B01_traductor_v2.docx` y correr `congelar_bloque.py`.
+  1. El traductor no avanzó después de la fila 24 de B01 (confirmado el 6-nov-2026): pasarle `03_bloques/B01/B01_traductor.docx` para que siga desde la fila 25, en lugar del archivo anterior. No hace falta `B01_traductor_v2.docx` ni volver a correr `congelar_bloque.py`.
   2. Revisar el español de B02 en `REVISION.md` y enviar `B02_traductor.docx`; después, `06_importar_traductor.py B02 --marcar-enviado`.
   3. Cuando el traductor devuelva B01: `06_importar_traductor.py B01`.
-- **Otras decisiones pendientes:** ¿un sexto bloque con las 530 frases oficiales sin bloque? (faltan ~90 generales); ¿sumar los ~480 pares de OPS/OMS Bolivia?
+- **Otras decisiones pendientes:** ¿un sexto bloque con las 530 frases oficiales sin bloque? (faltan ~90 generales); ¿sumar los ~480 pares de OPS/OMS Bolivia?; ¿integrar las 4 fuentes validadas en `FUENTES_COLLAO.md`, sección 4? (no cambian los bloques); guardar desde un navegador los PDF de HEARTS del MINSA.
 
 ## Fases (versión collao, desde el 5-nov-2026)
 
@@ -48,7 +49,7 @@
 | F3 | `04_reportes/EDA.md`, `04_reportes/fig/`, `F3_eda_20261105.xlsx` | `scripts/03_eda.py` |
 | F4 | `02_maestro/checkpoints/F4_limpio_20261105.xlsx`, `02_maestro/ids.csv` | `scripts/04_limpieza.py` + `scripts/datos/*.yaml` |
 | F5 | `02_maestro/checkpoints/F5_huecos_20261105.xlsx`, `04_reportes/F5_huecos.md` | `scripts/05_huecos.py` + `scripts/plan_medico.py` |
-| F6 | `02_maestro/corpus_maestro.xlsx` (2 848 oraciones), `03_bloques/B02…B05/`, `GUIA_GRABACION.docx`, `04_reportes/REVISION.md`, `F6_bloques_20261105.xlsx` | `scripts/f6_armar_bloques.py` |
+| F6 | `02_maestro/corpus_maestro.xlsx` (2 847 oraciones), `03_bloques/B02…B05/`, `GUIA_GRABACION.docx`, `04_reportes/REVISION.md`, `F6_bloques_20261105.xlsx` | `scripts/f6_armar_bloques.py` |
 | Congelar | `02_maestro/congelados/B01.xlsx`, `B01_original/`, `03_bloques/B01/B01_traductor.docx`, `04_reportes/B01_COLLAO.md` | `scripts/congelar_bloque.py` |
 | Avance | `04_reportes/AVANCE_B01.md` | `scripts/avance_traductor.py` |
 | Modelo | `06_dataset/texto_paralelo_collao.csv` | `scripts/09_texto_paralelo.py` |
@@ -64,4 +65,4 @@
 
 - ¿Sumar los ~480 pares de OPS/OMS Bolivia que el unificado no tomó?
 - Cusco y Puno se combinan por ahora: lo confirma el traductor.
-- Por confirmar (como antes): «chicha punta» y el calco «no + una».
+- Por confirmar (como antes): el calco «no + una».

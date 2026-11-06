@@ -37,7 +37,16 @@ from qa import aviso_word
 import quechua as Q
 
 TIPOS_COLLAO = ("fuente collao oficial", "Farfán (cusqueño, original)", "Lopera (libro, collao)", "OPS/OMS Bolivia (sureño boliviano)")
-ESPAÑOL_CAMBIADO = {"B01": {"CLI-0020": ("Soy de Ayacucho.", "Soy de Cusco.")}}     # pedido del proyecto, 5-nov-2026
+# ID → (antes, ahora, motivo), en el orden de las filas. Solo se aplica a filas que el traductor aún no ha trabajado.
+ESPAÑOL_CAMBIADO = {"B01": {
+    "CLI-0020": ("Soy de Ayacucho.", "Soy de Cusco.", "Pedido del proyecto (5-nov-2026): Cusco en lugar de Ayacucho"),
+    "GEN-0185": ("La canoa está rota.", "La soga está rota.",
+                 "Pedido del proyecto (5-nov-2026): el traductor comentó «no hay remar»; la canoa tampoco es de la sierra de Cusco"),
+    "GEN-0866": ("Ahora estoy cocinando el almuerzo.", "Ahora estoy cocinando mote.",
+                 "Pedido del proyecto (5-nov-2026): mismo problema que «desayuno», que el traductor comentó que no se dice"),
+    "GEN-0161": ("Mi tía hace chicha punta.", "Mi tía hace chicha de jora.",
+                 "Pedido del proyecto (5-nov-2026): «chicha punta» estaba por confirmar"),
+}}
 CAMPOS_BORRADOR = ["Tipo_borrador", "Variedad_fuente", "Origen_verificado", "Estado_unificado", "Observaciones_heredadas",
                    "Propuestas_equipo", "Otros_borradores"]
 CINCO = Q.VOCALES != 3
@@ -180,7 +189,7 @@ def pasar_a_collao(b, filas, C, O, QA, limite):
         C.loc[i, "Calidad"] = fila_live["Calidad"] if m else "7"
         C.loc[i, "Español"] = es
         if es != es_antes:
-            anotar(i, "Español", es_antes, es, "Pedido del proyecto (5-nov-2026): Cusco en lugar de Ayacucho")
+            anotar(i, "Español", es_antes, es, es_cambio[i][2])
         if control:
             anotar(i, "Control", "Sí", "No", "B01 a collao: el control medía contra un borrador chanka")
             C.loc[i, "Control"] = "No"

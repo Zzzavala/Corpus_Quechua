@@ -183,11 +183,11 @@ Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-11-05). Todo se mi
 
 | Fuente | Filas con quechua | Con glotal./aspir. (bien en collao) | Vocal e/o | c/qu/j/hu o letra ajena | Rasgo de otra variedad | Préstamo sin adaptar | Posible transcripción de oído |
 |---|---|---|---|---|---|---|---|
-| MINSA (s. f.), Palabras clave para la atención en salud – Quechua Cusco (difundido por el Ministerio de Cultura) | 1063 | 24 % | 0 % | 3 % | 6 % | 0 % | 3 % |
-| Lopera Quiroga (2020) | 564 | 29 % | 0 % | 23 % | 1 % | 8 % | 3 % |
-| OPS/OMS Bolivia (2013) | 174 | 51 % | 0 % | 0 % | 100 % | 1 % | 7 % |
-| Ministerio de Cultura (2015), Manual para el empleo del quechua Cusco Collao en la administración de justicia | 103 | 14 % | 0 % | 2 % | 7 % | 0 % | 2 % |
-| Farfán Cantero (2001), SITUA | 49 | 16 % | 0 % | 4 % | 0 % | 2 % | 0 % |
+| MINSA (s. f.), Palabras clave para la atención en salud – Quechua Cusco (difundido por el Ministerio de Cultura) | 1063 | 24 % | 0 % | 2 % | 6 % | 0 % | 2 % |
+| Lopera Quiroga (2020) | 564 | 29 % | 0 % | 23 % | 1 % | 11 % | 3 % |
+| OPS/OMS Bolivia (2013) | 174 | 51 % | 0 % | 0 % | 100 % | 2 % | 7 % |
+| Ministerio de Cultura (2015), Manual para el empleo del quechua Cusco Collao en la administración de justicia | 103 | 14 % | 0 % | 1 % | 7 % | 0 % | 2 % |
+| Farfán Cantero (2001), SITUA | 49 | 16 % | 0 % | 4 % | 0 % | 4 % | 0 % |
 | Ministerio de Cultura, Glosario multilingüe de la PIAS Lago Titicaca I (aimara y quechua Cusco Collao, Puno) | 48 | 15 % | 0 % | 0 % | 31 % | 0 % | 6 % |
 
 - En collao las glotalizadas y aspiradas **son parte del alfabeto** (no se quitan). Las vocales e/o (si se usan 3 vocales), la escritura castellana (j, c/qu/hu) y las semivocales («kunkaiki», «allyntachu») se **corrigen mecánicamente** en F4 (§10.3, registradas en `Cambios`). Lo demás (rasgos chanka o bolivianos, préstamos, transcripción) **solo se marca** en `QA`.
@@ -207,7 +207,7 @@ Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-11-05). Todo se mi
   - 0.26 · `QCH-1388` «¿Se pone de color amarillo? (hablando de otra persona)» ↔ «¿Q'illuyanchu?»
   - 0.26 · `PCS-076-08` «Las personas que tienen» ↔ «Sichus»
 
-- Números que no coinciden español↔quechua: **30** filas; sospechas de sentido (tipo *pisi*/*achka*, *wata*/*killa*, negación): **42** filas.
+- Números que no coinciden español↔quechua: **24** filas; sospechas de sentido (tipo *pisi*/*achka*, *wata*/*killa*, negación): **42** filas.
 
 ![Relación de longitud](fig/f04_relacion_longitud.png)
 
@@ -215,7 +215,7 @@ Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-11-05). Todo se mi
 
 | Pool | Palabras (tokens) | Palabras distintas | Distintas no halladas en el léxico collao | Ejemplos |
 |---|---|---|---|---|
-| Médico (unificado) | 5624 | 3099 | 3 % | alimento, ama, anotanayki, asuste, ayer, ayuno, años, chupo |
+| Médico (unificado) | 5624 | 3099 | 1 % | ama, chutu, hasta, hispana, inka, inkas, ire, karqa |
 
 - Léxico de referencia **collao**: todo el quechua de Lopera (forma del libro), Farfán y OPS/OMS Bolivia, comparado sin glotales ni aspiradas y con 3 vocales (así «p'unchay» y «punchay» cuentan como la misma palabra). Es chico, porque se armó solo con fuentes collao: «no hallada» no significa error. Crecerá cuando se agreguen las fuentes de `FUENTES_COLLAO.md`.
 

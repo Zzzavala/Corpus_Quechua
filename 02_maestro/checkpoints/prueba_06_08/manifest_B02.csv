@@ -7,46 +7,46 @@ CLI-0128,B02,B02-S1,train,Médico,Médico,¿Tienes frío?,¿Chirisunkichu?,CLI-0
 CLI-1001,B02,B02-S1,train,Médico,Paciente,"Sí, tengo frío y me tiembla el cuerpo.",Simulasqa rimay 139 kanmi.,sesion2/CLI-1001_es.wav,sesion2/CLI-1001_qu.wav,1.5,1.5,OK
 GEN-0949,B02,B02-S1,train,General,—,"Si tuviera dinero, compraría una vaca.",Simulasqa rimay 119 kanmi.,GEN-0949_es.wav,GEN-0949_qu.wav,,1.5,ES: no es WAV PCM válido (file does not start with RIFF id)
 GEN-0112,B02,B02-S1,train,General,—,Mamá cocina pescado.,Simulasqa rimay 35 kanmi.,GEN-0112_ES.WAV,GEN-0112_qu.wav,1.5,1.5,OK
-GEN-0007,B02,B02-S1,train,General,—,"Esta persona mayor vive en Francia, donde pasa hambre y frío, y necesita mucho consuelo.",,,,,,SIN_VALIDAR: falta el quechua validado | FALTA_ES | FALTA_QU
+GEN-0008,B02,B02-S1,train,General,—,"Quiero entonces dedicar este libro al niño que fue, en otro tiempo, esta persona mayor.",,,,,,SIN_VALIDAR: falta el quechua validado | FALTA_ES | FALTA_QU
 GEN-0144,B02,B02-S1,train,General,—,Voy a buscar plátanos maduros.,Simulasqa rimay 44 kanmilla.,GEN-0144_es.wav,GEN-0144_qu.wav,1.5,1.5,"AUDIO_REPETIDO_QU: 2 archivos con ese nombre (GEN-0144_qu.wav, sesion3/GEN-0144_qu.wav); se usó el primero"
 CLI-0828,B02,B02-S1,train,Médico,Médico,¿Desde cuándo tienes fiebre?,¿Mayk'aqmantapacha ukhu k'ahayniyuq kachkanki?,,,,,FALTA_ES | FALTA_QU
 CLI-1936,B02,B02-S1,train,Médico,Paciente,Desde hace dos días.,Simulasqa rimay 152 kanmilla.,,,,,FALTA_ES | FALTA_QU
 GEN-0828,B02,B02-S1,train,General,—,Mañana te devolveré tu libro.,Simulasqa rimay 105 kanmilla.,,,,,FALTA_ES | FALTA_QU
 GEN-0159,B02,B02-S1,train,General,—,Cosechamos yuca por la mañana.,Simulasqa rimay 51 kanmilla.,,,,,FALTA_ES | FALTA_QU
-GEN-0041,B02,B02-S1,train,General,—,Debo haber envejecido.,Simulasqa rimay 9 kanmilla.,,,,,FALTA_ES | FALTA_QU
+GEN-0081,B02,B02-S1,train,General,—,Esta flor me hacía sentir desdichado.,Simulasqa rimay 24 kanmilla.,,,,,FALTA_ES | FALTA_QU
 GEN-0971,B02,B02-S1,train,General,—,¿Cuándo vas a regresar?,Simulasqa rimay 123 kanmilla.,,,,,FALTA_ES | FALTA_QU
-CLI-0829,B02,B02-S1,train,Médico,Médico,¿A qué hora tienes fiebre?,¿Ima horata ukhuyki k'ahanlla?,,,,,FALTA_ES | FALTA_QU
+CLI-0829,B02,B02-S1,train,Médico,Médico,¿A qué hora tienes fiebre?,Kikinpa qillqasqan rimay 1.,,,,,FALTA_ES | FALTA_QU
 CLI-1937,B02,B02-S1,train,Médico,Paciente,Más en la tarde y en la noche.,Simulasqa rimay 153 kanmilla.,,,,,FALTA_ES | FALTA_QU
-GEN-0121,B02,B02-S1,train,General,—,El bebé llora por la leche.,"Huk rimaymi kayqa, musuqmanta qillqasqa 1.",,,,,FALTA_ES | FALTA_QU
-GEN-0110,B02,B02-S1,train,General,—,Hoy hace mucho calor.,"Huk rimaymi kayqa, musuqmanta qillqasqa 2.",,,,,FALTA_ES | FALTA_QU
-GEN-0057,B02,B02-S1,train,General,—,Siempre creo que estoy en mi tierra.,"Huk rimaymi kayqa, musuqmanta qillqasqa 3.",,,,,FALTA_ES | FALTA_QU
-GEN-1025,B02,B02-S1,train,General,—,Mi tío vino a visitarnos.,Simulasqa rimay 130 kanmi.,,,,,FALTA_ES | FALTA_QU
-CLI-0830,B02,B02-S1,train,Médico,Médico,¿Sudas en la noche?,Kikinpa qillqasqan rimay 1.,,,,,FALTA_ES | FALTA_QU
+GEN-0121,B02,B02-S1,train,General,—,El bebé llora por la leche.,Simulasqa rimay 38 kanmilla.,,,,,FALTA_ES | FALTA_QU
+GEN-0110,B02,B02-S1,train,General,—,Hoy hace mucho calor.,"Huk rimaymi kayqa, musuqmanta qillqasqa 1.",,,,,FALTA_ES | FALTA_QU
+GEN-0013,B02,B02-S1,train,General,—,Representaba una serpiente boa que digiere un elefante.,"Huk rimaymi kayqa, musuqmanta qillqasqa 2.",,,,,FALTA_ES | FALTA_QU
+GEN-1025,B02,B02-S1,train,General,—,Mi tío vino a visitarnos.,"Huk rimaymi kayqa, musuqmanta qillqasqa 3.",,,,,FALTA_ES | FALTA_QU
+CLI-0830,B02,B02-S1,train,Médico,Médico,¿Sudas en la noche?,¿Tuta hump'inkichu?,,,,,FALTA_ES | FALTA_QU
 CLI-1938,B02,B02-S1,train,Médico,Paciente,"Sí, amanezco con la ropa mojada.",Simulasqa rimay 154 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0200,B02,B02-S1,train,General,—,Los niños escuchan atentos.,Simulasqa rimay 67 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0425,B02,B02-S1,train,General,—,Ellas no hablan con su familia.,Simulasqa rimay 75 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0830,B02,B02-S1,train,General,—,Pronto empezará la siembra.,Simulasqa rimay 106 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0044,B02,B02-S1,train,General,—,Entonces se comen también los baobabs.,Simulasqa rimay 11 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0046,B02,B02-S1,train,General,—,Son árboles tan grandes como iglesias.,Simulasqa rimay 12 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0347,B02,B02-S1,train,Médico,Médico,¿Sudas mucho?,Simulasqa rimay 136 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-1005,B02,B02-S1,train,Médico,Paciente,"Sí, sudo mucho en las noches.",Simulasqa rimay 140 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0182,B02,B02-S1,train,General,—,La comunidad se reúne hoy.,Simulasqa rimay 60 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0139,B02,B02-S1,train,General,—,Los niños están jugando con barro.,Simulasqa rimay 43 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0922,B02,B02-S1,train,General,—,"Come rápido, que ya nos vamos.",Simulasqa rimay 118 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0092,B02,B02-S1,train,General,—,Te nombro ministro.,Simulasqa rimay 26 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0102,B02,B02-S1,train,General,—,¿Qué significa admirar?,Simulasqa rimay 27 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0137,B02,B02-S1,train,Médico,Médico,¿Tienes dificultad para respirar?,¿Sasatachu samanki?,,,,,FALTA_ES | FALTA_QU
 CLI-1038,B02,B02-S1,train,Médico,Paciente,"Sí, me cuesta respirar, sobre todo en las noches.",Simulasqa rimay 150 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0555,B02,B02-S1,train,General,—,El pájaro canta en las mañanas.,Simulasqa rimay 88 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-1130,B02,B02-S1,train,General,—,Mi mamá cocina trucha con papas.,Simulasqa rimay 132 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-1001,B02,B02-S1,train,General,—,"Mientras yo cocinaba, él barría la casa.",Simulasqa rimay 128 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0180,B02,B02-S1,train,General,—,El niño está enfermo.,Simulasqa rimay 59 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0073,B02,B02-S1,train,General,—,"Ya pueden venir los tigres, con sus garras.",Simulasqa rimay 21 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0170,B02,B02-S1,train,General,—,Hoy no hay escuela.,Simulasqa rimay 56 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0082,B02,B02-S1,train,General,—,No debí haber hecho caso a sus palabras.,Simulasqa rimay 25 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0138,B02,B02-S1,train,Médico,Médico,¿Tienes mucha tos?,¿Sinchitachu Uhunki?,,,,,FALTA_ES | FALTA_QU
 CLI-1939,B02,B02-S1,train,Médico,Paciente,"Sí, bastante, sobre todo cuando hace frío.",Simulasqa rimay 155 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0111,B02,B02-S1,train,General,—,Vamos al río por la tarde.,Simulasqa rimay 34 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0192,B02,B02-S1,train,General,—,Hoy es un buen día.,Simulasqa rimay 64 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0754,B02,B02-S1,train,General,—,Ella lavó la ropa en el río.,Simulasqa rimay 100 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0119,B02,B02-S1,train,General,—,Tengo hambre.,Simulasqa rimay 37 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0567,B02,B02-S1,train,General,—,El gato duerme en la mesa.,Simulasqa rimay 90 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0427,B02,B02-S1,train,Médico,Médico,¿Cuando tose le duele más?,¿Sorq'an nanan ¿Uhunki hinachu nanan masta?,,,,,FALTA_ES | FALTA_QU
 CLI-1940,B02,B02-S1,train,Médico,Paciente,"Sí, al toser me duele el pecho.",Simulasqa rimay 156 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0055,B02,B02-S1,train,General,—,Me dijiste: me gustan mucho las puestas de sol.,Simulasqa rimay 15 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0011,B02,B02-S1,train,General,—,Los adultos me desanimaron de ser pintor cuando tenía seis años.,Simulasqa rimay 1 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0905,B02,B02-S1,train,General,—,"Cuando era joven, mi papá trabajaba en la mina.",Simulasqa rimay 115 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0531,B02,B02-S1,train,General,—,¿Qué hace el perro por la noche?,Simulasqa rimay 77 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0107,B02,B02-S2,train,General,—,El niño está corriendo en la chacra.,Simulasqa rimay 30 kanmilla.,,,,,FALTA_ES | FALTA_QU
@@ -57,48 +57,48 @@ GEN-0920,B02,B02-S2,train,General,—,No toques eso.,Simulasqa rimay 116 kanmi.,
 CLI-0434,B02,B02-S2,train,Médico,Médico,¿Tiene dolor en el cuello?,Kikinpa qillqasqan rimay 3.,,,,,FALTA_ES | FALTA_QU
 CLI-1941,B02,B02-S2,train,Médico,Paciente,"No, el cuello no me duele.",Simulasqa rimay 157 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0221,B02,B02-S2,train,General,—,Ustedes abren la ventana.,Simulasqa rimay 73 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0030,B02,B02-S2,train,General,—,¿Dónde quieres llevarte mi cordero?,Simulasqa rimay 5 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0005,B02,B02-S2,train,General,—,"Esta persona mayor es capaz de comprender todo, hasta los libros para niños.",Rimay 1.,,,,,FALTA_ES | FALTA_QU
 GEN-0548,B02,B02-S2,train,General,—,El jaguar caza su alimento en silencio.,Simulasqa rimay 87 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0149,B02,B02-S2,train,General,—,Mi hermana teje muy bien.,Simulasqa rimay 45 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0799,B02,B02-S2,train,General,—,Parece que los niños se comieron todo el pan.,Simulasqa rimay 101 kanmi.,,,,,FALTA_ES | FALTA_QU
-CLI-1932,B02,B02-S2,train,Médico,Médico,¿La tos se acompaña de dolor hacia alguna parte de la espalda?,¿Uhunki hina wasaykichu nanasunki?,,,,,FALTA_ES | FALTA_QU
+CLI-1932,B02,B02-S2,train,Médico,Médico,"Cuando tose, ¿le duele alguna parte de la espalda?",¿Uhunki hina wasaykichu nanasunki?,,,,,FALTA_ES | FALTA_QU
 CLI-1942,B02,B02-S2,train,Médico,Paciente,"Sí, cuando toso me duele la espalda.",Simulasqa rimay 158 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0008,B02,B02-S2,train,General,—,"Quiero entonces dedicar este libro al niño que fue, en otro tiempo, esta persona mayor.",Rimay 1.,,,,,FALTA_ES | FALTA_QU
+GEN-0042,B02,B02-S2,train,General,—,Cada día aprendía algo nuevo.,Simulasqa rimay 10 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0202,B02,B02-S2,train,General,—,Mi abuela prepara las medicinas.,Simulasqa rimay 69 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0871,B02,B02-S2,train,General,—,Mi papá está arando la chacra.,Simulasqa rimay 109 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0081,B02,B02-S2,train,General,—,Esta flor me hacía sentir desdichado.,Simulasqa rimay 24 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0103,B02,B02-S2,train,General,—,"Te admiro, pero ¿qué importancia tiene?",Simulasqa rimay 28 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0126,B02,B02-S2,train,General,—,El tigre es un animal forzudo.,Simulasqa rimay 40 kanmi.,,,,,FALTA_ES | FALTA_QU
-CLI-1346,B02,B02-S2,train,Médico,Médico,¿Tienes hambre?,Kikinpa qillqasqan rimay 5.,,,,,FALTA_ES | FALTA_QU
+CLI-1346,B02,B02-S2,train,Médico,Médico,¿Tienes hambre?,¿Yarqasunkichu?,,,,,FALTA_ES | FALTA_QU
 CLI-1944,B02,B02-S2,train,Médico,Paciente,"No, casi no tengo hambre.",Simulasqa rimay 159 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0921,B02,B02-S2,train,General,—,Ayúdame a cargar la leña.,Simulasqa rimay 117 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0115,B02,B02-S2,train,General,—,El sol sale temprano.,Simulasqa rimay 36 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0505,B02,B02-S2,train,General,—,Nosotras nadamos bajo la lluvia.,Simulasqa rimay 76 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0013,B02,B02-S2,train,General,—,Representaba una serpiente boa que digiere un elefante.,Simulasqa rimay 2 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0018,B02,B02-S2,train,General,—,Descubrí a un extraordinario muchachito.,Simulasqa rimay 3 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0122,B02,B02-S2,train,General,—,Todos nosotros comemos cada noche.,Simulasqa rimay 39 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-1347,B02,B02-S2,train,Médico,Médico,¿Tienes sed?,¿Ch'akisunkichu?,,,,,FALTA_ES | FALTA_QU
 CLI-1945,B02,B02-S2,train,Médico,Paciente,"Sí, tengo mucha sed.",Simulasqa rimay 160 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0872,B02,B02-S2,train,General,—,El agua está hirviendo en la olla.,Simulasqa rimay 110 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0540,B02,B02-S2,train,General,—,Mañana iremos a la tienda.,Simulasqa rimay 82 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0046,B02,B02-S2,train,General,—,Son árboles tan grandes como iglesias.,Simulasqa rimay 12 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0025,B02,B02-S2,train,General,—,Es demasiado viejo.,Simulasqa rimay 4 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0904,B02,B02-S2,train,General,—,Antes no había luz en mi comunidad.,Simulasqa rimay 114 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0136,B02,B02-S2,train,Médico,Médico,¿Tienes cólicos?,¿Wisayki q'ewisunkichu?,,,,,FALTA_ES | FALTA_QU
 CLI-1015,B02,B02-S2,train,Médico,Paciente,"Sí, me dan cólicos antes de ir al baño.",Simulasqa rimay 141 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0165,B02,B02-S2,train,General,—,Mi abuelo se fue a pescar.,Simulasqa rimay 54 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0102,B02,B02-S2,train,General,—,¿Qué significa admirar?,Simulasqa rimay 27 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0537,B02,B02-S2,train,General,—,¿Qué hacen los niños en la fiesta?,Simulasqa rimay 80 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0037,B02,B02-S2,train,General,—,He comprado una caja de lápices de colores.,Simulasqa rimay 7 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0555,B02,B02-S2,train,General,—,El pájaro canta en las mañanas.,Simulasqa rimay 88 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0873,B02,B02-S2,train,General,—,Mis hermanos están estudiando para el examen.,Simulasqa rimay 111 kanmi.,,,,,FALTA_ES | FALTA_QU
-CLI-0431,B02,B02-S2,train,Médico,Médico,¿Le funciona bien el intestino y formado?,¿Akashanki allintachu?,,,,,FALTA_ES | FALTA_QU
+CLI-0431,B02,B02-S2,train,Médico,Médico,¿Le funciona bien el intestino?,¿Akashanki allintachu?,,,,,FALTA_ES | FALTA_QU
 CLI-1946,B02,B02-S2,train,Médico,Paciente,"No, estoy haciendo aguado.",Simulasqa rimay 161 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0191,B02,B02-S2,train,General,—,Hoy hace buen día.,Simulasqa rimay 63 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0180,B02,B02-S2,train,General,—,El niño está enfermo.,Simulasqa rimay 59 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0590,B02,B02-S2,train,General,—,Las niñas olvidan una fecha importante.,Simulasqa rimay 93 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0082,B02,B02-S2,train,General,—,No debí haber hecho caso a sus palabras.,Simulasqa rimay 25 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0076,B02,B02-S2,train,General,—,¿No tienes un biombo?,Simulasqa rimay 22 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-1026,B02,B02-S2,train,General,—,Tráeme un vaso de agua.,Simulasqa rimay 131 kanmi.,,,,,FALTA_ES | FALTA_QU
-CLI-0500,B02,B02-S2,train,Médico,Médico,"Cada vez que orina, ¿tiene ardor?",¿Hisp'aqtiykik'arasunkichu?,,,,,FALTA_ES | FALTA_QU
+CLI-0500,B02,B02-S2,train,Médico,Médico,"Cada vez que orina, ¿tiene ardor?",Kikinpa qillqasqan rimay 5.,,,,,FALTA_ES | FALTA_QU
 CLI-1948,B02,B02-S2,train,Médico,Paciente,"Sí, me arde cada vez.",Simulasqa rimay 162 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0546,B02,B02-S2,train,General,—,El perro duerme en su cama.,Simulasqa rimay 86 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0205,B02,B02-S2,train,General,—,El bosque habla en silencio.,Simulasqa rimay 70 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0050,B02,B02-S2,train,General,—,El planeta es muy pequeño.,Simulasqa rimay 13 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0801,B02,B02-S2,train,General,—,Cuentan que el zorro engañó al cóndor.,Simulasqa rimay 103 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0194,B02,B02-S2,train,General,—,¿Qué significa esta palabra?,Simulasqa rimay 65 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0542,B02,B02-S2,train,General,—,¿Qué hace el jaguar en la selva?,Simulasqa rimay 83 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0133,B02,B02-S3,train,General,—,¿Qué comiste hoy?,Simulasqa rimay 42 kanmilla.,,,,,FALTA_ES | FALTA_QU
 GEN-0827,B02,B02-S3,train,General,—,El domingo vamos a vender queso en la feria.,Simulasqa rimay 104 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0035,B02,B02-S3,train,General,—,Siento tristeza al acordarme de mi amigo.,Simulasqa rimay 6 kanmi.,,,,,FALTA_ES | FALTA_QU
@@ -106,96 +106,96 @@ GEN-0166,B02,B02-S3,train,General,—,Aquí viven tres familias.,Simulasqa rimay
 CLI-0501,B02,B02-S3,train,Médico,Médico,¿Orina frecuentemente?,¿Hisp'ay atisunki?,,,,,FALTA_ES | FALTA_QU
 CLI-1018,B02,B02-S3,train,Médico,Paciente,"Sí, voy a orinar a cada rato.",Simulasqa rimay 142 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0999,B02,B02-S3,train,General,—,Trabajo para que mis hijos estudien.,Simulasqa rimay 126 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0005,B02,B02-S3,train,General,—,"Esta persona mayor es capaz de comprender todo, hasta los libros para niños.",Rimay 2.,,,,,FALTA_ES | FALTA_QU
+GEN-0030,B02,B02-S3,train,General,—,¿A dónde quieres llevarte mi cordero?,Simulasqa rimay 5 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0183,B02,B02-S3,train,General,—,El tambor suena lejos.,Simulasqa rimay 61 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0153,B02,B02-S3,train,General,—,El espíritu cuida el bosque.,Simulasqa rimay 48 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0502,B02,B02-S3,train,Médico,Médico,¿Orina en las noches? ¿Cuántas veces?,¿Hisp'anki tutallachu ask'ata – hayk'a kutita?,,,,,FALTA_ES | FALTA_QU
 CLI-1019,B02,B02-S3,train,Médico,Paciente,"Sí, me levanto tres veces cada noche.",Simulasqa rimay 143 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0903,B02,B02-S3,train,General,—,Mi abuela siempre hacía pan los domingos.,Simulasqa rimay 113 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0042,B02,B02-S3,train,General,—,Cada día aprendía algo nuevo.,Simulasqa rimay 10 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0004,B02,B02-S3,train,General,—,Tengo otra disculpa.,Rimay 2.,,,,,FALTA_ES | FALTA_QU
 GEN-0545,B02,B02-S3,train,General,—,Los niños cantan canciones alegres.,Simulasqa rimay 85 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0750,B02,B02-S3,train,General,—,Mi papá arregló el techo de la casa.,Simulasqa rimay 96 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0503,B02,B02-S3,train,Médico,Médico,"¿Cómo es el chorro en la orina? ¿Delgado, grueso o como siempre?","¿Imaynataq hispayniyki, ñañu, raku, kaskanllachu?",,,,,FALTA_ES | FALTA_QU
 CLI-1020,B02,B02-S3,train,Médico,Paciente,Sale delgadito y con poca fuerza.,Simulasqa rimay 144 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0103,B02,B02-S3,train,General,—,"Te admiro, pero ¿qué importancia tiene?",Simulasqa rimay 28 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0039,B02,B02-S3,train,General,—,Dudo sobre los colores de su traje.,Simulasqa rimay 8 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0163,B02,B02-S3,train,General,—,No me gusta escuchar mucho ruido.,Simulasqa rimay 52 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0751,B02,B02-S3,train,General,—,Ayer no encontré mi sombrero.,Simulasqa rimay 97 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0164,B02,B02-S3,train,General,—,Trajeron sal del pueblo.,Simulasqa rimay 53 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0759,B02,B02-S3,train,Médico,Médico,¿Tomas medicamentos?,¿Hampita ukyayta yachankichu?,,,,,FALTA_ES | FALTA_QU
 CLI-1950,B02,B02-S3,train,Médico,Paciente,"Sí, para la presión, todos los días.",Simulasqa rimay 163 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0566,B02,B02-S3,train,General,—,Nosotros dormimos después de cenar.,Simulasqa rimay 89 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0018,B02,B02-S3,train,General,—,Descubrí a un extraordinario muchachito.,Simulasqa rimay 3 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0009,B02,B02-S3,train,General,—,Todas las personas mayores han comenzado por ser niños.,Rimay 3.,,,,,FALTA_ES | FALTA_QU
 GEN-0127,B02,B02-S3,train,General,—,El fuego calienta la casa.,Simulasqa rimay 41 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0950,B02,B02-S3,train,General,—,Deberías descansar un poco.,Simulasqa rimay 120 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0761,B02,B02-S3,train,Médico,Médico,¿Has estado enfermo de diabetes?,¿Ñawpaqta diabeteswan unqurqankichu?,,,,,FALTA_ES | FALTA_QU
 CLI-1951,B02,B02-S3,train,Médico,Paciente,"No, nunca me han dicho que tengo diabetes.",Simulasqa rimay 164 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0573,B02,B02-S3,train,General,—,El niño juega con bloques.,Simulasqa rimay 91 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0025,B02,B02-S3,train,General,—,Es demasiado viejo.,Simulasqa rimay 4 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0070,B02,B02-S3,train,General,—,¡Qué hermosa eres!,Simulasqa rimay 20 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0752,B02,B02-S3,train,General,—,Cocinamos sopa de trigo para la faena.,Simulasqa rimay 98 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0533,B02,B02-S3,train,General,—,Mi lengua vive en mi cabeza.,Simulasqa rimay 78 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0764,B02,B02-S3,train,Médico,Médico,¿Has estado internado en el hospital?,¿Hospitalpi internasqa kayta yachankichu?,,,,,FALTA_ES | FALTA_QU
 CLI-1952,B02,B02-S3,train,Médico,Paciente,"Sí, una vez, cuando nació mi hijo.",Simulasqa rimay 165 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0037,B02,B02-S3,train,General,—,He comprado una caja de lápices de colores.,Simulasqa rimay 7 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0152,B02,B02-S3,train,General,—,Los niños tienen frío.,Simulasqa rimay 47 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0063,B02,B02-S3,train,General,—,Las espinas son pura maldad de las flores.,Simulasqa rimay 18 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0537,B02,B02-S3,train,General,—,¿Qué hacen los niños en la fiesta?,Simulasqa rimay 80 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0831,B02,B02-S3,train,General,—,Mañana no habrá clases en la escuela.,Simulasqa rimay 107 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0539,B02,B02-S3,train,General,—,Mi mamá cocina plátano.,Simulasqa rimay 81 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0191,B02,B02-S3,train,General,—,Hoy amaneció con sol.,Simulasqa rimay 63 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0287,B02,B02-S3,train,Médico,Médico,"¿Después del nacimiento lo hospitalizaron? Si fue así, ¿por cuánto tiempo?",Simulasqa rimay 135 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-1021,B02,B02-S3,train,Médico,Paciente,"Sí, estuvo dos días en el hospital.",Simulasqa rimay 145 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0076,B02,B02-S3,train,General,—,¿No tienes un biombo?,Simulasqa rimay 22 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0104,B02,B02-S3,train,General,—,No sirve para nada.,Simulasqa rimay 29 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0951,B02,B02-S3,train,General,—,Podrías ayudarme con la cosecha.,Simulasqa rimay 121 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0567,B02,B02-S3,train,General,—,El gato duerme en la mesa.,Simulasqa rimay 90 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0111,B02,B02-S3,train,General,—,Vamos al río por la tarde.,Simulasqa rimay 34 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0402,B02,B02-S3,train,Médico,Médico,¿Qué enfermedad tiene tu hijo?,Kikinpa qillqasqan rimay 7.,,,,,FALTA_ES | FALTA_QU
 CLI-1025,B02,B02-S3,train,Médico,Paciente,Tiene fiebre y diarrea desde ayer.,Simulasqa rimay 146 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0051,B02,B02-S3,train,General,—,El retraso es siempre fatal.,Simulasqa rimay 14 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0874,B02,B02-S3,train,General,—,"Cuando llegaste, yo estaba durmiendo.",Simulasqa rimay 112 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-1130,B02,B02-S3,train,General,—,Mi mamá cocina pescado.,Simulasqa rimay 132 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0119,B02,B02-S3,train,General,—,Tengo hambre.,Simulasqa rimay 37 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0201,B02,B02-S4,train,General,—,"¿Puedes repetir eso, por favor?",Simulasqa rimay 68 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-1141,B02,B02-S4,train,General,—,Ahora estoy cocinando papas con queso.,Simulasqa rimay 134 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0011,B02,B02-S4,train,General,—,"Los adultos me desanimaron de ser pintor, cuando yo quería serlo, a la edad en que decidí dedicarme a ello.",Simulasqa rimay 1 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0010,B02,B02-S4,train,General,—,"Cuando tenía apenas seis años, solo había aprendido a dibujar boas cerradas y boas abiertas.",Rimay 4.,,,,,FALTA_ES | FALTA_QU
 GEN-0158,B02,B02-S4,train,General,—,El anciano conoce muchas palabras.,Simulasqa rimay 50 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-1024,B02,B02-S4,train,General,—,Le cociné una sopa a mi abuela.,Simulasqa rimay 129 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0737,B02,B02-S4,train,Médico,Médico,¿Su niño puede beber o mamar?,Simulasqa rimay 137 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-1026,B02,B02-S4,train,Médico,Paciente,"Sí, todavía puede mamar, pero poquito.",Simulasqa rimay 147 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0172,B02,B02-S4,train,General,—,Ellos están construyendo una casa.,Simulasqa rimay 57 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0010,B02,B02-S4,train,General,—,"Cuando tenía apenas seis años, solo había aprendido a dibujar boas cerradas y boas abiertas.",Rimay 3.,,,,,FALTA_ES | FALTA_QU
+GEN-0007,B02,B02-S4,train,General,—,"Esta persona mayor vive en Francia, donde pasa hambre y frío, y necesita mucho consuelo.",Rimay 5.,,,,,FALTA_ES | FALTA_QU
 GEN-0108,B02,B02-S4,train,General,—,La mujer canta una canción.,Simulasqa rimay 31 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0156,B02,B02-S4,train,General,—,"Mira, esa mariposa es azul.",Simulasqa rimay 49 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0749,B02,B02-S4,train,General,—,Los niños jugaron fútbol después de clases.,Simulasqa rimay 95 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0738,B02,B02-S4,train,Médico,Médico,¿Su niño vomita todo lo que toma?,Simulasqa rimay 138 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-1027,B02,B02-S4,train,Médico,Paciente,"No, vomita solo a veces.",Simulasqa rimay 148 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0004,B02,B02-S4,train,General,—,Tengo otra disculpa.,Rimay 4.,,,,,FALTA_ES | FALTA_QU
+GEN-0041,B02,B02-S4,train,General,—,Debo haber envejecido.,Simulasqa rimay 9 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0109,B02,B02-S4,train,General,—,El perro duerme bajo la mesa.,Simulasqa rimay 32 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-1136,B02,B02-S4,train,General,—,Ellos viajarán a Puno en bus.,Simulasqa rimay 133 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0039,B02,B02-S4,train,General,—,Dudo sobre los colores de su traje.,Simulasqa rimay 8 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0057,B02,B02-S4,train,General,—,Siempre creo que estoy en mi tierra.,Simulasqa rimay 16 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0197,B02,B02-S4,train,General,—,Las estrellas brillan.,Simulasqa rimay 66 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0624,B02,B02-S4,train,Médico,Médico,"Ahora que tiene diarrea, dele líquidos.",K'echawan kahtin ashka mateta q'onayki.,,,,,FALTA_ES | FALTA_QU
 CLI-1140,B02,B02-S4,train,Médico,Paciente,"Ya, le voy a dar mate de a poquitos.",Simulasqa rimay 151 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-1000,B02,B02-S4,train,General,—,"Si llueve mañana, no iremos a la feria.",Simulasqa rimay 127 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0174,B02,B02-S4,train,General,—,Esta palabra es difícil.,Simulasqa rimay 58 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0544,B02,B02-S4,train,General,—,Ella come arroz con pollo.,Simulasqa rimay 84 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0009,B02,B02-S4,train,General,—,Todas las personas mayores han comenzado por ser niños.,Rimay 5.,,,,,FALTA_ES | FALTA_QU
+GEN-0044,B02,B02-S4,train,General,—,Entonces se comen también los baobabs.,Simulasqa rimay 11 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0151,B02,B02-S4,train,General,—,Hay peces en la canasta.,Simulasqa rimay 46 kanmi.,,,,,FALTA_ES | FALTA_QU
-CLI-1455,B02,B02-S4,train,Médico,Médico,¿A que tiempo de gestación?,¿Haykaq killa unquqwan kashaqtiyki?,,,,,FALTA_ES | FALTA_QU
+CLI-1455,B02,B02-S4,train,Médico,Médico,¿A qué tiempo de gestación?,¿Haykaq killa unquqwan kashaqtiyki?,,,,,FALTA_ES | FALTA_QU
 CLI-1974,B02,B02-S4,train,Médico,Paciente,Estaba de tres meses.,Simulasqa rimay 166 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0800,B02,B02-S4,train,General,—,Dicen que mañana habrá feria en el pueblo.,Simulasqa rimay 102 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0585,B02,B02-S4,train,General,—,El hombre pesca con red.,Simulasqa rimay 92 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0070,B02,B02-S4,train,General,—,¡Qué hermosa eres!,Simulasqa rimay 20 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0092,B02,B02-S4,train,General,—,Te nombro ministro.,Simulasqa rimay 26 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0972,B02,B02-S4,train,General,—,¿Cuántas ovejas tienes?,Simulasqa rimay 124 kanmi.,,,,,FALTA_ES | FALTA_QU
-CLI-1456,B02,B02-S4,train,Médico,Médico,¿Cuando fue tu última regla?,Kikinpa qillqasqan rimay 9.,,,,,FALTA_ES | FALTA_QU
+CLI-1456,B02,B02-S4,train,Médico,Médico,¿Cuándo fue tu última regla?,Kikinpa qillqasqan rimay 9.,,,,,FALTA_ES | FALTA_QU
 CLI-1975,B02,B02-S4,train,Médico,Paciente,"Hace tres semanas, más o menos.",Simulasqa rimay 167 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0535,B02,B02-S4,train,General,—,Me gusta el caldo de gallina.,Simulasqa rimay 79 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0063,B02,B02-S4,train,General,—,Las espinas son pura maldad de las flores.,Simulasqa rimay 18 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0170,B02,B02-S4,train,General,—,Hoy no hay escuela.,Simulasqa rimay 56 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0073,B02,B02-S4,train,General,—,"Ya pueden venir los tigres, con sus garras.",Simulasqa rimay 21 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0152,B02,B02-S4,train,General,—,Los niños tienen frío.,Simulasqa rimay 47 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0753,B02,B02-S4,train,General,—,La vaca se escapó al cerro.,Simulasqa rimay 99 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0130,B02,B02-S4,train,Médico,Médico,¿Estás embarazada?,¿Wiksayoqchu kashianki?,,,,,FALTA_ES | FALTA_QU
 CLI-1028,B02,B02-S4,train,Médico,Paciente,"Sí, estoy embarazada de cuatro meses.",Simulasqa rimay 149 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0205,B02,B02-S4,train,General,—,El bosque habla en silencio.,Simulasqa rimay 70 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0539,B02,B02-S4,train,General,—,Mi mamá cocina plátano.,Simulasqa rimay 81 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0258,B02,B02-S4,train,General,—,La niña no baja al primer piso.,Simulasqa rimay 74 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0104,B02,B02-S4,train,General,—,No sirve para nada.,Simulasqa rimay 29 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0055,B02,B02-S4,train,General,—,Me dijiste: me gustan mucho las puestas de sol.,Simulasqa rimay 15 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0832,B02,B02-S4,train,General,—,Voy a cocinar sopa para todos.,Simulasqa rimay 108 kanmi.,,,,,FALTA_ES | FALTA_QU
 CLI-0519,B02,B02-S4,train,Médico,Médico,¿Cuántos meses no le viene la regla?,¿Hayka killataq manua yawarniyki hamunchu?,,,,,FALTA_ES | FALTA_QU
 CLI-1996,B02,B02-S4,train,Médico,Paciente,"Ningún mes, me viene normal.",Simulasqa rimay 168 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0542,B02,B02-S4,train,General,—,¿Qué hace el jaguar en la selva?,Simulasqa rimay 83 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0546,B02,B02-S4,train,General,—,El perro duerme en su cama.,Simulasqa rimay 86 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0078,B02,B02-S4,train,General,—,Tosió dos o tres veces.,Simulasqa rimay 23 kanmi.,,,,,FALTA_ES | FALTA_QU
 GEN-0973,B02,B02-S4,train,General,—,¿Por qué no fuiste a la escuela?,Simulasqa rimay 125 kanmi.,,,,,FALTA_ES | FALTA_QU
-GEN-0192,B02,B02-S4,train,General,—,Hoy es un buen día.,Simulasqa rimay 64 kanmi.,,,,,FALTA_ES | FALTA_QU
+GEN-0194,B02,B02-S4,train,General,—,¿Qué significa esta palabra?,Simulasqa rimay 65 kanmi.,,,,,FALTA_ES | FALTA_QU

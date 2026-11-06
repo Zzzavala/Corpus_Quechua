@@ -39,7 +39,7 @@ Filas nuevas en total: **515** (B01: 0; respuestas del paciente: 111; frases por
     - `CLI-1940` [Paciente] Sí, al toser me duele el pecho. *(Claude)*
 - `CLI-0434` [Médico] ¿Tiene dolor en el cuello?
     - `CLI-1941` [Paciente] No, el cuello no me duele. *(Claude)*
-- `CLI-1932` [Médico] ¿La tos se acompaña de dolor hacia alguna parte de la espalda?
+- `CLI-1932` [Médico] Cuando tose, ¿le duele alguna parte de la espalda?
     - `CLI-1942` [Paciente] Sí, cuando toso me duele la espalda. *(Claude)*
 - `CLI-1346` [Médico] ¿Tienes hambre?
     - `CLI-1944` [Paciente] No, casi no tengo hambre. *(Claude)*
@@ -47,7 +47,7 @@ Filas nuevas en total: **515** (B01: 0; respuestas del paciente: 111; frases por
     - `CLI-1945` [Paciente] Sí, tengo mucha sed. *(Claude)*
 - `CLI-0136` [Médico] ¿Tienes cólicos?
     - `CLI-1015` [Paciente] Sí, me dan cólicos antes de ir al baño. *(Claude)*
-- `CLI-0431` [Médico] ¿Le funciona bien el intestino y formado?
+- `CLI-0431` [Médico] ¿Le funciona bien el intestino?
     - `CLI-1946` [Paciente] No, estoy haciendo aguado. *(Claude)*
 - `CLI-0500` [Médico] Cada vez que orina, ¿tiene ardor?
     - `CLI-1948` [Paciente] Sí, me arde cada vez. *(Claude)*
@@ -73,9 +73,9 @@ Filas nuevas en total: **515** (B01: 0; respuestas del paciente: 111; frases por
     - `CLI-1027` [Paciente] No, vomita solo a veces. *(Claude)*
 - `CLI-0624` [Médico] Ahora que tiene diarrea, dele líquidos.
     - `CLI-1140` [Paciente] Ya, le voy a dar mate de a poquitos. *(Claude)*
-- `CLI-1455` [Médico] ¿A que tiempo de gestación?
+- `CLI-1455` [Médico] ¿A qué tiempo de gestación?
     - `CLI-1974` [Paciente] Estaba de tres meses. *(Claude)*
-- `CLI-1456` [Médico] ¿Cuando fue tu última regla?
+- `CLI-1456` [Médico] ¿Cuándo fue tu última regla?
     - `CLI-1975` [Paciente] Hace tres semanas, más o menos. *(Claude)*
 - `CLI-0130` [Médico] ¿Estás embarazada?
     - `CLI-1028` [Paciente] Sí, estoy embarazada de cuatro meses. *(Claude)*
@@ -117,7 +117,7 @@ Filas nuevas en total: **515** (B01: 0; respuestas del paciente: 111; frases por
 - `CLI-0517` [Médico] Si le viene sangre antes de la fecha de su regla, avise al médico.
 - `CLI-0442` [Médico] ¿Se despierta ahogándose cuando duerme?
     - `CLI-2004` [Paciente] Sí, a veces me despierto sin aire. *(Claude)*
-- `CLI-0506` [Médico] ¿Alguna vez ha orinado sangre y con olor?
+- `CLI-0506` [Médico] ¿Alguna vez ha orinado sangre con dolor?
     - `CLI-2005` [Paciente] No, mi orina es normal. *(Claude)*
 - `CLI-0508` [Médico] ¿Puede diferenciar si la sangre viene de la orina o de los genitales?
     - `CLI-1048` [Paciente] No sé, solo veo sangre en el papel. *(Claude)*
@@ -130,7 +130,7 @@ Filas nuevas en total: **515** (B01: 0; respuestas del paciente: 111; frases por
 - `CLI-1588` [Médico] Tienes que tomar las pastillas.
 - `CLI-1598` [Médico] Solo dos veces tiene que tomar las pastillas.
 - `CLI-0393` [Médico] Hasta luego.
-- `CLI-0220` [Médico] Necesitamos examen por un médico.
+- `CLI-0220` [Médico] Necesitamos que lo examine un médico.
 - `CLI-0227` [Médico] Necesitamos que te evalúe un médico especialista.
     - `CLI-2009` [Paciente] Está bien, iré donde el especialista. *(Claude)*
 - `CLI-1277` [Médico] ¿Podemos ayudarle?
@@ -193,13 +193,13 @@ Filas nuevas en total: **515** (B01: 0; respuestas del paciente: 111; frases por
     - `CLI-1083` [Paciente] No, no siento nada. *(Claude)*
 - `CLI-0586` [Médico] Cuando respira hondo, ¿le duele? ¿De qué lado?
     - `CLI-1084` [Paciente] Sí, me duele el lado izquierdo. *(Claude)*
-- `CLI-0587` [Médico] Cuando tose fuerte, ¿le duele?, ¿qué lado?
+- `CLI-0587` [Médico] Cuando tose fuerte, ¿le duele? ¿De qué lado?
     - `CLI-1969` [Paciente] Sí, también en el lado izquierdo. *(Claude)*
 - `CLI-0595` [Médico] ¿Le duele cuando le toco o aprieto?
     - `CLI-1970` [Paciente] Sí, cuando aprieta ahí me duele. *(Claude)*
 - `CLI-1752` [Médico] Es necesario un examen previo.
     - `CLI-1995` [Paciente] Está bien, me lo voy a hacer. *(Claude)*
-- `CLI-1809` [Médico] Necesario hacer un examen.
+- `CLI-1809` [Médico] Es necesario hacer un examen.
 - `CLI-0629` [Médico] Vaya al laboratorio.
     - `CLI-1991` [Paciente] Ya, ahorita voy. *(Claude)*
 - `CLI-0630` [Médico] Para que le hagan el examen de sangre.
@@ -210,19 +210,19 @@ Filas nuevas en total: **515** (B01: 0; respuestas del paciente: 111; frases por
 
 ### B05
 
-- `CLI-1447` [Médico] ¿Alguna vez estuvo con mal de orina, o le dolía a orinar?
+- `CLI-1447` [Médico] ¿Alguna vez estuvo con mal de orina, o le dolía al orinar?
     - `CLI-1971` [Paciente] Sí, el año pasado me dolía al orinar. *(Claude)*
-- `CLI-1448` [Médico] ¿Alguna vez estuvo mal del hígado o del pulmon?
+- `CLI-1448` [Médico] ¿Alguna vez estuvo mal del hígado o del pulmón?
     - `CLI-1972` [Paciente] No, ni del hígado ni del pulmón. *(Claude)*
 - `CLI-1450` [Médico] ¿Cuándo fue su última relación sexual?
     - `CLI-1973` [Paciente] Hace una semana. *(Claude)*
 - `CLI-1457` [Médico] ¿Cuántos embarazos has tenido?
     - `CLI-1997` [Paciente] Tuve tres embarazos. *(Claude)*
-- `CLI-1459` [Médico] ¿Fueron espontáneos?
+- `CLI-1459` [Médico] ¿Los abortos fueron espontáneos?
     - `CLI-1998` [Paciente] Sí, se me fue solo, no hice nada. *(Claude)*
 - `CLI-1634` [Médico] ¿Se cuidaba con algún método?
     - `CLI-1976` [Paciente] Sí, con la inyección de tres meses. *(Claude)*
-- `CLI-1750` [Médico] ¿Como se enteró de este método?
+- `CLI-1750` [Médico] ¿Cómo se enteró de este método?
     - `CLI-1977` [Paciente] Me contó la obstetra en la posta. *(Claude)*
 - `CLI-1759` [Médico] ¿Por qué está eligiendo este método?
     - `CLI-1978` [Paciente] Porque no quiero tener más hijos por ahora. *(Claude)*
@@ -242,11 +242,11 @@ Filas nuevas en total: **515** (B01: 0; respuestas del paciente: 111; frases por
 - `CLI-1636` [Médico] ¿Sufre o sufrió violencia sexual alguna vez?
     - `CLI-1981` [Paciente] No, eso no me ha pasado. *(Claude)*
 - `CLI-1638` [Médico] ¿Tiene relaciones sexuales forzadas?
-    - `CLI-1982` [Paciente] No, en eso no me obliga. *(Claude)*
+    - `CLI-2050` [Paciente] No, nunca me ha obligado. *(Claude)*
 - `CLI-0928` [Médico] ¿Te puedo hacer algunas preguntas personales?
     - `CLI-1106` [Paciente] Sí, doctor, puede preguntarme. *(Claude)*
 - `CLI-0930` [Médico] ¿Alguna vez tu pareja te ha lastimado?
-    - `CLI-1108` [Paciente] Sí, también me ha lastimado. *(Claude)*
+    - `CLI-2051` [Paciente] Sí, algunas veces me ha lastimado. *(Claude)*
 - `CLI-0129` [Médico] Lávate las manos.
     - `CLI-1983` [Paciente] Ya, me lavo con agua y jabón. *(Claude)*
 - `CLI-0619` [Médico] Dele de mamar a su hijo cada tres horas.

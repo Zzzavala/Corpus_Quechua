@@ -8,13 +8,13 @@ Archivo leído: `B02_traductor_devuelto.docx` (201 filas con ID en el Word).
 - Faltantes: GEN-0186
 - Sobrantes: GEN-9999
 - Duplicadas: GEN-0920 (se usó la primera aparición)
-- Sin quechua en el Word devuelto: GEN-0007
+- Sin quechua en el Word devuelto: GEN-0008
 - El traductor cambió el español en: GEN-0210 (no se validan: quedan Por_revisar; la propuesta está en Cambios y en el Excel de trabajo)
 
 ## Métricas (Traductor_metricas)
 
 - Bloque: B02
-- Fecha_importación: 2026-11-05 16:01
+- Fecha_importación: 2026-11-05 22:45
 - Filas: 199
 - Filas_con_borrador: 183
 - Sin_cambios_%: 92.3
@@ -22,8 +22,8 @@ Archivo leído: `B02_traductor_devuelto.docx` (201 filas con ID en el Word).
 - Reescrito_%: 1.6
 - Distancia_media_borrador: 0.019
 - Control_n: 10
-- Distancia_media_control: 0.383
-- Anclaje: Posible anclaje: con borrador cambia 0.02 y su traducción libre difiere 0.38 del borrador (razón 0.05).
+- Distancia_media_control: 0.398
+- Anclaje: Posible anclaje: con borrador cambia 0.02 y su traducción libre difiere 0.40 del borrador (razón 0.05).
 - Recomendación: Se pueden seguir dando borradores.
 - Faltantes: GEN-0186
 - Sobrantes: GEN-9999
