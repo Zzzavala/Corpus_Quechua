@@ -173,6 +173,23 @@ def cargar_checkpoint(prefijo: str) -> dict:
     return hojas
 
 
+def fotos_congeladas() -> dict:
+    """Bloques congelados TAL CUAL (config.bloque.congelados con foto en 02_maestro/congelados/BXX.xlsx, creada por
+    scripts/congelar_bloque.py): {bloque: {"Filas", "Corpus", "Origen", "QA"}}. La foto manda sobre lo que diga la
+    cadena: el bloque no se rearma y sus frases no se usan en otros bloques."""
+    import pandas as pd
+
+    out = {}
+    for b in (CFG.get("bloque", {}).get("congelados") or []):
+        p = RAIZ / "02_maestro" / "congelados" / f"{b}.xlsx"
+        if p.exists():
+            h = pd.read_excel(p, sheet_name=None, dtype=str, keep_default_na=False)
+            for k in ("Corpus", "Origen"):
+                h[k] = h[k].rename(columns={"Evidencia_P6": "Evidencia_borrador"})
+            out[b] = h
+    return out
+
+
 def hoy() -> str:
     return str(CFG.get("fecha_generacion", "2026-10-14"))
 

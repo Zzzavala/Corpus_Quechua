@@ -1,8 +1,18 @@
-# Configuración única del corpus quechua chanka médico (INF657).
+# Configuración única del corpus quechua COLLAO médico (INF657).
 # Cualquier cambio de parámetros se hace aquí, se regenera y se anota en 04_reportes/DECISIONES_TOMADAS.md.
+# 5-nov-2026: el proyecto cambió de quechua chanka a quechua collao (Cusco, y en general Cusco–Puno). Del material
+# chanka solo se conserva el ESPAÑOL; su quechua no entra al corpus.
 
 semilla: 657
-fecha_generacion: "2026-10-15"   # fecha de los datos: checkpoints, Cambios y LEEME (fija para que todo sea reproducible;
+
+# Variedad del corpus
+variedad:
+  nombre: "quechua collao (Cusco–Collao)"
+  iso: quz
+  zona: "Cusco (y Puno)"
+  vocales: 5          # P3 DECIDIDO (5-nov-2026): 5 = Academia Mayor de la Lengua, como escribe el traductor; 3 = alfabeto oficial MINEDU (a, i, u)
+                      # Quechua del Cusco (a, e, i, o, u). Con 3, los borradores pasan e→i y o→u en palabras quechuas.
+fecha_generacion: "2026-11-05"   # fecha de los datos: checkpoints, Cambios y LEEME (fija para que todo sea reproducible;
                                  # se actualiza a mano cuando se regenera el corpus con datos nuevos)
 
 rutas:
@@ -70,7 +80,8 @@ bloque:
   bloques_con_archivos: [B01, B02, B03, B04, B05]  # D5 pedía B01+B02; se solicitaron todos los bloques (14-oct-2026)
   # Bloques ya enviados al traductor: su composición, N°, sublotes y control quedan congelados al regenerar.
   # Además se congela solo cualquier bloque que tenga filas en Estado Enviado / Validado / Grabado en el maestro.
-  congelados: []
+  congelados: [B01]                # B01 ya está con el traductor (pedido del 5-nov-2026): no cambia; solo sus referencias a la variedad.
+                                   # Foto en 02_maestro/congelados/B01.xlsx (scripts/congelar_bloque.py); sus frases no se usan en otros bloques.
 
 # Parte general (§11.1)
 general:
@@ -84,11 +95,10 @@ general:
   orden_relleno: [principito, g2_diccionario, g_claude, g2_ejercicio]  # si faltan oraciones para llegar a 140
   b01_max_palabras_es: 12
   max_palabras_es: 20
-  pesos_cobertura:
-    sufijo: 3.0
-    bigrama: 1.0
+  pesos_cobertura:                 # medidos en el ESPAÑOL (la parte general no trae borrador collao): rasgos gramaticales
+    rasgo: 3.0                     # que en quechua son sufijos (tiempo, persona, caso, subordinación…) y palabras nuevas
     palabra: 0.5
-  penalizacion_longitud_exponente: 0.5   # puntaje = ganancia / (n_palabras_qu ** exponente)
+  penalizacion_longitud_exponente: 0.5   # puntaje = ganancia / (n_palabras_es ** exponente)
 
 # Parte médica (§11.2)
 medico:
@@ -99,22 +109,23 @@ medico:
     - {etapa: "Síntomas asociados", cuota: 10}
     - {etapa: "Examen físico", cuota: 8}
     - {etapa: "Explicación, plan y cierre", cuota: 10}
-  calidad_borrador:                # de mejor (1) a peor (7)
-    "Final – fuente chanka oficial": 1
-    "Final – coincide en los Excel": 2
-    "Final – única fuente": 3
-    "Final – corregido/normalizado a chanka": 4
-    "Final – forma del libro compatible con chanka": 5
-    "Revisar – duda de traducción": 6
-    "Revisar – adaptación propuesta": 6
-    "Pendiente – sin traducción chanka": 7
+  calidad_borrador:                # de mejor (1) a peor (7), según de dónde sale el borrador collao (Tipo_borrador)
+    "fuente collao oficial": 1               # material oficial en quechua Cusco Collao (MinCul/MINSA), cuando se descargue
+    "Farfán (cusqueño, original)": 2         # Farfán Cantero (2001), UNSAAC: cusqueño, forma original
+    "Lopera (libro, collao)": 3              # Lopera Quiroga (2020): forma original del libro (Puno/Cusco)
+    "OPS/OMS Bolivia (sureño boliviano)": 4  # familia collao, pero boliviano: el traductor lo ajusta a Cusco
+    "ninguno": 7                             # solo español: el traductor traduce desde cero
+  calidad_dudosa: 5                # si el equipo marcó el borrador del libro como «Revisar – duda de traducción»
   max_palabras_frase: 15           # frases del médico elegibles para B02 en adelante
 
 # Oraciones de control en B01 (D7)
 control:
   activo: true
-  n_general: 10
-  n_medico: 5
+  # Cuántas por bloque. Con collao la parte general no trae borrador, así que el control sale de la parte médica
+  # con borrador collao, en B02.
+  por_bloque:
+    # B01 ya no tiene: su borrador oculto era chanka y no servía para medir nada (scripts/congelar_bloque.py)
+    B02: {general: 0, medico: 10}   # las de B02 miden el anclaje con borradores collao
   calidad_max_medico: 4            # solo borradores médicos de buena calidad (1–4) sirven de control
   similitud_max_hermana: 75        # no se elige de control una fila con una «hermana» visible tan parecida (D7)
   excluir_codigos: [F-0052]        # español dudoso sin borrador a la vista («Mi tía hace chicha punta»: la coordinación del proyecto confirma «punta»)
@@ -139,16 +150,18 @@ qa:
   ratio_longitud_max: 2.0
   avisos_word_max: 1               # avisos ALTA por fila en el Word (§8.4: «una línea breve»)
 
-# Verificación de P6 (F2)
+# Ingesta (F2): emparejar filas del unificado con el original collao de cada fuente (por el español)
 ingesta:
-  p6_umbral_similitud: 90          # frase del Grupo 2 = ejemplo del diccionario MINEDU si la similitud es ≥ este valor
+  ops_umbral_similitud: 92         # OPS/OMS Bolivia: con 90–91 aparecían empates falsos («tomografía» ↔ «radiografía»)
+  farfan_umbral_similitud: 90      # Farfán: la tabla del HTML es corta y limpia
 
 # Ida y vuelta con el traductor (§8.5, D7)
 traductor:
   umbral_sin_cambios: 0.0          # distancia normalizada ≤ este valor → sin cambios
   umbral_reescrito: 0.5            # distancia normalizada > 0.5 → reescrito
   umbral_dejar_borradores: 0.5     # si > 50 % de filas con borrador se reescriben, dejar de dar borradores
-  min_filas_sublote_sin_tocar: 10  # si un sublote vuelve 100 % igual al borrador (con al menos estas filas), no se valida solo
+  min_filas_sublote_sin_tocar: 5   # si un sublote vuelve 100 % igual al borrador (con al menos estas filas), no se valida solo
+                                   # (era 10; con collao hay ~4–8 borradores por sublote)
 
 # Audio (P5)
 audio:

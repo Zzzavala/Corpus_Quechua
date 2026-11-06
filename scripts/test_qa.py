@@ -13,63 +13,80 @@ from dedup import grupos_casi_duplicados
 from qa import aviso_word, detectar_dup, revisar_fila
 import quechua as Q
 
+# Variedad objetivo: quechua COLLAO de Cusco (desde el 5-nov-2026). Los casos de §6 que eran «rasgos no chanka»
+# (glotalizadas, -sha-, -n, -nchis, -qti-, unu, uhyay) ahora son lo CORRECTO; lo que se marca es lo chanka o boliviano.
 CASOS = [
     # (español, quechua, dominio, tipos que deben aparecer (al menos uno))
-    ("Desde un mes me duele mucho mi estómago", "Qayna wata tumpallata wiksay nanachkan", "Médico", {"SENTIDO"}),
-    ("No debes comer comida con mucha sal", "Amam pisi kachiyuq mikunata mikunkichu", "Médico", {"SENTIDO"}),
-    ("¿Era mucho?", "¿Achkhachu karqa?", "Médico", {"ORTO"}),
-    ("¿Estás bien?", "¿llinllachu kachkanki?", "Médico", {"TRANSCRIPCION", "OOV"}),
-    ("¿Quién eres?", "¿Itaq kanki?", "Médico", {"TRANSCRIPCION", "OOV"}),
-    ("En cada comida tienes que lavarte las manos.", "Makiykita sapa mikunapi mayllijunayki.", "Médico", {"ORTO"}),
-    ("¿Cómo era tu dolor?", "¿Imaynatoq nanayniyki karqa?", "Médico", {"ORTO"}),
-    ("¿Te duele?", "¿Nanasukichu?", "Médico", {"TRANSCRIPCION", "OOV"}),
+    ("Desde un mes me duele mucho mi estómago", "Qayna wata tumpallata wiksay nanashan", "Médico", {"SENTIDO"}),
+    ("No debes comer comida con mucha sal", "Aman pisi kachiyuq mikhunata mikhunkichu", "Médico", {"SENTIDO"}),
+    ("¿Estás bien?", "¿llinllachu kashanki?", "Médico", {"TRANSCRIPCION", "OOV"}),
+    ("En cada comida tienes que lavarte las manos.", "Makiykita sapa mikhunapi maqchijunayki.", "Médico", {"ORTO"}),
+    ("¿Le duele el cuello?", "¿Kunkaiki nanan?", "Médico", {"ORTO"}),               # semivocal: kunkayki
+    ("¿Duerme bien?", "¿Allyntachu puñunky?", "Médico", {"ORTO"}),                 # semivocal: allintachu, puñunki
+    ("Estómago", "wicsa", "Médico", {"ORTO"}),
+    ("Uno", "juk", "Médico", {"ORTO"}),                                             # j → h en Cusco
     ("Pido perdón por el cordero.", "Carnerota pampachaykuway.", "General", {"PRESTAMO"}),
     ("Pienso en ti.", "Qampi piensani.", "General", {"PRESTAMO"}),
-    ("Todos entienden.", "Lliwtam entienden.", "General", {"PRESTAMO"}),
+    ("Todos entienden.", "Lliwtan entienden.", "General", {"PRESTAMO"}),
     ("Es mi amistad.", "Amistadniymi.", "General", {"PRESTAMO"}),
     ("Mi dibujo.", "Dibujoyniyqa.", "General", {"PRESTAMO"}),
-    ("Hueso", "tuyu", "Médico", {"TRANSCRIPCION", "OOV"}),
-    ("Nariz", "ñorton", "Médico", {"ORTO"}),
-    ("Plata", "qolqe", "Médico", {"ORTO"}),
-    ("Huevo", "runto", "Médico", {"ORTO"}),
-    ("Uña", "siyu", "Médico", {"TRANSCRIPCION", "OOV"}),
-    ("Sangre", "yawa", "Médico", {"TRANSCRIPCION", "OOV"}),
-    ("No es estándar", "stardin manchu", "Médico", {"PRESTAMO", "TRANSCRIPCION", "ORTO"}),
-    ("Mil uno", "waranqa hukniyoq", "Médico", {"ORTO"}),
-    ("¿Sabes escribir?", "qellqaytay yachankichu", "Médico", {"ORTO"}),
-    ("¿Cómo estás?", "¿Imayna kashanki?", "Médico", {"VARIEDAD"}),
-    ("¿Qué te duele?", "¿Imaykin nanan?", "Médico", {"VARIEDAD"}),
-    ("No", "Manan", "Médico", {"VARIEDAD"}),
-    ("Ropa", "p'acha", "Médico", {"ORTO"}),
-    ("Mira", "qhaway", "Médico", {"ORTO"}),
-    ("Nosotros", "ñoqanchis", "Médico", {"VARIEDAD", "ORTO"}),
-    ("Cuando caminas", "purijtiyki", "Médico", {"VARIEDAD"}),
-    ("Agua", "unu", "Médico", {"VARIEDAD"}),
-    ("Tomar", "uhyay", "Médico", {"VARIEDAD"}),
     ("¡Bebo!", "¡Tomani!", "General", {"PRESTAMO"}),
+    ("No es estándar", "stardin manchu", "Médico", {"PRESTAMO", "TRANSCRIPCION", "ORTO"}),
+    # rasgos chanka o bolivianos (no son del quechua de Cusco)
+    ("¿Cómo estás?", "¿Imaynam kachkanki?", "Médico", {"VARIEDAD"}),
+    ("No", "Manam", "Médico", {"VARIEDAD"}),
+    ("Nosotros", "ñuqanchik", "Médico", {"VARIEDAD"}),
+    ("Cuando caminas", "puriptiyki", "Médico", {"VARIEDAD"}),
+    ("Agua", "yaku", "Médico", {"VARIEDAD"}),
+    ("Tomar", "upyay", "Médico", {"VARIEDAD"}),
+    ("¿Cuántos años tienes?", "¿Machkha watayuqtaq kanki?", "Médico", {"VARIEDAD"}),
+    ("Sangre", "llawar", "Médico", {"VARIEDAD"}),
 ]
+# «e» y «o» solo son error con 3 vocales (P3: desde el 5-nov-2026 son 5)
+if Q.VOCALES == 3:
+    CASOS += [("¿Cómo era tu dolor?", "¿Imaynatoq nanayniyki karqa?", "Médico", {"ORTO"}),
+              ("Plata", "qolqe", "Médico", {"ORTO"}),
+              ("¿Sabes escribir?", "qellqaytay yachankichu", "Médico", {"ORTO"})]
 
-# Falsos positivos encontrados al revisar la pestaña QA: estos NO deben marcar el tipo indicado.
+# Lo que es correcto en collao NO debe marcarse (antes, con chanka, sí se marcaba).
 NO_DEBEN = [
-    ("Debe quedarse en casa por 14 días.", "Wasillaykipi qipakuy chunka tawayuq punchaw.", "ALINEACION"),
+    ("¿Cómo estás?", "¿Imaynan kashanki?", "VARIEDAD"),
+    ("No", "Manan", "VARIEDAD"),
+    ("Nosotros", "ñuqanchis", "VARIEDAD"),
+    ("Cuando caminas", "puriqtiyki", "VARIEDAD"),
+    ("Agua", "unu", "VARIEDAD"),
+    ("Tomar", "uhyay", "VARIEDAD"),
+    ("Día", "p'unchay", "ORTO"),
+    ("Mira", "qhaway", "ORTO"),
+    ("Comida", "mikhuna", "ORTO"),
+    ("¿Desde cuándo te duele?", "¿Hayk'aqmanta nanasunki?", "ORTO"),
+    # falsos positivos de alineación y sentido que no deben volver
+    ("Debe quedarse en casa por 14 días.", "Wasillaykipi qhipakuy chunka tawayuq p'unchay.", "ALINEACION"),
     ("Él sube al segundo piso.", "Pay iskay pisuman siqan.", "ALINEACION"),
-    ("Dudo sobre los colores de su traje.", "Pachaykipa colorninmanta iskayrayani.", "ALINEACION"),
-    ("¡Un día vi ponerse el sol cuarenta y tres veces!", "¡Huk punchawmi inti siqaykuyta tawa chunka kimsayuq kutita rikurqani!", "ALINEACION"),
-    ("El pez nada en el agua.", "Challwa yakupi waytan.", "SENTIDO"),
+    ("¡Un día vi ponerse el sol cuarenta y tres veces!", "¡Huk p'unchaymi inti siqaykuyta tawa chunka kimsayuq kutita rikurqani!", "ALINEACION"),
+    ("El pez nada en el agua.", "Challwa unupi waytan.", "SENTIDO"),
     ("¿Poco, fuerte o leve?", "¿Pisitachu, sinchitachu?", "SENTIDO"),
-    ("En cada comida tienes que lavarte las manos.", "Makiykita sapa mikunapi mayllikunayki.", "TRANSCRIPCION"),
 ]
+if Q.VOCALES == 5:
+    NO_DEBEN += [("¿Cómo era tu dolor?", "¿Imaynatoq nanayniyki karqa?", "ORTO"), ("Plata", "qolqe", "ORTO"),
+                 ("Plata", "qolqe", "PRESTAMO"), ("¿Sabes escribir?", "qellqaytay yachankichu", "ORTO"),
+                 ("Enfermedad", "onqoy", "PRESTAMO")]
 
+TRES = Q.VOCALES == 3
 NORMALIZACION = [
-    ("p'acha", "pacha"), ("qhaway", "qaway"), ("achkha", "achka"), ("onqoy", "unquy"), ("hukniyoq", "hukniyuq"),
-    ("qolqe", "qulqi"), ("wicsa", "wiksa"), ("jamuy", "hamuy"), ("huasi", "wasi"), ("¿Achkhachu karqa?", "¿Achkachu karqa?"),
-    ("Ñuqa Lince nisqapi tiyani", "Ñuqa Lince nisqapi tiyani"), ("Ayacuchomanta kani", "Ayacuchomanta kani"),
-    ("Sutiyqa Annel.", "Sutiyqa Annel."),
-    ("Hospitalisakunayki.", "Hospitalisakunayki."), ("Lluqi pechoykita tocasayki.", "Lluqi pechoykita tocasayki."),
-    ("¿Samanki hina o ruwanki hina?", "¿Samanki hina o ruwanki hina?"), ("¿Wawacha naceruspan waqarqa?", "¿Wawacha naceruspan waqarqa?"),
-    ("Weqeyta waqastin.", "Wiqiyta waqastin."), ("inti seqaykuyta", "inti siqaykuyta"),
+    # glotalizadas y aspiradas se conservan (alfabeto collao)
+    ("p'acha", "p'acha"), ("qhaway", "qhaway"), ("p’unchay", "p'unchay"), ("mikhuy", "mikhuy"),
+    # vocales según P3, j → h, semivocales
+    ("onqoy", "unquy" if TRES else "onqoy"), ("hukniyoq", "hukniyuq" if TRES else "hukniyoq"), ("qolqe", "qulqi" if TRES else "qolqe"),
+    ("jamuy", "hamuy"), ("Juk kutitachu", "Huk kutitachu"),
+    ("¿Hayka killatac?", "¿Hayka killataq?"), ("seccsisunkichu", "seqsisunkichu"),      # «c» final y «cc» → q
+    ("¿Kunkaiki nanan?", "¿Kunkayki nanan?"), ("Allyntachu puñunky?", "Allintachu puñunki?"), ("Taitaykiwan", "Taytaykiwan"),
+    ("sonkoiykita", "sunkuykita" if TRES else "sonkoykita"), ("K’echaqtin", "K'ichaqtin" if TRES else "K'echaqtin"),
+    # préstamos y nombres propios no se tocan (tampoco la «qu» castellana de un nombre)
+    ("Ñuqa Lince nisqapi tiyani", "Ñuqa Lince nisqapi tiyani"), ("Cuscomanta kani", "Cuscomanta kani"),
+    ("Sutiyqa Annel.", "Sutiyqa Annel."), ("Hospitalisakunayki.", "Hospitalisakunayki."),
     ("hospitalman rini", "hospitalman rini"), ("Carnerota", "Carnerota"), ("Coronavirus unquymanta", "Coronavirus unquymanta"),
-    ("Iskay minotollapas.", "Iskay minotollapas."),          # H23: préstamo, la regla de vocales no lo toca
+    ("Iskay minotollapas.", "Iskay minotollapas."), ("hinatachu Yupanqui?", "hinatachu Yupanqui?"),
 ]
 
 # Revisión ultracode (H15, H23, H24, H27): avisos que NO deben salir como ALTA en el Word.

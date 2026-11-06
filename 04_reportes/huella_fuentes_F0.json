@@ -64,6 +64,16 @@
     "modificado": "2026-10-14T14:49:19",
     "sha256": "be4379112e87bdfac9efac07919d1bc9faed434b66c00d21a37ed54f3efdf7c1"
   },
+  "Fuentes/AmericasNLP/es-quz/jw300.es-quz.es": {
+    "bytes": 12660076,
+    "modificado": "2026-11-05T03:07:31",
+    "sha256": "c6d34548622eb510ed89fb08934f28fbd9b89c872ee07a5788c8177012e57ea7"
+  },
+  "Fuentes/AmericasNLP/es-quz/jw300.es-quz.quz": {
+    "bytes": 12101655,
+    "modificado": "2026-11-05T03:07:38",
+    "sha256": "52ad7293cf9187d3fa6dd57ad77b26b93cc2bfccd4f188c3f9a51b7ff4902df2"
+  },
   "Fuentes/AmericasNLP/README.md": {
     "bytes": 2039,
     "modificado": "2026-10-14T14:48:33",
@@ -88,6 +98,41 @@
     "bytes": 1221,
     "modificado": "2026-10-14T15:07:41",
     "sha256": "b158361a1b54f4647acdec133b82fc3e4dd152a21a568e9ec15d843643adb7fe"
+  },
+  "Fuentes/collao/MinCul_Glosario_aimara_quechua_PIAS_Puno.pdf": {
+    "bytes": 8518167,
+    "modificado": "2026-11-05T03:07:21",
+    "sha256": "46e51712f837998045c0a12f1c339334434583f6938f83cddd205ba06ab90c9f"
+  },
+  "Fuentes/collao/MinCul_Glosario_COVID19_VMI.pdf": {
+    "bytes": 2198664,
+    "modificado": "2026-11-05T03:07:10",
+    "sha256": "bfbea1fc1e3836db199894573af2a05da9725d9c092b57273d627125acddb138"
+  },
+  "Fuentes/collao/MinCul_Guia_senaletica_lenguas_indigenas.pdf": {
+    "bytes": 1522970,
+    "modificado": "2026-11-05T03:07:23",
+    "sha256": "1ede9406c2f8c0bb2ba44bf9e9a1b72710ec277948879aa16d7fb32190af5f90"
+  },
+  "Fuentes/collao/MinCul_Manual_justicia_Quechua_Cusco_Collao.pdf": {
+    "bytes": 2059724,
+    "modificado": "2026-11-05T03:07:08",
+    "sha256": "0d160dff0e7f7be6a6665e5d6786ce844eac8ef0f684ab5743a43ab20d7a4a40"
+  },
+  "Fuentes/collao/MinCul_Palabras_clave_salud_Quechua_Cusco.pdf": {
+    "bytes": 1553215,
+    "modificado": "2026-11-05T03:07:05",
+    "sha256": "0ba3b2ec370720abccb14fd40d1572fc6c784253f062764bc0b950006339a0f6"
+  },
+  "Fuentes/collao/MINSA_COVID19_lavado_de_manos_quechua_Cusco_Collao.pdf": {
+    "bytes": 407376,
+    "modificado": "2026-11-05T03:07:25",
+    "sha256": "44e385908e600704f0feb2ddc904c5cb64b65124bbeca061290a07fbd2bd8c23"
+  },
+  "Fuentes/collao/MINSA_COVID19_prevencion_general_quechua_Cusco_Collao.pdf": {
+    "bytes": 695267,
+    "modificado": "2026-11-05T03:07:24",
+    "sha256": "4a45bfe59fb44bf80a087f603c66a9ae55933048a804378edbf1d914e0bf6360"
   },
   "Fuentes/Corpus_Construido (1).xlsx": {
     "bytes": 11639,
@@ -145,9 +190,9 @@
     "sha256": "e362250a7f88adc22a5e28c7a231b2a9f1b6779aaa1425c44b5a03cb845b52fe"
   },
   "Estrategia/CLAUDE.md": {
-    "bytes": 55695,
-    "modificado": "2026-10-16T13:19:00",
-    "sha256": "47b247a80f1b97ea95601798123c9f65ee7aac3abf3e406dfab17cc8e8b060b2"
+    "bytes": 61464,
+    "modificado": "2026-11-05T16:00:28",
+    "sha256": "58da513d0d9cefbacba5f131501c053b5f355856c40f315dadcb29f54f5ab8a4"
   },
   "Estrategia/INF657_CLAUDE_corpus.md": {
     "bytes": 54931,

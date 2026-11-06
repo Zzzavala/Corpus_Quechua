@@ -4,6 +4,8 @@
 # Vida cotidiana andina, sin tema médico ni religioso, frases cortas (≤ 12 palabras) y naturales.
 # Cada grupo apunta a un rasgo gramatical (entre paréntesis, la forma que se espera en quechua; la decide el traductor).
 # Se crean como filas nuevas con Tipo_borrador = "redactado por Claude (solo español)" y Estado = Por_revisar.
+# 5-nov-2026: el traductor comentó en B01 que «desayuno» no se dice así en quechua; por eso se evitan desayuno, almuerzo
+# y mar. «¿Ya comiste tu desayuno?» se deja porque es la fila de B01, congelada tal cual.
 # El quechua lo pone el traductor. Nunca se redacta quechua.
 
 pasado_rqa:
@@ -30,7 +32,7 @@ pasado_rqa:
     - "Caminamos tres horas hasta la comunidad."
     - "El perro ladró toda la noche."
     - "Mis primos construyeron una casa nueva."
-    - "El bus llegó tarde a Huamanga."
+    - "El bus llegó tarde a Sicuani."
     - "Ayer no fui a trabajar."
     - "Cayó granizo sobre la chacra de habas."
     - "Mi hermano compró una radio nueva."
@@ -120,7 +122,7 @@ futuro:
     - "Tú cuidarás a las ovejas esta semana."
     - "El domingo vamos a vender queso en la feria."
     - "Mañana te devolveré tu libro."
-    - "Ellos viajarán a Huancavelica en bus."
+    - "Ellos viajarán a Puno en bus."
     - "Pronto empezará la siembra."
     - "Mañana no habrá clases en la escuela."
     - "Voy a cocinar sopa para todos."
@@ -147,7 +149,7 @@ futuro:
     - "El próximo mes nacerán los corderitos."
     - "Mañana limpiaremos la acequia."
     - "Mi papá te enseñará a arar."
-    - "Algún día viajaré al mar."
+    - "Algún día viajaré a Arequipa."
     - "Esta tarde jugaremos vóley en la plaza."
     - "Tus primos llegarán con regalos."
     - "Mañana iré temprano por agua."
@@ -165,7 +167,7 @@ futuro:
     - "Mi hija aprenderá a tocar la guitarra."
     - "Mañana regaremos la chacra de maíz."
     - "Después de la cosecha haremos una fiesta."
-    - "En abril iremos a Huanta."
+    - "En abril iremos a Urubamba."
     - "Mañana te prestaré mi caballo."
     - "El próximo domingo elegiremos al nuevo presidente de la comunidad."
     - "Este año sembraremos más quinua."
@@ -175,7 +177,7 @@ futuro:
 progresivo:
   rasgo: "progresivo (-chka-)"
   frases:
-    - "Ahora estoy cocinando el almuerzo."
+    - "Ahora estoy cocinando papas con queso."
     - "Los niños están jugando en el patio."
     - "Está lloviendo desde la mañana."
     - "Mi mamá está tejiendo una manta."
@@ -215,7 +217,7 @@ progresivo:
     - "Las mujeres están pelando habas."
     - "Estamos sembrando papa en la chacra de arriba."
     - "El niño estaba mirando las estrellas."
-    - "Mi hermana está preparando el desayuno."
+    - "Mi hermana está preparando la comida."
     - "Estaban esperando el camión en la carretera."
     - "Mi tío está cargando los costales al camión."
     - "Las nubes están tapando el cerro."
@@ -245,7 +247,7 @@ habitual_pasado:
     - "De niños nadábamos en la laguna."
     - "Mi mamá vendía queso en la feria de los domingos."
     - "Antes las casas tenían techo de paja."
-    - "Cada año íbamos al carnaval de Ayacucho."
+    - "Cada año íbamos a la fiesta del Inti Raymi."
     - "De joven mi papá tocaba el charango."
     - "Antes mi mamá molía el maíz en batán."
     - "De niña llevaba la merienda a mi papá."
@@ -288,7 +290,7 @@ imperativo:
     - "Barre el patio antes de salir."
     - "No le grites a tu hermano."
     - "Llévate el paraguas, va a llover."
-    - "Pongan la mesa para el almuerzo."
+    - "Pongan la mesa para comer."
 
 condicional:
   rasgo: "condicional y deseo (-man, -waq)"
@@ -300,7 +302,7 @@ condicional:
     - "Deberías descansar un poco."
     - "Podrías ayudarme con la cosecha."
     - "Si vinieras temprano, iríamos juntos."
-    - "Me gustaría conocer Ayacucho."
+    - "Me gustaría conocer el lago Titicaca."
     - "Sería bueno arreglar el camino."
     - "Si supiera leer, leería el periódico."
     - "Quisiéramos una escuela más grande."
@@ -337,7 +339,7 @@ preguntas:
     - "¿Lloverá mañana?"
     - "¿Has visto a mi perro?"
     - "¿De quién es esta casa?"
-    - "¿Qué cocinaste para el almuerzo?"
+    - "¿Qué cocinaste hoy?"
     - "¿Cómo se llama tu pueblo?"
     - "¿A qué hora empieza la reunión?"
     - "¿Ustedes ya terminaron la tarea?"

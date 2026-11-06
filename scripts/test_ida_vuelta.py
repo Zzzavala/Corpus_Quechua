@@ -1,7 +1,8 @@
 """Prueba de los scripts 06, 07 y 08 con datos simulados (§8.5, §13), sin tocar los archivos reales.
 
 Trabaja sobre COPIAS en 02_maestro/checkpoints/prueba_06_08/:
-- Copia B01_traductor.docx y simula lo que haría el traductor: deja filas igual, edita un poco, reescribe, llena las
+- Copia el Word de B02 (el de B01 ya tiene el trabajo real del traductor y está Enviado) y simula lo que haría el
+  traductor: deja filas igual, edita un poco, reescribe, llena las
   oraciones de control y las filas sin borrador, deja una vacía, agrega comentarios, cambia un español, borra una fila,
   duplica otra y agrega un ID que no existe.
 - Corre 06 (importar) contra copias del maestro y del Excel de trabajo, y verifica POR ID lo que quedó escrito.
@@ -32,7 +33,7 @@ from qa import aviso_word
 
 PY = sys.executable
 TMP = RAIZ / "02_maestro" / "checkpoints" / "prueba_06_08"
-B = "B01"
+B = "B02"
 REAL_MAESTRO = RAIZ / CFG["rutas"]["maestro"]
 REAL_TRABAJO = ruta("bloques") / B / f"{B}_trabajo.xlsx"
 REAL_WORD = ruta("bloques") / B / f"{B}_traductor.docx"
@@ -71,6 +72,37 @@ def main() -> int:
     shutil.copy(REAL_TRABAJO, t_trabajo)
     shutil.copy(REAL_WORD, t_word)
 
+    # Desde el cambio a collao, los bloques casi no traen borradores (la parte general va sin borrador). Para probar el mecanismo
+    # de edición, se ponen borradores SIMULADOS en la copia del maestro y en la copia del Word (los mismos en ambos),
+    # dejando 6 filas sin borrador para probar ese caso. Los archivos reales no se tocan.
+    wb = P.abrir(t_maestro)
+    ws_c = wb["Corpus"]
+    filas_c = P.filas_por_id(ws_c)
+    corpus = {r["ID"]: r for r in P.leer(ws_c)}
+    sin_b = [i for i, r in corpus.items() if r["Bloque"] == B and not r["Quechua_borrador"] and r["Control"] != "Sí"]
+    simulados = {i: f"Simulasqa rimay {k} kanmi." for k, i in enumerate(sin_b[6:], 1)}
+    for i, q in simulados.items():
+        P.poner(ws_c, filas_c[i], "Quechua_borrador", q)
+    # y un aviso ALTA simulado en la primera de ellas (pestaña QA + Observaciones del Word), para probar que 06 separa
+    # el comentario del traductor del «Aviso:» prellenado
+    # 4.ª fila simulada por orden: queda en S1 (S4 se devuelve sin tocar) y no es la primera fila con borrador, que la
+    # prueba usa para simular un español cambiado
+    id_aviso = sorted(simulados, key=lambda i: int(corpus[i]["N_bloque"]))[3]
+    ws_qa = wb["QA"]
+    cols_qa = P.columnas(ws_qa)
+    fila_qa = ws_qa.max_row + 1
+    for k, v in {"ID": id_aviso, "Tipo": "ORTO", "Severidad": "ALTA", "Detalle": "aviso simulado para la prueba"}.items():
+        ws_qa.cell(row=fila_qa, column=cols_qa[k]).value = v
+    P.guardar(wb, t_maestro)
+    texto_aviso = aviso_word([("ORTO", "ALTA", "aviso simulado para la prueba")])
+    dsim = Document(t_word)
+    for t in dsim.tables:
+        for row in t.rows:
+            if len(row.cells) >= 6 and row.cells[1].text.strip() in simulados:
+                row.cells[4].text = simulados[row.cells[1].text.strip()]
+                if row.cells[1].text.strip() == id_aviso:
+                    row.cells[5].text = texto_aviso
+    dsim.save(t_word)
     wb = P.abrir(t_maestro)
     corpus = {r["ID"]: r for r in P.leer(wb["Corpus"])}
     avisos = {}
@@ -81,7 +113,9 @@ def main() -> int:
     code, out = correr(["scripts/06_importar_traductor.py", B, "--marcar-enviado", "--maestro", str(t_maestro), "--trabajo", str(t_trabajo)])
     wb1 = P.abrir(t_maestro)
     est1 = Counter(r["Estado"] for r in P.leer(wb1["Corpus"]) if r["Bloque"] == B)
-    cam1 = [c for c in P.leer(wb1["Cambios"]) if "--marcar-enviado" in c["Regla"]]
+    # solo las de este bloque: el maestro real ya trae las de B01, que sí se envió
+    ids_b = {r["ID"] for r in P.leer(wb1["Corpus"]) if r["Bloque"] == B}
+    cam1 = [c for c in P.leer(wb1["Cambios"]) if "--marcar-enviado" in c["Regla"] and c["ID"] in ids_b]
     chequear("06 --marcar-enviado deja las 200 filas en Enviado y lo registra en Cambios",
              code == 0 and est1 == Counter({"Enviado": 200}) and len(cam1) == 200, f"({dict(est1)}; {len(cam1)} en Cambios)")
 
@@ -181,7 +215,7 @@ def main() -> int:
              code == 4 and sha256(t_maestro) == h_m, out.strip()[:120])
 
     # ------------------------------------------------------------ 06
-    rep = TMP / "importacion_B01.md"
+    rep = TMP / f"importacion_{B}.md"
     rel = lambda p: str(p.relative_to(RAIZ))             # rutas relativas a la raíz (H36)
     code, out = correr(["scripts/06_importar_traductor.py", B, "--docx", rel(t_word), "--maestro", rel(t_maestro),
                         "--trabajo", rel(t_trabajo), "--reporte", rel(rep)])
@@ -272,7 +306,7 @@ def main() -> int:
     wav(audio / f"{ids[5]}_qu.wav")
     wav(audio / f"{ids[6]}_ES.WAV"); wav(audio / f"{ids[6]}_qu.wav")            # nombre en mayúsculas
     wav(audio / f"{ids[7]}_es.wav"); wav(audio / f"{ids[7]}_qu.wav"); wav(audio / "sesion3" / f"{ids[7]}_qu.wav")   # repetido
-    man = TMP / "manifest_B01.csv"
+    man = TMP / f"manifest_{B}.csv"
     code, out = correr(["scripts/08_manifest.py", B, "--maestro", rel(t_maestro), "--audio-dir", rel(audio), "--salida", rel(man)])
     chequear("08 corre y escribe el manifest (rutas relativas a la raíz)", code == 0 and man.exists(), out.strip()[-140:])
     filas = {r["id"]: r for r in csv.DictReader(open(man, encoding="utf-8"))}
@@ -292,7 +326,9 @@ def main() -> int:
     md = ["# Prueba de los scripts 06, 07 y 08 con datos simulados", "",
           f"Generado por `scripts/test_ida_vuelta.py`. Se trabajó sobre copias en `02_maestro/checkpoints/prueba_06_08/`; "
           "los archivos reales no se modificaron (se comprueba con sha256).", "",
-          "**Qué se simuló:** marcar el bloque como Enviado; en la copia del Word de B01, filas sin cambios, 10 con una edición "
+          f"**Qué se simuló:** como {B} casi no trae borradores collao, primero se pusieron borradores simulados en la copia "
+          "del maestro y del Word (todas las filas sin borrador menos 6). Luego: marcar el bloque como Enviado; en la copia "
+          f"del Word de {B}, filas sin cambios, 10 con una edición "
           "pequeña (8 en S1 y 1 en S2 y S3), 3 reescritas, el sublote S4 devuelto sin ningún cambio, "
           f"las {len(control)} oraciones de control llenadas (la mitad igual al borrador oculto, la otra mitad distinta), "
           "las filas sin borrador llenadas, 1 fila dejada vacía, un comentario después de un «Aviso:», un comentario suelto, "

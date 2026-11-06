@@ -29,7 +29,7 @@ DATOS = RAIZ / CFG["rutas"]["datos_redactados"]
 COLS_F2 = ["uid", "Dominio", "Pool", "Fuente", "Fuente_detalle", "Archivo", "Hoja", "Código_original", "Códigos_origen",
            "Fila_original", "Español", "Quechua_borrador", "Tipo_borrador", "Variedad_fuente", "Origen_verificado",
            "Estado_unificado", "Observaciones_heredadas", "Propuestas_equipo", "Sección", "Escenario", "Etapa_consulta",
-           "Etapa_B01", "Tipo_oración", "Rol", "Evidencia_P6"]
+           "Etapa_B01", "Tipo_oración", "Rol", "Evidencia_borrador", "Rol_fijo"]
 SECCIONES_LEX_PRIORITARIAS = ("Signos y síntomas", "Cuerpo humano", "Enfermedades, lesiones y condiciones",
                               "Fluidos, secreciones y excretas", "Funciones y procesos del cuerpo")
 
@@ -40,14 +40,16 @@ def cargar_yaml(nombre: str) -> dict:
 
 
 def calidad(r: dict) -> int:
-    """§11.2: 1 = mejor borrador … 7 = solo español. En lo general: Principito > frases variadas > ejercicios."""
+    """§11.2: 1 = mejor borrador collao … 7 = solo español (config.medico.calidad_borrador, por Tipo_borrador).
+    En lo general (sin borrador): Principito > frases variadas > ejercicios."""
     if r["Dominio"] == "General":
         return {"principito": 1, "g2_diccionario": 2, "g2_ejercicio": 3}.get(r["Pool"], 3)
     if not r["Quechua_borrador"]:
         return 7
-    if r["Tipo_borrador"] == "fuente chanka oficial":
-        return 1
-    return int(CFG["medico"]["calidad_borrador"].get(r["Estado_unificado"], 6))
+    c = int(CFG["medico"]["calidad_borrador"].get(r["Tipo_borrador"], 6))
+    if texto(r["Estado_unificado"]).startswith("Revisar – duda"):
+        c = max(c, int(CFG["medico"]["calidad_dudosa"]))      # el equipo dudó de esa traducción del libro
+    return c
 
 
 # ------------------------------------------------------------------ normalización del español
@@ -243,7 +245,7 @@ def main() -> int:
             continue
         q = signos_y_espacios(q0, es_espanol=False)
         cambio(r["uid"], "Quechua_borrador", q0, q, "espacios y signos")
-        if r["Tipo_borrador"] == "fuente chanka oficial":
+        if r["Tipo_borrador"] == "fuente collao oficial":
             r["Quechua_borrador"] = q
             continue
         q2, reglas = Q.normalizar_ortografia(q)
@@ -253,7 +255,7 @@ def main() -> int:
     # ---------------------------------------------------------- 4. reclasificar con el texto limpio
     for r in filas:
         r["Tipo_oración"] = tipo_oracion(r["Español"])
-        if r["Dominio"] == "Médico":
+        if r["Dominio"] == "Médico" and r.get("Rol_fijo") != "Sí":      # si la fuente dice quién habla (F/C), se respeta
             r["Rol"] = rol(r["Español"], "Médico", r["Etapa_consulta"], r["Sección"])
             r["Etapa_B01"] = etapa_b01(r["Sección"], r["Español"])
         r["Calidad"] = calidad(r)
@@ -262,7 +264,9 @@ def main() -> int:
     corpus, lexico = [], []
     for r in filas:
         es_lex = r["Dominio"] == "Médico" and not es_pregunta(r["Español"]) and (
-            r["Tipo_oración"] == "palabra" or (r["Etapa_consulta"] == "Léxico" and n_palabras(r["Español"]) <= 3))
+            r["Tipo_oración"] == "palabra" or (r["Etapa_consulta"] == "Léxico" and n_palabras(r["Español"]) <= 3)
+            # Palabras clave (MINSA): las entradas cortas que no son pregunta ni orden son términos («Examen de sangre.»)
+            or (r["Código_original"].startswith(("PCS-", "PIA-")) and n_palabras(r["Español"]) <= 3 and r["Tipo_oración"] != "orden"))
         (lexico if es_lex else corpus).append(r)
     # léxico: quitar repetidos exactos
     vistos: dict[str, dict] = {}
@@ -357,7 +361,7 @@ def main() -> int:
 
     origen = C[["ID", "Fuente", "Archivo", "Hoja", "Código_original", "Fila_original", "Tipo_borrador", "Variedad_fuente",
                 "Origen_verificado", "Estado_unificado", "Observaciones_heredadas", "Códigos_origen", "Códigos_unidos",
-                "Otros_borradores", "Propuestas_equipo", "Parte_de", "Evidencia_P6", "Fuente_detalle", "uid"]].copy()
+                "Otros_borradores", "Propuestas_equipo", "Parte_de", "Evidencia_borrador", "Fuente_detalle", "uid"]].copy()
 
     L = pd.DataFrame(lex)
     L["ID"] = L["uid"].map(ids)
@@ -383,8 +387,8 @@ def main() -> int:
         am = avisos_man.get(r["Código_original"]) if r["Quechua_borrador"] else None
         if am:                                   # primero el aviso puesto a mano: es el que llega al Word
             qa_rows.append({"ID": r["ID"], "Tipo": am["tipo"], "Severidad": am["severidad"], "Detalle": am["detalle"]})
-        for t, s, d in revisar_fila(r["Español"], r["Quechua_borrador"], r["Dominio"], r["Tipo_borrador"] == "fuente chanka oficial",
-                                    r["Estado_unificado"], r["Observaciones_heredadas"]):
+        for t, s, d in revisar_fila(r["Español"], r["Quechua_borrador"], r["Dominio"], r["Tipo_borrador"] == "fuente collao oficial",
+                                    r["Estado_unificado"], r["Observaciones_heredadas"], r["Tipo_borrador"]):
             qa_rows.append({"ID": r["ID"], "Tipo": t, "Severidad": s, "Detalle": d})
         if r["Otros_borradores"]:
             qa_rows.append({"ID": r["ID"], "Tipo": "DUP", "Severidad": "BAJA", "Detalle": f"había otro borrador para el mismo español: {r['Otros_borradores']}"})

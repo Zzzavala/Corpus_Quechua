@@ -3,12 +3,12 @@
 # redactadas por Claude (`nuevo`), que quedan con Tipo_borrador = "redactado por Claude (solo español)" y
 # Estado = Por_revisar. Nunca se redacta quechua.
 #
-# Caso: paciente mujer (Annel, 20 años, de Ayacucho) con dolor de barriga desde hace tres días, fiebre y vómitos.
+# Caso: paciente mujer (Annel, 20 años, de Cusco; antes «de Ayacucho», cambiado al pasar a quechua collao) con dolor de barriga desde hace tres días, fiebre y vómitos.
 # Cada unidad (pregunta + respuestas) va entera en el mismo sublote.
 
 - etapa: Inicio
   unidades:
-    - [{cod: QCH-1295}, {nuevo: "Buenos días, doctor.", rol: Paciente}]
+    - [{cod: QCH-1295}, {cod: MJC-019-06}]   # «Buenos días, doctor.»: frase oficial collao (Ministerio de Cultura), antes redactada
     - [{cod: QCH-0001}, {cod: QCH-0002}]
     - [{cod: QCH-0011}, {cod: QCH-0012}]
     - [{cod: QCH-0015}, {cod: QCH-0016}]

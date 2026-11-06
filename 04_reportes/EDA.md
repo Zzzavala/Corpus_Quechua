@@ -1,6 +1,6 @@
 # EDA del corpus (F3) — antes de limpiar
 
-Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-10-15). Todo se mide **antes** de la limpieza (F4). Las cifras de rasgos del quechua son **sospechas automáticas**: Claude no es hablante de chanka.
+Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-11-05). Todo se mide **antes** de la limpieza (F4). Las cifras de rasgos del quechua son **sospechas automáticas**: Claude no es hablante de quechua. Variedad del corpus: **quechua collao (Cusco–Collao)**; del material chanka solo se usa el español.
 
 ## 1. Cuántas filas hay y de dónde salen
 
@@ -9,96 +9,90 @@ Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-10-15). Todo se mi
 | General | G2 ejercicios | 545 |
 | General | G2 frases variadas | 128 |
 | General | Principito (G1) | 113 |
-| Médico | Médico (unificado) | 1528 |
+| Médico | Médico (unificado) | 2767 |
 
-- **General** = Principito (traducción automática) + Grupo 2. **Médico** = vocabulario unificado (1 528 filas).
+- **General** = Principito + Grupo 2 (solo español). **Médico** = vocabulario unificado (1 528 filas) + 25 frases de Farfán que el unificado no tenía.
 - Grupo 2 incluye 4 filas que no son oraciones (F-0517 vacía y 3 de bibliografía); se descartan en F4.
 
 ### Fuente
 
 | Fuente | Filas | % |
 |---|---|---|
-| Grupo 2 – Corpus Chanka | 673 | 29.1 |
-| Lopera Quiroga (2020) | 566 | 24.5 |
-| Allin Kawsay (INS/MINSA) | 510 | 22.0 |
-| OPS/OMS Bolivia (2013) | 234 | 10.1 |
-| SOCEMURP (corpus original del equipo) | 118 | 5.1 |
-| Grupo 1 – El Principito | 113 | 4.9 |
-| Kim 1 (pregunta añadida) | 43 | 1.9 |
-| Farfán Cantero (2001), SITUA | 24 | 1.0 |
-| MinCul – manual de justicia (chanka) | 13 | 0.6 |
-| YouTube | 9 | 0.4 |
-| Afiche MINSA/MinCul lavado de manos (chanka) | 6 | 0.3 |
-| MINSA – diabetes (quechua) | 4 | 0.2 |
+| MINSA (s. f.), Palabras clave para la atención en salud – Quechua Cusco (difundido por el Ministerio de Cultura) | 1063 | 29.9 |
+| Grupo 2 – Corpus Chanka | 673 | 18.9 |
+| Lopera Quiroga (2020) | 566 | 15.9 |
+| Allin Kawsay (INS/MINSA) | 510 | 14.4 |
+| OPS/OMS Bolivia (2013) | 234 | 6.6 |
+| SOCEMURP (corpus original del equipo) | 118 | 3.3 |
+| Grupo 1 – El Principito | 113 | 3.2 |
+| Ministerio de Cultura (2015), Manual para el empleo del quechua Cusco Collao en la administración de justicia | 103 | 2.9 |
+| Farfán Cantero (2001), SITUA | 49 | 1.4 |
+| Ministerio de Cultura, Glosario multilingüe de la PIAS Lago Titicaca I (aimara y quechua Cusco Collao, Puno) | 48 | 1.4 |
+| Kim 1 (pregunta añadida) | 43 | 1.2 |
+| MinCul – manual de justicia (chanka) | 13 | 0.4 |
+| YouTube | 9 | 0.3 |
+| Afiche MINSA/MinCul lavado de manos (chanka) | 6 | 0.2 |
+| MINSA – diabetes (quechua) | 4 | 0.1 |
 | OMS (2009) – lista de verificación | 1 | 0.0 |
 
 ### Variedad de la fuente
 
 | Variedad de la fuente | Filas | % |
 |---|---|---|
-| chanka (frases del equipo, sin validar) | 673 | 29.1 |
-| collao/Puno, normalizado a chanka por reglas | 566 | 24.5 |
-| sin confirmar (web INS/MINSA) | 510 | 22.0 |
-| boliviano (solo se tomó el español) | 234 | 10.1 |
-| chanka (declarada por el manual) | 118 | 5.1 |
-| máquina (NLLB-200 1.3B → quy) | 113 | 4.9 |
-| — (solo español) | 44 | 1.9 |
-| cusqueño, normalizado a chanka por reglas | 24 | 1.0 |
-| chanka oficial (MinCul) | 13 | 0.6 |
-| sin confirmar | 9 | 0.4 |
-| chanka oficial (MINSA/MinCul) | 6 | 0.3 |
-| sin confirmar (MINSA) | 4 | 0.2 |
+| collao cusqueño, oficial (traducción del Estado) | 1214 | 34.2 |
+| — (solo español; su quechua era chanka y no se usa) | 823 | 23.2 |
+| collao (Puno/Cusco), forma original del libro | 566 | 15.9 |
+| — (solo español; su quechua era chanka de Huancavelica, transcrito de oído) | 510 | 14.4 |
+| quechua sureño boliviano (familia collao) | 234 | 6.6 |
+| — (solo español; su quechua era de traductor automático chanka quy) | 113 | 3.2 |
+| collao cusqueño, forma original | 49 | 1.4 |
+| — (solo español) | 44 | 1.2 |
 
 ### Tipo de borrador
 
 | Tipo de borrador | Filas | % |
 |---|---|---|
-| ejercicio generado | 545 | 23.6 |
-| normalizado de Lopera | 510 | 22.0 |
-| Allin Kawsay (transcripción) | 472 | 20.4 |
-| ninguno | 373 | 16.1 |
-| MINEDU | 127 | 5.5 |
-| SOCEMURP | 118 | 5.1 |
-| traductor automático Rosettia | 113 | 4.9 |
-| normalizado de Farfán (cusqueño) | 24 | 1.0 |
-| fuente chanka oficial | 19 | 0.8 |
-| YouTube (transcripción) | 9 | 0.4 |
-| MINSA (material en quechua) | 4 | 0.2 |
+| ninguno | 1552 | 43.7 |
+| fuente collao oficial | 1214 | 34.2 |
+| Lopera (libro, collao) | 564 | 15.9 |
+| OPS/OMS Bolivia (sureño boliviano) | 174 | 4.9 |
+| Farfán (cusqueño, original) | 49 | 1.4 |
 
 ### Estado en el unificado (solo médico)
 
 | Estado en el unificado (solo médico) | Filas | % |
 |---|---|---|
-| Final – corregido/normalizado a chanka | 522 | 34.2 |
-| Pendiente – sin traducción chanka | 361 | 23.6 |
-| Final – coincide en los Excel | 281 | 18.4 |
-| Final – forma del libro compatible con chanka | 122 | 8.0 |
-| Revisar – duda de traducción | 89 | 5.8 |
-| Revisar – adaptación propuesta | 72 | 4.7 |
-| Final – única fuente | 58 | 3.8 |
-| Final – fuente chanka oficial | 12 | 0.8 |
-| Pendiente – no usar (ver observación) | 11 | 0.7 |
+| (vacío) | 1239 | 44.8 |
+| Final – corregido/normalizado a chanka | 522 | 18.9 |
+| Pendiente – sin traducción chanka | 361 | 13.0 |
+| Final – coincide en los Excel | 281 | 10.2 |
+| Final – forma del libro compatible con chanka | 122 | 4.4 |
+| Revisar – duda de traducción | 89 | 3.2 |
+| Revisar – adaptación propuesta | 72 | 2.6 |
+| Final – única fuente | 58 | 2.1 |
+| Final – fuente chanka oficial | 12 | 0.4 |
+| Pendiente – no usar (ver observación) | 11 | 0.4 |
 
 ### Etapa de la consulta (médico, mapeo §11.3)
 
 | Etapa | Filas | % |
 |---|---|---|
-| Léxico | 527 | 34.5 |
-| Recolección de información | 515 | 33.7 |
-| Explicación y plan | 207 | 13.5 |
-| Examen físico | 161 | 10.5 |
-| Sensible | 59 | 3.9 |
-| Inicio | 50 | 3.3 |
-| Relación | 7 | 0.5 |
+| Recolección de información | 842 | 30.4 |
+| Léxico | 620 | 22.4 |
+| Sensible | 522 | 18.9 |
+| Inicio | 320 | 11.6 |
+| Explicación y plan | 270 | 9.8 |
+| Examen físico | 171 | 6.2 |
+| Relación | 20 | 0.7 |
 | Sin sección | 2 | 0.1 |
 
 ### Rol (médico, heurística)
 
 | Rol | Filas | % |
 |---|---|---|
-| Médico | 941 | 61.6 |
-| — | 545 | 35.7 |
-| Paciente | 42 | 2.7 |
+| Médico | 1757 | 63.5 |
+| — | 867 | 31.3 |
+| Paciente | 143 | 5.2 |
 
 > «—» = palabra suelta o léxico (no tiene hablante). Rol se decide por el español: preguntas y órdenes → Médico; 1.ª persona («me duele», «tengo», «sí, …») → Paciente. Ver `scripts/heuristicas.py`.
 
@@ -106,36 +100,36 @@ Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-10-15). Todo se mi
 
 | Sección | Filas |
 |---|---|
-| Vocabulario médico (palabras sueltas) | 285 |
-| Examen físico: indicaciones | 130 |
-| Síntomas generales | 122 |
+| Salud sexual y reproductiva | 494 |
+| Vocabulario médico (palabras sueltas) | 378 |
+| Presentación y saludo | 256 |
+| Motivo de consulta | 218 |
+| Antecedentes | 148 |
+| Síntomas generales | 140 |
+| Tratamiento e indicaciones | 132 |
+| Examen físico: indicaciones | 131 |
 | Vocabulario (Allin Kawsay) | 120 |
-| Tratamiento e indicaciones | 98 |
 | Lopera – Anexo. Vocabulario general | 62 |
-| Sistema digestivo | 59 |
-| Antecedentes | 59 |
+| Sistema digestivo | 61 |
+| Métodos anticonceptivos | 61 |
 | Sistema cardiorrespiratorio | 52 |
 | Promoción de la salud y prevención | 47 |
 | Indagar el síntoma: tiempo y características | 44 |
-| Salud sexual y reproductiva | 40 |
-| Métodos anticonceptivos | 32 |
+| Filiación | 35 |
+| Exámenes auxiliares | 31 |
 | Filiación (datos generales) | 28 |
 | Lopera – Anexo. Alimentos y relacionados | 28 |
-| Exámenes auxiliares | 22 |
+| Violencia | 28 |
 | Motivo, evolución y dolor | 22 |
 | Sistema urinario | 21 |
+| Tranquilizar al paciente | 20 |
 | Diagnóstico | 20 |
 | Motivo de consulta y enfermedad actual | 19 |
-| Violencia | 19 |
 | Salud mental (estado psicológico) | 18 |
-| Presentación y saludo | 17 |
 | Sistema nervioso | 16 |
 | Ojos | 15 |
 | Antecedentes y entorno | 14 |
 | Lopera – Anexo. Colores | 13 |
-| Lopera – Anexo. Números | 10 |
-| Reproducción y embarazo | 9 |
-| Tranquilizar al paciente | 7 |
 
 ![Filas por fuente](fig/f01_filas_por_fuente.png)
 
@@ -144,13 +138,10 @@ Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-10-15). Todo se mi
 | Pool | Lado | Filas | Mín. pal. | Mediana pal. | P90 pal. | Máx. pal. | Mediana car. | Máx. car. |
 |---|---|---|---|---|---|---|---|---|
 | G2 ejercicios | español | 545 | 3 | 5.0 | 6.0 | 8 | 27.0 | 40 |
-| G2 ejercicios | quechua | 545 | 2 | 4.0 | 5.0 | 7 | 32.0 | 52 |
 | G2 frases variadas | español | 124 | 2 | 5.0 | 6.0 | 9 | 26.0 | 44 |
-| G2 frases variadas | quechua | 124 | 1 | 3.0 | 4.0 | 8 | 27.0 | 51 |
-| Médico (unificado) | español | 1528 | 0 | 3.0 | 8.0 | 45 | 17.0 | 255 |
-| Médico (unificado) | quechua | 1156 | 1 | 2.0 | 4.0 | 17 | 16.0 | 144 |
+| Médico (unificado) | español | 2767 | 0 | 3.0 | 7.0 | 45 | 16.0 | 255 |
+| Médico (unificado) | quechua | 2001 | 1 | 2.0 | 5.0 | 16 | 20.0 | 164 |
 | Principito (G1) | español | 113 | 1 | 6.0 | 9.0 | 20 | 35.0 | 107 |
-| Principito (G1) | quechua | 113 | 1 | 4.0 | 6.8 | 14 | 37.0 | 113 |
 
 - Oraciones con más de 20 palabras en español: **17** (Médico (unificado): 17). Las 5 más largas:
 
@@ -168,89 +159,73 @@ Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-10-15). Todo se mi
 |---|---|---|---|---|
 | G2 ejercicios | 545 | 0 | 0 | 0 |
 | G2 frases variadas | 104 | 4 | 0 | 16 |
-| Médico (unificado) | 305 | 99 | 509 | 615 |
+| Médico (unificado) | 1079 | 136 | 769 | 783 |
 | Principito (G1) | 102 | 0 | 1 | 10 |
 
-- Palabras sueltas (1 palabra) en el médico: **509** → no se graban solas (§10.2): van a `Lexico`.
-- Frases de 2–3 palabras en el médico: **324** (muchas son términos: «dolor de cabeza»).
+- Palabras sueltas (1 palabra) en el médico: **769** → no se graban solas (§10.2): van a `Lexico`.
+- Frases de 2–3 palabras en el médico: **841** (muchas son términos: «dolor de cabeza»).
 
 ## 4. Duplicados exactos y casi duplicados
 
 | Pool | Filas | Español repetido (exacto) | Quechua repetido (exacto) | Grupos de casi duplicados (≥90) | Sobrarían (>2 por grupo) |
 |---|---|---|---|---|---|
-| G2 ejercicios | 545 | 1 | 30 | 64 | 29 |
-| G2 frases variadas | 124 | 0 | 1 | 1 | 1 |
-| Médico (unificado) | 1528 | 7 | 79 | 27 | 10 |
+| G2 ejercicios | 545 | 1 | 0 | 64 | 14 |
+| G2 frases variadas | 124 | 0 | 0 | 2 | 0 |
+| Médico (unificado) | 2767 | 225 | 52 | 56 | 6 |
 | Principito (G1) | 113 | 0 | 0 | 0 | 0 |
 
 - «Exacto» = igual tras normalizar (minúsculas, sin tildes ni signos).
 - Casi duplicado = similitud del español ≥ 90 **y** misma polaridad (sí/no) **y** mismos números (decisión propia: «ellos bajan al río» y «ellos no bajan al río» no son paráfrasis). Se conservan hasta 2 por grupo, salvo que tengan el **mismo borrador quechua** (entonces queda 1: grabar dos veces lo mismo no aporta).
-- Quechua repetido con español distinto es típico de los ejercicios del Grupo 2 («ellos/ellas bajan al río» → «Paykuna mayuman uraykunku»).
+- La parte general ya no trae borrador (su quechua era chanka): ahí los casi duplicados se deciden solo por el español.
 
-  - `F-0449` «mamá cocina pescado.» → «Mamay challwata yanun.»
-  - `F-0189` «él camina muy rápido.» → «Pay ancha utqayta purin.»
-  - `F-0167` «ella camina muy rápido.» → «Pay ancha utqayta purin.»
-  - `F-0564` «ella sube al segundo piso.» → «Pay iskay pisuman siqan.»
-  - `F-0581` «él sube al segundo piso.» → «Pay iskay pisuman siqan.»
-  - `F-0128` «ella no baila con alegría.» → «Pay kusiywan mana tusunchu.»
 
-## 5. Rasgos no chanka y letras fuera de la convención, por fuente
+## 5. Rasgos de otra variedad (chanka/boliviano) y letras fuera de la convención collao, por fuente
 
-| Fuente | Filas con quechua | Glotal./aspir. | Vocal e/o | c/qu/j/hu o letra ajena | Rasgo de otra variedad | Préstamo sin adaptar | Posible transcripción de oído |
+| Fuente | Filas con quechua | Con glotal./aspir. (bien en collao) | Vocal e/o | c/qu/j/hu o letra ajena | Rasgo de otra variedad | Préstamo sin adaptar | Posible transcripción de oído |
 |---|---|---|---|---|---|---|---|
-| Grupo 2 – Corpus Chanka | 672 | 0 % | 0 % | 0 % | 0 % | 2 % | 0 % |
-| Lopera Quiroga (2020) | 510 | 0 % | 0 % | 0 % | 0 % | 5 % | 1 % |
-| Allin Kawsay (INS/MINSA) | 472 | 0 % | 0 % | 0 % | 0 % | 6 % | 0 % |
-| SOCEMURP (corpus original del equipo) | 118 | 0 % | 0 % | 0 % | 0 % | 1 % | 0 % |
-| Grupo 1 – El Principito | 113 | 0 % | 3 % | 1 % | 0 % | 27 % | 0 % |
-| Farfán Cantero (2001), SITUA | 24 | 0 % | 0 % | 0 % | 0 % | 0 % | 0 % |
-| MinCul – manual de justicia (chanka) | 13 | 0 % | 0 % | 0 % | 0 % | 0 % | 0 % |
-| YouTube | 9 | 0 % | 0 % | 0 % | 0 % | 0 % | 0 % |
-| Afiche MINSA/MinCul lavado de manos (chanka) | 6 | 0 % | 0 % | 0 % | 0 % | 0 % | 0 % |
-| MINSA – diabetes (quechua) | 4 | 0 % | 0 % | 0 % | 0 % | 0 % | 0 % |
+| MINSA (s. f.), Palabras clave para la atención en salud – Quechua Cusco (difundido por el Ministerio de Cultura) | 1063 | 24 % | 0 % | 3 % | 6 % | 0 % | 3 % |
+| Lopera Quiroga (2020) | 564 | 29 % | 0 % | 23 % | 1 % | 8 % | 3 % |
+| OPS/OMS Bolivia (2013) | 174 | 51 % | 0 % | 0 % | 100 % | 1 % | 7 % |
+| Ministerio de Cultura (2015), Manual para el empleo del quechua Cusco Collao en la administración de justicia | 103 | 14 % | 0 % | 2 % | 7 % | 0 % | 2 % |
+| Farfán Cantero (2001), SITUA | 49 | 16 % | 0 % | 4 % | 0 % | 2 % | 0 % |
+| Ministerio de Cultura, Glosario multilingüe de la PIAS Lago Titicaca I (aimara y quechua Cusco Collao, Puno) | 48 | 15 % | 0 % | 0 % | 31 % | 0 % | 6 % |
 
-- Glotalizadas/aspiradas, e/o y escritura castellana se **corrigen mecánicamente** en F4 (§10.3, registradas en `Cambios`). Lo demás (variedad, préstamos, transcripción) **solo se marca** en `QA` para el traductor.
-- El unificado ya había normalizado casi todo: lo que queda allí es poco. Los ejercicios y frases del Grupo 2 están limpios en ortografía; el Principito concentra los préstamos (traducción automática).
+- En collao las glotalizadas y aspiradas **son parte del alfabeto** (no se quitan). Las vocales e/o (si se usan 3 vocales), la escritura castellana (j, c/qu/hu) y las semivocales («kunkaiki», «allyntachu») se **corrigen mecánicamente** en F4 (§10.3, registradas en `Cambios`). Lo demás (rasgos chanka o bolivianos, préstamos, transcripción) **solo se marca** en `QA`.
+- Lopera (forma del libro) escribe a la castellana y con 5 vocales; OPS/OMS Bolivia trae rasgos bolivianos (j, -chka-, «machkha»); Farfán es cusqueño y es el más cercano a la convención.
 
 ![Rasgos por fuente](fig/f03_rasgos_por_fuente.png)
 
 ## 6. Relación de longitud quechua/español (alineación)
 
-- Relación en caracteres (quechua ÷ español): mediana **1.07**, P5 0.62, P95 1.67.
-- Fuera de [0.5, 2.0]: **64** filas (Médico (unificado): 62, Principito (G1): 2). Casi todas son palabras sueltas o frases muy cortas, donde la relación es inestable. Ejemplos de frases:
+- Relación en caracteres (quechua ÷ español): mediana **1.12**, P5 0.56, P95 2.67.
+- Fuera de [0.5, 2.0]: **239** filas (Médico (unificado): 239). Casi todas son palabras sueltas o frases muy cortas, donde la relación es inestable. Ejemplos de frases:
 
-  - 0.20 · `QCH-0195` «Siéntate (si está echado)» ↔ «Tiyay»
-  - 0.40 · `QCH-0761` «¿Ha notado que desde que se le quitó el apetito (deseo de comer) es qu» ↔ «¿Mana mikusqaykimanta tulluyankichu?»
-  - 0.42 · `QCH-0284` «Ladéate (Ponte de costado)» ↔ «Waqtampakuy»
-  - 0.49 · `QCH-0719` «¿La tos se acompaña de dolor hacia alguna parte de la espalda (tórax)?» ↔ «¿Uhunki hina wasaykichu nanasunki?»
-  - 0.49 · `QCH-0748` «¿Se le hinchan los pies por las tardes o es que ya los pies los tiene » ↔ «¿Chakiyki punkisunkichu o punkisqapuni kachkan?»
-  - 0.49 · `QCH-0809` «¿Ha notado que le baja humedad por los genitales?» ↔ «¿Humpinchu genitalniyki?»
+  - 0.24 · `PCS-095-03` «El hermano de hermana» ↔ «Turay»
+  - 0.24 · `PCS-095-01` «La hermana de hermana» ↔ «Ñañay»
+  - 0.24 · `PCS-095-04` «La hermana de hermano» ↔ «Panay»
+  - 0.25 · `QCH-1386` «¿Se pone de color morado? (hablando de otra persona)» ↔ «¿Kulliyanchu?»
+  - 0.26 · `QCH-1388` «¿Se pone de color amarillo? (hablando de otra persona)» ↔ «¿Q'illuyanchu?»
+  - 0.26 · `PCS-076-08` «Las personas que tienen» ↔ «Sichus»
 
-- Números que no coinciden español↔quechua: **1** filas; sospechas de sentido (tipo *pisi*/*achka*, *wata*/*killa*, negación): **171** filas.
+- Números que no coinciden español↔quechua: **30** filas; sospechas de sentido (tipo *pisi*/*achka*, *wata*/*killa*, negación): **42** filas.
 
 ![Relación de longitud](fig/f04_relacion_longitud.png)
 
 ## 7. Vocabulario del quechua
 
-| Pool | Palabras (tokens) | Palabras distintas | Distintas no halladas en AmericasNLP/diccionarios | Ejemplos |
+| Pool | Palabras (tokens) | Palabras distintas | Distintas no halladas en el léxico collao | Ejemplos |
 |---|---|---|---|---|
-| G2 ejercicios | 2198 | 430 | 2 % | awilunwan, kartata, mamaquchapi, muchilata, pachamamata, pilikulata, qamkunapura, riwistata |
-| G2 frases variadas | 442 | 309 | 3 % | awilu, ispiritu, ispiritun, nisisitani, pachamamamanta, qaynunchaw, rimuwan, waqyanankupaq |
-| Médico (unificado) | 2688 | 1471 | 10 % | aaaaaaa, akakiswanchu, akullichkankichu, akullinki, altuman, amalluka, amuqlli, amuqllu |
-| Principito (G1) | 486 | 357 | 3 % | carnakunaqa, chaqurunki, hamunmankuñam, iskayrayani, millqukuq, musyaykachirqa, pintur, qusqay |
+| Médico (unificado) | 5624 | 3099 | 3 % | alimento, ama, anotanayki, asuste, ayer, ayuno, años, chupo |
 
-- Léxico de referencia: JW300 quy (palabras que aparecen 2+ veces), diccionario MINEDU (PDF y AmericasNLP), Dict_misc, manual MinCul, afiche y material de diabetes en quechua; se consideran solo formas escritas con el alfabeto chanka. Una palabra cuenta como hallada si ella o su raíz (quitando sufijos) aparece. «No hallada» no significa error: el léxico médico casi no está en esos textos.
+- Léxico de referencia **collao**: todo el quechua de Lopera (forma del libro), Farfán y OPS/OMS Bolivia, comparado sin glotales ni aspiradas y con 3 vocales (así «p'unchay» y «punchay» cuentan como la misma palabra). Es chico, porque se armó solo con fuentes collao: «no hallada» no significa error. Crecerá cuando se agreguen las fuentes de `FUENTES_COLLAO.md`.
 
-**Las 25 palabras quechuas más frecuentes:** mana (289), paykuna (105), huk (96), pay (88), ñuqayku (88), warma (82), warmi (81), warmakuna (80), qam (48), ñuqa (46), qari (45), sapa (37), hina (34), qamkuna (32), nanasunki (30), o (30), punchaw (29), kay (29), ama (28), kachkan (27), ancha (26), wasipi (24), kunan (24), utqayta (23), kachkanki (23)
+**Las 25 palabras quechuas más frecuentes:** mana (76), o (56), kashan (42), allin (38), kani (38), hina (36), kay (31), ama (30), manan (30), ima (28), kanki (28), sapa (26), chunka (25), punchay (24), yawar (24), nanan (22), kashanki (21), punchaw (21), sichus (21), hayka (20), killa (19), chay (17), ari (17), chayqa (17), kunan (16)
 
 ## 8. Cobertura de sufijos (§11.1): qué enseña cada pool
 
 | Pool | Sufijos presentes | Ausentes |
 |---|---|---|
-| Principito (G1) | 46 de 63 | -chka, -chun, -kama, -naku, -nkichik, -ntin, -p, -pis, -pu, -puni, -rayku, -s, -saq, -sun, -waq, -ychik, -ysi |
-| G2 frases variadas | 44 de 63 | -chun, -kama, -naku, -nqa, -ntin, -p, -pas, -pis, -puni, -raq, -rayku, -s, -stin, -su, -taq, -waq, -ychik, -ykichik, -ysi |
-| G2 ejercicios | 34 de 63 | -chi, -chun, -hina, -kama, -m, -naku, -nchik, -ntin, -p, -pas, -pis, -pu, -puni, -raq, -rayku, -rqa, -saq, -sqa, -stin, -su, -sun, -taq, -wa, -waq, -ya, -ychik, -ykichik, -ysi, -ña |
-| Médico (unificado) | 57 de 63 | -chun, -ntin, -pis, -stin, -ychik, -ysi |
+| Médico (unificado) | 61 de 65 | -rqu, -stin, -ychis, -ysi |
 
 > Segmentación **heurística** (quita sufijos desde el final, el más largo primero, hasta una raíz del diccionario). Es aproximada: confunde homófonos (-n persona/posesivo, -y imperativo/posesivo, -pa genitivo/derivativo). Sirve para comparar pools, no como análisis morfológico.
 
@@ -262,95 +237,102 @@ Generado por `scripts/03_eda.py` desde el checkpoint F2 (2026-10-15). Todo se mi
 
 | Etapa | Médico | Paciente |
 |---|---|---|
-| Examen físico | 147 | 0 |
-| Explicación y plan | 190 | 5 |
-| Inicio | 37 | 12 |
-| Recolección de información | 492 | 23 |
-| Relación | 7 | 0 |
-| Sensible | 56 | 2 |
+| Examen físico | 157 | 0 |
+| Explicación y plan | 243 | 9 |
+| Inicio | 238 | 44 |
+| Recolección de información | 685 | 74 |
+| Relación | 18 | 2 |
+| Sensible | 387 | 8 |
 | Sin sección | 1 | 0 |
 
 ### Material para la consulta completa de B01 (§11.2)
 
 | Etapa (B01) | Médico | Paciente |
 |---|---|---|
-| Inicio | 37 | 12 |
-| Motivo de consulta | 15 | 7 |
-| Caracterizar el síntoma | 142 | 9 |
-| Síntomas asociados | 80 | 4 |
+| Inicio | 238 | 44 |
+| Motivo de consulta | 142 | 16 |
+| Caracterizar el síntoma | 155 | 13 |
+| Síntomas asociados | 82 | 4 |
 | Examen físico | 84 | 0 |
-| Explicación, plan y cierre | 68 | 0 |
+| Explicación, plan y cierre | 101 | 6 |
 
-- Frases del **paciente** en todo el unificado: **42** frente a **930** del médico.
-- Escenarios **sin ninguna frase del paciente**: 86 de 104. Los que sí tienen:
+- Frases del **paciente** en todo el unificado: **137** frente a **1729** del médico.
+- Escenarios **sin ninguna frase del paciente**: 84 de 110. Los que sí tienen:
 
 | Escenario | Frases del paciente |
 |---|---|
+| Antecedentes › Familia | 39 |
+| Presentación y saludo › Saludo y trato | 28 |
+| Motivo de consulta › Motivo de consulta | 9 |
 | Síntomas generales › Dolor: presencia y localización | 8 |
 | Filiación (datos generales) › Estado civil y acompañante | 5 |
+| Salud sexual y reproductiva › Embarazo y parto | 5 |
 | Tratamiento e indicaciones › Hospitalización, procedimientos y cuidados | 5 |
+| Síntomas generales › Dolor: inicio, irradiación y evolución | 4 |
+| Tratamiento e indicaciones › Medicamentos y dosis | 4 |
 | Filiación (datos generales) › Nombre, edad e identificación | 3 |
 | Filiación (datos generales) › Procedencia y residencia | 3 |
 | Motivo de consulta y enfermedad actual › Cómo se siente el paciente | 3 |
 | Motivo de consulta y enfermedad actual › Tiempo de enfermedad y forma de inicio | 3 |
+| Filiación › Datos personales | 3 |
 | Sistema cardiorrespiratorio › Tos y flema | 2 |
-| Presentación y saludo › Saludo y trato | 1 |
+| Presentación y saludo › Acceso lingüístico | 2 |
+| Tranquilizar al paciente › Tranquilizar al paciente | 2 |
 | Motivo de consulta y enfermedad actual › Motivo de consulta | 1 |
-| Salud sexual y reproductiva › Embarazo y parto | 1 |
-| Antecedentes › Familia | 1 |
 | Salud sexual y reproductiva › Flujo, molestias genitales y control ginecológico | 1 |
 | Síntomas generales › Dolor: horario, intensidad y tipo | 1 |
 | Sistema digestivo › Gases, hinchazón del abdomen, eructos y saliva | 1 |
 | Síntomas generales › Mareos | 1 |
 | Sistema digestivo › Dolor de estómago (abdomen) | 1 |
 | Salud mental (estado psicológico) › Ánimo, conducta y percepciones | 1 |
+| Violencia › Preguntas sobre violencia | 1 |
+| Salud sexual y reproductiva › Menstruación y menopausia | 1 |
 
 ### Temas clave (búsqueda por palabras en el español)
 
 | Tema | Frases | Médico | Paciente |
 |---|---|---|---|
-| fiebre | 5 | 5 | 0 |
+| fiebre | 6 | 6 | 0 |
 | tos | 16 | 15 | 1 |
-| vómito/náusea | 9 | 9 | 0 |
-| diarrea/deposiciones | 22 | 22 | 0 |
-| dolor de cabeza | 6 | 4 | 2 |
-| dolor de estómago/barriga | 24 | 20 | 4 |
-| orina | 33 | 33 | 0 |
+| vómito/náusea | 11 | 10 | 1 |
+| diarrea/deposiciones | 24 | 24 | 0 |
+| dolor de cabeza | 11 | 7 | 4 |
+| dolor de estómago/barriga | 27 | 21 | 6 |
+| orina | 38 | 37 | 1 |
 | respirar/falta de aire | 30 | 30 | 0 |
 | alergias | 2 | 2 | 0 |
-| medicamentos/dosis | 17 | 17 | 0 |
-| embarazo | 10 | 9 | 1 |
-| niños | 33 | 32 | 1 |
-| sangrado | 25 | 25 | 0 |
+| medicamentos/dosis | 29 | 28 | 1 |
+| embarazo | 31 | 29 | 2 |
+| niños | 65 | 54 | 11 |
+| sangrado | 40 | 39 | 1 |
 | desmayo/convulsión | 4 | 4 | 0 |
-| deshidratación | 2 | 1 | 1 |
-| volver/control | 6 | 6 | 0 |
-| ¿entendió? | 1 | 1 | 0 |
-| tranquilizar | 4 | 4 | 0 |
+| deshidratación | 3 | 2 | 1 |
+| volver/control | 25 | 25 | 0 |
+| ¿entendió? | 3 | 2 | 1 |
+| tranquilizar | 9 | 9 | 0 |
 
 ![Etapas y rol](fig/f06_etapas_rol.png)
 
 ## 10. EDA previo de un compañero (solo precedente)
 
-Existe un EDA anterior (`Fuentes/Trabajo - Otro Compañero/[Vibe]EDA_Corpus_NLP.ipynb` + `Corpus_Recopilado.xlsx`). No se usó como fuente de datos ni de alertas. Diferencias principales: usaba la hoja médica antigua del Grupo 3 (no el unificado), y preseleccionaba 100 + 100 + 100 frases por cobertura de palabras del **español** de unas flashcards. Aquí se usa el unificado (D10), la proporción 70/30 por bloque (D1), cobertura de **sufijos del quechua** para la parte general (§11.1) y el flujo de consulta para la parte médica (§11.2).
+Existe un EDA anterior (`Fuentes/Trabajo - Otro Compañero/[Vibe]EDA_Corpus_NLP.ipynb` + `Corpus_Recopilado.xlsx`). No se usó como fuente de datos ni de alertas. Diferencias principales: usaba la hoja médica antigua del Grupo 3 (no el unificado), y preseleccionaba 100 + 100 + 100 frases por cobertura de palabras del **español** de unas flashcards. Aquí se usa el unificado (D10), la proporción 70/30 por bloque (D1), cobertura de **rasgos gramaticales** para la parte general (§11.1; medidos en el español, porque esa parte ya no trae borrador collao) y el flujo de consulta para la parte médica (§11.2).
 
 ## 11. Conclusiones (en simple)
 
 **Qué se descarta (estimado; F4 da la cifra exacta):**
 - 11 filas «Pendiente – no usar» del unificado (títulos), la fila vacía F-0517 y las 3 filas de bibliografía del Grupo 2.
-- Repetidos exactos: general 1, médico 7.
-- Casi duplicados que pasan de 2 por significado: general 30 (sobre todo ejercicios del Grupo 2), médico 10.
+- Repetidos exactos: general 1, médico 225.
+- Casi duplicados que pasan de 2 por significado: general 14 (sobre todo ejercicios del Grupo 2), médico 6.
 - Oraciones de más de 20 palabras que no sean listas partibles (17 candidatas).
-- Las 509 palabras sueltas del médico no se descartan: pasan a `Lexico`; las prioritarias vuelven como frases portadoras (F5).
+- Las 769 palabras sueltas del médico no se descartan: pasan a `Lexico`; las prioritarias vuelven como frases portadoras (F5).
 
 **Qué falta:**
-- **Voz del paciente.** Hay ~42 frases del paciente para todo el corpus; cada bloque necesita ~30. F5 debe redactar en español las respuestas del paciente a las preguntas de los bloques planificados.
+- **Voz del paciente.** Hay ~137 frases del paciente para todo el corpus; cada bloque necesita ~30. F5 debe redactar en español las respuestas del paciente a las preguntas de los bloques planificados.
 - Temas con poco o nada: ver la tabla de temas clave (alergias, deshidratación, niños, embarazo con sangrado, «¿entendió?»).
-- Quechua confiable: ninguna fila es gold. El Principito es traducción automática con préstamos; el médico viene en gran parte de Lopera (collao) normalizado por reglas.
+- Quechua collao: solo la parte médica tiene borradores (2001 filas: Lopera, Farfán y OPS/OMS Bolivia, en su forma original). Ninguno es gold: Lopera escribe a la castellana y tiene desalineados; OPS es boliviano. La parte general va **sin borrador** (el traductor traduce desde el español).
 - Los ejercicios del Grupo 2 son muy repetitivos: tras quitar casi duplicados quedan bastantes menos.
 
 **Cuántos bloques caben (estimado):**
-- Parte general utilizable ≈ **751** oraciones → **5 bloques** de 140.
-- Parte médica utilizable (frases ≤ 20 palabras, sin léxico ni repetidos) ≈ **948** → alcanzaría para 15 bloques de 60, pero la mitad debe ser del paciente, así que el límite real lo pone lo que se redacte en F5.
-- **La parte general es la que limita: ~5 bloques** con el material actual. Para más, habría que decidir P4 (AmericasNLP) con la coordinación del proyecto.
-- El diccionario MINEDU en PDF tiene texto y se usó para P6: las frases del Grupo 2 **no** aparecen como ejemplos del diccionario (solo 2 coinciden). Son frases del equipo con vocabulario chanka; se usan igual, con `Origen_verificado = No`.
+- Parte general utilizable ≈ **767** oraciones → **5 bloques** de 140.
+- Parte médica utilizable (frases ≤ 20 palabras, sin léxico ni repetidos) ≈ **1740** → alcanzaría para 29 bloques de 60, pero la mitad debe ser del paciente, así que el límite real lo pone lo que se redacte en F5.
+- **La parte general de las fuentes alcanza para ~5 bloques**; F5 suma oraciones redactadas en español en varios tiempos (`oraciones_generales.yaml`).

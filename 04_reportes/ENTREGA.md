@@ -1,105 +1,125 @@
-# ENTREGA — Corpus quechua chanka médico (F0–F7 + revisión ultracode)
+# ENTREGA — Corpus quechua collao médico
 
-Para: equipo del proyecto · Fecha: 2026-10-15 · Preparado por Claude (Claude Code) en `D:\Corpus_Quechua`
+Para: equipo del proyecto · Fecha: 2026-11-05 · Preparado por Claude (Claude Code) en `D:\Corpus_Quechua`
 
 ## En 5 líneas
 
-1. El corpus quedó en un solo archivo maestro: **2 254 oraciones** (1 114 generales + 1 140 médicas), 545 palabras sueltas en Léxico y 92 descartes con su motivo. Nada se borró sin rastro.
-2. **Los 5 bloques (B01–B05) tienen su Word para el traductor y su Excel de trabajo.** B01 es una consulta completa de punta a punta (dolor de barriga) con 15 oraciones de control.
-3. **La parte general (70 %) ahora enseña distintos tiempos:** en cada bloque hay entre 40 y 105 oraciones que redacté en español (pasado, futuro, progresivo, condicional, imperativo, preguntas, subordinadas). El presente quedó entre 44 % y 65 % según el bloque.
-4. **Se hizo la revisión ultracode:** 3 revisores, 39 hallazgos, todos atendidos y probados (detalle en `DECISIONES_TOMADAS.md`). **Los IDs cambiaron** respecto de los archivos del 14-oct (no se había enviado nada).
-5. Antes de enviar, **revisa el español que redacté o adapté** (`Por_revisar`): 72 filas en B01 y 77 en B02. Ningún quechua es «gold»: todo lo prellenado es borrador y yo no escribí quechua.
+1. **Los 5 bloques están listos en quechua de Cusco (collao), con 5 vocales.** Cada uno tiene 200 oraciones: 140 generales + 60 médicas, en 4 sublotes de 50.
+2. **B01 ya no tiene nada chanka por delante.** Las filas 1 a 24, que trabajó el traductor, no se tocaron. Desde la fila 25, cada fila trae un borrador collao o la celda vacía. También dice «Soy de Cusco.» y lleva la misma tabla de ortografía que los demás bloques.
+3. **B02 a B05 son nuevos:** usan borradores collao en su forma original y traen frases oficiales del Estado en quechua de Cusco (lo más cercano a «data gold» que hay).
+4. **Se extrajeron las fuentes oficiales:** Palabras clave de salud, manual de justicia, glosario PIAS Puno (49 frases de atención) y glosario COVID (135 términos). Además, hay texto paralelo para el equipo de modelo: `06_dataset/texto_paralelo_collao.csv`, 1 881 pares.
+5. **Lo que sigue:** revisar el español de B02, pasar a B01 el Word corregido y enviar B02.
 
 ## Qué está listo
 
 | Qué | Dónde |
 |---|---|
-| Archivo maestro (única fuente de verdad): LEEME, Corpus, Origen, Cambios, Descartes, Lexico, QA, Bloques, Traductor_metricas | `02_maestro/corpus_maestro.xlsx` |
-| **Word para el traductor de B01–B05** (A4 horizontal, instrucciones, 4 tablas de 50, borrador prellenado, 1 aviso breve por fila como máximo) | `03_bloques/B0X/B0X_traductor.docx` |
-| Excel de trabajo de B01–B05 (pestañas Bloque / Detalle / Resumen) | `03_bloques/B0X/B0X_trabajo.xlsx` |
-| Guía de grabación (protocolo, regla D8, nombres de archivo, formato de audio) | `03_bloques/GUIA_GRABACION.docx` |
-| **Español para tu revisión** (antes de enviar), con el archivo donde se corrige cada fila | `04_reportes/REVISION.md` |
-| Reportes: inventario, EDA, decisiones, verificación final, prueba de scripts, huecos de F5 | `04_reportes/INVENTARIO.md`, `EDA.md`, `DECISIONES_TOMADAS.md`, `VERIFICACION_F7.md`, `PRUEBA_06_07_08.md`, `F5_huecos.md` |
-| Scripts reproducibles (todo se regenera desde las fuentes) | `scripts/` + `config.yaml` |
-| Scripts de operación probados con datos simulados | `scripts/06_importar_traductor.py`, `07_hoja_grabacion.py`, `08_manifest.py` |
+| Archivo maestro (2 848 oraciones, única fuente de verdad) | `02_maestro/corpus_maestro.xlsx` |
+| Word para el traductor de B01–B05 | `03_bloques/B0X/B0X_traductor.docx` |
+| Excel de trabajo de B01–B05 | `03_bloques/B0X/B0X_trabajo.xlsx` |
+| Guía de grabación | `03_bloques/GUIA_GRABACION.docx` |
+| **Qué cambió en B01, fila por fila** | `04_reportes/B01_COLLAO.md` |
+| **Avance del traductor en B01:** sus filas, sus comentarios y lo que se aprende | `04_reportes/AVANCE_B01.md` |
+| **Español para revisar antes de enviar** (B02–B05), con el archivo donde se corrige cada fila | `04_reportes/REVISION.md` |
+| Texto paralelo es–quz para el modelo, con la confiabilidad de cada par | `06_dataset/texto_paralelo_collao.csv` |
+| JW300 es–quz, solo para preentrenar (religioso, no se graba) | `Fuentes/AmericasNLP/es-quz/` |
+| Fuentes collao: qué variedad es cada una y qué se extrajo | `04_reportes/FUENTES_COLLAO.md` |
+| Verificación final, prueba de scripts y decisiones | `04_reportes/VERIFICACION_F7.md`, `PRUEBA_06_07_08.md`, `DECISIONES_TOMADAS.md` |
+| Especificación actualizada (sección 0) | `Estrategia/CLAUDE.md` |
 
-La verificación final (`04_reportes/VERIFICACION_F7.md`) revisa cada punto del checklist de §13, corre las pruebas y abre cada .docx/.xlsx con LibreOffice; las páginas convertidas están en `04_reportes/revision_visual/`.
+## Qué pasó con B01
+
+| Filas | Qué tienen ahora |
+|---|---|
+| 1 a 24 | **Idénticas a las del archivo del traductor:** su quechua, sus comentarios y sus colores. |
+| 25 a 200, con borrador (7) | Borrador de una fuente collao: 6 de Farfán (Cusco) y 1 de OPS/OMS Bolivia, que lleva aviso. |
+| 25 a 200, vacías (169) | El traductor escribe desde el español. De ellas, 96 traían borrador chanka: **ninguna fuente collao tiene esas frases y el quechua no se inventa ni se convierte a mano.** Las otras 73 ya estaban vacías. |
+
+- **Más trabajo para el traductor:** esas 96 filas ya no traen borrador, igual que la parte general de B02–B05.
+- **Español:** solo cambió la fila 30, «Soy de Cusco.». Los IDs y el orden son los mismos.
+- **Ortografía:** el Word ya pide 5 vocales y no dice «chanka» en ninguna parte.
+- **Control:** B01 ya no tiene oraciones de control, porque su borrador oculto era chanka y no servía para medir. El traductor no nota nada. El anclaje se mide con las 10 de B02.
+- **Lo chanka que queda, solo en lo interno:** los borradores que el traductor vio en las filas 1 a 24, para medir cuánto corrigió, y los nombres de las fuentes del español en la pestaña Detalle del Excel.
+- **Nada se perdió:** la versión anterior y la copia exacta de su archivo están en `02_maestro/congelados/B01_original/`.
 
 ## Qué enviar a quién
 
-1. **Revisión del equipo primero:** revisa `04_reportes/REVISION.md` (B01 y B02 son lo urgente). Si cambias algo, edita el archivo de `scripts/datos/` que indica la tabla y vuelve a generar (ver «Cómo regenerar»).
-2. **Al traductor:** envía **`B01_traductor.docx` y `B02_traductor.docx`** juntos (D5: siempre un bloque adelante). Pídele que devuelva **el mismo archivo**, sin mover filas, sin tocar la columna ID y sin «Control de cambios». Yo no envié nada a nadie.
-3. **Al enviarlos, márcalos como enviados:** `.venv\Scripts\python.exe scripts\06_importar_traductor.py B01 --marcar-enviado` (y lo mismo con B02). Desde ahí esos bloques quedan **congelados**: al regenerar, no cambian sus filas, N° ni sublotes.
-4. **Cuando vuelva cada Word:** guárdalo como `03_bloques/B01/B01_traductor_devuelto.docx` y corre `.venv\Scripts\python.exe scripts\06_importar_traductor.py B01` (con los Excel cerrados). Escribe el quechua validado en el maestro y en el Excel de trabajo, registra todo en Cambios, separa los comentarios, calcula las métricas y el análisis de control, y deja `04_reportes/importacion_B01.md`. Protecciones:
-   - Si el Word trae Control de cambios sin aceptar, no lo importa y te dice cómo aceptarlos.
-   - Si el traductor cambió el español de una fila, esa fila no se valida: queda `Por_revisar` y decides tú.
-   - Si un sublote vuelve sin ningún cambio, sus filas no se validan solas: confirma con el traductor que lo revisó y reimporta con `--confirmar-sublotes B01-S2`.
-5. **Para la sesión de grabación:** `scripts\07_hoja_grabacion.py B01` → `03_bloques/B01/B01_grabacion.docx`. Dale al grabador esa hoja y `GUIA_GRABACION.docx`.
-6. **Después de grabar:** pon los audios en `05_audio/` (`{ID}_es.wav`, `{ID}_qu.wav`) y corre `scripts\08_manifest.py B01` → `06_dataset/manifest_B01.csv`, con el control de formato, duración y nombres repetidos.
+1. **B01: pasen al traductor `03_bloques/B01/B01_traductor.docx`.**
+   - **Antes, pregúntenle si avanzó después de la fila 24.** Este Word no tiene lo que haya hecho después de su versión v1.
+   - Si avanzó, no le pasen este archivo. Guarden el suyo como `02_maestro/congelados/B01_original/B01_traductor_v2.docx` y corran el comando de abajo, que deja intacto lo nuevo que hizo.
+
+   ```
+   .venv\Scripts\python.exe scripts\congelar_bloque.py B01 --word 02_maestro\congelados\B01_original\B01_traductor_v2.docx
+   ```
+
+2. **Revisen el español de B02** en `04_reportes/REVISION.md` (77 filas). No hace falta saber quechua: es ver si cada oración en español suena natural y dice lo que debe.
+3. **Envíen `B02_traductor.docx`.** El traductor siempre va un bloque adelante (D5). Yo no envié nada a nadie.
+4. **Al enviarlo, márquenlo:** desde ahí queda congelado.
+
+   ```
+   .venv\Scripts\python.exe scripts\06_importar_traductor.py B02 --marcar-enviado
+   ```
+
+5. **Cuando vuelva cada Word:** guárdenlo como `03_bloques/BXX/BXX_traductor_devuelto.docx` y corran `06_importar_traductor.py BXX`. Después siguen `07_hoja_grabacion.py` para grabar y `08_manifest.py` con los audios.
 
 ## Qué debes revisar
 
-- **Español redactado o adaptado por mí (`Por_revisar`):** 72 filas en B01, 77 en B02, 109 en B03, 144 en B04 y 136 en B05. Son:
-  - oraciones generales nuevas en varios tiempos (`oraciones_generales.yaml`);
-  - respuestas del paciente y frases portadoras (no existían en las fuentes);
-  - adaptaciones de giros bolivianos o frases poco naturales, y oraciones largas partidas. En estas, `REVISION.md` muestra el original y el borrador quechua, para que veas si siguen diciendo lo mismo.
-- **El guion de B01** (`scripts/datos/plan_b01.yaml`): paciente mujer de 20 años de Ayacucho con dolor de barriga, fiebre y vómitos. Cambié una respuesta que sugería apendicitis («ahora me duele más abajo, al lado derecho») y no cuadraba con «No es nada grave».
-- **Por confirmar:**
-  - «Mi tía hace chicha punta» (B01): no sé qué significa «punta» aquí; por eso no se usa como oración de control.
-  - Algunos ejercicios del Grupo 2 calcan «no + una» («Yo no leo una revista»). No los cambié: decides si se dejan.
-- **Avisos en el Word:** 7 filas en B01, 13 en B02, 27 en B03, 3 en B04 y 1 en B05. Casi todos son «posible préstamo del español» o «el equipo marcó este borrador como dudoso». Son sospechas para que el traductor mire primero, no correcciones.
+- **Español redactado o adaptado (`Por_revisar`):** 77 filas en B02, 104 en B03, 137 en B04 y 135 en B05. En B02 son 40 oraciones generales nuevas, 30 respuestas del paciente nuevas y 7 frases adaptadas. Las escribí o ajusté yo, no salen tal cual de una fuente; por eso una persona debe leerlas antes de que lleguen al traductor.
+- **Avisos en el Word:** 1 en las filas nuevas de B01, 5 en B02, 9 en B03, 9 en B04 y 6 en B05. La mayoría dice que el borrador es boliviano y hay que adaptarlo a Cusco.
+- **Cuánto borrador ve el traductor:** 16 filas en B02, 24 en B03 y 30 en B04 y B05. El resto lo traduce desde el español. B02 tiene además 10 frases de control con la celda vacía.
+- **Lo que comentó el traductor** (`AVANCE_B01.md`):
+  - «desayuno», «remar» y «buenos días» no se dicen así. Quité desayuno y almuerzo de B02–B05, y no quedaba ninguna de las otras;
+  - el glosario oficial PIAS sí traduce los saludos («Allin p'unchay», «Allin sukha», «Allin tuta»): conviene preguntarle si le parecen forzados;
+  - las frases del Principito con cosas que no hay en los Andes (baobabs, boa, elefante) siguen en B02 y B03. El Word ya le pide escribirlas como las diría un hablante.
+- **Por confirmar:** «Mi tía hace chicha punta» y el calco «no + una» de algunos ejercicios (igual que antes).
 
-## Hallazgos que conviene que sepas
+## ¿Lo oficial y Lopera son gold?
 
-- **Grupo 2 (P6):** el diccionario MINEDU en PDF tiene texto, así que lo verifiqué de verdad: **solo 2 de 669 frases** del Grupo 2 aparecen como ejemplos del diccionario. Son frases del equipo con léxico chanka (útiles, pero `Origen_verificado = No`).
-- **Lopera (collao):** 510 filas médicas tienen quechua derivado de Lopera, normalizado por reglas. Son borradores, no chanka real.
-- **Celdas cortadas en el unificado:** algunas frases largas (COVID-19) están cortadas a 255 caracteres en la fuente; se partieron o descartaron.
-- **AmericasNLP** tiene 135 647 pares (no ~180 000). Solo se usó como léxico de referencia.
-- **La voz del paciente casi no existía:** 42 frases en el unificado (39 tras la limpieza; el inventario cuenta 46 con una regla de primera persona más amplia). Por eso redacté en español las respuestas del paciente de los 5 bloques.
-- **Quedan pocas frases generales de las fuentes:** el Principito y las frases variadas se acaban en B03. Desde B03 la parte general son ejercicios (máximo 35 por bloque) y oraciones redactadas por mí.
+**Ninguno es gold todavía.** Gold sigue siendo lo validado por el traductor y grabado (D8).
 
-## Pendientes (P1–P7)
+- **Fuentes oficiales (MINSA, Ministerio de Cultura):** son lo más cercano, porque son traducciones del Estado al quechua de Cusco. Tienen la máxima prioridad y casi no deberían necesitar cambios, aunque varias escriben con 3 vocales y el traductor las pasará a 5. Entran 25 a los bloques (B02: 2, B03: 7, B04: 2, B05: 14), porque son sobre todo de salud reproductiva y no se torció el plan de temas por eso. Las otras 530 quedan para bloques futuros y ya están en el texto paralelo.
+- **Lopera (libro de semiología):** es buen material, pero escribe a la castellana y tiene frases desalineadas («¿Le duele el pulmón?» → «¿Kunkaiki nanan?», y kunka es cuello). Por eso va como borrador.
+
+## Pendientes (P1–P7 y nuevos)
 
 | # | Qué se usó por ahora | Qué falta decidir |
 |---|---|---|
-| P1 | Todo `train`; 20 filas por bloque marcadas `Test_sugerido = Sí` (10 % estratificado, sin casi gemelas en los bloques y con pares pregunta/respuesta completos). | ¿Apartamos ese 10 % como prueba? |
-| P2 | Fecha desconocida; B01 y B02 listos para enviar (y B03–B05 también tienen archivos). | Fecha de la primera sesión y con cuántos días se envía el Word. |
-| P3 | Se asume el alfabeto oficial de 3 vocales; el Word lo pide con una tabla. | Confirmarlo con el traductor. |
-| P4 | AmericasNLP **no** se usa para oraciones (solo léxico). La variedad de tiempos la dan las oraciones que redacté. | Solo si se quieren **más de 5 bloques**: usar oraciones cortas no religiosas de AmericasNLP o que yo redacte más. |
-| P5 | WAV, 16 kHz, mono, 16 bits (en `config.yaml`, la guía, 07 y 08). | Confirmarlo con el equipo de modelo antes de grabar. |
-| P6 | Verificado: el Grupo 2 no sale del diccionario (2 de 669). | Nada, salvo que alguien del Grupo 2 aclare de dónde salieron. |
-| P7 | Audios de Allin Kawsay no se usan (y no están en la carpeta). | Nada. |
+| P3 | **Decidido: 5 vocales**, como escribe el traductor. | Nada. El texto paralelo trae fuentes con 3 vocales: el equipo de modelo debe tenerlo en cuenta. |
+| Escritura | **Decidido:** lo ya traducido no se toca, aunque use «c» y «j» (cashanqui, mijunchu). Los borradores pendientes siguen la tabla («k» y «h») y el traductor cambia lo que no le parezca. | Nada. El equipo de modelo tendrá que unificar la escritura antes de entrenar. |
+| P1 | Todo `train`; 20 filas por bloque marcadas `Test_sugerido = Sí`. | ¿Apartamos ese 10 % como prueba? |
+| P2 | B01 ya empezó; B02 listo. | Fecha de la siguiente sesión. |
+| P4 | JW300 es–quz solo como léxico y para preentrenar. No se graba. | ¿Lo usa el equipo de modelo? |
+| P5 | WAV, 16 kHz, mono, 16 bits. | Confirmarlo con el equipo de modelo. |
+| P6 | Ya no aplica: del Grupo 2 solo se usa el español. | — |
+| P7 | Los audios de Allin Kawsay no se usan. | — |
+| Nuevo | Cusco y Puno juntos; solo lo boliviano lleva aviso. | Que el traductor confirme si le parece bien. |
+| Nuevo | Sexto bloque: quedan 530 frases oficiales sin bloque, pero no hay generales suficientes. | ¿Redacto ~90 generales más? |
+| Nuevo | OPS/OMS Bolivia: quedan unos 480 pares sin usar. | ¿Los sumamos? Son bolivianos y necesitan adaptación. |
+
+La guía de señalética no se extrajo: sus tablas cambian de una página a otra y salía mezclada con aimara, y son ~40 letreros, casi ninguno médico. Guardar un par equivocado como «oficial» haría más daño que ayuda.
 
 ## Cuántos bloques caben
 
-| Bloque | General: Principito / frases variadas / ejercicios / redactadas | Presente en la parte general | Médica (médico / paciente) y temas | Estado |
-|---|---|---|---|---|
-| B01 | 35 / 65 / 0 / 40 | 57 % | 32 / 28 — consulta completa (6 etapas) | Archivos listos |
-| B02 | 35 / 56 / 9 / 40 | 65 % | 30 / 30 — fiebre, respiratorio, digestivo, urinario, antecedentes, niño enfermo, embarazo | Archivos listos |
-| B03 | 34 / 0 / 35 / 71 | 55 % | 30 / 30 — pérdida de conocimiento, dolor de pecho, falta de aire, embarazo con señales de alarma, sangrados, tratamiento, seguimiento | Archivos listos |
-| B04 | 0 / 0 / 35 / 105 | 45 % | 30 / 30 — cabeza, huesos, ojos/oídos, otros síntomas, examen, diagnóstico | Archivos listos |
-| B05 | 0 / 0 / 35 / 105 | 44 % | 30 / 30 — salud reproductiva, anticoncepción, salud mental, violencia (neutra), promoción, hospital | Archivos listos |
+| Bloque | General: Principito / frases variadas / ejercicios / redactadas | Presente | Médica (médico / paciente) | Borradores en el Word | Control |
+|---|---|---|---|---|---|
+| B01 (con el traductor) | 35 / 65 / 0 / 40 | 51 % | 32 / 28 — consulta completa | 7 desde la fila 25 | — |
+| B02 | 35 / 57 / 8 / 40 | 59 % | 30 / 30 | 16 | 10 |
+| B03 | 34 / 0 / 35 / 71 | 53 % | 30 / 30 | 24 | — |
+| B04 | 0 / 0 / 35 / 105 | 42 % | 30 / 30 | 30 | — |
+| B05 | 0 / 0 / 35 / 105 | 39 % | 30 / 30 | 30 | — |
 
-- **Caben 5 bloques** (1 000 oraciones). Sobran 414 generales (400 ejercicios y 14 redactadas) y 840 médicas. Para un sexto bloque haría falta redactar ~100 oraciones generales más (o decidir P4).
-- Cada sublote tiene 34–36 generales + 14–16 médicas; cada pregunta va con su respuesta en el mismo sublote.
+**Caben 5 bloques.** Sobran 431 generales (416 ejercicios y 15 redactadas) y 1 417 médicas. Para un sexto bloque hacen falta ~90 oraciones generales más.
 
 ## Cómo regenerar
 
-Desde `D:\Corpus_Quechua`, con los Excel y Word cerrados (cada script acepta `--forzar` para rehacer su salida):
+Desde `D:\Corpus_Quechua`, con Excel y Word cerrados (el Word de B01 no se regenera aquí, y todo corre en CPU):
 
 ```
+.venv\Scripts\python.exe scripts\02_ingesta.py --forzar
+.venv\Scripts\python.exe scripts\03_eda.py --forzar
 .venv\Scripts\python.exe scripts\04_limpieza.py --forzar
 .venv\Scripts\python.exe scripts\05_huecos.py --forzar --estricto
 .venv\Scripts\python.exe scripts\f6_armar_bloques.py --forzar
+.venv\Scripts\python.exe scripts\09_texto_paralelo.py
 .venv\Scripts\python.exe scripts\f7_verificacion.py
 ```
-
-- La cadena completa es `00_huella_fuentes → 01_inventario → 02_ingesta → 03_eda → 04_limpieza → 05_huecos → f6_armar_bloques → f7_verificacion`.
-- Los IDs están fijados en `02_maestro/ids.csv`: al regenerar, una fila nunca cambia de ID. Si cambias el texto de una frase redactada, recibe un ID nuevo (nunca hereda la traducción de otra).
-- Lo que ya devolvió el traductor se conserva solo si el español de la fila no cambió. Los bloques enviados no se rearman.
-- Si un archivo está abierto en Word o LibreOffice, `f6` se detiene sin dejar nada a medias. Con `--solo-archivos B03,B04` regenera solo los archivos de esos bloques.
-
-## Instalaciones hechas
-
-- Entorno propio `.venv` (Python 3.14) con pandas, openpyxl, python-docx, rapidfuzz, pypdfium2, pyyaml, matplotlib, numpy y pillow (`requirements.txt`). No se tocaron `inf659_env` ni `.venvs`.
-- **LibreOffice 26.8.1** (winget), porque la PC no tiene Word ni Excel y había que abrir de verdad cada archivo generado para revisarlo.

@@ -1,4 +1,22 @@
-# CLAUDE.md — Corpus quechua chanka médico (INF657, PUCP)
+# CLAUDE.md — Corpus quechua collao médico (INF657, PUCP)
+
+> ## ⚠️ 0. Cambio de variedad: de chanka a COLLAO (5-nov-2026) — esta sección manda sobre el resto
+>
+> El proyecto pasó de quechua chanka a **quechua collao (Cusco–Collao, ISO `quz`; Cusco y, en general, Puno)**, porque hay más hablantes collao disponibles. **Se empieza de cero en lo que es quechua: nada chanka entra al corpus.** Donde el resto de este archivo diga «chanka», léase «collao», con estas reglas:
+>
+> - **Qué se conserva:** todo el trabajo sobre el **español** (fuentes, limpieza, adaptaciones, respuestas del paciente, oraciones generales en varios tiempos), el diseño de bloques (D1–D8, 200 = 140 + 60, sublotes, B01 consulta completa) y las herramientas (Word, Excel, 06–08).
+> - **Qué sale:** el quechua de toda fuente chanka (unificado «Quechua_final (chanka)», SOCEMURP, MinCul, afiche, diabetes, Allin Kawsay —app probada en Huancavelica—, Grupo 2, Principito traducido con un modelo `quy`, AmericasNLP `quy`, diccionario MINEDU de Ayacucho). De esas fuentes queda **solo el español**; el traductor collao traduce desde cero.
+> - **Borradores collao (D6), en su forma ORIGINAL:** Lopera Quiroga (2020) —forma del libro, Puno/Cusco—, Farfán Cantero (2001) —cusqueño— y OPS/OMS Bolivia (2013) —sureño boliviano, de la familia collao—. **Ninguno es gold** (Lopera escribe a la castellana y tiene desalineados; OPS es boliviano). Calidad: fuente collao oficial > Farfán > Lopera > OPS/OMS Bolivia > solo español.
+> - **Ortografía (D9 y §10.3):** alfabeto oficial del quechua collao: **glotalizadas y aspiradas SÍ se escriben** (p'unchay, qhaway, mikhuy); k, q, w, h (no c/qu/hu/j); semivocales con y/w (kunkayki, no kunkaiki); **vocales: 5 (P3 decidido el 5-nov-2026, como escribe el traductor; Academia Mayor de la Lengua Quechua del Cusco)** → `config.yaml` (`variedad.vocales`). **Lo que el traductor ya tradujo no se toca,** aunque use «c» y «j». Lo pendiente sigue esta tabla y él cambia lo que no le parezca.
+> - **Rasgos que se marcan en QA (§6, §12):** ahora lo que no es de Cusco: progresivo -chka- (Cusco: -sha-), validador -m tras vocal (Cusco: -n), -nchik (Cusco: -nchis), -pti- (Cusco: -qti-), léxico chanka o boliviano (yaku→unu, upyay/ukyay→uhyay, llamkay→llank'ay, punchaw→p'unchay, haykap→hayk'aq, machkha→hayk'a, llawar→yawar) y la «j» boliviana.
+> - **Parte general (§11.1):** ya no trae borrador, así que la cobertura se mide en el **español** (tiempo, persona, posesivo, caso, subordinación, negación, pregunta: lo que en quechua son sufijos).
+> - **B01 ya está con el traductor:** sus filas e IDs no se rearman (`02_maestro/congelados/B01.xlsx` y `B01_original/`; `bloque.congelados: [B01]`) y f6 nunca regenera su Word: lo escribe `scripts/congelar_bloque.py`. Lo que él ya trabajó (filas 1–24) queda idéntico. Desde la fila 25, cada fila trae un borrador de fuente collao o la celda vacía: el chanka no se convierte con reglas, porque sería inventar quechua. B02–B05 se arman en collao y no repiten su español.
+> - **Control (D7):** las 10 médicas de B02, con borrador collao (`config.control.por_bloque`). B01 ya no tiene, porque su borrador oculto era chanka.
+> - **Lugares del español:** Cusco/Puno en lugar de Ayacucho, también en B01.
+> - **Fuentes collao nuevas, ya extraídas** (`Fuentes/collao/`, `04_reportes/FUENTES_COLLAO.md`): *Palabras clave para la atención en salud – Quechua Cusco*, manual de justicia Cusco Collao y glosario PIAS Puno, con calidad 1; glosario COVID-19 VMI, solo léxico y texto paralelo. La guía de señalética no se extrae (mezcla columnas y casi no es médica). AmericasNLP 2021 es–quz (JW300) está en `Fuentes/AmericasNLP/es-quz/`: sirve de léxico y para preentrenar, no se graba.
+> - **Para el equipo de modelo:** `scripts/09_texto_paralelo.py` → `06_dataset/texto_paralelo_collao.csv`. Ninguna fuente es gold hasta que el traductor la valide y se grabe (D8).
+> - **Avance de un bloque en curso:** `scripts/avance_traductor.py B01` → `04_reportes/AVANCE_B01.md` (no valida nada).
+> - Las cifras de §5 siguen sirviendo para verificar las versiones de los archivos.
 
 > **Lee este archivo completo antes de hacer cualquier cosa.**
 > Resume los acuerdos de la estrategia del proyecto (14 de octubre de 2026), donde se revisaron los Excel, el manual SOCEMURP y se definió la estrategia. Aquí no debe perderse nada.
@@ -30,7 +48,7 @@
 ## 1. El proyecto
 
 - **Curso:** INF657 – Ingeniería y Gestión del Conocimiento (maestría, PUCP). Proyecto grupal de 15 personas.
-- **Objetivo:** apoyar la interacción **paciente quechuahablante ↔ médico** en **quechua chanka** (variedad de Ayacucho, Apurímac y Huancavelica; código ISO `quy`).
+- **Objetivo:** apoyar la interacción **paciente quechuahablante ↔ médico** en **quechua collao** (variedad de Cusco y, en general, Puno; código ISO `quz`). *(Hasta el 5-nov-2026 era chanka, `quy`: ver §0.)*
 - **Dirección del sistema: bidireccional.**
   - El paciente habla quechua → el médico recibe español (reconocimiento de voz + traducción).
   - El médico habla español → el paciente recibe quechua.
@@ -51,7 +69,7 @@ En el vocabulario unificado aparecen las columnas "Marshall", "Kim 1" y "Kim 2":
 
 ### Colaboradores externos (cuello de botella)
 
-- **Traductor español → quechua chanka** (profesor de quechua).
+- **Traductor español → quechua collao de Cusco** (hablante collao).
   - Trabaja **solo en Word**.
   - **No traduce en vivo:** recibe el bloque con anticipación y llega a la sesión con todo traducido.
 - **Grabador:** lee en voz alta cada oración **primero en español y luego en quechua**. Idealmente solo graba; puede anotar observaciones.
@@ -90,7 +108,7 @@ Por qué existe este trabajo:
 | D6 | **Se le dan borradores al traductor** | En el Word, la celda "Quechua" viene **prellenada con el borrador** y él corrige ahí mismo. Luego se compara automáticamente borrador vs. final (porcentaje de edición). |
 | D7 | **Oraciones de control en B01** (recomendado, activo por defecto) | ~15 oraciones de B01 que **sí tienen borrador** se entregan con la celda Quechua **vacía**. Sirve para medir el "anclaje": si con borrador corrige mucho menos de lo que difiere su traducción libre, el borrador lo está sesgando. Si en las oraciones con borrador reescribe más del 50 %, los borradores no ahorran tiempo y se dejan de dar. Se puede desactivar en `config.yaml`. |
 | D8 | **Regla del gold** | Ningún borrador entra al entrenamiento ni a la evaluación como verdad. **Gold = validado por el traductor y luego grabado.** Si al grabar el hablante dice la frase distinto a lo escrito, **se transcribe lo que dijo** y se anota (la transcripción tiene que coincidir con el audio). |
-| D9 | **Convención ortográfica = alfabeto oficial del quechua chanka** | 3 vocales (a, i, u) en palabras quechuas; sin glotalizadas ni aspiradas; sin c/qu/j/hu castellanas. Las reglas detalladas están en §10.3 (son las mismas que aplicó el vocabulario unificado). Falta confirmar con el traductor (P3). |
+| D9 | **Convención ortográfica = alfabeto oficial del quechua collao** | Glotalizadas (ch' k' p' q' t') y aspiradas (chh kh ph qh th) **sí** se escriben; k, q, w, h en lugar de c/qu/hu/j castellanas; semivocales con y/w. Vocales: 3 (a, i, u; MINEDU) por defecto o 5 (Academia Mayor de la Lengua Quechua): P3. Reglas en §10.3 y §0. |
 | D10 | **Fuente médica principal = vocabulario unificado** | `Vocabulario_Quechua_Chanka_unificado_2.xlsx` es la última versión: toma todo el Grupo 3 de `Corpus_Equipos` y agrega cosas. `Corpus_Construido.xlsx` y la hoja Grupo 3 de `Corpus_Equipos_1.xlsx` quedan **solo como referencia** (están superados). |
 | D11 | **Fuente general = Grupo 1 (Principito) + Grupo 2** | El profesor dice que las oraciones del Principito "valen bastante": **tienen prioridad**. El unificado NO trae estas hojas; se sacan de `Corpus_Equipos_1.xlsx`. AmericasNLP 2021 **no se graba tal cual** (ver P4). |
 | D12 | **Bloques limpios + origen en otra pestaña** | Ver §8. Nada de columnas ocultas ni Excels de 30 columnas en la vista principal. |
@@ -106,7 +124,7 @@ Si no hay respuesta de la coordinación del proyecto, **usa el valor por defecto
 |---|---|---|
 | P1 | **¿Se aparta un conjunto de prueba?** El profesor dijo "todo es train". Se recomendó igual apartar un conjunto que el modelo no vea. | Todas las filas con `Split = train`. Además, una columna `Test_sugerido` (Sí/No) que marca un **10 % estratificado** de cada bloque (14 generales + 6 médicas) para poder activarlo si se confirma. |
 | P2 | Fecha de la primera sesión y con cuántos días de anticipación recibe el traductor el Word. | Desconocido. Generar B01 y B02 lo antes posible. |
-| P3 | ¿El traductor usa el alfabeto oficial (3 vocales)? | Asumir que sí. Las instrucciones del Word se lo piden explícitamente. |
+| P3 | ¿3 vocales (alfabeto oficial MINEDU) o 5 (Academia Mayor de la Lengua Quechua del Cusco)? «Se definirá después» (coordinación, 5-nov-2026). | 3 vocales; se cambia con `variedad.vocales` en `config.yaml` y se regenera (el Word muestra la tabla que corresponda). |
 | P4 | ¿Se usan oraciones de AmericasNLP 2021 para la parte general? | **No**, solo como léxico de referencia. Si la parte general no alcanza para los bloques planificados, **pregúntale a la coordinación del proyecto** antes de usarlas, y solo con oraciones cortas no religiosas filtradas. |
 | P5 | Formato de audio. | WAV, 16 kHz, mono, 16 bits (habitual en reconocimiento de voz). Confirmar con el equipo de modelo. |
 | P6 | Origen real de las filas del Grupo 2 (¿ejemplos del diccionario MINEDU o ejercicios generados?). | Clasificar con la heurística de §5.2 y verificar contra el PDF del diccionario si está en la carpeta. Si no se puede verificar, marcar `Origen_verificado = No`. |
@@ -266,7 +284,7 @@ Tus chequeos automáticos deberían detectar casos como estos. Úsalos como **pr
 
 **Transcripción de oído (Grupo 3 original):** «tuyu», «ñorton», «qolqe», «runto», «siyu», «yawa», «stardin manchu», «waranqa hukniyoq», «qellqaytay yachankichu».
 
-**Rasgos no chanka que aparecen en las fuentes:**
+**Rasgos de otra variedad que aparecen en las fuentes** (desde §0 lo que se marca es lo que NO es de Cusco: -chka-, -m, -nchik, -pti-, yaku, upyay, «j» boliviana; lo de esta lista es lo correcto en collao):
 - progresivo *-sha-* («kashanki»);
 - validador *-n* tras vocal («Imaykin», «manan»);
 - glotalizadas y aspiradas («p'acha», «qhaway»);
@@ -485,24 +503,28 @@ La coordinación del proyecto designa una única persona responsable de este arc
 
 **Únicos cambios automáticos permitidos:** los ortográficos mecánicos de esta tabla, registrados en `Cambios`. **Prohibido** cambiar léxico, gramática o sentido: eso se marca en QA para el traductor.
 
+*(Desde el 5-nov-2026, convención COLLAO. La versión chanka anterior quitaba glotalizadas y aspiradas: ya no.)*
+
 | Regla | Ejemplo |
 |---|---|
-| Sin glotalizadas ni aspiradas (k', q', p', t', ch', kh, ph, qh, th) | «p'acha» → «pacha», «qhaway» → «qaway», «achkha» → «achka» |
-| 3 vocales en palabras quechuas (a, i, u) | «onqoy» → «unquy», «-yoq» → «-yuq», «qolqe» → «qullqi» |
-| Sin c/qu/j/hu castellanas en palabras quechuas | «wicsa» → «wiksa», «jamuy» → «hamuy», «huasi» → «wasi» |
+| Glotalizadas y aspiradas **se conservan**; solo se unifica el apóstrofo | «p’unchay» → «p'unchay»; «qhaway», «mikhuy» se dejan |
+| 3 vocales en palabras quechuas (a, i, u) — **solo si `variedad.vocales` = 3 (P3)** | «onqoy» → «unquy», «-yoq» → «-yuq», «qolqe» → «qulqi» |
+| «j» castellana → h (siempre); c/qu/hu → k/q/w solo si la palabra resultante existe en el léxico collao | «jampiq» → «hampiq», «juk» → «huk» |
+| Semivocales con y/w | «kunkaiki» → «kunkayki», «allyntachu» → «allintachu», «puñunky» → «puñunki» |
 
 **Solo marcar en QA, sin cambiar** (no es mecánico):
 
-| Rasgo | Ejemplo |
+| Rasgo (no es de Cusco) | Ejemplo |
 |---|---|
-| Progresivo -sha- → -chka- | «kashanki» → «kachkanki» |
-| Validador -n tras vocal → -m | «manan» → «manam» |
-| Inclusivo -nchis → -nchik | |
-| Subordinador -qti- / -jti- → -pti- | |
-| Léxico chanka | yaku (no unu), upyay (no uhyay), llamkay, punchaw, haykap, hurquy, wichqay, mayllay, kiri |
+| Progresivo -chka- → -sha- | «kachkanki» → «kashanki» |
+| Validador -m tras vocal → -n | «manam» → «manan» |
+| Inclusivo -nchik → -nchis | |
+| Subordinador -pti- / -jti- → -qti- | |
+| Léxico chanka o boliviano | yaku (Cusco: unu), upyay/ukyay (uhyay), llamkay (llank'ay), punchaw (p'unchay), haykap (hayk'aq), machkha (hayk'a), llawar (yawar) |
+| ¿Falta una glotalizada o aspirada? | si en las fuentes collao la palabra siempre se escribe con ella («punchay» → «p'unchay») |
 
-- Los **préstamos y nombres propios conservan su escritura** («hospital», «Lince», «Ayacucho»).
-- Las fuentes oficiales chanka (afiches MINSA/MinCul, manual MinCul) **se respetan tal cual**.
+- Los **préstamos y nombres propios conservan su escritura** («hospital», «Lince», «Cusco»).
+- Las fuentes oficiales **collao** (Ministerio de Cultura, MINSA) **se respetan tal cual**.
 
 ### 10.4 Descartar (siempre con motivo)
 
@@ -527,12 +549,12 @@ La coordinación del proyecto designa una única persona responsable de este arc
 - El quechua es aglutinante, así que la unidad principal son los **sufijos**:
   - **Nominales:** -kuna; posesivos -y, -yki, -n, -nchik, -yku, -ykichik, -nku; casos -ta, -man, -pi, -manta, -wan, -paq, -pa/-p, -kama, -rayku, -hina, -nta, -yuq, -ntin.
   - **Verbales de persona:** -ni, -nki, -n, -nchik, -yku, -nkichik, -nku; objeto -wa-, -su-, -yki.
-  - **Tiempo, aspecto y modo:** -chka-, -rqa-, -sqa-; futuro -saq, -nqa, -sun; condicional -man, -waq; imperativo -y, -ychik, -chun.
+  - **Tiempo, aspecto y modo:** -sha- (collao; en chanka -chka-), -rqa-, -sqa-; futuro -saq, -nqa, -sun; condicional -man, -waq; imperativo -y, -ychis, -chun.
   - **Derivativos:** -chi-, -ku-, -mu-, -pu-, -ri-, -yku-, -naku-, -ysi-, -pa-.
   - **Nominalizadores:** -q, -sqa, -na, -y.
-  - **Subordinadores:** -spa, -pti-, -stin.
+  - **Subordinadores:** -spa, -qti- (collao; en chanka -pti-), -stin.
   - **Enclíticos:** -mi/-m, -si/-s, -chá, -chu, -taq, -qa, -pas/-pis, -lla, -ña, -raq, -yá, -puni.
-- Segmentación **heurística** (sufijos desde el final de la palabra, priorizando el más largo) sobre los borradores. Documenta que es aproximada. Unidades secundarias: bigramas de letras (fonotaxis) y palabras nuevas.
+- Segmentación **heurística** (sufijos desde el final de la palabra, priorizando el más largo) sobre los borradores. Documenta que es aproximada. Unidades secundarias: bigramas de letras (fonotaxis) y palabras nuevas. *(Desde §0 la parte general no trae borrador collao: la cobertura se mide en el español con los rasgos que en quechua son estos sufijos — tiempo, persona, posesivo, caso, subordinación, negación, pregunta — y palabras nuevas.)*
 - **Puntaje** = unidades nuevas cubiertas (con pesos; sufijos > bigramas > palabras) ÷ penalización por longitud. Empates: prioridad de pool, luego la más corta. Semilla fija.
 - **Cuotas por bloque** (configurables; ajústalas y justifica si el material no da):
   - ~35 del **Principito** (prioridad del profesor; se agota en ~3 bloques);
@@ -563,13 +585,12 @@ La coordinación del proyecto designa una única persona responsable de este arc
 - **B03:** señales de alarma y emergencias (sangrado, desmayo, falta de aire, embarazo con sangrado, niño deshidratado) + tratamiento (dosis, horarios) + tranquilizar al paciente.
 - **B04 en adelante:** el resto, por frecuencia. Si tienes acceso web, consulta datos del MINSA o del CDC-MINSA sobre las principales causas de consulta en Ayacucho, Apurímac y Huancavelica y **cita la fuente**; si no, usa este orden y anótalo. Después: salud sexual y reproductiva, anticoncepción, salud mental, ojos, oídos y nariz, exámenes auxiliares. Violencia: frases neutras, sin detalles explícitos.
 
-**Calidad del borrador** para elegir entre frases equivalentes, de mejor a peor:
-1. Fuente chanka oficial.
-2. "Final – coincide" (incluye SOCEMURP).
-3. "Final – única fuente".
-4. "Final – corregido/normalizado".
-5. "Final – forma del libro compatible" (Lopera).
-6. "Revisar".
+**Calidad del borrador** para elegir entre frases equivalentes, de mejor a peor (collao, desde §0):
+1. Fuente collao oficial (Ministerio de Cultura / MINSA, cuando se agreguen).
+2. Farfán Cantero (2001), cusqueño, forma original.
+3. Lopera Quiroga (2020), forma del libro (Puno/Cusco).
+4. OPS/OMS Bolivia (2013), sureño boliviano.
+5. Cualquiera de las anteriores si el equipo la marcó «Revisar – duda de traducción».
 7. Solo español: válido; el traductor traduce desde cero.
 
 **Integridad de pares:** pregunta y respuestas en el mismo sublote.
@@ -592,24 +613,24 @@ Si una sección no encaja, decide y anótalo.
 
 - Cada sublote ≈ 35 generales + 15 médicas.
 - Las médicas siguen el orden de la consulta a lo largo de los sublotes, y las generales se reparten intercaladas.
-- **Control (D7):** en B01, elegir ~15 filas con borrador (unas 10 generales y 5 médicas) repartidas entre sublotes. Esas filas van con la celda Quechua vacía en el Word. Se registran en `Detalle` y en el maestro.
+- **Control (D7):** ~15 filas con borrador repartidas entre sublotes. Desde §0 (collao) la parte general no trae borrador, así que son médicas y se reparten entre B01 (5) y B02 (10). Esas filas van con la celda Quechua vacía en el Word. Se registran en `Detalle` y en el maestro.
 
 ---
 
 ## 12. Revisión automática de calidad ("evaluación como LLM")
 
-Tú no eres hablante de quechua chanka. **Tus avisos son sospechas para que el traductor sepa dónde mirar primero, nunca correcciones que cuenten como válidas.**
+Tú no eres hablante de quechua. **Tus avisos son sospechas para que el traductor sepa dónde mirar primero, nunca correcciones que cuenten como válidas.**
 
 Tipos de aviso (pestaña `QA`, severidad ALTA / MEDIA / BAJA):
 
 | Tipo | Qué detecta |
 |---|---|
 | `ORTO` | Letras fuera de la convención (§10.3). |
-| `VARIEDAD` | Rasgos cusqueños, collao o bolivianos (§6). |
+| `VARIEDAD` | Rasgos que no son del quechua de Cusco: chanka o bolivianos (§0, §10.3). En un borrador boliviano va un solo aviso ALTA («adáptelo al quechua de Cusco») y los rasgos sueltos bajan a MEDIA. |
 | `PRESTAMO` | Palabra española sin adaptar dentro del quechua («entienden», «piensani»). Severidad baja si es un préstamo común y natural («hospital», «pastilla»). |
 | `ALINEACION` | Relación de longitud quechua/español fuera de [0.5, 2.0]; números que no coinciden; pregunta en español sin marca interrogativa en quechua (-chu, -taq, ima-, pi-, may-, hayka-…). |
 | `SENTIDO` | Sospecha semántica (tipo *pisi*/*achka*, *wata*/*killa*). Explica el porqué en una línea. |
-| `OOV` | Palabra no encontrada en AmericasNLP ni en el diccionario tras quitar sufijos. **Severidad baja** en léxico médico, que es esperable que no esté. |
+| `OOV` | Palabra no encontrada en el léxico collao de referencia (todo el quechua de Lopera, Farfán y OPS/OMS, más las fuentes collao que se agreguen) tras quitar sufijos. **Severidad baja** en léxico médico, que es esperable que no esté. |
 | `DUP` | Mismo quechua para dos españoles distintos (o viceversa). |
 | `TRANSCRIPCION` | Patrones de transcripción de oído (y por ll, o/e, letras pegadas). |
 

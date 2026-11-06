@@ -1,6 +1,7 @@
 # Oraciones de más de 20 palabras (§10.1). Se parten en unidades de 15 palabras o menos, redactadas por Claude
 # a partir del original (Estado = Por_revisar). Si no se pueden partir limpiamente → descartar con motivo.
 # `qu` solo se pone cuando es un trozo LITERAL del borrador original (el script lo comprueba); nunca se redacta quechua.
+# (5-nov-2026: se quitaron los trozos que había, porque eran del borrador chanka; el corpus pasó a quechua collao.)
 
 QCH-0478:
   - {es: "Cuarentena significa que debe quedarse en casa."}
@@ -40,21 +41,21 @@ QCH-0765:
   - {es: "¿Le duele o siente que se le hincha el abdomen?"}
   - {es: "¿Cuánto tiempo dura esta molestia?"}
 QCH-0768:
-  - {es: "¿Ha tenido diarreas?", qu: "¿Qichawanchu kachkanki?"}
+  - {es: "¿Ha tenido diarreas?"}
   - {es: "¿Cómo son: aguadas, delgadas como cinta o en pedazos?"}
   - {es: "¿Tienen sangre roja, o son blancas o negras como la brea?"}
 QCH-0769:
   - {es: "Cuando tiene diarrea, ¿le duele o le dan retortijones?"}
   - {es: "¿Siente que quiere volver a hacer, aunque salga poco?"}
 QCH-0770:
-  - {es: "¿Ha tenido dolor en la boca del estómago?", qu: "Wiksa simipi nanasunkichu"}
-  - {es: "¿Luego ese dolor se fue al lado derecho y es muy fuerte?", qu: "¿chay nanay paña wiksapichu, unaytachu nanasunki?"}
+  - {es: "¿Ha tenido dolor en la boca del estómago?"}
+  - {es: "¿Luego ese dolor se fue al lado derecho y es muy fuerte?"}
 QCH-0771:
   - {es: "¿A los pocos días se le pusieron amarillos los ojos y la piel?"}
   - {es: "¿Cambió el color de su orina?"}
 QCH-0793:
-  - {es: "Si le viene sangre antes de la fecha de su regla, avise al médico.", qu: "Yawarniyki hamun mana tukasunki hinaqa willanayki doctorman"}
-  - {es: "Eso no es normal.", qu: "chayqa manam allinchu."}
+  - {es: "Si le viene sangre antes de la fecha de su regla, avise al médico."}
+  - {es: "Eso no es normal."}
 QCH-0820:
   - {es: "¿Ha notado que un lado de la cara no es igual al otro?"}
   - {es: "¿Se le ha torcido la boca hacia un lado?"}

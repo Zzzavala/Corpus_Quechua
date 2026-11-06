@@ -1,6 +1,7 @@
 """F6 – Priorización y bloques (§11) + archivos de los bloques de config.bloque.bloques_con_archivos (§8).
 
-- Parte general (140/bloque): selección voraz por cobertura de sufijos, bigramas y palabras (§11.1), con cuotas por pool.
+- Parte general (140/bloque): selección voraz por cobertura (§11.1), con cuotas por pool. Desde el cambio a collao la
+  parte general no trae borrador, así que la cobertura se mide en el español (rasgos que en quechua son sufijos).
 - Parte médica (60/bloque): plan de F5 (B01 curado; B02… por tema), unidades pregunta+respuestas indivisibles.
 - 4 sublotes de 50 (≈35 + 15); control en B01 (D7); Test_sugerido 10 % estratificado (P1).
 - Escribe 02_maestro/corpus_maestro.xlsx, 03_bloques/BXX/BXX_trabajo.xlsx y BXX_traductor.docx (bloques con archivos),
@@ -25,9 +26,9 @@ from rapidfuzz import fuzz
 from rapidfuzz.process import cdist
 
 from comun import (CFG, RAIZ, asegurar_dir, cargar_checkpoint, clave_normalizada, es_pregunta, escribir_json, escribir_texto,
-                   guardar_excel, guardar_seguro, hoy, n_palabras, ruta, ruta_checkpoint)
+                   fotos_congeladas, guardar_excel, guardar_seguro, hoy, n_palabras, ruta, ruta_checkpoint)
 import docs_word as W
-from heuristicas import tiempo_es
+from heuristicas import tiempo_es, unidades_es
 from excel_formato import escribir_clave_valor, escribir_hoja
 from qa import aviso_word
 import quechua as Q
@@ -44,7 +45,7 @@ COLS_CORPUS = ["ID", "Dominio", "Escenario", "Etapa_consulta", "Rol", "Español"
                "Estado", "Prioridad", "Bloque", "Sublote", "Split", "Test_sugerido", "Control", "Responde_a", "N_bloque"]
 COLS_ORIGEN = ["ID", "Fuente", "Archivo", "Hoja", "Código_original", "Fila_original", "Tipo_borrador", "Variedad_fuente",
                "Origen_verificado", "Estado_unificado", "Observaciones_heredadas", "Códigos_origen", "Códigos_unidos",
-               "Otros_borradores", "Propuestas_equipo", "Parte_de", "Evidencia_P6", "Fuente_detalle"]
+               "Otros_borradores", "Propuestas_equipo", "Parte_de", "Evidencia_borrador", "Fuente_detalle"]
 
 
 # ======================================================================= selección general (§11.1)
@@ -54,9 +55,10 @@ def seleccionar_general(C: pd.DataFrame, bloques: list[str], excluir: set[str] =
     G["_fila"] = G["Fila_original"].astype(int)
     G["_hoja"] = G["Hoja"].map({"Grupo 1 - Principito": 0, "Grupo 2 - Corpus Chanka": 1})
     G = G.sort_values(["_hoja", "_fila", "ID"])
-    unidades = {r["ID"]: Q.unidades_cobertura(r["Quechua_borrador"]) for _, r in G.iterrows()}
-    largo_qu = {r["ID"]: max(1, len(Q.tokens_qu(r["Quechua_borrador"]))) for _, r in G.iterrows()}
-    largo_es = {r["ID"]: n_palabras(r["Español"]) for _, r in G.iterrows()}
+    # Sin borrador collao en la parte general, la cobertura se mide en el español: rasgos gramaticales que en quechua
+    # son sufijos (tiempo, persona, posesivo, caso, subordinación…) y palabras nuevas (heuristicas.unidades_es).
+    unidades = {r["ID"]: unidades_es(r["Español"]) for _, r in G.iterrows()}
+    largo_es = {r["ID"]: max(1, n_palabras(r["Español"])) for _, r in G.iterrows()}
     pool_de = dict(zip(G["ID"], G["Pool"]))
     restantes = {p: list(G.loc[G["Pool"] == p, "ID"]) for p in POOLS}
     restantes[POOL_CLAUDE] = orden_redactadas(G)
@@ -93,7 +95,7 @@ def seleccionar_general(C: pd.DataFrame, bloques: list[str], excluir: set[str] =
             notas.append(f"{b}: {cuota['g2_ejercicio']} ejercicios del Grupo 2 (más que el tope de {cuotas_base['g2_ejercicio_max']}) porque "
                          f"no quedaban otras oraciones generales.")
         max_pal = CFG["general"]["b01_max_palabras_es"] if b == "B01" else CFG["general"]["max_palabras_es"]
-        cubiertas = {"sufijo": set(), "bigrama": set(), "palabra": set()}
+        cubiertas = {t: set() for t in pesos}
         elegidos = []
         restante = dict(cuota)
         candidatos = {p: [i for i in restantes[p] if largo_es[i] <= max_pal] for p in POOLS}
@@ -108,7 +110,7 @@ def seleccionar_general(C: pd.DataFrame, bloques: list[str], excluir: set[str] =
                 for i in candidatos[p]:
                     u = unidades[i]
                     ganancia = sum(pesos[t] * len(u[t] - cubiertas[t]) for t in pesos)
-                    puntaje = ganancia / (largo_qu[i] ** expo)
+                    puntaje = ganancia / (largo_es[i] ** expo)
                     clave = (puntaje, -POOLS.index(p), -largo_es[i])
                     if mejor_clave is None or clave > mejor_clave:
                         mejor, mejor_clave = i, clave
@@ -119,8 +121,8 @@ def seleccionar_general(C: pd.DataFrame, bloques: list[str], excluir: set[str] =
             restantes[p].remove(mejor)
             for t in cubiertas:
                 cubiertas[t] |= unidades[mejor][t]
-        # las redactadas por Claude no tienen borrador (no hay sufijos que medir): se toman en su orden intercalado por
-        # rasgo gramatical, para que cada bloque tenga una mezcla pareja de tiempos
+        # las redactadas por Claude se toman en su orden intercalado por rasgo gramatical (YAML), para que cada bloque
+        # tenga una mezcla pareja de tiempos
         redactadas = restantes[POOL_CLAUDE][:cuota[POOL_CLAUDE]]
         del restantes[POOL_CLAUDE][:cuota[POOL_CLAUDE]]
         salida[b] = intercalar(elegidos, redactadas)
@@ -226,13 +228,16 @@ def armar_bloque(b: str, gen_ids: list[str], C: pd.DataFrame) -> list[dict]:
     return filas
 
 
-def elegir_control(filas_b01: list[dict], C: pd.DataFrame, visibles: list[str]) -> set[str]:
-    """D7: ~10 generales + ~5 médicas de B01 con borrador, repartidas entre sublotes.
+def elegir_control(filas_b01: list[dict], C: pd.DataFrame, visibles: list[str], n_general: int, n_medico: int,
+                   semilla: int) -> set[str]:
+    """D7: filas CON borrador de un bloque que van al traductor con la celda Quechua vacía, repartidas entre sublotes
+    (config.control.por_bloque). Desde el cambio a collao la parte general no trae borrador, así que el control sale de
+    la parte médica, repartido entre B01 y B02 (la primera entrega).
     No se elige una fila que tenga una «hermana» con borrador visible muy parecido en la misma entrega (B01+B02):
     el traductor vería casi la misma solución y el análisis de anclaje saldría sesgado."""
     if not CFG["control"]["activo"]:
         return set()
-    rng = random.Random(CFG["semilla"])
+    rng = random.Random(semilla)
     info = C.set_index("ID")
     umbral = CFG["control"]["similitud_max_hermana"]
     excluir = set(CFG["control"].get("excluir_codigos") or [])      # el traductor solo verá el español: debe ser claro
@@ -259,11 +264,18 @@ def elegir_control(filas_b01: list[dict], C: pd.DataFrame, visibles: list[str]) 
             continue
         por_sub[f["Sublote"]][r["Dominio"]].append(f["ID"])
     subs = sorted(por_sub)
-    for dom, total in [("General", CFG["control"]["n_general"]), ("Médico", CFG["control"]["n_medico"])]:
+    if not subs:
+        return elegidas
+    for dom, total in [("General", n_general), ("Médico", n_medico)]:
         cupos = [total // len(subs) + (1 if k < total % len(subs) else 0) for k in range(len(subs))]
         for s, c in zip(subs, cupos):
             lista = sorted(por_sub[s][dom])
             elegidas |= set(rng.sample(lista, min(c, len(lista))))
+        # si un sublote no tenía candidatas suficientes, el cupo se completa con las de otros sublotes
+        faltan = total - sum(1 for i in elegidas if info.loc[i, "Dominio"] == dom)
+        resto = sorted(i for s in subs for i in por_sub[s][dom] if i not in elegidas)
+        if faltan > 0 and resto:
+            elegidas |= set(rng.sample(resto, min(faltan, len(resto))))
     return elegidas
 
 
@@ -323,12 +335,13 @@ def word_traductor(b: str, filas: list[dict], C: pd.DataFrame, QA: pd.DataFrame,
         avisos[q["ID"]].append((q["Tipo"], q["Severidad"], q["Detalle"]))
     doc = W.documento_horizontal()
     W.pie_con_pagina(doc, f"Bloque {b}")
-    h = doc.add_heading(f"Bloque {b} — Traducción al quechua chanka", level=1)
+    h = doc.add_heading(f"Bloque {b} — Traducción al quechua de Cusco (collao)", level=1)
     doc.add_paragraph(f"Este documento tiene {len(filas)} oraciones en {CB['sublotes']} sublotes de {CB['tamano_sublote']}. "
                       "Gracias por su ayuda.")
     doc.add_heading("Qué hacer", level=2)
     for t in [
-        "Lea cada oración en español y revise el quechua de la columna «Quechua». Corríjalo ahí mismo para que sea quechua chanka natural.",
+        "Lea cada oración en español y revise el quechua de la columna «Quechua». Corríjalo ahí mismo para que sea quechua de Cusco natural.",
+        "El quechua que viene escrito es solo un borrador y puede tener formas de otras zonas: déjelo como se dice en Cusco.",
         "Si la celda de quechua está vacía, escriba la traducción.",
         "Si una frase en español no se diría así, escriba cómo lo diría naturalmente un hablante y anótelo en «Observaciones».",
         "Algunas filas traen un aviso en gris en «Observaciones». Es solo una sospecha automática: usted decide. Escriba su comentario después del aviso.",
@@ -338,14 +351,19 @@ def word_traductor(b: str, filas: list[dict], C: pd.DataFrame, QA: pd.DataFrame,
     ]:
         doc.add_paragraph(t, style="List Number")
     doc.add_paragraph("«Quién habla»: Médico, Paciente, o — cuando es una oración general (sin hablante).")
-    doc.add_heading("Convención ortográfica (alfabeto oficial del quechua chanka)", level=2)
+    tres = Q.VOCALES == 3
+    doc.add_heading("Convención ortográfica (alfabeto oficial del quechua collao)" if tres else
+                    "Convención ortográfica (quechua de Cusco, cinco vocales)", level=2)
     t = W.tabla(doc, ["Regla", "Escriba", "No escriba"], [9.0, 8.0, 8.0])
     for regla, si, no in [
-        ("Tres vocales en palabras quechuas: a, i, u", "unquy, -yuq, qullqi", "onqoy, -yoq, qolqe"),
-        ("Sin glotalizadas ni aspiradas", "pacha, qaway, achka", "p'acha, qhaway, achkha"),
-        ("k, w, h en lugar de c, qu, hu, j", "wiksa, wasi, hamuy", "wicsa, huasi, jamuy"),
-        ("Formas del chanka", "kachkanki, manam, ñuqanchik, -pti-", "kashanki, manan, ñoqanchis, -qti-"),
-        ("Préstamos y nombres propios: como en español", "hospital, Ayacucho", "—"),
+        ("Tres vocales en palabras quechuas: a, i, u", "unquy, -yuq, qullqi", "onqoy, -yoq, qolqe") if tres else
+        ("Cinco vocales (Academia Mayor de la Lengua Quechua)", "onqoy, -yoq, qolqe", "unquy, -yuq, qullqi"),
+        ("Glotalizadas y aspiradas: sí se escriben", "p'unchay, t'anta, qhaway, mikhuy", "punchay, tanta, qaway, mikuy"),
+        ("k, q, w, h en lugar de c, qu, hu, j", "wiksa, wasi, hamuy, huk", "wicsa, huasi, jamuy, juk"),
+        ("Semivocales con y / w", "kunkayki, tayta, allintachu", "kunkaiki, taita, allyntachu"),
+        ("Formas del quechua de Cusco", "kashanki, manan, ñuqanchis, -qti-" if tres else "kashanki, manan, ñoqanchis, -qti-",
+         "kachkanki, manam, ñuqanchik, -pti-"),
+        ("Préstamos y nombres propios: como en español", "hospital, Cusco", "—"),
     ]:
         celdas = t.add_row().cells
         for c, v in zip(celdas, (regla, si, no)):
@@ -471,7 +489,7 @@ def resumen_bloque(b, filas, C, control, test) -> list[tuple]:
                  ("Tiempos y rasgos de la parte general", resumen_tiempos(list(gen.index), C)),
                  ("Etapas o temas de la parte médica", " → ".join(temas)),
                  ("Sufijos del quechua presentes (borradores)", f"{len(sufijos)} de {total_suf} (segmentación aproximada)"),
-                 ("Oraciones de control (D7)", f"{len(control & set(ids))} (celda Quechua vacía en el Word)" if b == "B01" else "No aplica (solo B01)"),
+                 ("Oraciones de control (D7)", f"{len(control & set(ids))} (celda Quechua vacía en el Word)" if b in (CFG["control"].get("por_bloque") or {}) else f"No aplica (control solo en {', '.join(CFG['control'].get('por_bloque') or {}) or 'ningún bloque'})"),
                  ("Test sugerido (P1)", f"{len(test & set(ids))} filas marcadas; por ahora todo es train"),
                  ("Español redactado o adaptado por Claude (Por_revisar)", int((info.loc[ids, "Estado"] == "Por_revisar").sum())),
                  ("Sin borrador quechua (el traductor traduce desde cero)", int((info.loc[ids, "Quechua_borrador"] == "").sum())),
@@ -488,7 +506,7 @@ def guia_grabacion():
     a = CFG["audio"]
     doc = W.documento_vertical()
     W.pie_con_pagina(doc, "Guía de grabación")
-    doc.add_heading("Guía de grabación — Corpus quechua chanka médico", level=1)
+    doc.add_heading("Guía de grabación — Corpus quechua collao médico", level=1)
     doc.add_paragraph("Para el grabador y quien acompañe la sesión. Se graba con la hoja BXX_grabacion.docx, que se genera "
                       "cuando el traductor devuelve el bloque (script 07_hoja_grabacion.py).")
     doc.add_heading("1. Antes de empezar", level=2)
@@ -537,7 +555,7 @@ def guia_grabacion():
 
 
 LEEME = [
-    ("Corpus quechua chanka médico — archivo maestro",),
+    ("Corpus quechua collao médico — archivo maestro",),
     ("Qué es", "La única fuente de verdad del corpus (INF657, PUCP). Responsable: el equipo del proyecto. Nadie trabaja sobre copias propias."),
     ("Generado", "Por los scripts de D:\\Corpus_Quechua\\scripts (cadena 00→05, f6). Fecha de los datos: {fecha}."),
     ("",),
@@ -564,7 +582,7 @@ LEEME = [
     ("Dominio", "General o Médico (70 % / 30 % de cada bloque)."),
     ("Escenario / Etapa_consulta", "Sección y subsección de origen / etapa de la consulta (Calgary-Cambridge, §11.3)."),
     ("Rol", "Médico / Paciente / — (sin hablante)."),
-    ("Quechua_borrador", "Borrador NO validado (traductor automático, normalizado de otra variedad, libro…). Nunca es gold."),
+    ("Quechua_borrador", "Borrador collao NO validado, en su forma original: libro de Lopera (Puno/Cusco), tabla de Farfán (Cusco) o diálogo OPS/OMS (Bolivia). Nunca es gold. Vacío = el traductor traduce desde el español (del material chanka solo se usa el español)."),
     ("Quechua_validado", "Lo que devolvió el traductor. Gold = validado y grabado (D8)."),
     ("Estado", "Borrador · Sin borrador · Por_revisar (español redactado o adaptado por Claude) · Enviado · Validado · Grabado."),
     ("Prioridad", "Número del bloque planificado (1 = B01 … 5 = B05); vacío = aún sin bloque."),
@@ -576,7 +594,7 @@ LEEME = [
     ("",),
     ("Reglas clave",),
     ("D8", "Ningún borrador entra al entrenamiento ni a la evaluación como verdad."),
-    ("Ortografía", "Alfabeto oficial del quechua chanka (§10.3). Los scripts solo hicieron cambios mecánicos (registrados en Cambios)."),
+    ("Ortografía", "Alfabeto oficial del quechua collao (§10.3; vocales según config.variedad.vocales, P3). Los scripts solo hicieron cambios mecánicos (registrados en Cambios)."),
 ]
 
 
@@ -618,14 +636,22 @@ def bloques_congelados(viejo: dict[str, pd.DataFrame]) -> dict[str, dict]:
     """H5: un bloque que ya salió al traductor no se vuelve a armar: se copia su composición (IDs, N°, sublote, control y
     test) del maestro anterior. Se congela si está en config.bloque.congelados o si alguna de sus filas ya está Enviado,
     Validado o Grabado."""
-    cong = set(CB.get("congelados") or [])
+    salida = {}
+    # 1) foto TAL CUAL (02_maestro/congelados/BXX.xlsx): manda sobre el maestro anterior
+    for b, f in fotos_congeladas().items():
+        F = f["Filas"].copy()
+        F["_n"] = F["N°"].astype(int)
+        F = F.sort_values("_n")
+        salida[b] = {"filas": [{"ID": i, "N°": int(n), "Sublote": s} for i, n, s in zip(F["ID"], F["_n"], F["Sublote"])],
+                     "control": set(F.loc[F["Control"] == "Sí", "ID"]), "test": set(F.loc[F["Test_sugerido"] == "Sí", "ID"]),
+                     "foto": f}
+    cong = set(CB.get("congelados") or []) - set(salida)
     V = viejo.get("Corpus")
     if V is None or "Bloque" not in V:
         if cong:
-            raise ValueError(f"config.bloque.congelados = {sorted(cong)}, pero no hay maestro anterior del que copiar su composición.")
-        return {}
-    cong |= set(V.loc[V["Estado"].isin(ESTADOS_ENVIADOS) & (V["Bloque"] != ""), "Bloque"])
-    salida = {}
+            raise ValueError(f"config.bloque.congelados = {sorted(cong)}, pero no hay foto ni maestro anterior del que copiar su composición.")
+        return salida
+    cong |= set(V.loc[V["Estado"].isin(ESTADOS_ENVIADOS) & (V["Bloque"] != ""), "Bloque"]) - set(salida)
     for b in sorted(cong):
         S = V[V["Bloque"] == b].copy()
         if S.empty:
@@ -637,10 +663,11 @@ def bloques_congelados(viejo: dict[str, pd.DataFrame]) -> dict[str, dict]:
     return salida
 
 
-def conservar_validados(C: pd.DataFrame, viejo: dict[str, pd.DataFrame]) -> tuple[pd.DataFrame, pd.DataFrame]:
+def conservar_validados(C: pd.DataFrame, viejo: dict[str, pd.DataFrame], ids_foto: set[str] = frozenset()) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Si el maestro ya existe, conserva Quechua_validado, Estado (Enviado, Validado, Grabado) y Traductor_metricas.
     H1: el quechua validado solo se conserva si el español de la fila sigue igual; si el español cambió después de enviarlo,
-    la fila vuelve a Por_revisar con una nota (hay que reenviarla al traductor)."""
+    la fila vuelve a Por_revisar con una nota (hay que reenviarla al traductor). Las filas de una foto (congelar_bloque.py)
+    se exceptúan: su español solo cambia a propósito, queda en Cambios y el Word corregido se le pasa al traductor."""
     TM = pd.DataFrame(columns=COLS_TM)
     if "Corpus" in viejo:
         v = viejo["Corpus"].drop_duplicates("ID").set_index("ID")
@@ -656,7 +683,7 @@ def conservar_validados(C: pd.DataFrame, viejo: dict[str, pd.DataFrame]) -> tupl
                 continue
             if s0 not in ESTADOS_ENVIADOS:
                 continue
-            if e0 == es:
+            if e0 == es or i in ids_foto:
                 qv[k] = qv[k] or q0
                 est[k] = s0
             else:
@@ -736,24 +763,38 @@ def main() -> int:
     viejo = leer_maestro_viejo()
     cong = bloques_congelados(viejo)
     ids_cong = {f["ID"] for b in cong for f in cong[b]["filas"]}
+    # Bloques con foto TAL CUAL: sus filas entran al maestro como estaban (reemplazan a la fila viva del mismo ID) y
+    # ninguna frase con el mismo español se usa en otro bloque.
+    claves_cong = set()
+    for b, c in cong.items():
+        if "foto" not in c:
+            continue
+        foto = c["foto"]
+        S = foto["Corpus"]
+        claves_cong |= {clave_normalizada(e) for e in S["Español"]}
+        C = pd.concat([C[~C["ID"].isin(S["ID"])], S.reindex(columns=C.columns, fill_value="")], ignore_index=True)
+        O = pd.concat([O[~O["ID"].isin(S["ID"])], foto["Origen"].reindex(columns=O.columns, fill_value="")], ignore_index=True)
+        QA = pd.concat([QA[~QA["ID"].isin(S["ID"])], foto["QA"].reindex(columns=QA.columns, fill_value="")], ignore_index=True)
+    excluir_otros = ids_cong | set(C.loc[C["Español"].map(clave_normalizada).isin(claves_cong), "ID"])
     faltan = sorted(ids_cong - set(C["ID"]))
     if faltan:
         raise ValueError(f"Filas de bloques ya enviados ({', '.join(sorted(cong))}) ya no están en el corpus: {', '.join(faltan[:10])}"
                          f"{' …' if len(faltan) > 10 else ''}. Su texto cambió o se descartó: restaurarlo o tratarlo a mano.")
     bloques_plan = sorted(b for b in set(C["Plan_bloque"]) | set(cong) if b)
     libres = [b for b in bloques_plan if b not in cong]
-    gen_sel, notas = seleccionar_general(C, libres, excluir=ids_cong)
+    gen_sel, notas = seleccionar_general(C, libres, excluir=excluir_otros)
     bloques = [b for b in bloques_plan if b in gen_sel or b in cong]
 
     filas_bloque = {b: cong[b]["filas"] if b in cong else armar_bloque(b, gen_sel[b], C) for b in bloques}
-    if "B01" in cong:
-        control = set(cong["B01"]["control"])
-    elif "B01" in filas_bloque:
-        # B01 y B02 se entregan juntos: el control no puede tener una «hermana» con borrador en ninguno de los dos
-        visibles = [f["ID"] for b in ("B01", "B02") for f in filas_bloque.get(b, [])]
-        control = elegir_control(filas_bloque["B01"], C, visibles)
-    else:
-        control = set()
+    # D7: B01 y B02 se entregan juntos: el control no puede tener una «hermana» con borrador en ninguno de los dos
+    visibles = [f["ID"] for b in ("B01", "B02") for f in filas_bloque.get(b, [])]
+    control: set[str] = set()
+    for k, (b, n) in enumerate((CFG["control"].get("por_bloque") or {}).items()):
+        if b in cong:
+            control |= set(cong[b]["control"])
+        elif b in filas_bloque:
+            control |= elegir_control(filas_bloque[b], C, visibles, int(n.get("general", 0)), int(n.get("medico", 0)),
+                                      CFG["semilla"] + k)
     planificadas = [f["ID"] for b in bloques for f in filas_bloque[b]]
     con_gemela = ids_con_gemela(planificadas, C)
     test = set()
@@ -769,7 +810,7 @@ def main() -> int:
     C["Control"] = C["ID"].map(lambda i: "Sí" if i in control else "No")
     C["Test_sugerido"] = C["ID"].map(lambda i: "Sí" if i in test else "No")
     C["Split"] = "train"
-    C, TM = conservar_validados(C, viejo)
+    C, TM = conservar_validados(C, viejo, {f["ID"] for b, c in cong.items() if "foto" in c for f in c["filas"]})
     orden_dom = {"General": 0, "Médico": 1}
     C = C.sort_values(by=["Dominio", "ID"], key=lambda s: s.map(orden_dom) if s.name == "Dominio" else s).reset_index(drop=True)
 
@@ -794,7 +835,7 @@ def main() -> int:
             "Control": int((sub["Control"] == "Sí").sum()), "Test_sugerido": int((sub["Test_sugerido"] == "Sí").sum()),
             "Por_revisar": int((sub["Estado"] == "Por_revisar").sum()),
             "Sin_borrador": int((sub["Quechua_borrador"] == "").sum()),
-            "Estado": ("Congelado (ya salió al traductor; composición fija)" if b in cong else
+            "Estado": ("Congelado tal cual (ya está con el traductor; no se regenera)" if b in cong else
                        "Archivos generados (Word del traductor y Excel de trabajo)" if b in CB["bloques_con_archivos"] else "Planificado"),
             "Notas": " ".join(n for n in notas if n.startswith(b)),
         })
@@ -808,7 +849,7 @@ def main() -> int:
     nota_resto += (f"Alcanza para otro bloque de {CB['generales']} generales respetando el tope de ejercicios."
                    if usables >= CB["generales"] else
                    f"Respetando el tope de ejercicios solo hay {usables} generales usables: no alcanza para otro bloque de "
-                   f"{CB['generales']}. Para seguir: más oraciones redactadas (oraciones_generales.yaml) o decidir P4 (AmericasNLP).")
+                   f"{CB['generales']}. Para seguir: más oraciones redactadas (oraciones_generales.yaml) o fuentes collao nuevas (04_reportes/FUENTES_COLLAO.md).")
     filas_bl.append({"Bloque": "Sin asignar", "Total": len(resto), "Generales": len(r_gen), "Médicas": len(r_med),
                      "Estado": "Material disponible para bloques futuros", "Notas": nota_resto})
     BL = pd.DataFrame(filas_bl).astype(object).fillna("")
@@ -822,6 +863,9 @@ def main() -> int:
         # lo que registraron 06 (importación, envío) no sale de la cadena 00→05: se conserva del maestro anterior
         del_06 = viejo["Cambios"][viejo["Cambios"]["Regla"].str.contains("(06", regex=False)]
         CBios = pd.concat([CBios, del_06[[c for c in CBios.columns if c in del_06.columns]]], ignore_index=True).fillna("")
+    for c_b in cong.values():      # lo que cambió congelar_bloque.py en una foto
+        if "foto" in c_b and "Cambios" in c_b["foto"]:
+            CBios = pd.concat([CBios, c_b["foto"]["Cambios"]], ignore_index=True).fillna("")
     D = H["Descartes"].drop(columns=["uid", "Reemplazado_por_uid"], errors="ignore")
     L = H["Lexico"].drop(columns=["uid"], errors="ignore")
 
@@ -831,7 +875,10 @@ def main() -> int:
         if b not in filas_bloque or (solo and b not in solo):
             continue
         if b in cong:
-            print(f"{b}: congelado (ya salió al traductor): no se regeneran su Word ni su Excel de trabajo.")
+            # el Word del traductor lo escribe congelar_bloque.py a partir del archivo que él tiene; aquí jamás se rehace
+            if "foto" in cong[b]:
+                excel_trabajo(b, filas_bloque[b], C, O, QA, control, test)
+            print(f"{b}: ya está con el traductor: no se regenera su Word.")
             continue
         excel_trabajo(b, filas_bloque[b], C, O, QA, control, test)
         word_traductor(b, filas_bloque[b], C, QA, control)

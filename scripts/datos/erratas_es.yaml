@@ -38,6 +38,10 @@ frases:
   "dificultad de respirar": "dificultad para respirar"
   "¿Le sacaron radiografía?": "¿Le sacaron una radiografía?"
   "Tiene mal de la columna": "Tiene mal la columna"
+  # Farfán (2001), tabla del HTML
+  "¿Cómo estas?": "¿Cómo estás?"
+  "El hígado me deule": "El hígado me duele"
+  "Temgo mareos": "Tengo mareos"
 
 palabras:
   aqui: aquí
@@ -67,3 +71,4 @@ palabras:
   sliba: silba
   entreñimiento: estreñimiento
   vómitar: vomitar
+  medico: médico

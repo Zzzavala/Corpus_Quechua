@@ -18,8 +18,11 @@ from docx import Document
 from docx.oxml.ns import qn
 from openpyxl import load_workbook
 
+from avance_traductor import avance
 from comun import CFG, RAIZ, cargar_checkpoint, clave_normalizada, escribir_texto, ruta
+from congelar_bloque import ESPAÑOL_CAMBIADO, TIPOS_COLLAO
 from heuristicas import tiempo_es
+from quechua import VOCALES as Q_VOCALES
 
 PY = sys.executable
 R: list[tuple[str, str, bool, str]] = []
@@ -98,10 +101,13 @@ def main() -> int:
             etapas = set(sub["Plan_tema"]) - {""}
             esperadas = {e["etapa"] for e in CFG["medico"]["b01_etapas"]}
             ok(b, "Consulta completa: las 6 etapas de §11.2", esperadas <= etapas, ", ".join(sorted(etapas)))
+        cfg_ctrl = (CFG["control"].get("por_bloque") or {}).get(b)
+        if cfg_ctrl and CFG["control"]["activo"]:
             ctrl = sub[sub["Control"] == "Sí"]
-            ok(b, "~15 oraciones de control (10 generales + 5 médicas), en los 4 sublotes",
-               len(ctrl) == 15 and Counter(ctrl["Dominio"]) == Counter({"General": 10, "Médico": 5}) and ctrl["Sublote"].nunique() == 4,
-               f"({len(ctrl)}: {dict(Counter(ctrl['Dominio']))})")
+            esperado = Counter({k: v for k, v in (("General", int(cfg_ctrl.get("general", 0))), ("Médico", int(cfg_ctrl.get("medico", 0)))) if v})
+            ok(b, f"Oraciones de control (D7): {sum(esperado.values())}, con borrador, repartidas en los sublotes",
+               Counter(ctrl["Dominio"]) == esperado and (ctrl["Quechua_borrador"] != "").all() and ctrl["Sublote"].nunique() >= min(3, len(ctrl)),
+               f"({len(ctrl)}: {dict(Counter(ctrl['Dominio']))}; sublotes {ctrl['Sublote'].nunique()})")
 
         # Word del traductor
         doc = Document(ruta("bloques") / b / f"{b}_traductor.docx")
@@ -123,10 +129,41 @@ def main() -> int:
                       "Tipo_borrador", "Estado_unificado", "Por_revisar", "Fuente"]
         hallados = [p for p in prohibidos if p in todo]
         ok(b, "Word: sin información de origen ni columnas técnicas", not hallados, str(hallados))
-        mal_qu = [i for i, q, _ in filas_w if q != ("" if C6.loc[i, "Control"] == "Sí" else C6.loc[i, "Quechua_borrador"])]
-        ok(b, "Word: celda Quechua = borrador; vacía en control y en filas sin borrador", not mal_qu, f"(distintas: {mal_qu[:5]})")
-        obs_mal = [i for i, _, o in filas_w if o and not o.startswith("Aviso:")]
-        ok(b, "Word: Observaciones solo con «Aviso:» (ALTA) o vacía", not obs_mal, f"({sum(1 for x in filas_w if x[2])} avisos)")
+        # títulos, instrucciones, tabla de ortografía y avisos (el quechua no: «chanka» también es una palabra quechua, muslo)
+        visible = [texto] + [c.text for t in doc.tables if t.rows[0].cells[0].text.strip() != "N°" for row in t.rows for c in row.cells]
+        visible += [x[2] for x in filas_w] + [row.cells[3].text for t in tablas for row in t.rows[1:]]
+        ok(b, "Word: ninguna referencia al chanka ni a Ayacucho (título, instrucciones, ortografía, español y avisos)",
+           not re.search(r"(?i)chanka|ayacuch", "\n".join(visible)))
+        orto = [[c.text for c in r.cells] for t in doc.tables if t.rows[0].cells[0].text.strip() == "Regla" for r in t.rows]
+        orto_b02 = [[c.text for c in r.cells] for t in Document(ruta("bloques") / "B02" / "B02_traductor.docx").tables
+                    if t.rows[0].cells[0].text.strip() == "Regla" for r in t.rows]
+        ok(b, f"Word: tabla de ortografía de {Q_VOCALES} vocales, igual en todos los bloques", orto == orto_b02 and any(str(c).startswith(
+            "Cinco vocales" if Q_VOCALES == 5 else "Tres vocales") for f in orto for c in f))
+        orig_b = RAIZ / "02_maestro" / "congelados" / f"{b}_original"
+        if b in CB.get("congelados", []):
+            # ya está con el traductor: lo que él trabajó no se toca; lo demás, borrador collao o vacío
+            palabra = sorted(orig_b.glob(f"{b}_traductor_v*.docx"))[-1]
+            filas_orig = [tuple(c.text for c in r.cells) for t in Document(palabra).tables
+                          if t.rows[0].cells[0].text.strip() == "N°" for r in t.rows[1:]]
+            filas_hoy = [tuple(c.text for c in r.cells) for t in tablas for r in t.rows[1:]]
+            limite = max(int(x["N"]) for x in avance(b))
+            ok(b, f"Word: las filas 1–{limite}, ya trabajadas por el traductor, son idénticas a {palabra.name}",
+               [x for x in filas_hoy if int(x[0]) <= limite] == [x for x in filas_orig if int(x[0]) <= limite] and limite > 0)
+            ok(b, "Word: mismos IDs y en el mismo orden que el archivo del traductor", [x[1] for x in filas_hoy] == [x[1] for x in filas_orig])
+            pend = [x for x in filas_hoy if int(x[0]) > limite]
+            mal_qu = [x[1] for x in pend if x[4] != C6.loc[x[1], "Quechua_borrador"]]
+            ok(b, "Word: filas siguientes = borrador del maestro o vacía", not mal_qu, f"(distintas: {mal_qu[:5]})")
+            tipos = F6["Origen"].set_index("ID")["Tipo_borrador"]
+            no_collao = [x[1] for x in pend if x[4] and tipos[x[1]] not in TIPOS_COLLAO]
+            ok(b, "Word: filas siguientes sin borradores chanka (solo de fuentes collao)", not no_collao,
+               f"({sum(1 for x in pend if x[4])} con borrador, {sum(1 for x in pend if not x[4])} vacías; chanka: {no_collao[:5]})")
+            es_camb = [x[1] for x, y in zip(filas_hoy, filas_orig) if x[3] != y[3]]
+            ok(b, "Word: el español solo cambió donde se pidió", es_camb == list(ESPAÑOL_CAMBIADO.get(b, {})), str(es_camb))
+        else:
+            mal_qu = [i for i, q, _ in filas_w if q != ("" if C6.loc[i, "Control"] == "Sí" else C6.loc[i, "Quechua_borrador"])]
+            ok(b, "Word: celda Quechua = borrador; vacía en control y en filas sin borrador", not mal_qu, f"(distintas: {mal_qu[:5]})")
+            obs_mal = [i for i, _, o in filas_w if o and not o.startswith("Aviso:")]
+            ok(b, "Word: Observaciones solo con «Aviso:» (ALTA) o vacía", not obs_mal, f"({sum(1 for x in filas_w if x[2])} avisos)")
 
         # Excel de trabajo
         wb = load_workbook(ruta("bloques") / b / f"{b}_trabajo.xlsx")

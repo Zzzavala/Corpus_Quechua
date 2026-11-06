@@ -23,7 +23,8 @@ from collections import Counter
 import pandas as pd
 import yaml
 
-from comun import (CFG, RAIZ, cargar_checkpoint, clave_normalizada, escribir_texto, es_pregunta, guardar_excel, guardar_seguro,
+from comun import (CFG, RAIZ, cargar_checkpoint, clave_normalizada, escribir_texto, es_pregunta, fotos_congeladas, guardar_excel,
+                   guardar_seguro, texto,
                    hash_corto, ruta, ruta_checkpoint)
 from heuristicas import tipo_oracion
 from plan_medico import TEMAS, elegir_medico
@@ -71,6 +72,21 @@ def main() -> int:
 
     C["Clave"] = C.apply(clave_codigo, axis=1)
     por_clave = {k: i for k, i in zip(C["Clave"], C["ID"])}
+    # Un código que se unió a otra fila al quitar duplicados (p. ej. «¿Cómo te llamas?» de SOCEMURP, que quedó en la
+    # versión de Farfán, con borrador collao) sigue sirviendo en plan_b01.yaml y respuestas_paciente.yaml.
+    unidos_de: dict[str, list[str]] = {}
+    for k, i, unidos in zip(C["Clave"], C["ID"], C["Códigos_unidos"]):
+        for cod in [c for c in texto(unidos).split(";") if c]:
+            por_clave.setdefault(cod, i)
+            unidos_de.setdefault(k, []).append(cod)
+    # también los casi duplicados descartados (Descartes → Reemplazado_por_uid)
+    id_de_uid = dict(zip(C["uid"], C["ID"]))
+    clave_de_id = dict(zip(C["ID"], C["Clave"]))
+    for cod, reemp in zip(H["Descartes"]["Código_original"], H["Descartes"]["Reemplazado_por_uid"]):
+        i = id_de_uid.get(texto(reemp))
+        if cod and i and cod not in por_clave:
+            por_clave[cod] = i
+            unidos_de.setdefault(clave_de_id[i], []).append(cod)
     fila_de = {i: r for i, r in zip(C["ID"], C.to_dict("records"))}
     plan_b01 = yaml_de("plan_b01.yaml")
     respuestas = yaml_de("respuestas_paciente.yaml")
@@ -123,13 +139,19 @@ def main() -> int:
         fila_de[idn] = f
         return idn
 
+    # ---------------------------------------------------------- bloques congelados TAL CUAL (B03): no se replanifican
+    # y sus frases (por ID o por el mismo español) no se usan en otros bloques
+    fotos = fotos_congeladas()
+    ids_cong = {i for f in fotos.values() for i in f["Filas"]["ID"]}
+    claves_cong = {clave_normalizada(e) for f in fotos.values() for e in f["Corpus"]["Español"]}
+    usados: set[str] = set(C.loc[C["ID"].isin(ids_cong) | C["Español"].map(clave_normalizada).isin(claves_cong), "ID"])
+
     # ---------------------------------------------------------- B01 (curado)
-    usados: set[str] = set()
     orden = 0
     u = 0
     faltan_codigos = []
     etapa_plan: dict[str, str] = {}      # en B01 la etapa la fija el guion, no la heurística (p. ej. QCH-0008)
-    for etapa in plan_b01:
+    for etapa in (plan_b01 if "B01" not in fotos else []):
         for unidad in etapa["unidades"]:
             u += 1
             ultimo_medico = ""
@@ -170,6 +192,9 @@ def main() -> int:
             usados.add(nid)
 
     for b in bloques:
+        if b in fotos:
+            print(f"{b}: congelado tal cual (foto en 02_maestro/congelados/{b}.xlsx): no se replanifica.")
+            continue
         elegidos = elegir_medico(C, b, usados)
         orden = 0
         u = 0
@@ -179,10 +204,11 @@ def main() -> int:
             r = fila_de[idx]
             plan.append({"ID": idx, "Bloque": b, "Unidad": f"{b}-U{u:02d}", "Orden": orden, "Tema": tema, "Responde_a": ""})
             usados.add(idx)
-            if es_pregunta(r["Español"]) and not respuestas.get(r["Clave"]):
+            clave_resp = next((k for k in [r["Clave"]] + unidos_de.get(r["Clave"], []) if respuestas.get(k)), "")
+            if es_pregunta(r["Español"]) and not clave_resp:
                 sin_respuesta.append({"Bloque": b, "Tema": tema, "ID": idx, "Clave": r["Clave"], "Español": r["Español"]})
-            elif r["Clave"] in respuestas:          # respuesta a una pregunta, o respuesta opcional a una indicación
-                agregar_respuestas(b, u, tema, r, idx, respuestas[r["Clave"]])
+            elif clave_resp:                        # respuesta a una pregunta, o respuesta opcional a una indicación
+                agregar_respuestas(b, u, tema, r, idx, respuestas[clave_resp])
         # frases portadoras del bloque (cada una es su propia unidad, al final de su tema)
         for pt in portadoras.get(b, []) or []:
             u += 1
@@ -245,7 +271,7 @@ def main() -> int:
     C2["Etapa_B01"] = [etapa_plan.get(i, e) for i, e in zip(C2["ID"], C2["Etapa_B01"])]
     o_nuevo = N[["ID", "Fuente", "Archivo", "Hoja", "Código_original", "Fila_original", "Tipo_borrador", "Variedad_fuente",
                  "Origen_verificado", "Estado_unificado", "Observaciones_heredadas", "Códigos_origen", "Códigos_unidos",
-                 "Otros_borradores", "Propuestas_equipo", "Parte_de", "Evidencia_P6", "Fuente_detalle", "uid"]]
+                 "Otros_borradores", "Propuestas_equipo", "Parte_de", "Evidencia_borrador", "Fuente_detalle", "uid"]]
     origen2 = pd.concat([origen, o_nuevo], ignore_index=True)
 
     df_reg = pd.DataFrame(sorted(registro.items(), key=lambda x: x[1]), columns=["uid", "ID"])

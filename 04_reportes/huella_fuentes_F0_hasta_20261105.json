@@ -1,0 +1,202 @@
+{
+  "Fuentes/5660130-manejo-de-paciente-con-diabetes-mellitus-2.pdf": {
+    "bytes": 2374435,
+    "modificado": "2026-10-14T14:52:54",
+    "sha256": "6eabd4a68f36b87f8c5a5c243bf211cabc9a343aa308bfe1c5995dd018683f1c"
+  },
+  "Fuentes/8361447-diabetes_mellitus_quechua.pdf": {
+    "bytes": 657298,
+    "modificado": "2026-10-14T14:52:43",
+    "sha256": "98eb4bffffe1a475e4fe910626488134dfa7b5a7f2a731975c0ad557798ba9e4"
+  },
+  "Fuentes/AFICHE_COVID 19 LAVADO DE MANOS MINSA quechua  chanka.pdf": {
+    "bytes": 407335,
+    "modificado": "2026-10-14T14:52:28",
+    "sha256": "0f6702417dc5632eeff31a6c90504022135318c073c51e0800a321f8c9ff3e4e"
+  },
+  "Fuentes/AmericasNLP/dev.es": {
+    "bytes": 65632,
+    "modificado": "2026-10-14T14:49:01",
+    "sha256": "a09f2c7d93bf2e3b9e9b18d71b279e5554c7cc02db6363f85abdbb231db04da5"
+  },
+  "Fuentes/AmericasNLP/dev.quy": {
+    "bytes": 65872,
+    "modificado": "2026-10-14T14:49:04",
+    "sha256": "0a3af37e96e923e874a1239ce181864bc71ed743f5520c50daaf66111e1e57a0"
+  },
+  "Fuentes/AmericasNLP/dict.es": {
+    "bytes": 226252,
+    "modificado": "2026-10-14T14:49:11",
+    "sha256": "abe24b4f79c4f0307729c717f8af4d96641a94324029ac9484de7348949ee854"
+  },
+  "Fuentes/AmericasNLP/dict.quy": {
+    "bytes": 206518,
+    "modificado": "2026-10-14T14:49:11",
+    "sha256": "525f0c6db9094cf434df2169f685bc1b21d27c65e6d737e0c39b82bfadce737b"
+  },
+  "Fuentes/AmericasNLP/es-quy/dict_misc.quy-es.es": {
+    "bytes": 201884,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "046718eb637ebb72abdc0bfcab1d8059c624bd84c98163f9e7701bf281dec240"
+  },
+  "Fuentes/AmericasNLP/es-quy/dict_misc.quy-es.quy": {
+    "bytes": 184996,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "ffa68412ad3ab3d32b84f3460137b91c10e342f2125894c710253e81d5e5d513"
+  },
+  "Fuentes/AmericasNLP/es-quy/jw300.es-quy.es": {
+    "bytes": 11323668,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "5fb4bd6033ce35ea536216f547f3f0c2fbc54f751d2805e2c7010a53ec72b345"
+  },
+  "Fuentes/AmericasNLP/es-quy/jw300.es-quy.quy": {
+    "bytes": 11019760,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "abb38aa9cf50a717f289da5a6a0c8174539c2f213bb25a493ca04d21f31d36cf"
+  },
+  "Fuentes/AmericasNLP/es-quy/minedu.quy-es.es": {
+    "bytes": 24368,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "92b589ad2d995894cccdaf5878631729f1075a21f34dd38050c7a3e163c7b3f1"
+  },
+  "Fuentes/AmericasNLP/es-quy/minedu.quy-es.quy": {
+    "bytes": 21521,
+    "modificado": "2026-10-14T14:49:19",
+    "sha256": "be4379112e87bdfac9efac07919d1bc9faed434b66c00d21a37ed54f3efdf7c1"
+  },
+  "Fuentes/AmericasNLP/es-quz/jw300.es-quz.es": {
+    "bytes": 12660076,
+    "modificado": "2026-11-05T03:07:31",
+    "sha256": "c6d34548622eb510ed89fb08934f28fbd9b89c872ee07a5788c8177012e57ea7"
+  },
+  "Fuentes/AmericasNLP/es-quz/jw300.es-quz.quz": {
+    "bytes": 12101655,
+    "modificado": "2026-11-05T03:07:38",
+    "sha256": "52ad7293cf9187d3fa6dd57ad77b26b93cc2bfccd4f188c3f9a51b7ff4902df2"
+  },
+  "Fuentes/AmericasNLP/README.md": {
+    "bytes": 2039,
+    "modificado": "2026-10-14T14:48:33",
+    "sha256": "d6517e48a81b4d0547189d5eb20d24cbbfa43a3ea28152cd03595f228e99a61a"
+  },
+  "Fuentes/AmericasNLP/test.es": {
+    "bytes": 57470,
+    "modificado": "2026-10-14T14:50:05",
+    "sha256": "a30e58fe429dcaeaf17699e38e2e23ffc13722ae530c4c724f9855d26c73aa8f"
+  },
+  "Fuentes/AmericasNLP/train.es": {
+    "bytes": 11323668,
+    "modificado": "2026-10-14T14:48:53",
+    "sha256": "5fb4bd6033ce35ea536216f547f3f0c2fbc54f751d2805e2c7010a53ec72b345"
+  },
+  "Fuentes/AmericasNLP/train.quy": {
+    "bytes": 11019760,
+    "modificado": "2026-10-14T14:48:56",
+    "sha256": "abb38aa9cf50a717f289da5a6a0c8174539c2f213bb25a493ca04d21f31d36cf"
+  },
+  "Fuentes/arbol.txt": {
+    "bytes": 1221,
+    "modificado": "2026-10-14T15:07:41",
+    "sha256": "b158361a1b54f4647acdec133b82fc3e4dd152a21a568e9ec15d843643adb7fe"
+  },
+  "Fuentes/collao/MinCul_Glosario_aimara_quechua_PIAS_Puno.pdf": {
+    "bytes": 8518167,
+    "modificado": "2026-11-05T03:07:21",
+    "sha256": "46e51712f837998045c0a12f1c339334434583f6938f83cddd205ba06ab90c9f"
+  },
+  "Fuentes/collao/MinCul_Glosario_COVID19_VMI.pdf": {
+    "bytes": 2198664,
+    "modificado": "2026-11-05T03:07:10",
+    "sha256": "bfbea1fc1e3836db199894573af2a05da9725d9c092b57273d627125acddb138"
+  },
+  "Fuentes/collao/MinCul_Guia_senaletica_lenguas_indigenas.pdf": {
+    "bytes": 1522970,
+    "modificado": "2026-11-05T03:07:23",
+    "sha256": "1ede9406c2f8c0bb2ba44bf9e9a1b72710ec277948879aa16d7fb32190af5f90"
+  },
+  "Fuentes/collao/MinCul_Manual_justicia_Quechua_Cusco_Collao.pdf": {
+    "bytes": 2059724,
+    "modificado": "2026-11-05T03:07:08",
+    "sha256": "0d160dff0e7f7be6a6665e5d6786ce844eac8ef0f684ab5743a43ab20d7a4a40"
+  },
+  "Fuentes/collao/MinCul_Palabras_clave_salud_Quechua_Cusco.pdf": {
+    "bytes": 1553215,
+    "modificado": "2026-11-05T03:07:05",
+    "sha256": "0ba3b2ec370720abccb14fd40d1572fc6c784253f062764bc0b950006339a0f6"
+  },
+  "Fuentes/collao/MINSA_COVID19_lavado_de_manos_quechua_Cusco_Collao.pdf": {
+    "bytes": 407376,
+    "modificado": "2026-11-05T03:07:25",
+    "sha256": "44e385908e600704f0feb2ddc904c5cb64b65124bbeca061290a07fbd2bd8c23"
+  },
+  "Fuentes/collao/MINSA_COVID19_prevencion_general_quechua_Cusco_Collao.pdf": {
+    "bytes": 695267,
+    "modificado": "2026-11-05T03:07:24",
+    "sha256": "4a45bfe59fb44bf80a087f603c66a9ae55933048a804378edbf1d914e0bf6360"
+  },
+  "Fuentes/Corpus_Construido (1).xlsx": {
+    "bytes": 11639,
+    "modificado": "2026-10-14T14:38:53",
+    "sha256": "924e4b12f041380ee70a40cbab8ce1042aed5d5f347553bae2e044149a575ee8"
+  },
+  "Fuentes/Corpus_Equipos (1).xlsx": {
+    "bytes": 98159,
+    "modificado": "2026-10-16T13:17:46",
+    "sha256": "75e781ffece8df6ab81417cedf0ee44f10b793c77c3ae840be674610c9d96d2e"
+  },
+  "Fuentes/entrevistaquechua_spa.pdf": {
+    "bytes": 18586038,
+    "modificado": "2026-10-14T14:54:38",
+    "sha256": "74db6520301fee4b743db0907704461cf3d6f2ee2724a54961459f3ea786e6e2"
+  },
+  "Fuentes/manualparaelempleodelquechuachankaenlaadministraciondejusticia.pdf": {
+    "bytes": 1918986,
+    "modificado": "2026-10-14T14:52:16",
+    "sha256": "83c058e94008b97eb011a9551031321d3aa7373480101a720fbb65212dbc3177"
+  },
+  "Fuentes/ManualSemiologiaQuechua-2020.pdf": {
+    "bytes": 921434,
+    "modificado": "2026-10-14T14:53:55",
+    "sha256": "86245e156b00ccf0033e810a107852d9eda06dad2518f278db73d270adb9ade5"
+  },
+  "Fuentes/PDF Manual de Quechua Socemurp Compress _ ILIDE.INFO Platform PDF Viewer (1).pdf": {
+    "bytes": 38580298,
+    "modificado": "2026-10-14T13:43:48",
+    "sha256": "de8ab82d144424e85dff985dcbab9daf3426be76f292863019d3142ac64eddf4"
+  },
+  "Fuentes/Quechua médico.html": {
+    "bytes": 11272,
+    "modificado": "2026-10-14T14:53:30",
+    "sha256": "3ee01fe11de1006c4656f9254d362b93a668b0624c1d632f113006aaa14dddae"
+  },
+  "Fuentes/Trabajo - Otro Compañero/[Vibe]EDA_Corpus_NLP.ipynb": {
+    "bytes": 2196666,
+    "modificado": "2026-10-14T14:38:35",
+    "sha256": "808d36baf63dd7e7f0ad4bc876d1fa08db37852ce60d5948f4e49ecde9332f62"
+  },
+  "Fuentes/Trabajo - Otro Compañero/Corpus_Recopilado.xlsx": {
+    "bytes": 86725,
+    "modificado": "2026-10-14T14:38:31",
+    "sha256": "321ba05888f393fff4fdc1ef4286c6ced4fb1b8c25fe459b27b2738fbb7dfc99"
+  },
+  "Fuentes/Vocabulario_Quechua_Chanka_unificado (2).xlsx": {
+    "bytes": 401453,
+    "modificado": "2026-10-14T13:43:29",
+    "sha256": "5916322c2adfaf3b0982bac88c966618a6dcad8f76b458835ce4830e3123ddc1"
+  },
+  "Fuentes/Yachakuqkunapa simi qullqa. Ayakuchu Chanka Qichwa simipi (1).pdf": {
+    "bytes": 48953811,
+    "modificado": "2026-10-14T14:51:29",
+    "sha256": "e362250a7f88adc22a5e28c7a231b2a9f1b6779aaa1425c44b5a03cb845b52fe"
+  },
+  "Estrategia/CLAUDE.md": {
+    "bytes": 61326,
+    "modificado": "2026-11-05T15:51:28",
+    "sha256": "2adf03e23677f7ef0155a74a3867e7f86da92566bd5487ee6ce0cc13955d5fa7"
+  },
+  "Estrategia/INF657_CLAUDE_corpus.md": {
+    "bytes": 54931,
+    "modificado": "2026-10-16T13:19:00",
+    "sha256": "9d3d42aa4f84aba6092346a98fc1bde8e3c2f4c9df85865ab0ef7f40f54c870f"
+  }
+}

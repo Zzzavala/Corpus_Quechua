@@ -1,6 +1,8 @@
 # Inventario de fuentes (F1)
 
-Generado por `scripts/01_inventario.py` el 2026-10-15. Fuentes en `Fuentes/` (solo lectura).
+Generado por `scripts/01_inventario.py` el 2026-11-05. Fuentes en `Fuentes/` (solo lectura).
+
+> **Desde el 5-nov-2026 el corpus es de quechua collao (Cusco–Collao).** Este inventario sigue verificando que los archivos sean las mismas versiones de §5 (las cifras no cambian), pero del material chanka solo se usa el español. Qué fuente aporta quechua collao y cuál no: `04_reportes/FUENTES_COLLAO.md`.
 
 ## 1. Archivos encontrados
 
@@ -175,7 +177,7 @@ Generado por `scripts/01_inventario.py` el 2026-10-15. Fuentes en `Fuentes/` (so
 | es-quy/dict_misc | `es-quy/dict_misc.quy-es.es`, `es-quy/dict_misc.quy-es.quy` | 9000 | 9000 |
 | test (solo español) | `test.es` | 1003 | — |
 
-- Total de pares (train + dev + dict): **135,647**. El equipo hablaba de ~180k: **no coincide**. La cifra real es la del archivo (el README confirma que `train` = solo JW300 quy; `dict` = MINEDU 643 + Dict_misc 9 000). No afecta a los bloques: AmericasNLP solo se usa como léxico de referencia (P4).
+- Total de pares (train + dev + dict): **135,647**. El equipo hablaba de ~180k: **no coincide**. La cifra real es la del archivo (el README confirma que `train` = solo JW300 quy; `dict` = MINEDU 643 + Dict_misc 9 000). No afecta a los bloques. Desde el cambio a collao (5-nov-2026) su quechua (quy = chanka) ya no se usa; solo su lado español sirve como léxico español de referencia.
 - `es-quy/jw300` es idéntico a `train` (mismo tamaño); `dict` = `minedu` + `dict_misc`.
 - `test` solo trae español (1 003 líneas), como dice §5.5.
 
@@ -184,17 +186,17 @@ Generado por `scripts/01_inventario.py` el 2026-10-15. Fuentes en `Fuentes/` (so
 | Archivo | Páginas | Páginas con texto | Qué es | Inicio del texto |
 |---|---|---|---|---|
 | `PDF Manual de Quechua Socemurp Compress _ ILIDE.INFO Platform PDF Viewer (1).pdf` | 78 | 0 | Manual de Quechua médico SOCEMURP (2021). Solo imagen (§5.4). | (sin texto) |
-| `Yachakuqkunapa simi qullqa. Ayakuchu Chanka Qichwa simipi (1).pdf` | 264 | 263 | Diccionario MINEDU *Yachakuqkunapa Simi Qullqa* (2014), chanka. **Tiene capa de texto**: se usa en F2 para verificar P6. | «Yachakuqkunapa Simi Qullqa DISTRIBUIDO GRATUITAMENTE POR EL MINISTERIO DE EDUCACIÓN - PROH…» |
-| `ManualSemiologiaQuechua-2020.pdf` | 80 | 75 | Lopera Quiroga (2020), *Manual de Semiología en Quechua* (Puno/collao). Con texto. | «Decano Dr. Miguel Palacios Celi Vicedecano Dr. Ciro Maguiña Vargas Secretario del Interior…» |
-| `entrevistaquechua_spa.pdf` | 96 | 94 | Confirmado: «Diálogo médico paciente en QUECHUA – Bolivia 2013» (OPS/OMS). | «Diálogo médico paciente en QUECHUA Bolivia 2013…» |
-| `manualparaelempleodelquechuachankaenlaadministraciondejusticia.pdf` | 150 | 136 | Manual para el empleo del quechua chanka en la administración de justicia (MinCul). Con texto. | «MANUAL PARA EL EMPLEO DEL EN LA ADMINISTRACIÓN DE JUSTICIA QUECHUA CHANKA Hablando en nues…» |
-| `AFICHE_COVID 19 LAVADO DE MANOS MINSA quechua chanka.pdf` | 1 | 1 | Afiche MINSA lavado de manos en quechua chanka. Con texto. | «Makikipi pulsirakunata anillukunatapas urqukuy Makikita achka yakuwan chapuy Makikita achk…» |
-| `8361447-diabetes_mellitus_quechua.pdf` | 1 | 1 | Diabetes mellitus 2, vía HEARTS, en quechua (gob.pe). Con texto. | «DIABETES MELLITUS 2 KAPTIN YANAPAY HEARTS NISQAPI RURAYKUNA *Kay documentoqa manam wiksaya…» |
+| `Yachakuqkunapa simi qullqa. Ayakuchu Chanka Qichwa simipi (1).pdf` | 264 | 263 | Diccionario MINEDU *Yachakuqkunapa Simi Qullqa* (2014), chanka. Con texto. Ya no se usa (el corpus es collao). | «Yachakuqkunapa Simi Qullqa DISTRIBUIDO GRATUITAMENTE POR EL MINISTERIO DE EDUCACIÓN - PROH…» |
+| `ManualSemiologiaQuechua-2020.pdf` | 80 | 75 | Lopera Quiroga (2020), *Manual de Semiología en Quechua* (collao: Puno/Cusco). Con texto. **Fuente de borradores collao** (forma del libro, vía el unificado). | «Decano Dr. Miguel Palacios Celi Vicedecano Dr. Ciro Maguiña Vargas Secretario del Interior…» |
+| `entrevistaquechua_spa.pdf` | 96 | 94 | Confirmado: «Diálogo médico paciente en QUECHUA – Bolivia 2013» (OPS/OMS). Quechua sureño boliviano (familia collao): **fuente de borradores**, emparejados por el español. | «Diálogo médico paciente en QUECHUA Bolivia 2013…» |
+| `manualparaelempleodelquechuachankaenlaadministraciondejusticia.pdf` | 150 | 136 | Manual para el empleo del quechua chanka en la administración de justicia (MinCul). Con texto. Chanka: ya no se usa. | «MANUAL PARA EL EMPLEO DEL EN LA ADMINISTRACIÓN DE JUSTICIA QUECHUA CHANKA Hablando en nues…» |
+| `AFICHE_COVID 19 LAVADO DE MANOS MINSA quechua chanka.pdf` | 1 | 1 | Afiche MINSA lavado de manos en quechua chanka. Con texto. Chanka: ya no se usa. | «Makikipi pulsirakunata anillukunatapas urqukuy Makikita achka yakuwan chapuy Makikita achk…» |
+| `8361447-diabetes_mellitus_quechua.pdf` | 1 | 1 | Diabetes mellitus 2, vía HEARTS, en quechua (gob.pe). Con texto. Es chanka (-chka-, -m): ya no se usa. | «DIABETES MELLITUS 2 KAPTIN YANAPAY HEARTS NISQAPI RURAYKUNA *Kay documentoqa manam wiksaya…» |
 | `5660130-manejo-de-paciente-con-diabetes-mellitus-2.pdf` | 1 | 1 | Diabetes mellitus 2, vía HEARTS, en español (gob.pe). Con texto. | «PARA DIABETES MELLITUS -2 VÍA DE ABORDAJE HEARTS *Este protocolo no aplica para personas g…» |
 
 - SOCEMURP: 78 páginas (esperado 78) → ✔ igual.
 
-- `Quechua médico.html`: **Farfán Cantero (2001), revista SITUA**, «Quechua médico» (UNSAAC, Cusco) → quechua **cusqueño**. Codificación Windows-1252 (las tildes se ven mal si se abre como UTF-8). No es Allin Kawsay.
+- `Quechua médico.html`: **Farfán Cantero (2001), revista SITUA**, «Quechua médico» (UNSAAC, Cusco) → quechua **cusqueño**. Codificación Windows-1252 (las tildes se ven mal si se abre como UTF-8). No es Allin Kawsay. **Fuente de borradores collao** (cusqueño original).
 
 ## 8. Trabajo previo de un compañero (§5.7, solo precedente)
 
@@ -204,4 +206,4 @@ Archivos: `[Vibe]EDA_Corpus_NLP.ipynb`, `Corpus_Recopilado.xlsx`. No se usan com
 
 - Cifras marcadas «✖ DIFIERE»: **0**.
 - Ver el comentario de cada sección: las diferencias se explican por cómo se cuenta (filas vacías, bibliografía, heurísticas), no por otra versión del archivo, salvo que se indique lo contrario.
-- AmericasNLP: 135,647 pares, no ~180k. Solo se usa como léxico de referencia (P4), así que no cambia la composición de los bloques.
+- AmericasNLP: 135,647 pares, no ~180k. Es chanka (quy): desde el cambio a collao solo se usa su lado español como léxico español, así que no cambia la composición de los bloques.

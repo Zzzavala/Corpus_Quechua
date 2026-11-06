@@ -79,15 +79,16 @@ def main() -> int:
     avisos = []
     sufs = []
     for _, r in R.iterrows():
-        oficial = r["Tipo_borrador"] == "fuente chanka oficial"
-        av = revisar_fila(r["Español"], r["Quechua_borrador"], r["Dominio"], oficial, r["Estado_unificado"], r["Observaciones_heredadas"])
+        oficial = r["Tipo_borrador"] == "fuente collao oficial"
+        av = revisar_fila(r["Español"], r["Quechua_borrador"], r["Dominio"], oficial, r["Estado_unificado"], r["Observaciones_heredadas"],
+                          r["Tipo_borrador"])
         avisos.append(av)
         sufs.append(sorted(Q.unidades_cobertura(r["Quechua_borrador"])["sufijo"]) if r["Quechua_borrador"] else [])
     R["avisos"] = avisos
     R["sufijos"] = sufs
     for tipo in ["ORTO", "VARIEDAD", "PRESTAMO", "ALINEACION", "SENTIDO", "TRANSCRIPCION", "OOV"]:
         R[f"av_{tipo}"] = R["avisos"].map(lambda av, t=tipo: any(x[0] == t and (t != "PRESTAMO" or x[1] == "ALTA") for x in av))
-    R["glotal"] = R["avisos"].map(lambda av: any("glotalizada" in d for t, s, d in av))
+    R["glotal"] = R["Quechua_borrador"].map(Q.tiene_laringal)            # en collao SÍ se escriben
     R["vocal_eo"] = R["avisos"].map(lambda av: any("vocal e/o" in d for t, s, d in av))
     R["castellana"] = R["avisos"].map(lambda av: any("castellana" in d or "fuera del alfabeto" in d for t, s, d in av))
     R["clave_es"] = R["Español"].map(clave_normalizada)
@@ -96,13 +97,13 @@ def main() -> int:
     md = ["# EDA del corpus (F3) — antes de limpiar", "",
           f"Generado por `scripts/03_eda.py` desde el checkpoint F2 ({CFG['fecha_generacion']}). "
           "Todo se mide **antes** de la limpieza (F4). Las cifras de rasgos del quechua son **sospechas automáticas**: "
-          "Claude no es hablante de chanka.", ""]
+          f"Claude no es hablante de quechua. Variedad del corpus: **{CFG['variedad']['nombre']}**; del material chanka solo se usa el español.", ""]
 
     # ---------------------------------------------------------------- 1. conteos
     md += ["## 1. Cuántas filas hay y de dónde salen", ""]
     t = R.groupby(["Dominio", "Pool_n"]).size().reset_index(name="Filas").rename(columns={"Pool_n": "Pool"})
     md += [tabla(t), "",
-           "- **General** = Principito (traducción automática) + Grupo 2. **Médico** = vocabulario unificado (1 528 filas).",
+           "- **General** = Principito + Grupo 2 (solo español). **Médico** = vocabulario unificado (1 528 filas) + 25 frases de Farfán que el unificado no tenía.",
            "- Grupo 2 incluye 4 filas que no son oraciones (F-0517 vacía y 3 de bibliografía); se descartan en F4.", ""]
     for col, titulo_ in [("Fuente", "Fuente"), ("Variedad_fuente", "Variedad de la fuente"), ("Tipo_borrador", "Tipo de borrador"),
                          ("Estado_unificado", "Estado en el unificado (solo médico)")]:
@@ -182,27 +183,28 @@ def main() -> int:
            f"- Casi duplicado = similitud del español ≥ {CFG['limpieza']['similitud_casi_duplicado']} **y** misma polaridad (sí/no) **y** mismos números "
            "(decisión propia: «ellos bajan al río» y «ellos no bajan al río» no son paráfrasis). Se conservan hasta 2 por grupo, "
            "salvo que tengan el **mismo borrador quechua** (entonces queda 1: grabar dos veces lo mismo no aporta).",
-           "- Quechua repetido con español distinto es típico de los ejercicios del Grupo 2 («ellos/ellas bajan al río» → «Paykuna mayuman uraykunku»).", ""]
+           "- La parte general ya no trae borrador (su quechua era chanka): ahí los casi duplicados se deciden solo por el español.", ""]
     ej = R[(R["Pool"] == "g2_ejercicio") & R.duplicated("clave_qu", keep=False) & (R["clave_qu"] != "")].sort_values("clave_qu").head(6)
     for _, r in ej.iterrows():
         md.append(f"  - `{r['Código_original']}` «{r['Español']}» → «{r['Quechua_borrador']}»")
     md.append("")
 
-    # ---------------------------------------------------------------- 5. rasgos no chanka
-    md += ["## 5. Rasgos no chanka y letras fuera de la convención, por fuente", ""]
+    # ---------------------------------------------------------------- 5. rasgos de otra variedad (no collao)
+    md += ["## 5. Rasgos de otra variedad (chanka/boliviano) y letras fuera de la convención collao, por fuente", ""]
     cq = R[R["Quechua_borrador"] != ""]
     filas = []
     for fuente, g in cq.groupby("Fuente"):
         n = len(g)
         filas.append([fuente, n, f"{100 * g['glotal'].mean():.0f} %", f"{100 * g['vocal_eo'].mean():.0f} %", f"{100 * g['castellana'].mean():.0f} %",
                       f"{100 * g['av_VARIEDAD'].mean():.0f} %", f"{100 * g['av_PRESTAMO'].mean():.0f} %", f"{100 * g['av_TRANSCRIPCION'].mean():.0f} %"])
-    t = pd.DataFrame(filas, columns=["Fuente", "Filas con quechua", "Glotal./aspir.", "Vocal e/o", "c/qu/j/hu o letra ajena",
+    t = pd.DataFrame(filas, columns=["Fuente", "Filas con quechua", "Con glotal./aspir. (bien en collao)", "Vocal e/o", "c/qu/j/hu o letra ajena",
                                      "Rasgo de otra variedad", "Préstamo sin adaptar", "Posible transcripción de oído"])
     md += [tabla(t.sort_values("Filas con quechua", ascending=False)), "",
-           "- Glotalizadas/aspiradas, e/o y escritura castellana se **corrigen mecánicamente** en F4 (§10.3, registradas en `Cambios`). "
-           "Lo demás (variedad, préstamos, transcripción) **solo se marca** en `QA` para el traductor.",
-           "- El unificado ya había normalizado casi todo: lo que queda allí es poco. Los ejercicios y frases del Grupo 2 están limpios en ortografía; "
-           "el Principito concentra los préstamos (traducción automática).", ""]
+           "- En collao las glotalizadas y aspiradas **son parte del alfabeto** (no se quitan). Las vocales e/o (si se usan 3 vocales), "
+           "la escritura castellana (j, c/qu/hu) y las semivocales («kunkaiki», «allyntachu») se **corrigen mecánicamente** en F4 "
+           "(§10.3, registradas en `Cambios`). Lo demás (rasgos chanka o bolivianos, préstamos, transcripción) **solo se marca** en `QA`.",
+           "- Lopera (forma del libro) escribe a la castellana y con 5 vocales; OPS/OMS Bolivia trae rasgos bolivianos (j, -chka-, «machkha»); "
+           "Farfán es cusqueño y es el más cercano a la convención.", ""]
     tipos = ["av_VARIEDAD", "av_PRESTAMO", "av_TRANSCRIPCION"]
     nombres = ["Rasgo de otra variedad", "Préstamo sin adaptar", "Posible transcripción de oído"]
     fu_orden = cq["Fuente"].value_counts().index[:9]
@@ -249,10 +251,10 @@ def main() -> int:
         tipos_ = set(toks)
         no_lx = [t for t in tipos_ if len(t) >= 3 and not Q.es_prestamo_o_propio(t)[0] and not Q.conocida(t)]
         filas.append([pool, len(toks), len(tipos_), f"{100 * len(no_lx) / max(len(tipos_), 1):.0f} %", ", ".join(sorted(no_lx)[:8])])
-    md += [tabla(pd.DataFrame(filas, columns=["Pool", "Palabras (tokens)", "Palabras distintas", "Distintas no halladas en AmericasNLP/diccionarios", "Ejemplos"])), "",
-           "- Léxico de referencia: JW300 quy (palabras que aparecen 2+ veces), diccionario MINEDU (PDF y AmericasNLP), Dict_misc, manual MinCul, afiche y "
-           "material de diabetes en quechua; se consideran solo formas escritas con el alfabeto chanka. Una palabra cuenta como hallada si ella o su raíz "
-           "(quitando sufijos) aparece. «No hallada» no significa error: el léxico médico casi no está en esos textos.", "",
+    md += [tabla(pd.DataFrame(filas, columns=["Pool", "Palabras (tokens)", "Palabras distintas", "Distintas no halladas en el léxico collao", "Ejemplos"])), "",
+           "- Léxico de referencia **collao**: todo el quechua de Lopera (forma del libro), Farfán y OPS/OMS Bolivia, comparado sin glotales ni "
+           "aspiradas y con 3 vocales (así «p'unchay» y «punchay» cuentan como la misma palabra). Es chico, porque se armó solo con fuentes "
+           "collao: «no hallada» no significa error. Crecerá cuando se agreguen las fuentes de `FUENTES_COLLAO.md`.", "",
            "**Las 25 palabras quechuas más frecuentes:** " + ", ".join(f"{w} ({n})" for w, n in todas.most_common(25)), ""]
 
     # ---------------------------------------------------------------- 8. sufijos
@@ -327,7 +329,8 @@ def main() -> int:
            "Existe un EDA anterior (`Fuentes/Trabajo - Otro Compañero/[Vibe]EDA_Corpus_NLP.ipynb` + `Corpus_Recopilado.xlsx`). No se usó como fuente "
            "de datos ni de alertas. Diferencias principales: usaba la hoja médica antigua del Grupo 3 (no el unificado), y preseleccionaba 100 + 100 + 100 "
            "frases por cobertura de palabras del **español** de unas flashcards. Aquí se usa el unificado (D10), la proporción 70/30 por bloque (D1), "
-           "cobertura de **sufijos del quechua** para la parte general (§11.1) y el flujo de consulta para la parte médica (§11.2).", ""]
+           "cobertura de **rasgos gramaticales** para la parte general (§11.1; medidos en el español, porque esa parte ya no trae borrador "
+           "collao) y el flujo de consulta para la parte médica (§11.2).", ""]
 
     # ---------------------------------------------------------------- 11. conclusiones
     gen = R[(R["Dominio"] == "General") & (R["Español"] != "")]
@@ -349,16 +352,16 @@ def main() -> int:
            f"- **Voz del paciente.** Hay ~{int((mm['Rol'] == 'Paciente').sum())} frases del paciente para todo el corpus; cada bloque necesita ~30. "
            "F5 debe redactar en español las respuestas del paciente a las preguntas de los bloques planificados.",
            "- Temas con poco o nada: ver la tabla de temas clave (alergias, deshidratación, niños, embarazo con sangrado, «¿entendió?»).",
-           "- Quechua confiable: ninguna fila es gold. El Principito es traducción automática con préstamos; el médico viene en gran parte de Lopera (collao) normalizado por reglas.",
+           f"- Quechua collao: solo la parte médica tiene borradores ({int(((R['Dominio'] == 'Médico') & (R['Quechua_borrador'] != '')).sum())} filas: "
+           "Lopera, Farfán y OPS/OMS Bolivia, en su forma original). Ninguno es gold: Lopera escribe a la castellana y tiene desalineados; "
+           "OPS es boliviano. La parte general va **sin borrador** (el traductor traduce desde el español).",
            "- Los ejercicios del Grupo 2 son muy repetitivos: tras quitar casi duplicados quedan bastantes menos.", "",
            "**Cuántos bloques caben (estimado):**",
            f"- Parte general utilizable ≈ **{gen_util}** oraciones → **{n_bloques_gen} bloques** de 140.",
            f"- Parte médica utilizable (frases ≤ 20 palabras, sin léxico ni repetidos) ≈ **{med_util}** → alcanzaría para {n_bloques_med} bloques de 60, "
            "pero la mitad debe ser del paciente, así que el límite real lo pone lo que se redacte en F5.",
-           f"- **La parte general es la que limita: ~{n_bloques_gen} bloques** con el material actual. Para más, habría que decidir P4 (AmericasNLP) con la coordinación del proyecto.",
-           "- El diccionario MINEDU en PDF tiene texto y se usó para P6: las frases del Grupo 2 **no** aparecen como ejemplos del diccionario "
-           f"(solo {int((R['Origen_verificado'] == 'Sí').sum() - int((R['Fuente'].str.startswith('SOCEMURP') & (R['Origen_verificado'] == 'Sí')).sum()))} coinciden). "
-           "Son frases del equipo con vocabulario chanka; se usan igual, con `Origen_verificado = No`.", ""]
+           f"- **La parte general de las fuentes alcanza para ~{n_bloques_gen} bloques**; F5 suma oraciones redactadas en español "
+           "en varios tiempos (`oraciones_generales.yaml`).", ""]
 
     escribir_texto(DESTINO, "\n".join(md))
     S = R.drop(columns=["avisos"]).copy()

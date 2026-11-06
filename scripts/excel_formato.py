@@ -18,7 +18,7 @@ ANCHOS = {"N°": 6, "ID": 11, "Sublote": 9, "Dominio": 10, "Rol": 10, "Español"
           "Observaciones_heredadas": 50, "Detalle": 70, "Antes": 50, "Después": 50, "Regla": 40, "Motivo": 50,
           "Fuente": 32, "Archivo": 30, "Tipo_borrador": 28, "Variedad_fuente": 30, "Avisos_QA": 60, "Categoría": 45}
 AJUSTE = {"Español", "Quechua", "Quechua_borrador", "Quechua_validado", "Notas", "Observaciones_heredadas", "Detalle",
-          "Antes", "Después", "Motivo", "Avisos_QA", "Escenario", "Otros_borradores", "Evidencia_P6", "Descripción"}
+          "Antes", "Después", "Motivo", "Avisos_QA", "Escenario", "Otros_borradores", "Evidencia_borrador", "Descripción"}
 
 
 def escribir_hoja(wb, nombre: str, df: pd.DataFrame, estado_col: str | None = "Estado", dominio_col: str | None = "Dominio",

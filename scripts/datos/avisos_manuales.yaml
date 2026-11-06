@@ -1,7 +1,8 @@
 # Avisos de QA puestos a mano (§12) cuando el borrador parece no decir lo mismo que el español y los detectores
 # automáticos no lo marcan. Son sospechas para el traductor (van al Word si son ALTA); no corrigen nada.
-# Clave = código original. Origen: revisión ultracode (H22), 15-oct-2026.
-
-EL-0019: {tipo: SENTIDO, severidad: ALTA, detalle: "el borrador parece decir «me paré encima de los arbustos»; el español dice «me puse en pie de un brinco»"}
-QCH-0567: {tipo: SENTIDO, severidad: ALTA, detalle: "el borrador dice «al enfermarse» («unqukuruspan»); el español dice «después del nacimiento»"}
-EL-0060: {tipo: SENTIDO, severidad: ALTA, detalle: "el borrador repite la misma palabra («suyananchikmi suyananchik»)"}
+# Clave = código original. Formato:
+#   QCH-xxxx: {tipo: SENTIDO, severidad: ALTA, detalle: "el borrador parece decir «…»; el español dice «…»"}
+#
+# 5-nov-2026: se quitaron los 3 avisos que había (EL-0019, QCH-0567, EL-0060) porque eran sobre borradores chanka,
+# que ya no se usan (el corpus pasó a quechua collao).
+{}

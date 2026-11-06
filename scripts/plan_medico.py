@@ -27,7 +27,7 @@ TEMAS = {
         ("Niño enfermo", r".", r"\b(?:su|tu)\s+(?:niñ[oa]|hij[oa]|bebé)\b.*(?:enferm|fiebre|diarrea|vomit|beber|mamar)"
                                r"|(?:enferm|fiebre|diarrea|vomit).*\b(?:su|tu)\s+(?:niñ[oa]|hij[oa]|bebé)\b"
                                r"|diarrea.*(?:líquidos|mate)|(?:líquidos|mate).*diarrea"),
-        ("Embarazo", r".", r"^¿.*(?:embarazada|gestante|espera un hijo)"),
+        ("Embarazo", r".", r"^¿.*(?:embarazada|gestante|gestación|espera un hijo|control prenatal|última regla|se mueve tu bebé|cuántos meses)"),
     ],
     "B03": [
         ("Pérdida de conocimiento", r"Pérdida del conocimiento|convulsiones", None),

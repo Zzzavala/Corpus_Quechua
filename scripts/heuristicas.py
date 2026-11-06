@@ -112,6 +112,9 @@ _COND = re.compile(r"\b\w{2,}(ría|rías|ríamos|rían)\b|\b(quisiera|quisieras|
 _PERF = re.compile(r"\b(he|has|ha|hemos|han|había|habías|habíamos|habían|hube|hubo)\s+\w+(ado|ido|to|cho|so)\b")
 _PRET = re.compile(r"\b\w{2,}(é|ó|aste|iste|aron|ieron)\b")
 _IMPF = re.compile(r"\b\w{2,}(aba|abas|ábamos|aban|ía|ías|íamos|ían)\b")
+_PRET_IRR = re.compile(r"\b(fui|fue|fuiste|fuimos|fueron|tuve|tuvo|tuvimos|tuvieron|hice|hizo|hicimos|hicieron|dije|dijo|dijeron|"
+                       r"vine|vino|vinieron|puse|puso|pusieron|pude|pudo|supe|supo|quise|quiso|traje|trajo|trajeron|dio|dieron|"
+                       r"estuve|estuvo|estuvieron|anduve|vi|vio|vieron|era|eran|fuera)\b")
 _NO_VERBO = {"qué", "sé", "dé", "té", "bebé", "café", "josé", "también", "día", "días", "tía", "tías", "mía", "mías", "policía",
              "alegría", "maría", "energía", "compañía", "todavía", "sandía", "vía", "garantía", "lejía", "cirugía", "anemia",
              "historia", "farmacia", "dosis", "economía", "cortesía", "panadería", "tienda", "sabía", "ahí", "aquí", "allí"}
@@ -129,13 +132,57 @@ def tiempo_es(es: str) -> str:
         return "futuro"
     if _COND.search(s2):
         return "condicional"
-    if _PERF.search(s2) or _PRET.search(s2) or _IMPF.search(s2):
+    if _PERF.search(s2) or _PRET.search(s2) or _IMPF.search(s2) or _PRET_IRR.search(s2):
         return "pasado"
     if tipo_oracion(es) == "orden" or re.match(r"^[¡¿]?\s*(que|vamos|vengan|sigan|cantemos|saquemos)\b", s):
         return "imperativo"
     if _IR_A.search(s2):
         return "futuro"
     return "presente"
+
+
+# ----------------------------------------------------------------- rasgos gramaticales del español (cobertura §11.1)
+# La parte general ya no trae borrador quechua (5-nov-2026: su quechua era chanka), así que la cobertura de sufijos no
+# se puede medir en el quechua. Se mide en el español lo que el traductor tendrá que expresar con sufijos collao:
+# tiempo (-rqa-, -sqa-, -sha-, futuro, -man), persona y número (-ni, -nki, -nchis, -yku, -nku…), posesivo (-y, -yki,
+# -n…), caso (con → -wan, en → -pi, a → -man, de/desde → -manta, para → -paq, hasta → -kama, como → hina…),
+# subordinación (-spa, -qti-, -naypaq), negación (mana … -chu), pregunta (-chu, -taq) y plural (-kuna). Es aproximado.
+
+_PERSONA = [
+    ("1sg", r"\b(yo|me|mi|mis|conmigo)\b|\b\w+(é|aba|ía)\b"), ("2sg", r"\b(tú|tu|tus|te|contigo|usted)\b|\b\w+(as|es|aste|iste)\b"),
+    ("1pl", r"\b(nosotros|nosotras|nos|nuestro|nuestra|nuestros|nuestras)\b|\b\w+(amos|emos|imos)\b"),
+    ("2pl", r"\b(ustedes|vosotros)\b"), ("3pl", r"\b(ellos|ellas)\b|\b\w+(aron|ieron)\b"),
+]
+_POSESIVO = [("pos-1", r"\b(mi|mis)\b"), ("pos-2", r"\b(tu|tus)\b"), ("pos-3", r"\b(su|sus)\b"),
+             ("pos-1pl", r"\b(nuestro|nuestra|nuestros|nuestras)\b")]
+_CASO = [("con", r"\bcon\b"), ("en", r"\ben\b"), ("a/al", r"\b(a|al|hacia)\b"), ("de/desde", r"\b(desde|del)\b|\bde\s+(la|el|los|las|mi|tu|su)\b"),
+         ("para", r"\bpara\b"), ("hasta", r"\bhasta\b"), ("por", r"\bpor\b"), ("como", r"\bcomo\b"), ("sin", r"\bsin\b"),
+         ("de-posesión", r"\b(de|del)\s+(mi|tu|su|la|el)\s+\w+\b")]
+_SUBORD = [("cuando", r"\bcuando\b"), ("si", r"^\s*¿?si\b|,\s*si\b"), ("mientras", r"\bmientras\b"), ("para-que", r"\bpara que\b"),
+           ("porque", r"\b(porque|como no|ya que)\b"), ("aunque", r"\baunque\b"), ("antes-despues", r"\b(antes|después) de\b"),
+           ("gerundio", r"\b\w+(ando|iendo)\b(?<!estando)")]
+
+
+def unidades_es(es: str) -> dict[str, set[str]]:
+    """Unidades de cobertura medidas en el español: rasgos gramaticales (que en quechua son sufijos) y palabras."""
+    s = texto(es).lower()
+    rasgos = {f"tiempo:{tiempo_es(es)}", f"tipo:{tipo_oracion(es)}"}
+    for nombre, pat in _PERSONA:
+        if re.search(pat, s):
+            rasgos.add(f"persona:{nombre}")
+    for nombre, pat in _POSESIVO + _CASO + _SUBORD:
+        if re.search(pat, s):
+            rasgos.add(f"rasgo:{nombre}")
+    if re.search(r"\b(no|nunca|tampoco|ni)\b", s):
+        rasgos.add("rasgo:negación")
+    if es_pregunta(es):
+        rasgos.add("rasgo:pregunta")
+        m = re.search(r"¿\s*(qué|quién|quiénes|dónde|cuándo|cuánto|cuántos|cuántas|cómo|por qué|para qué|de dónde|a dónde|con quién|cuál)", s)
+        rasgos.add(f"interrogativo:{m.group(1) if m else 'sí/no'}")
+    if re.search(r"\b(los|las|unos|unas)\s+\w+s\b|\b\w+(os|as|es)\s+(son|están|tienen)\b", s):
+        rasgos.add("rasgo:plural")
+    palabras = {p for p in re.findall(r"[a-záéíóúñü]{4,}", s)}
+    return {"rasgo": rasgos, "palabra": palabras}
 
 
 # ----------------------------------------------------------------- secciones → etapas (§11.3)

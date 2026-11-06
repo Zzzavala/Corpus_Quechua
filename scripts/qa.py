@@ -1,6 +1,7 @@
 """Revisión automática de calidad (§12): arma las filas de la pestaña QA.
 
-Los avisos son sospechas para el traductor (Claude no es hablante de chanka), nunca correcciones válidas.
+Los avisos son sospechas para el traductor (Claude no es hablante de quechua), nunca correcciones válidas.
+Variedad objetivo: quechua collao de Cusco (config.variedad).
 """
 from __future__ import annotations
 
@@ -18,32 +19,40 @@ RE_DUDA_OBS = re.compile(r"mal transcrit|transcripci[oó]n dudosa|ilegible", re.
 
 
 def revisar_fila(es: str, qu: str, dominio: str, oficial: bool = False, estado_unificado: str = "",
-                 observaciones: str = "") -> list[tuple[str, str, str]]:
-    """Avisos (Tipo, Severidad, Detalle) de una fila. `oficial`: fuente chanka oficial (se respeta tal cual: sus avisos
-    bajan a BAJA). `estado_unificado`/`observaciones`: lo que dijo el equipo del Grupo 3 sobre ese borrador."""
+                 observaciones: str = "", tipo_borrador: str = "") -> list[tuple[str, str, str]]:
+    """Avisos (Tipo, Severidad, Detalle) de una fila. `oficial`: fuente collao oficial (se respeta tal cual: sus avisos
+    bajan a BAJA). `estado_unificado`/`observaciones`: lo que dijo el equipo del Grupo 3 sobre ese borrador.
+    `tipo_borrador`: si el borrador es boliviano, va un solo aviso general (ALTA) y los rasgos sueltos bajan a MEDIA."""
     av: list[tuple[str, str, str]] = []
     es, qu = texto(es), texto(qu)
     if not qu:
         return av
     nota_of = " (fuente oficial: se respeta)" if oficial else ""
+    boliviano = texto(tipo_borrador).startswith("OPS/OMS Bolivia")
+    variedad = Q.detectar_variedad(qu)
+    if boliviano:
+        av.append(("VARIEDAD", "ALTA", "borrador en quechua boliviano: adáptelo al quechua de Cusco"
+                   + (f" ({variedad[0]})" if variedad else "")))
     for sev, det in Q.detectar_orto(qu):
         av.append(("ORTO", "BAJA" if oficial else sev, det + nota_of))
-    for det in Q.detectar_variedad(qu):
-        av.append(("VARIEDAD", "MEDIA" if oficial else "ALTA", det + nota_of))
+    for det in variedad:
+        av.append(("VARIEDAD", "MEDIA" if (oficial or boliviano) else "ALTA", det + nota_of))
     for sev, det in Q.detectar_prestamos(qu, es):
         av.append(("PRESTAMO", "BAJA" if oficial else sev, det + nota_of))
     for sev, det in Q.detectar_alineacion(es, qu, CFG["qa"]):
         av.append(("ALINEACION", sev, det))
     for sev, det in Q.detectar_sentido(es, qu):
         av.append(("SENTIDO", sev, det))
-    if texto(estado_unificado).startswith("Revisar") or RE_DUDA_OBS.search(texto(observaciones)):
+    # «Revisar – duda de traducción» = el equipo dudó de la traducción del libro. («Revisar – adaptación propuesta»
+    # era sobre adaptarlo a chanka: ya no aplica.)
+    if texto(estado_unificado).startswith("Revisar – duda") or RE_DUDA_OBS.search(texto(observaciones)):
         av.append(("SENTIDO", "ALTA", "el equipo marcó este borrador como dudoso: revisarlo con cuidado"))
     for det in Q.detectar_transcripcion(qu):
         av.append(("TRANSCRIPCION", "MEDIA", det))
     oov = Q.detectar_oov(qu)
     if oov:
         av.append(("OOV", "BAJA" if dominio == "Médico" else "MEDIA",
-                   "no están en AmericasNLP/diccionarios: " + ", ".join(f"«{t}»" for t in oov[:8]) + (" …" if len(oov) > 8 else "")))
+                   "no están en el léxico collao de referencia: " + ", ".join(f"«{t}»" for t in oov[:8]) + (" …" if len(oov) > 8 else "")))
     return av
 
 

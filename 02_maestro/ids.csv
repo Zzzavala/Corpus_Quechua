@@ -1139,6 +1139,915 @@ F5:port:QCH-1123:9b2fdabe,CLI-1137
 F5:port:QCH-1000:45782b3d,CLI-1138
 F5:port:QCH-1012:cdf946b4,CLI-1139
 F5:resp:QCH-0898:b1701bc2,CLI-1140
+FA:03,CLI-1141
+FA:05,CLI-1142
+FA:07,CLI-1143
+FA:09,CLI-1144
+FA:11,CLI-1145
+FA:13,CLI-1146
+PCS:dr vargas:allin punchaw qampaq kachun señora,CLI-1147
+PCS:sra flores:allim punchaw qampaq kachun dr vargas,CLI-1148
+FA:15,CLI-1149
+PCS:bien gracias:allillanmi sullpayki,CLI-1150
+PCS:buenas noches:allin tuta kachun qampaq,CLI-1151
+PCS:buenas tardes:allin ch isi kachun qampaq,CLI-1152
+PCS:buenos dias:allin punchaw kachun qampaq,CLI-1153
+PCS:el gusto es mio:nuqa anchata kusikuni,CLI-1154
+PCS:enf lucia:la espero la semana que vine,CLI-1155
+PCS:me alegro:kusikuni,CLI-1156
+PCS:mucho gusto encantado:anchata kusikuni allinpuni,CLI-1157
+PCS:muy bien:ancha allin,CLI-1158
+PCS:obst maruja:ire temprano a su casa,CLI-1159
+PCS:pase por favor:haykuykamuy haykuykamuy,CLI-1160
+PCS:sra ana:añanchay señorita,CLI-1161
+PCS:y usted:qanri,CLI-1162
+FA:17,CLI-1163
+PCS:sra cruz:allin punchaw doctor nuqan kani juana cr,CLI-1164
+PCS:sra paulina:allin punchaw kachun sipas señorita,CLI-1165
+FA:19,CLI-1166
+MJC:bien doctor:allillanmi tayta,CLI-1167
+MJC:bien doctora:allillanmi mamay,CLI-1168
+MJC:buenos dias doctor:allin p unchaw doctor,CLI-1169
+MJC:buenos dias señor:allin p unchaw wiraqucha,CLI-1170
+MJC:como estan señoras:mamakuna imaynalla kachkankichik,CLI-1171
+MJC:como estan señores:taytakuna imaynalla kachkankinchis,CLI-1172
+PCS:el es doctor:paymi doctor,CLI-1173
+PCS:el es luis:payqa luismi,CLI-1174
+PCS:el es su esposo:pay esponsunmi pay qusanmi,CLI-1175
+PCS:ella es de la comunidad:payqa comunidadmantan,CLI-1176
+PCS:ella es obstetris:payqa obstertrismi,CLI-1177
+PCS:ella esta embarazada:pay unquq kashan,CLI-1178
+PCS:ella esta mal:pay unqusqa kashan,CLI-1179
+PCS:tu eres muy joven mujer:qan ancha sipas kanki,CLI-1180
+PCS:tu esposa esta bien:esposayki warmiyki allim kashan,CLI-1181
+PCS:tu tienes que venir:qan hamunayki,CLI-1182
+PCS:usted es casada:qan casadachu kanki,CLI-1183
+PCS:usted es el promotor:qan promotor kanki,CLI-1184
+PCS:usted es la mama:qanmi maman,CLI-1185
+PCS:yo estoy con dolores:nuqa dolorwa kani,CLI-1186
+PCS:yo estoy mal:nuqa unqusqa kani,CLI-1187
+PCS:yo soy doctor:nuqan doctor kani,CLI-1188
+PCS:yo tengo hijos:nuqa wawayuq kani,CLI-1189
+PCS:yo voy mañana:nuqa paqarin risaq,CLI-1190
+PCS:amigo amiga:khumpa amiguy amigay,CLI-1191
+PCS:compañera o:khumpay,CLI-1192
+PCS:el es martin condori:paymi martin condorichu,CLI-1193
+PCS:el es promotor de salud:paymi promotor de salud,CLI-1194
+PCS:el hospital es grande:hampina wasiqa hatunmi hospitalqa hatunm,CLI-1195
+PCS:ella es doctora:payqa doctoran,CLI-1196
+PCS:ella es la sra margarita:paymi doña margaritachu,CLI-1197
+PCS:es usted casada:qam casadachu kanki,CLI-1198
+PCS:soy de limatambo:nuqan limatambomanta kani,CLI-1199
+PCS:soy juan:nuqan juan kani,CLI-1200
+PCS:yo soy enfermera:nuqan kani enfermera,CLI-1201
+PCS:yo soy la sra maruja cruz:nuqan kani maruja cruz,CLI-1202
+PCS:yo soy obstetra:nuqan kani obstetriz,CLI-1203
+FA:21,CLI-1204
+PCS:el esta con its:payqa its kashan,CLI-1205
+PCS:ella esta con sangrado:payqa yawar apaywan kashan,CLI-1206
+PCS:usted es el esposo de la señora rosa:qamchu kanki señora rosaq qusan,CLI-1207
+PCS:usted es el presidente de la comunidad:qam presidente kanki comunidadmanta,CLI-1208
+PCS:usted esta sana:qan qalipi kashanki,CLI-1209
+PCS:usted tiene una infeccion:qan infeccionniyuq kashanki,CLI-1210
+PCS:yo estare de turno:nuqaqa turnupi kasaq,CLI-1211
+PCS:yo la espero mañana:nuqa suyasayki paq arin,CLI-1212
+PCS:yo soy su madre:nuqan maman kani,CLI-1213
+FA:23,CLI-1214
+MJC:regrese el siguiente lunes:huk intichay p unchawta kutimunki,CLI-1215
+MJC:regrese mañana en la tarde:paqarin inti wasapayta kuti,CLI-1216
+PCS:alto a largo a mediano a:hatun wask a tinkulla,CLI-1217
+PCS:bajo a:taqsa,CLI-1218
+PCS:bonito a:munay munaycha,CLI-1219
+PCS:corto a:wit u,CLI-1220
+PCS:delgado a:ñañu,CLI-1221
+PCS:feo a:millay,CLI-1222
+PCS:flaco a:tullukay tullu,CLI-1223
+PCS:gordo a:wirasapa,CLI-1224
+PCS:juan es partero:juanqa wiksayuq warmikunata unquchiq,CLI-1225
+PCS:los promotores de salud son de:paykuna promotor de salud,CLI-1226
+PCS:negro a:yana,CLI-1227
+PCS:pequeño a:uña huchuy,CLI-1228
+PCS:ustedes recibiran la vacuna:qamkunaqa vacunachikunkichismi,CLI-1229
+PCS:viejo a anciano a:machu paya awichu awicha,CLI-1230
+MJC:espere ya le van a llamar:suyaykuy waqyamusunkiña,CLI-1231
+MJC:guarde silencio:ch inlla,CLI-1232
+MJC:tome asiento:tiyaykuy,CLI-1233
+FA:25,CLI-1234
+MJC:adelante joven:waynacha haykuyamuy,CLI-1235
+MJC:adelante señor:wiraqucha haykuyamuy,CLI-1236
+MJC:adelante señora:quya haykuyamuy,CLI-1237
+MJC:adelante señoras:quyakuna haykuykamuy,CLI-1238
+MJC:tomen asiento mas cordial:tiyaykuychik,CLI-1239
+PCS:bien mejor:allin allinniray,CLI-1240
+PCS:como esta julia:imaynan kashan julia,CLI-1241
+PCS:como esta la gestante:imaynan kashan unquq wiksayuq,CLI-1242
+PCS:como esta la herida:imaynapi kashan qiriyki,CLI-1243
+PCS:como esta la madre:imaynan kashan maman,CLI-1244
+PCS:como esta su hijo:imaynan kashan wawayki,CLI-1245
+PCS:contento feliz:kusisqa,CLI-1246
+PCS:ella no esta bien:payqa mana allinpi kashan,CLI-1247
+PCS:mal peor:mana allinpunichu,CLI-1248
+PCS:mi esposa esta embarazada:warmiyqa wiksayuqmi kashan,CLI-1249
+PCS:mis hijos estan enfermos:wawaykuna unqusqa kashan,CLI-1250
+PCS:nosotros estamos preocupados:nuqayku llakisqa kashayku,CLI-1251
+PCS:regular mas o menos:huq chika allin,CLI-1252
+PCS:yo estoy con hemorragia:nuqa yawarpi unqushani,CLI-1253
+PCS:mi casa esta lejos:wasiyqa karurapiqmi kashan,CLI-1254
+PCS:mi mis:nuqapak,CLI-1255
+PCS:mis hijos estan en mi casa:wawaykunaqa wasiypin kashanku,CLI-1256
+PCS:nuestra posta de salud:nuqanchispa posta saludninchis,CLI-1257
+PCS:nuestro a nuestros as:nuqanchispa,CLI-1258
+PCS:su salud es importante:qali kayqa ancha allinmi,CLI-1259
+PCS:su sus:kikinpaq,CLI-1260
+PCS:su tarjeta de control:control tarjetanmi,CLI-1261
+PCS:sus hijos de paulina:paulinaq wawankuna,CLI-1262
+PCS:sus hijos estan mal:wawankuna unqusqa kashan,CLI-1263
+PCS:sus pastillas:pastillankuna,CLI-1264
+PCS:sus pies estan hinchados:chakiykikuna punkisqa kashan,CLI-1265
+PCS:tu alimentacion es importante:allin muquyniykiq a ancha allinmi,CLI-1266
+PCS:tu mama traera su tarjeta:mamaykiqa tarjetantan apamunan,CLI-1267
+PCS:tu medicina:medicinayki,CLI-1268
+PCS:tu tarjeta de control:control tarjetayki,CLI-1269
+PCS:tu tienes sangrado:yawarmi apashasunki,CLI-1270
+PCS:tu tus:kampaq,CLI-1271
+PCS:tus padres vienen el lunes:taytamamaykikuna lunes punchawta hamunan,CLI-1272
+FA:27,CLI-1273
+MJC:le escuchare señora:uyarisayki mamay,CLI-1274
+MJC:les escuchare:uyarisaykichik,CLI-1275
+MJC:lo escuchare señor:uyarisayki wiraqucha,CLI-1276
+MJC:podemos ayudarle:yanaparikiykumanchu,CLI-1277
+MJC:puedo ayudarle:yanapariykimanchu,CLI-1278
+PCS:el lunes que viene:lunes punchaw hamuqta,CLI-1279
+PCS:el proximo martes:hawa martes punchaw hamuqta,CLI-1280
+PCS:hoy es sabado:kunanqa sabadu punchawmi,CLI-1281
+PCS:otro dia:huq punchay,CLI-1282
+PCS:pasado mañana:minsha punchawta,CLI-1283
+PCS:todos los dias:sapa punchaw,CLI-1284
+MJC:hablo un poco de quechua:pisillata runa simita rimani,CLI-1285
+MJC:no hablo castellano:manan castellanuta rimanichu,CLI-1286
+MJC:no se quechua:manan yachanichu,CLI-1287
+MJC:si hablo quechua:ari runa simita rimani,CLI-1288
+MJC:si se quechua:ari yachani,CLI-1289
+PCS:ayer carmen estaba enferma:qayna punchay carmenqa unqusqa kasharan,CLI-1290
+PCS:el doctor estara el proximo martes:doctor minchha punchay martes kanqa,CLI-1291
+PCS:la espero el jueves:juevesta suyasayki,CLI-1292
+PCS:los dias lunes te atendere:lunes punchawkunapi qawasayki,CLI-1293
+PCS:otro dia vienes con calma:huq punchay tiempuwan hamunki,CLI-1294
+PCS:pasado mañana esta el resultado:minchha punchawta resultadokuna lluqsimu,CLI-1295
+PCS:que dia vendra el promotor:ima puchawmi promotor hamunqa,CLI-1296
+PCS:si hoy es lunes mañana es martes:ari kunanqa lunis punchawmi paqarinqa ma,CLI-1297
+PCS:si hoy es lunes que dia es mañana:ari kunanqa lunes punchawmi ima punchawm,CLI-1298
+PCS:todos los dias estamos:sapa punchaymi kashayku,CLI-1299
+PCS:todos los dias se atiende:sapa punchawmi atiendikun,CLI-1300
+FA:29,CLI-1301
+MJC:le ayudare:yanaparisayki,CLI-1302
+MJC:no llore:ama waqaychu,CLI-1303
+MJC:no se preocupe:ama llakikuychu,CLI-1304
+MJC:prefiero hablar en quechua:quechuapi runasimipi munani,CLI-1305
+MJC:todo va a estar bien:lliwmi allin kanqa,CLI-1306
+MJC:tranquilicese señor:qasilla qasilla taytay,CLI-1307
+MJC:tranquilicese señora:qasilla qasilla mamay,CLI-1308
+MJC:ya no llore:amaña waqaychu,CLI-1309
+PCS:a lgunos:ej ejercicios,CLI-1310
+PCS:enfermeron kani:mariaqa promotora saludpi,CLI-1311
+MJC:en este momento:kunanpuni,CLI-1312
+MJC:espere media hora:media horata suyaykuy,CLI-1313
+MJC:llega en 1 hora:huk huraspi chayamunqa,CLI-1314
+MJC:llega en 5 minutos:pichqa minutupi chayamunqa,CLI-1315
+MJC:muy pronto:kunallan,CLI-1316
+PCS:como:imayna may hina,CLI-1317
+PCS:cuando vendras:hayk aqcha hamunki,CLI-1318
+PCS:cuando:hayk aq,CLI-1319
+PCS:cuanto:hayk a,CLI-1320
+PCS:donde esta tu esposo:maypin kashan qusayki,CLI-1321
+PCS:donde:maypi,CLI-1322
+PCS:en cuanto tiempo llego a tu comunidad:hayk a pacha puriypin llaqtaykiman chaya,CLI-1323
+PCS:esta a dos horas de viaje:iskay pacha puriypin kashan,CLI-1324
+PCS:esta en mi casa:wasiypin kashan,CLI-1325
+PCS:estare el viernes:hamusaq viernes punchawta,CLI-1326
+PCS:que:ima,CLI-1327
+PCS:quien cual:pim mayqin,CLI-1328
+FA:31,CLI-1329
+MJC:gracias por su ayuda:añay yanapawasqaykimanta,CLI-1330
+MJC:muchas gracias doctor:añaychayki,CLI-1331
+MJC:no hay de que:imamanta,CLI-1332
+PCS:ayer me pego:qayna punchawmi maqawaran,CLI-1333
+PCS:como se cayo:imaynatan urmayuran,CLI-1334
+PCS:cuanto estas pesando:haykatacha llasashanki,CLI-1335
+PCS:esta golpeada:takasqataq maqasqataq kashan,CLI-1336
+PCS:estaba caminando:purisharanmi,CLI-1337
+PCS:estara tu esposo:qusayki kanmanchu,CLI-1338
+PCS:estare temprano:tutallamanta kasaq,CLI-1339
+PCS:mucha quinua:ancha quinuata,CLI-1340
+PCS:no mi hija:manan wawaycha,CLI-1341
+PCS:que es lo que estas comiendo mas:imata aswanta miqhushanki,CLI-1342
+PCS:tal vez estara con fractura:yaqapascha p akisqa kashan,CLI-1343
+PCS:vendras mañana:paqarin hamunkichu,CLI-1344
+PCS:veremos como esta:qawasun imaynacha kashan,CLI-1345
+FA:33,CLI-1346
+FA:35,CLI-1347
+PCS:esta con hemorragia:yawarchu apasasunki yawar pichu kashanki,CLI-1348
+PCS:que le duele:imayki nanan,CLI-1349
+PCS:que sintomas tienes:imaykikunan nanan,CLI-1350
+PCS:que tiene la señora:imanarunmi mamitata,CLI-1351
+PCS:que tienes:imanasunki,CLI-1352
+PCS:tiene dolor de cintura:cinturaykichu nanaywanchu kachkanki,CLI-1353
+PCS:tiene frio:chirimantachu kachanki,CLI-1354
+PCS:tiene hambre:yaraqaymantaghu kashnaki,CLI-1355
+PCS:tiene mareo:umayki muyuchkan,CLI-1356
+PCS:tiene su tarjeta:kachanchu tarjetayki,CLI-1357
+MJC:donde vive usted:maypi tiyanki taytay,CLI-1358
+MJC:en la manzana c:manzana c ñisqapi,CLI-1359
+MJC:en que calle vive:ima callipi tiyanki,CLI-1360
+MJC:en que manzana vive:mayqin manzana ñisqapi tiyanki,CLI-1361
+MJC:que numero:ima yupaypi,CLI-1362
+MJC:vivo en la calle los incas:los inkas callipi tiyani,CLI-1363
+MJC:vivo en san salvador:san salvador llaqtapi,CLI-1364
+PCS:el brazo mark ana:el muslo aycha,CLI-1365
+PCS:el pecho el torax khasqu:la nalga siki,CLI-1366
+PCS:no tengo ganas de comer:manan mihunaywanchu,CLI-1367
+PCS:tengo dolor de cabeza:umaymi nanashan,CLI-1368
+PCS:tengo frio y calor:chiri humpiywan kashani,CLI-1369
+PCS:tengo muchos hijos:ashkha wawayuqmi kani,CLI-1370
+PCS:tengo muchos mareos:sinchitan umay muyushan,CLI-1371
+PCS:yo tengo dolor de vientre:wiksaymi nanan,CLI-1372
+U:QCH-0035,CLI-1373
+FA:37,CLI-1374
+PCS:el dedo del pie:chakiq rawk anan,CLI-1375
+PCS:el recto el ano:uquti,CLI-1376
+MJC:soy casada:casarasqa kani,CLI-1377
+PCS:esta hinchado sus pies:chakiykikuna punkisqa kashan,CLI-1378
+PCS:estoy con dolor de vientre:wiksaymi nanawashian,CLI-1379
+PCS:julia tiene golpe:juliaqa takasqan kashan,CLI-1380
+PCS:julian esta con fiebre:julianqa ruphaywan kashan,CLI-1381
+PCS:la herida tiene pus:q eyayuq k iriyki kashan,CLI-1382
+PCS:mi esposa tiene vomito:warmiy aqtuywa kashan,CLI-1383
+PCS:tengo dolor al orinar:hisp aqtiymi nanawan,CLI-1384
+PCS:tengo que coser la herida:kirita serarusaq,CLI-1385
+PCS:tengo que currar la herida:k irita hampisaq,CLI-1386
+PCS:tengo que ir a la comunidad:comundadtan risaq,CLI-1387
+PCS:tiene inflamacion en el estomago:wiksanmi punkipasqa kashan,CLI-1388
+PCS:tiene inflamacion en la matriz:madrinmi punkipakun,CLI-1389
+FA:39,CLI-1390
+MJC:cuantos hijos tiene:hayk ataq churiykikunari,CLI-1391
+MJC:estoy casada:casadan kani,CLI-1392
+MJC:no por civil:manan civilllapi,CLI-1393
+MJC:no solo convivimos:manan sirvinakuyllapi tiyayku,CLI-1394
+MJC:no solo por religioso:manan religiosollapi,CLI-1395
+MJC:no tengo hijas:mana ususiykuna kanmi,CLI-1396
+MJC:no tengo hijos:mana churiyniyuqchu kani,CLI-1397
+MJC:si me he casado en la iglesia:ari iglesiapi casarasqa kani,CLI-1398
+MJC:si me he casado por civil:ari civilniskapi casarakuni,CLI-1399
+MJC:si me he casado por religioso:ari religiosupicasarasqa kani,CLI-1400
+MJC:si tengo esposo:ari qhariyuq kani,CLI-1401
+MJC:si tengo hijas:ari ususiyniyuq kani,CLI-1402
+MJC:si tengo hijos:ari churiyniyuqmi kani,CLI-1403
+MJC:tengo 3 hijos:kimsan churiykunaqa,CLI-1404
+MJC:tiene hijas:ususiyuqchu kanki,CLI-1405
+MJC:tiene hijos:churiyuqchu kanki,CLI-1406
+MJC:tienes esposo o marido:qusayuqchu kanki,CLI-1407
+MJC:usted se ha casado por civil:civilpichu casarasqa kanki,CLI-1408
+PCS:estoy menstruando:killa yawarniymi,CLI-1409
+PCS:la herida esta sana:q irinqa hanpikusqañan,CLI-1410
+PCS:tengo escozor en mi parte:seqsiwashan warmikayniy,CLI-1411
+PCS:tenia un golpe:gulpiyuqmi karani,CLI-1412
+PCS:tiene sintomas de aborto:sullurunman hinakashan,CLI-1413
+MJC:convivo con mi pareja:parejaywan tiyayku,CLI-1414
+MJC:no estoy casada:manan qusayuqchu kani,CLI-1415
+MJC:no tengo esposa:mana siñurayuqchukani,CLI-1416
+MJC:no tengo esposo:manan wiraquchay kanchu,CLI-1417
+MJC:no tengo mujer:mana warmiyuqchu kani,CLI-1418
+MJC:no tengo pareja:mana parejayuqchu kani,CLI-1419
+MJC:si son de mi pareja:ari parejaymanta,CLI-1420
+MJC:soy abandonado:wiqch usqa kani,CLI-1421
+MJC:soy divorciado:t aqanakusqan kani,CLI-1422
+MJC:soy separado:t aqanakusqan kani,CLI-1423
+MJC:vivo con mi pareja:parejaywan tiyani,CLI-1424
+FA:41,CLI-1425
+MJC:estoy abandonada:saqisqan kani,CLI-1426
+MJC:mi esposa ha fallecido:warmiyqa wañupunmi,CLI-1427
+MJC:mi esposa ya ha fallecido:warmiqaq wañukapunña,CLI-1428
+MJC:mi esposo ha fallecido:qusayqa wañupunmi,CLI-1429
+MJC:mi esposo ya ha fallecido:qusayqa wañukapunña,CLI-1430
+MJC:no tengo marido:manan qusayuqchu kani,CLI-1431
+MJC:soy divorciada:t aqasqan kani,CLI-1432
+MJC:soy viuda:viudan kani,CLI-1433
+MJC:soy viudo:viudun kani,CLI-1434
+MJC:tiene esposa:warmiyuqchu kanki,CLI-1435
+MJC:tiene esposo:qusayuqchu kanki,CLI-1436
+PCS:mal de orina:isp ay unquy,CLI-1437
+PCS:mal del higado:k ichpan unquy,CLI-1438
+PCS:mal del pulmon:surq an unquy,CLI-1439
+PCS:relaciones sexuales:yuquy,CLI-1440
+PCS:tiempo de gestacion:hayka killa wiksayuq kay,CLI-1441
+PCS:tomar medicinas:hampi uhay,CLI-1442
+PCS:ultima relacion sexual:ultimu warmi qariwan tupasqanku,CLI-1443
+PCS:uso de condon:kundun churakuy yachay,CLI-1444
+U:QCH-0040,CLI-1445
+PCS:a que edad tuvo su primera relacion sexual:hayk a watayuqman tuparanki qariwan,CLI-1446
+PCS:alguna vez estuvo con mal de orina o le dolia a orinar:hayk aqllapas hisp ay unquywan karankich,CLI-1447
+PCS:alguna vez estuvo mal del higado o del pulmon:kukupin unquy o pulmonmanta unkurankichu,CLI-1448
+PCS:coagulacion de sangre:yawar tikayay,CLI-1449
+PCS:cuando fue su ultima relacion sexual:hayk aqmi ultimuta qariwan puñuuranki,CLI-1450
+PCS:le dijeron que no debe tomar alguna medicina:hak aqllapas nirasunkikuchu kay mana ham,CLI-1451
+PCS:parejas sexuales:waynakunawan tupasqa,CLI-1452
+FA:43,CLI-1453
+PCS:a que edad iniciaste relaciones sexuales:hayka wataykipin qariwan kqallariranki,CLI-1454
+PCS:a que tiempo de gestacion:haykaq killa unquqwan kashaqtiyki,CLI-1455
+PCS:cuando fue tu ultima regla:hayk aqmi ultimo yawarniyki chayamuran,CLI-1456
+PCS:cuantos embarazos has tenido:hayk a kutintaq wiksayuq karanki,CLI-1457
+PCS:cuantos hijos vivos tienen:hayk an kausaq wawaykikuna kashan,CLI-1458
+PCS:fueron espontaneos:payllamantachu karan,CLI-1459
+PCS:has tenido problemas en tus embarazos:sasachaykuna karanchu unquq kaqtiyki,CLI-1460
+PCS:que edad tiene tu ultimo hijo:haykaq watayuqmi sullka wawayki,CLI-1461
+PCS:te has estado cuidando con algo:imawanmi cuidakusharanki,CLI-1462
+PCS:tiene pareja:aqtual kanchu qhariyki,CLI-1463
+PCS:tuviste abortos:hayk aqllapas sullurankichu,CLI-1464
+PCS:usted o su pareja usan condon en sus relaciones sexuales:qam utaq qhariykipas churakunkichis cond,CLI-1465
+U:QCH-0042,CLI-1466
+PCS:cual:imakuna,CLI-1467
+PCS:cuales:mayqenkuna,CLI-1468
+PCS:cuando fue su ultima menstruacion:hayk aqmi ultimo yawarniykit chayamuran,CLI-1469
+PCS:cuantos dias dura su mestruacion:hayqaq punchaymi yawarniykiwan kanki,CLI-1470
+PCS:desde cuando esta tomando:hayk aqmanta pacha uqyashanki,CLI-1471
+PCS:desde cuando esta usted mal:hayk aqmanta unqushanki,CLI-1472
+PCS:en caso de pacientes mujeres:warmikunapi,CLI-1473
+PCS:eres regular en su mestruacion:sapa killallapichu yawayniyki chayamusun,CLI-1474
+PCS:esta sangrando por sus parte:wawachakuyniykimanta yawar purishanchu k,CLI-1475
+PCS:esta tomando alguna medicina:uqyashanki ima hampitapas,CLI-1476
+PCS:le tocaba en esa fecha:chay punchawpichu q allarinan karan,CLI-1477
+PCS:noto algun problema o anormalidad:sasachaykuna karanchu yawarnynkiwan kaqt,CLI-1478
+PCS:que molestias o malestar tiene usted ahora:ima nanaywan kunan kashanki,CLI-1479
+PCS:que preocupaciones tiene usted ahora:ima llakikuywanmi qam kunan kashanki,CLI-1480
+FA:45,CLI-1481
+PCS:alguna vez estuvo mal de su parte intima:hayk aqllapas nanarasunki o unqurankichu,CLI-1482
+PCS:con cuantas personas ha tenido relaciones sexuales:hayk a wanmi tuparanki kuska karanki,CLI-1483
+PCS:cuantas parejas ha tenido:hayk a tan munakuranki tiyaranki,CLI-1484
+PCS:desde cuando esta asi:haykaqmanta shayna kashanki,CLI-1485
+PCS:obst marta:allcharikuy qawanaypaq,CLI-1486
+PCS:que tratamiento recibio usted:ima hampillatapas chaskirankichu,CLI-1487
+PCS:sra yolanda:allinmi doctora,CLI-1488
+PCS:tiene usted alguna herida o grano o verruga en su parte inti:hayk allpas karanchu mirk akuna qunpucha,CLI-1489
+FA:47,CLI-1490
+PCS:con que la golpeo:imawanmi takarasunki,CLI-1491
+PCS:desde cuando la golpea:hayk aqmantapacha maqasunki,CLI-1492
+PCS:donde le duele:mayniykin nanan,CLI-1493
+PCS:guarde los objetos peligrosos:ancha manchapa kaqkunata waqaychay,CLI-1494
+PCS:la estaremos esperando el dia miercoles:suyasaykiku q aya miercoles p unchawta,CLI-1495
+PCS:necesita un examen:takasqamanta examenta ruwachikunayki,CLI-1496
+PCS:nosotros estaremos atentos a su llamado:nuqaykuqa makilla uyarisaqku wahakamusqa,CLI-1497
+PCS:que bueno que ha venido:allinmi hamusqayki,CLI-1498
+PCS:revise su casa:wasiykita qhawarukunayki,CLI-1499
+PCS:su certificado de salud estara aqui para cualquier tramite:papelnyikikunaqa cerificadoykikunaqa kay,CLI-1500
+PCS:tambien conversar:hinallataq parlarisun,CLI-1501
+PCS:tenemos que curar las heridas:kunanqa kiriykikunata hampisun,CLI-1502
+PCS:tenga a la mano ropa zapatos llaves:yuyanayki wasikimanta lluqsinaykiktaqtin,CLI-1503
+PCS:tiene que denunciar:denunciata churamunayki,CLI-1504
+PCS:tiene vecinos o familiares que la puedan ayudar:kanchu ayllukikuna yanapanasunkipaq,CLI-1505
+PCS:trompas de falopio:warmi muhu purinan,CLI-1506
+PCS:comer bien:allinta mihuy allinta mihunki,CLI-1507
+PCS:cuando se hinchen tus pies:hayq aqtaq chakiyki punkin,CLI-1508
+PCS:cuanto le empezaron las contracciones:hayqaqmantan onqonanayhuan kashanki,CLI-1509
+PCS:descansar y dormir bien:samakunki y puñunki allinta,CLI-1510
+PCS:que color y olor tenia el liquido:ima pawqar imaynatataq asnaran,CLI-1511
+PCS:si hay sangrado reposar:yawar kanqa chayqa samanayki,CLI-1512
+PCS:si te duele la cabeza tambien:umaykipas nanaqtinqa samanayki,CLI-1513
+PCS:si te sientes mal tienes que venir:mana allinta reparakuspaqa chayqa hamuna,CLI-1514
+PCS:son frecuentes:ñut ullapichu onqoynay kashan,CLI-1515
+PCS:tiene flujo vaginal:yuraqt ika kanchu,CLI-1516
+PCS:tomar estas vitaminas:kay vitaminakunata uqyanayki,CLI-1517
+PCS:trabajar menos:ama sinchita llank ankichu,CLI-1518
+PCS:venir a tus controles cada mes:sapa killapi hamunayki controlman,CLI-1519
+PCS:ya se rompio la bolsa:llocsimunñachu unu,CLI-1520
+PCS:felicitamos por su hijo:saminchanin wawaykita,CLI-1521
+PCS:para no embarazarse pronto mejor usar algun metodo:allinpi kankichis,CLI-1522
+PCS:si hay algun problema tienen que avisar:mana chaylla wiksayakunaykipaqqa kuidaku,CLI-1523
+PCS:su hijito solo debe tomar leche materna:wawachaykiqa ñuñullaykitam ukyanan,CLI-1524
+PCS:tiene que descansar:samanaykin,CLI-1525
+PCS:traer la tarjeta cuando vengan al control:imapas kaptinqa willakamunaykichismi,CLI-1526
+PCS:apoyo para promotores:promotorta yanapay,CLI-1527
+PCS:atender con urgencia:usqayllapi acudina,CLI-1528
+PCS:ayuda de la comunidad:comunidadpa yanapayninta,CLI-1529
+PCS:en casos de emergencias:sasachaykuna kaqtin,CLI-1530
+PCS:llevar con urgencia al centro de salud:usqayllapi centro de salud apayuy,CLI-1531
+PCS:necesitamos vuestra colaboracion:nuqaykuqa yanapayniykichista munayku,CLI-1532
+PCS:partos con mucha sangre:sinchi yawarpi wachakuy,CLI-1533
+PCS:partos de jovenes:sipaskunaq wachakuynin,CLI-1534
+PCS:partos de personas mas viejas:paya warmikuna wachakuynin,CLI-1535
+PCS:señores autoridades buenos dias:señores autoridades allin punchay napayk,CLI-1536
+PCS:soy el medico enfermera obstetriz:nuqan kani doctor enfermera obstetriz,CLI-1537
+PCS:vengo a explicar nuestro trabajo:hamuni llankayninqu yacharichiq,CLI-1538
+PCS:dr javier:ama manchakuychu,CLI-1539
+PCS:dra patricia:ayudeme a acomodarla para el examen,CLI-1540
+PCS:sr pedro:buenos dias doctora,CLI-1541
+PCS:sra graciela:1 mes y medio,CLI-1542
+PCS:obst maria:allin p unchay iman pasansunki,CLI-1543
+PCS:sra victoria:hay mucho trabajo en la chacra,CLI-1544
+PCS:aborto completo:hunt asqa sullu,CLI-1545
+PCS:aborto incompleto:qhuru sulu partin sullu,CLI-1546
+PCS:aborto inevitable:sullupipuni,CLI-1547
+PCS:dolor de vientre:wiqsa nanay,CLI-1548
+PCS:mal olor:wiru asnay,CLI-1549
+PCS:trabajo coordinado:parlarispa llank ana,CLI-1550
+PCS:desprendimiento de la placenta:thamin llikikun,CLI-1551
+PCS:edad materna:mamaq watan,CLI-1552
+PCS:embarazo no deseado:mana wiksayakuq munaq,CLI-1553
+PCS:enfermedades cronicas:sasa hanpina unquykuna,CLI-1554
+PCS:latidos cardiacos:sunqu phatatay phatatatay,CLI-1555
+PCS:muchos embarazos:askha kuti wiksayakuq,CLI-1556
+PCS:placenta previa:thamin uthapin paris,CLI-1557
+PCS:por herencia:tayta mamamanta hamuq,CLI-1558
+PCS:por toxicos en el ambiente:wayrapi miyukunamanta,CLI-1559
+PCS:rotura uterina:matris p akisqa,CLI-1560
+PCS:sangrado rojo oscuro:yana puka yawar,CLI-1561
+PCS:sangrado rojo vivo:kawsaq puka yawar,CLI-1562
+PCS:sangrado vaginal:warmi kaynin yawarchay,CLI-1563
+PCS:violencia familiar:familia ukupi maqanakuy,CLI-1564
+PCS:aumento de tamaño del utero:matris wiñaynin,CLI-1565
+PCS:el utero no se contrae:matris mana wisq akunchu,CLI-1566
+PCS:hemorragia severa:yawarchay chanin,CLI-1567
+PCS:hemorragias port parto:yawarchay canin wachakusqan pata,CLI-1568
+PCS:hipotension arterial:sunqu pisi llank an,CLI-1569
+PCS:inversion uterina:matriz tiqrasqa,CLI-1570
+PCS:lesion de canal del parto:warmin kayninpi k iri,CLI-1571
+PCS:palidez marcada:q illu llana,CLI-1572
+PCS:placenta incompleta:paris phasmin,CLI-1573
+PCS:restos de membranas:llika paris mana lluqsinchu,CLI-1574
+PCS:retencion de placenta:paris mana lluqsinchu,CLI-1575
+PCS:retencion de restos placentarios:parista partin mana lluqsinchu,CLI-1576
+PCS:sangrado continuo con utero contraido:yawar chanin mana matrisnin wisqakuqtin,CLI-1577
+PCS:taquicardia materna:sunku phatay,CLI-1578
+PCS:usuaria o usuaria o:tengo molestias en mis partes warmikayni,CLI-1579
+PCS:usuaria o:buenos dias doctora,CLI-1580
+PCS:debe venir tu pareja para poder conversar y explicarle:hamunanmi qusayki paywan parlanapaq,CLI-1581
+PCS:el tratamiento es tambien para tu pareja:qusaykipas tratamientuta chaskinanmi,CLI-1582
+PCS:la infeccion puede afectar a nuestra matriz:infeccionkunaqa matrisninchistan k irin,CLI-1583
+PCS:las infecciones detectadas a tiempo se:tiempunpi k iri hampisqa,CLI-1584
+PCS:no tener relaciones sexuales hasta estar sano:ama qusaykiwan puñunkichu qaliñanayki ka,CLI-1585
+PCS:puede nacer nuestro hijo con algun mal:wawapis mana allimmi paq arinman,CLI-1586
+PCS:si no se cura nos puede llevar a la muerte:mana hanpikusqa wuañuytan tariswan,CLI-1587
+PCS:tienes que tomar las pastillas:pastillakunatan uqyanayki,CLI-1588
+PCS:cuando no limpiamos bien nuestro ano despues de cacar:mana allinta sikinchista pichakuqtinchis,CLI-1589
+PCS:el condon es el unico metodo que cuida de una its y embarazo:condunmi harq arinwanchis its infeccionm,CLI-1590
+PCS:frases para la:e xplicacion,CLI-1591
+PCS:las its no se curan:kay infeccionqa its nisqaqa manasya hanp,CLI-1592
+PCS:puede tener infeccion las niñas y mujeres que no tiene relac:mana qusayuq warmi wawapis infeccionniyu,CLI-1593
+PCS:relaciones sexuales con condon:qusaykiwan kaqtiyki conduntan churakunan,CLI-1594
+PCS:se contagian a traves de las ropas interiores:ratakunmi ukhuna p achakunamanpas,CLI-1595
+PCS:se contamina nuestra vagina con la caca:rakanchispis akawan infectakun,CLI-1596
+PCS:si no toma seguira igual:mana millp uspaqa chayq a manan qhaliyan,CLI-1597
+PCS:solo dos veces tiene que tomar las pastillas:iskay kuitllatan pastillata millp unayki,CLI-1598
+PCS:usted tiene una infeccion its:qan personayki its infeccionniyuq kashan,CLI-1599
+PCS:usted y su pareja tiene que seguir el tratamiento:qan qusaykiwan hamuikunaykichis,CLI-1600
+PCS:a traves de la madre al hijo si la madre esta con el virus d:sichus mama unquyniyuq chayqa wawaman pa,CLI-1601
+PCS:ataca solo a los humanos:runallatan hap in,CLI-1602
+PCS:en el liquidos vaginal:rakaq ununpi,CLI-1603
+PCS:en el parto:wachakuqtinchis,CLI-1604
+PCS:en el semen:qariq muhumpi,CLI-1605
+PCS:en la lactancia:ñuñuqtinchis,CLI-1606
+PCS:en la leche materna:mamaq lechimpi,CLI-1607
+PCS:es un virus:vih sida virus sutiyuksi,CLI-1608
+PCS:esta mas en la sangre:yawarpinsi masta tiyan,CLI-1609
+PCS:puede transmitirse durante el embarazo:wawaman wiqsayuq kaqtinchis pasanman,CLI-1610
+PCS:recibiendo sangre de personas infectadas con vih:yawarta churachikuspa o chaskispa uq unq,CLI-1611
+PCS:relaciones sexuales sin proteccion del condon:qhariwan tupaspa mana condunta churakusp,CLI-1612
+PCS:se protege usando condon durante las relaciones sexual sea a:hark ayta atinkun condunta churakuspa sa,CLI-1613
+PCS:el vhi sida no respeta a nadie ricos pobres quechuas amazoni:kay unquyqa mana pitapis manchakunchu,CLI-1614
+PCS:en los centros de salud es gratis:centro de saludpi manan qulqipaqchu,CLI-1615
+PCS:hacernos un examen:exameneta ruwakunanchis,CLI-1616
+PCS:los jovenes y las mujeres estan en mayor peligro:sipas warmikuna wayna qharikuna ancha ma,CLI-1617
+PCS:personas que tiene el vih puede tener relaciones sexuales co:kay unquywanqa warmiwanpis qhariwanpis k,CLI-1618
+PCS:tratamiento retroviral que hace que el virus no ataque mas t:kamni uq allin hampi chay unquyllapaq,CLI-1619
+PCS:usar condon:condunta churakuna,CLI-1620
+PCS:vih no es igual al sida con vih puede vivir muchos años si s:kay unquywan unay watan kausayta atiswan,CLI-1621
+PCS:cumplir con el tratamiento:hampita hunt ana,CLI-1622
+PCS:examen de sangre:yawar qawachiy,CLI-1623
+PCS:examen vaginal:rakha qawachiy,CLI-1624
+PCS:hacerse el diagnostico:qawachikuy,CLI-1625
+PCS:recibiendo sangre:yawar chaskiy,CLI-1626
+PCS:sin proteccion:mana hark ayniyuq,CLI-1627
+PCS:ulcera vaginal:k iri rakhapi,CLI-1628
+PCS:actualmente tiene pareja:kunan actual qhariyuqchu kashanki,CLI-1629
+PCS:cuantas parejas sexuales tuvo o tiene:kayk a qhariwanmi tuparanki icha hayk aw,CLI-1630
+PCS:cuantos años tiene:hayk a watayuqmi kanki,CLI-1631
+PCS:desde cuando:hayk aqmanta pacha,CLI-1632
+PCS:donde nacio:maypin paqariranki,CLI-1633
+PCS:se cuidaba con algun metodo:qhipakunapi karanki huk metodowan,CLI-1634
+PCS:señora por favor responda:señora willarikuy,CLI-1635
+PCS:sufre o sufrio violencia sexual alguna vez:qhariwan tupanaykipaq karanchu sasachaku,CLI-1636
+PCS:tiene algun dolor en la vagina:qhariwan tupaqtiki kanchu nanay rakhayki,CLI-1637
+PCS:tiene relaciones sexuales forzadas:mana munashaqtiyki qhariwan tupankichu,CLI-1638
+PCS:tuvo abortos provocados:sulluranki qam kykiymanta,CLI-1639
+PCS:cada mujer necesita control:sapanka warmi qhawachikunan,CLI-1640
+PCS:cuanto tiempo dura su menstruacion:hayk a punchawmi unqunki killaykiwan,CLI-1641
+PCS:dolor de cabeza:uma nanay,CLI-1642
+PCS:eleccion de metodo:metodo aqllay,CLI-1643
+PCS:los metodos no son iguales:sapa metodoqa huq hina kama,CLI-1644
+PCS:metodos de planificacion:mana wiksayakunapaq hampi,CLI-1645
+PCS:no hacen daño:manan k irikunchu,CLI-1646
+PCS:relacione sexuales:qariwan warmiwan tupana puñuy,CLI-1647
+PCS:su pareja es comprensivo:qhariykiwan allintachu apanakunkichis,CLI-1648
+PCS:su pareja toma:qhariyki upyanchu machaschu,CLI-1649
+PCS:usted sabe cuando ovula:qam yachankichu hayk aq muhuyki listo wa,CLI-1650
+PCS:conocer cuando ovula:yachanayki hayk qsi muhuyki yawaewan kan,CLI-1651
+PCS:dia fertil cuando el moco vaginal es como la clara del huevo:runtuq unun hinan kana rakhaykipi unuyki,CLI-1652
+PCS:es importante la participacion del esposo:ancha allimpunin qusaykiq yanapaynin,CLI-1653
+PCS:no es bueno si tu ciclo es irregular:mana allinchu kanman sichus mana yawarni,CLI-1654
+PCS:observar diario su parte intima genitales:sapa punchaw rakhaykita qawanayki,CLI-1655
+PCS:registrar la duracion de los ciclos:sapa killa yawarninkiq chayamusqanta ano,CLI-1656
+PCS:usar si tu ciclo es regular:kayway ta hayk akuwaq sichus yawarniyki ,CLI-1657
+PCS:antes que entre a la vagina:manaraq warmiq rakamman haykuqtin,CLI-1658
+PCS:ayuda a prevenir un embarazo:hark an mana warmi wiqsañananpaq,CLI-1659
+PCS:cada tres meses se le entregara 30 condones:centro de saludpi sapa killapi kinsa chu,CLI-1660
+PCS:cuando el pene esta duro o erecto:uyu pichiku k uku kaqtin,CLI-1661
+PCS:el semen queda dentro de la bolsita:qhariq muhunmi llikapi q ipan,CLI-1662
+PCS:es una funda delgada de jebe:jebemanta ñañu llika,CLI-1663
+PCS:evita las its y el vih sida:hark an mana its infeccion ni sida hayku,CLI-1664
+PCS:no entra el espermatozoide a la vagina:hark an ama qhariq muhun warmiman haykun,CLI-1665
+PCS:se usa una sola vez:ch ulla kutillapaqmi huq,CLI-1666
+PCS:usa el varon en cada relacion coital:qhari churakun sapa warmiwan kayta munaq,CLI-1667
+PCS:cada condon se usa una sola vez:sapanka condontaqa ch ullakutilla churak,CLI-1668
+PCS:dejar un espacio en la punta para que se deposite el semen e:ama puntakama churakunaykichu qariq muhu,CLI-1669
+PCS:el condon puede estar dañado:kundunqa mayninpiqa mana allinchu kanman,CLI-1670
+PCS:en los establecimientos de salud es gratis:centro de saludpiqa mana qulqipaqchu,CLI-1671
+PCS:es facil de conseguir:maypipis tariyta atikunmi,CLI-1672
+PCS:es seguro si se usa correctamente:ari allinta churakunki chayqa manan imap,CLI-1673
+PCS:fecha de vencimiento:tinpunka pasarapunña,CLI-1674
+PCS:puede romperse:qhasurukumanmi,CLI-1675
+PCS:retirar del pene cuando este erecto:suchuchina urquna qhariq pichikun k uku ,CLI-1676
+PCS:un condon en cada relacion:sapa qharita o warmiwan tupaspaqa chayqa,CLI-1677
+PCS:analisis de orina:hispay qaway,CLI-1678
+PCS:su ultima menstruacion:ima puchawkama hamurasunki yawarniyk,CLI-1679
+PCS:uno diario:chullallata punchawpi,CLI-1680
+PCS:empezar a tomar despues de tu regla:kallarinayki uqyayta yawarninyki pasaqti,CLI-1681
+PCS:en su familia alguien tuvo cancer al utero o mamas:aylluykipi familiaykipi pillapis madre u,CLI-1682
+PCS:este metodo no es indicado para usted:manay qanpaq kay metodoqa allinchu,CLI-1683
+PCS:no puede usar porque es mayor de:manañan edayniyki rayku allinchu qampaq,CLI-1684
+PCS:pastilla que contiene hormonas:huch uy pastillakunalla hormonakunayuqmi,CLI-1685
+PCS:problemas de higado:kukupiy kukupinniyki q alichu,CLI-1686
+PCS:tiene problemas de corazon:sunqu unquyniyki kanchu,CLI-1687
+PCS:tiene que venir con su esposo para que reciban la informacio:qusaykiwan hamunayki paymanwan willanapa,CLI-1688
+PCS:tiene varices:kanchu sirk a punkiy,CLI-1689
+PCS:tomar todos los dias:sapa punchawmi millp unayki upyanaki,CLI-1690
+PCS:al principio puede tener un poco de dolor de cabeza:chayraq kallariyninpi umayki nananman,CLI-1691
+PCS:cancer en los senos o en el utero:cancer ñuñupi o madripi,CLI-1692
+PCS:derrame cerebral:ñusqun ususqa,CLI-1693
+PCS:hepatitis cualquier enfermedad del higado:kupupipi unquy,CLI-1694
+PCS:la mujer sigue menstruando pero los ovulos no maduran:warmiq yawarninqa chayamuchkallanmi runt,CLI-1695
+PCS:las personas que tienen:sichus,CLI-1696
+PCS:las pildoras impiden el embarazo:pildorakuwanqa manan wuqsayuq kayta atin,CLI-1697
+PCS:problemas cardiacos:sunqu nanayniyuq,CLI-1698
+PCS:problemas circulatorios:yawar mana allin puriq,CLI-1699
+PCS:si continuan estas molestias debes volver:chaynalla kanki chayqa kutimunayki,CLI-1700
+PCS:venir al proximo mes para su control:kutimunku uq killamanta,CLI-1701
+PCS:labios mayores:phatu aycha simi,CLI-1702
+PCS:labios menores:huchu aycha simi,CLI-1703
+PCS:monte de venus:madre pata,CLI-1704
+PCS:orificio urinario:hispana t uqu,CLI-1705
+PCS:orificio vaginal:rakha t uqu,CLI-1706
+PCS:testiculos huevos:runtu,CLI-1707
+PCS:e xplicaciones durante la:c onsulta,CLI-1708
+PCS:es un dispositivo pequeño de plastico:platicumanta huchuylla ruwasqa,CLI-1709
+PCS:organos internos de la mujer:organos internos del hombre,CLI-1710
+PCS:ovario semillas muhu taqi femeninas:conductos muhu sirk a deferentes yuma si,CLI-1711
+PCS:se coloca dentro del utero de la mujer:waymin madrin uhuman churakun,CLI-1712
+PCS:tiene la forma de t:kikin kaynin t man riqchakun,CLI-1713
+PCS:trompas de warmi muhu falopio purinan:liquido seminal yuma,CLI-1714
+PCS:utero madri matriz:prostata hip ay p iti,CLI-1715
+PCS:aumentar la menstruacion y dolor:yapakun killapi yawar,CLI-1716
+PCS:control al primer mes a los 3 meses a los 6 meses y luego ca:qhawachikuna kinsa killamanta suqta kill,CLI-1717
+PCS:d esventajas del:diu,CLI-1718
+PCS:los hilos del diu sirve para saber que esta en su sitio:chay hiluchanmi riqsichiwanchis chaypi k,CLI-1719
+PCS:no debe haber dolor durante las relaciones sexuales:mana ima nanaypis kammanchu qusaykiwan k,CLI-1720
+PCS:puede salirse sin darnos cuenta:llluqsirapunmamni mana riparaypi,CLI-1721
+PCS:revisar los hilos despues de cada menstruacion:sapa killa yawar pasaqtin llunquna chay ,CLI-1722
+PCS:se puede tener relaciones sexuales todos los dias:sapa p unchaumi qusaykiwan kayta atiwaq,CLI-1723
+PCS:si hay dolor en las relaciones es bueno un control:sichus ima nanaypis kanma qusaykiwan kaq,CLI-1724
+PCS:usarlo por un tiempo maximo de 10 años:pisqa watallan churakuy allin,CLI-1725
+PCS:abra las piernas:chakaykita kichariy,CLI-1726
+PCS:cancer en el cuello uterino:cancer unquyniyuq,CLI-1727
+PCS:cuando hay inflamacion pelvica:sichus inflamacion kaqtin,CLI-1728
+PCS:cuando se tiene anemia:sichus amaychura unquyniyuq,CLI-1729
+PCS:dispositivo intra uterino:madre uhupi churasqa,CLI-1730
+PCS:esto es un especulo:kay kikin especulo sutiyuq,CLI-1731
+PCS:menstrua bastante y hay mucho dolor:sichus killapi yawar chanin y sinchi nan,CLI-1732
+PCS:no le va a doler:manan nananqachu,CLI-1733
+PCS:problemas en el utero trompas de falopio:sichus madripi ima k iripis kaqtin,CLI-1734
+PCS:saquese el calzon:uqu p achaykita ch utikuy,CLI-1735
+PCS:suba a la mesa:siqay kay mesapataman,CLI-1736
+PCS:vaya orinar:unu isp ayta ruwamuy,CLI-1737
+PCS:al control venir con su esposo:contromanqa hamunayki qusaykiwan,CLI-1738
+PCS:estos son los hilos del diu:kaymi kashan kay diu sutiyuq hilukuna,CLI-1739
+PCS:examen pelvico:qhawachikuna,CLI-1740
+PCS:ha tenido problemas del corazon:sunqunanay hayk aqllapis karannki,CLI-1741
+PCS:le colocare este aparatito:kayta churasayki,CLI-1742
+PCS:ligadura de trompas:t inkiy t ipiy warmi muhuq purinanta,CLI-1743
+PCS:metodo definitivo:lumpaypaq ruwasqa,CLI-1744
+PCS:sangrara un poco mas de lo normal:yawarchakunki huq chikanta,CLI-1745
+PCS:a los 30 dias:kinsa chunka p unchaymanta,CLI-1746
+PCS:a los 7 dias:qanchis p unchaymanta,CLI-1747
+PCS:alguna vez ha tenido problemas en el utero:hayk akpas madriykiwan sasachakuypi kara,CLI-1748
+PCS:cada cuanto tiempo menstruo:hayk a punchawmantan yawarniyki killapi ,CLI-1749
+PCS:como se entero de este metodo:imaynapin kay kasqanta yacharanki,CLI-1750
+PCS:debe firmar un consentimiento:kay papeltan q elqanayki munayniykimanta,CLI-1751
+PCS:es necesario un examen previo:allinta yachanapaq examenta ruwana,CLI-1752
+PCS:es realizado por personal especializado:yachaqmi chayta ruwan,CLI-1753
+PCS:es un metodo definitivo:chay metodoqa llumpuypaqmi,CLI-1754
+PCS:es una pequeña operacion:huchuy operacionmi,CLI-1755
+PCS:hay alguien que la esta obligando:pipistaq kamayusunkiman,CLI-1756
+PCS:lo ha pensado bien:allintachu yuyayniranki,CLI-1757
+PCS:no se va arrepentir despues:manachu chaymanta pesachikunki,CLI-1758
+PCS:por que esta eligiendo este metodo:imaraykun kay metodo nisqata haqllanki,CLI-1759
+PCS:sirve para ligar y o cortar las trompas de falopio:chaywanqa manaña muhu ñannin kapunqachu,CLI-1760
+PCS:venir a sus controles:hamunayki qhawachikuq,CLI-1761
+PCS:con problemas del corazon:sunqumanta unquqkuna,CLI-1762
+PCS:cuando todavia no han tenido hijos:manaraq wawayuq kaspa,CLI-1763
+PCS:el deseo sexual es el mismo:qhariwan kay munayninchis manan chinkanc,CLI-1764
+PCS:es seguro:ancha takyasqa,CLI-1765
+PCS:fiebre en la herida:k iripi sinchi ruphay kaqtin,CLI-1766
+PCS:molestias urinarias:sichus unu hispakuqtiyki manay kanqa,CLI-1767
+PCS:mucho dolor pelvico o abdominal:sinchi nanay matrisniykipi kaqtinqa,CLI-1768
+PCS:personas con mucho peso:sichus sinchita llashanki chayqa,CLI-1769
+PCS:problemas de patologias pelvica:madrimanta unquyniyuq kaspa,CLI-1770
+PCS:se sigue menstruando igual:yawarninchis killapi chayamullan,CLI-1771
+PCS:venir con urgencia:hamuna ratulla usqhaylla,CLI-1772
+PCS:esta de acuerdo su esposa:warmiykiwan parlarankichu,CLI-1773
+PCS:esta seguro de hacerse esta operacion:takyasqachu kashanki kay operacion ruwak,CLI-1774
+PCS:evita el embarazo:manan warmita wiqsayachinchu,CLI-1775
+PCS:firmar su consentimiento:q elqanayki munayniykita,CLI-1776
+PCS:la operacion no demora:manan unaychu operacionqa,CLI-1777
+PCS:las relaciones sexuales son iguales:warmiwan kayqa munayninchis manan chinka,CLI-1778
+PCS:se corta los tubitos para que no salgan los espermatozoides:tuqurun muhu ñanta kuchukapun,CLI-1779
+PCS:se ira caminando despues de la operacion:purispa ripunki operacion tukukuqtin,CLI-1780
+PCS:señor juan entendio lo que le explique:wiraqucha juan entenderankichu rimasqayt,CLI-1781
+PCS:usted tiene que solicitarlo:qanmi ichaqa mañakunayki,CLI-1782
+MJC:estaba andrajoso:thantallañan karqan,CLI-1783
+PCS:a los dos dias usted puede trabajar:iskay punchaymantaña llank anayki,CLI-1784
+PCS:debe pensarlo mejor:allintan yuyaymananayki,CLI-1785
+PCS:debe ser revisado por un especialista:allin yachaqmi qhawanasuyki,CLI-1786
+PCS:descansar en el hospital 12 horas:samanayki hospitalpi chunka iskayniyuq u,CLI-1787
+PCS:es necesario un control antes de la operacion:manaraq operacionta ruwaspa allinta qhaw,CLI-1788
+PCS:llenare su historia clinica:hunt asaq kausayniykita historiaykita,CLI-1789
+PCS:no realizar trabajos pesados:mana sasa llank aykunata ruwanachu,CLI-1790
+PCS:no tener relaciones sexuales durante:mana warmiykiwan qanchis punchay,CLI-1791
+PCS:o piensa volver a casarse:huqmanta casarakuyta yuyaymanashanki cha,CLI-1792
+PCS:por 3 meses usar condon:sichus tupanki chayqa condonta churakunk,CLI-1793
+PCS:si hay anemia debe curarse antes:sichus amaychurayuq kanki chayqa hampina,CLI-1794
+PCS:si tiene un hijo debe pensarlo:sichus chullalla wawayki kan chaypi yuya,CLI-1795
+PCS:si tiene una infeccion en el pene debe curarse:hinallataq sichus infeccion pichikuykipi,CLI-1796
+PCS:es un metodo de emergencia:chay metodoqa sinchi llakipi kaqtiyki,CLI-1797
+PCS:impide la ovulacion:mana muhuykita uq muhuwan tupachinchu,CLI-1798
+PCS:no deja que haya embarazo:mana wiqsayuq kanaykita hark an,CLI-1799
+PCS:no es abortivo:manan sulluchikunchu,CLI-1800
+PCS:no protege de las infecciones de transmision sexual y del si:mana infeccion tramision oral o sida nis,CLI-1801
+PCS:no se toma diario:manataqmi sapa punchawchu millp una,CLI-1802
+PCS:no usar esta pastilla cada rato:mana kay pastillastaqa sapa ratuchu mill,CLI-1803
+PCS:su control despues de 7 dias:qhawasaykiku suqta punchaymanta,CLI-1804
+PCS:usar trusa ajustada por siete dias:mat i p achawan uhuykiman churakunki suq,CLI-1805
+PCS:venir cada año para una consulta:chaymanta sapa wata qhawachikuq hamunayk,CLI-1806
+PCS:volver despues de 30 dias:chaymantataq kutimunayki kinsa chunka p ,CLI-1807
+PCS:mujeres que han sido violadas:sichus warmi alkuchasqa karan,CLI-1808
+PCS:necesario hacer un examen:alllinmi kanman qhawachikunayki,CLI-1809
+PCS:no se preocupe todo estara bien:ama llakikuychu allinmi imapis lluqsinqa,CLI-1810
+PCS:no tener relaciones sexuales hasta su proxima regla:manan qusaykiwan puñunaykichu killa unqu,CLI-1811
+PCS:si ha fallado el metodo que estaba usando:sichus chay metodo sutuyuq mana hark aqn,CLI-1812
+PCS:tomar dentro de las 72 horas despues de la relacion sexual s:millp unayki qanchis chunka iskayniyuq h,CLI-1813
+PCS:tomar la primera dosis y la segunda despues de 12 horas prim:millp unayki segundatapas chunka iskayni,CLI-1814
+PCS:tomar las pastillas como le indique:pastillata millp unayki nisq ayta hina,CLI-1815
+PCS:usar en situaciones de emergencia:sinchi llakipi kaqtiyki chayta milp uwaq,CLI-1816
+PCS:y saben que puede quedar embarazadas:y yachanman wiqsayuq kananta,CLI-1817
+PCS:ya puso la denuncia:ñachu denunciata churamunkiña,CLI-1818
+PCS:antes de las 72 horas:manaraq qanchis chunka iskayniyuq kaqtin,CLI-1819
+PCS:despues de 12 hora:chunka iskayniyuq horasmanta,CLI-1820
+PCS:dolor en las mamas:ñuñu nanay,CLI-1821
+PCS:donde puede conseguir:maypin tarywaq,CLI-1822
+PCS:en cualquier farmacia centro de salud:mak in farmaciapitas o centro de saludpi,CLI-1823
+PCS:cuantos dedos tiene en la mano izquierda:hayk a rawk anaykikunan lluqimakikipi ka,CLI-1824
+PCS:cuantos dias hay en una semana:hayk a punchawmi huk semanapi kan,CLI-1825
+PCS:el monitor:karu kamachikuq,CLI-1826
+PCS:estoy enfermo a tres dias:kimsa puchaw unqusqaymanta risani,CLI-1827
+PCS:la almohada:sawanayki,CLI-1828
+PCS:la cama:kamay puñuna,CLI-1829
+PCS:la cobija:puñuna,CLI-1830
+PCS:la piyama:puñunaiki p acha,CLI-1831
+PCS:la puerta:punku,CLI-1832
+PCS:la sabana:llamp u qatana,CLI-1833
+PCS:la ventana:qhawana t uqu wintana,CLI-1834
+PCS:que tiempo esta enfermo a:hayk a unayna unquchkani,CLI-1835
+PCS:1 62 cm 200 libras:68 años,CLI-1836
+PCS:estatura peso:edad,CLI-1837
+PCS:iskay pacha ibrasniyuq:suqtachunka pusaqniyuq,CLI-1838
+PCS:presion arterial pulso:temperatura,CLI-1839
+PCS:la señora juana dio a luz el 20 d diciembre del año 2009:mama juanaqa wachakura iskay chunka dici,CLI-1840
+PCS:el abuelo:machula taytay,CLI-1841
+PCS:el esposo:qusay,CLI-1842
+PCS:el hijo:wawayki,CLI-1843
+PCS:el padre:tayta,CLI-1844
+PCS:el padrino:padrinuy,CLI-1845
+PCS:hoy es enero kunanqa:enero killa,CLI-1846
+PCS:la abuela:hatun mama mamaku,CLI-1847
+PCS:la esposa:warmiki,CLI-1848
+PCS:la hija:ususiyki,CLI-1849
+PCS:la madre:wachaq mama,CLI-1850
+PCS:la madrina:madrinay,CLI-1851
+PCS:las 11 55 de la noche:kuska tutan,CLI-1852
+PCS:las 12 00 pm:chawpi p unchaw,CLI-1853
+PCS:que mes es hoy:ima killapin kashanchis,CLI-1854
+PCS:como se llama:iman sutiyki,CLI-1855
+PCS:cuñada por la mujer:qhachun masiy,CLI-1856
+PCS:cuñado por la mujer:qatay masiy,CLI-1857
+PCS:el amante:pantaqmasyiki inkaiki,CLI-1858
+PCS:el hermano de hermana:turay,CLI-1859
+PCS:el hermano de hermano:wawqiy,CLI-1860
+PCS:el nieto:haway,CLI-1861
+PCS:el padre es juan:juanmi taytanqa,CLI-1862
+PCS:el sobrino:wawqenpa churin,CLI-1863
+PCS:el solteron:wayna mana yana,CLI-1864
+PCS:el viudo:mana yanayuq,CLI-1865
+PCS:ella se llama susana y tiene 16 años:paypa sutinqa susanan payqa chunka suqta,CLI-1866
+PCS:es mi hijo a:wawaymi,CLI-1867
+PCS:la hermana de hermana:ñañay,CLI-1868
+PCS:la hermana de hermano:panay,CLI-1869
+PCS:la nuera:qhachun,CLI-1870
+PCS:la sobrina:sobrinaymi,CLI-1871
+PCS:la viuda:mana yanayuq,CLI-1872
+PCS:quien es el ella:pitaq payri,CLI-1873
+PCS:quien es el padre:pim taytan,CLI-1874
+PCS:abra la boca:simiykita kichay,CLI-1875
+PCS:cierre la boca:wisk ay simiyikita,CLI-1876
+PCS:le vamos a tomar la temperatura:ruphayninta ruphaytupunawan qhawasun,CLI-1877
+PCS:levante la lengua:qalluykita uqariy,CLI-1878
+PCS:por favor no muerda el termometro:ama k utuychu ruphay tupanata,CLI-1879
+PCS:saquese la ropa:ch utikuy p achaykita,CLI-1880
+PCS:sostenga al niño a a la niña:hap iy qhari wawata warmi wawata,CLI-1881
+PCS:venga para pesarle:hamuy llasaq aysayman churay,CLI-1882
+PCS:hay que tomar 3 cucharada s:ukyay kimsa cucharachata,CLI-1883
+PCS:no olvidar no olvido:ama qunqaspa ama qunqasaqchu,CLI-1884
+PCS:usar poner:chukakuy churay,CLI-1885
+PCS:a las nueve de la mañana:isqun pacha tutamanta,CLI-1886
+PCS:a las nueve de la noche:isqun pacha tutata,CLI-1887
+PCS:al acostarse:puñunaypaq,CLI-1888
+PCS:con las comidas:mihunawan,CLI-1889
+PCS:con leche:ñuñuwan,CLI-1890
+PCS:con mucha agua:asqha unuwan,CLI-1891
+PCS:cuando es necesario:munaq chayqa,CLI-1892
+PCS:debajo de la lengua:qalluq uranta,CLI-1893
+PCS:estos medicamentos:kay hanpikunata,CLI-1894
+PCS:hay que aplicar la crema en la area afectada:qhakuruna cremawan k iri pataman,CLI-1895
+PCS:media hora antes de comer:kuskan pachaman amaraq mikushakqtiki,CLI-1896
+PCS:media hora despues de comer:mikhurusqayki kusqanpacha chaymantaña,CLI-1897
+PCS:para dormir:puñunapaqña,CLI-1898
+PCS:para el dolor:nanayninpaq,CLI-1899
+PCS:por la mañana:tutayllamanta,CLI-1900
+PCS:por la noche:tutanpi,CLI-1901
+PCS:por tres dias:kimsa punchawpi,CLI-1902
+PCS:sin falta:ama qunqankichu,CLI-1903
+PCS:tres veces al dia:punchawpi kimsa kutita,CLI-1904
+PCS:un dia si un dia no:huk punchawta uhana huk p unchawtaq mana,CLI-1905
+PCS:una vez al dia:punchawpi chulla kutita,CLI-1906
+PCS:esas vendas:kay wankhurikuykunata kay vendakunata,CLI-1907
+PCS:estas inyecciones:kay inyeccioneskunata,CLI-1908
+PCS:por favor llame al doctor a la doctora:waharuy docturta utaq doctorata,CLI-1909
+PCS:por favor tome asiento:tiyarikuy,CLI-1910
+PCS:por favor tome la pastilla:pastillatan millp unayki,CLI-1911
+PCS:por favor vaya al puesto de salud:puesto de saludta riruy,CLI-1912
+PCS:tiene que tomar mucha agua:askha unuta ukyanaykin,CLI-1913
+PCS:tu tienes que tomar la tableta:qammi kay tabletakunata upyanayki,CLI-1914
+PCS:usted tiene que ir al puesto de salud:qamqa rinayki puesto de saludta,CLI-1915
+PCS:yo tengo que ir a la comunidad:nuqaqa comunidadta aylluta rinsay,CLI-1916
+PCS:el farmaceutico:hampikunamanta yachaq,CLI-1917
+PCS:el frasco:uña utillacha qispimanta,CLI-1918
+PCS:el jarabe:mullp una hampi,CLI-1919
+PCS:el suero:upyana unu,CLI-1920
+PCS:el supositorio:sikiman churakuna hampi,CLI-1921
+PCS:la crema:lluqsina hampi,CLI-1922
+PCS:la cucharita:uña cucharacha,CLI-1923
+PCS:la gota:sut uy,CLI-1924
+PCS:la jeringa:jiringapi hampi sikiman churana,CLI-1925
+PCS:la receta:ricita,CLI-1926
+PCS:las capsulas:mullp una pastillakuna,CLI-1927
+PCS:las pastillas:mulp una pastillaschakuna,CLI-1928
+PCS:los liquidos:apyana unukuna,CLI-1929
+U:QCH-0142,CLI-1930
+U:QCH-0713,CLI-1931
+U:QCH-0719,CLI-1932
+U:QCH-0720,CLI-1933
+U:QCH-0722,CLI-1934
+U:QCH-0963,CLI-1935
+F5:resp:QCH-1379:8be6c891,CLI-1936
+F5:resp:QCH-1380:e823bd77,CLI-1937
+F5:resp:QCH-1381:6fdb040e,CLI-1938
+F5:resp:QCH-0146:f632739c,CLI-1939
+F5:resp:QCH-0708:bb81d010,CLI-1940
+F5:resp:QCH-0716:c656c04b,CLI-1941
+F5:resp:QCH-0719:28b5c482,CLI-1942
+F5:resp:QCH-0720:dfaa7a6b,CLI-1943
+F5:resp:FA-33:20b8befc,CLI-1944
+F5:resp:FA-35:06ba3f5b,CLI-1945
+F5:resp:QCH-0712:c06ba33c,CLI-1946
+F5:resp:QCH-0762:ea33c20e,CLI-1947
+F5:resp:QCH-0776:0b49ad98,CLI-1948
+F5:resp:QCH-0780:96c241bc,CLI-1949
+F5:resp:QCH-1309:6089d724,CLI-1950
+F5:resp:QCH-1311:23324997,CLI-1951
+F5:resp:QCH-1314:e067de83,CLI-1952
+F5:resp:QCH-0695:8af2cc9b,CLI-1953
+F5:resp:QCH-0696:c8c76378,CLI-1954
+F5:resp:QCH-0697:ab177221,CLI-1955
+F5:resp:QCH-0814:06cd5003,CLI-1956
+F5:resp:QCH-0705:ebfef58d,CLI-1957
+F5:resp:QCH-0706:6e8e20da,CLI-1958
+F5:resp:QCH-1368:77dac1e7,CLI-1959
+F5:resp:QCH-1369:2013d3f3,CLI-1960
+F5:resp:QCH-1370:64c36994,CLI-1961
+F5:resp:QCH-1434:0d07c26e,CLI-1962
+F5:resp:QCH-1435:db220a5b,CLI-1963
+F5:resp:QCH-0133:067b28fc,CLI-1964
+F5:resp:QCH-0141:73e28492,CLI-1965
+F5:resp:QCH-0699:1263d7b1,CLI-1966
+F5:resp:QCH-0700:447c9b84,CLI-1967
+F5:resp:QCH-0701:aba8fa16,CLI-1968
+F5:resp:QCH-0861:b6266d11,CLI-1969
+F5:resp:QCH-0869:d80b0585,CLI-1970
+F5:resp:PCS-042-05:4d36b337,CLI-1971
+F5:resp:PCS-042-06:76f177af,CLI-1972
+F5:resp:PCS-042-08:6d3654e0,CLI-1973
+F5:resp:PCS-043-09:948caecc,CLI-1974
+F5:resp:PCS-043-12:5087ef4f,CLI-1975
+F5:resp:PCS-069-10:d9750637,CLI-1976
+F5:resp:PCS-082-03:f71589e0,CLI-1977
+F5:resp:PCS-082-04:81be8836,CLI-1978
+F5:resp:QCH-0830:f246b11c,CLI-1979
+F5:resp:QCH-0831:e22a7c13,CLI-1980
+F5:resp:PCS-069-07:5efd2cad,CLI-1981
+F5:resp:PCS-069-08:ef513fd2,CLI-1982
+F5:resp:QCH-0136:69d86d39,CLI-1983
+F5:resp:QCH-0918:813b9bba,CLI-1984
+F5:resp:QCH-0921:3549da15,CLI-1985
+F5:resp:PCS-020-14:7efe20f1,CLI-1986
+F5:resp:PCS-021-04:506d4b75,CLI-1987
+F5:resp:PCS-030-07:9854c73c,CLI-1988
+F5:resp:PCS-031-03:3b78cbbf,CLI-1989
+FA:01,CLI-1990
+F5:resp:QCH-0903:47b4042d,CLI-1991
+F5:resp:QCH-0904:9b56f2cc,CLI-1992
+F5:resp:QCH-0905:fe0dc5f5,CLI-1993
+F5:resp:PCS-082-08:980d1a1f,CLI-1994
+F5:resp:PCS-082-08:94795344,CLI-1995
+F5:resp:QCH-0794:18d3cacc,CLI-1996
+F5:resp:PCS-043-03:13d3be1f,CLI-1997
+F5:resp:PCS-043-08:d4f6fe18,CLI-1998
+F5:resp:QCH-1393:5d50130d,CLI-1999
+F5:resp:QCH-0707:6c6e3149,CLI-2000
+F5:resp:QCH-0729:b5e4b5d1,CLI-2001
+F5:resp:QCH-0721:7cc1002e,CLI-2002
+F5:resp:QCH-0725:b2b44dfd,CLI-2003
+F5:resp:QCH-0726:560e75db,CLI-2004
+F5:resp:QCH-0782:1f586a2f,CLI-2005
+F5:resp:QCH-1447:80222c44,CLI-2006
+F5:resp:PCS-035-11:b5625762,CLI-2007
+F5:resp:PCS-042-04:b9bb809c,CLI-2008
+F5:resp:QCH-0508:7ac2816e,CLI-2009
+F5:resp:MJC-027-02:506ec0b4,CLI-2010
+F5:resp:MJC-027-01:11dbdc88,CLI-2011
+PIA:bienvenido a a la pias plataforma itinerante de accion socia:allin hamusqa pias nisqaman kay,CLI-2012
+PIA:buenos dias hermano hermana:allin p unchay wayqiy panay allin p unch,CLI-2013
+PIA:cual es su nombre:imam sutiyki,CLI-2014
+PIA:hola como estan:allinllachu imaynallam kachkankichik,CLI-2015
+PIA:cuantos años tiene:hayk a watayuqmi kanki,CLI-2016
+PIA:en que podemos ayudarlo a:imapim yanapaykikuman,CLI-2017
+PIA:espere un momento:huk chikanta suyay,CLI-2018
+PIA:tome asiento:tiyarikuy,CLI-2019
+PIA:tomen asiento:tiyarikuychik,CLI-2020
+PIA:vino con algun familiar:aylluykiwanchu hamurqanki,CLI-2021
+PIA:corrigeme si entendi mal:sichus imatapas mana allinta yuyaychayki,CLI-2022
+PIA:cual es su lengua materna:mayqinmi mama simiyki,CLI-2023
+PIA:desea usted hablar en su lengua originaria o castellano:mama simiykipichu rimayta munanki utaq c,CLI-2024
+PIA:disculpe pedire ayuda a otra persona para poder atenderlo en:pampachaykuway simiykipi yanapanaypaqmi ,CLI-2025
+PIA:estoy feliz de poder ayudarlo a:kusisqam yanapasqaywan kachkani,CLI-2026
+PIA:habla castellano:castellano simita rimankichu,CLI-2027
+PIA:habla otra lengua cual:wak simitachu rimanki mayqinta,CLI-2028
+PIA:el servicio es gratuito:yanapayqa mana qullqillapaqmi,CLI-2029
+PIA:es un placer atenderle que puedo hacer por usted:yanaparisqaywanmi kusikuni imatam ruwaym,CLI-2030
+PIA:lo la estan atendiendo:yanaparichkasunkikuchu,CLI-2031
+PIA:no entiendo bien lo que dice puede por favor repetir:manam allintachu yuyaychayki nisqaykita ,CLI-2032
+PIA:podria brindarme su numero de dni:dniniykip yupayninta niwankimanchu,CLI-2033
+PIA:por favor muestreme su dni:ama hina kaychu dniykita qhawarichiway,CLI-2034
+PIA:que servicio esta buscando:imapi yanapanatam maskhachkanki,CLI-2035
+PIA:que tramite desea realizar:ima ruwaytam munachkanki,CLI-2036
+PIA:desea registrar una queja o hacer una sugerencia:quejatachu churayta munanki utaq imaniyt,CLI-2037
+PIA:felicidades por la llegada de su bebe:wawaykip chayamusqanwan ancha kusikuy ka,CLI-2038
+PIA:su opinion es importante para nosotros:rimayniykiqa ñuqaykupaqqa ancha allinmi,CLI-2039
+PIA:su pedido no podra ser atendido por ahora:mañakusqaykiqa manaraqmi khunanqa yanapa,CLI-2040
+PIA:gracias por recibirnos en su comunidad:ayllu ykichikpi chaskiwasqaykichikmanta,CLI-2041
+PIA:gracias por tu tiempo:añay tiempoykimanta,CLI-2042
+PIA:ha sido un gusto atenderlo a:yanapasqaywanmi kusisqa kani,CLI-2043
+PIA:hasta luego nos vemos pronto:tupananchikkama,CLI-2044
+PIA:hasta pronto que le vaya bien:tupananchikkama allinlla tarikapu wanki,CLI-2045
+PIA:me alegra haberte conocido:riqsisqaywanmi kusisqa kani,CLI-2046
+PIA:no dude en contactarnos si necesita algo mas:sichus imatapuwanpas munanki hin aqa ama,CLI-2047
+F5:resp:PIA-018-08:07a11d25,CLI-2048
+F5:resp:PIA-020-08:2bdff63d,CLI-2049
 P:EL-0001,GEN-0001
 P:EL-0002,GEN-0002
 P:EL-0003,GEN-0003
@@ -2254,6 +3163,35 @@ F5:gen:habitual_pasado:5216646b,GEN-1112
 F5:gen:habitual_pasado:28a83a7e,GEN-1113
 F5:gen:condicional:2aa9b21b,GEN-1114
 F5:gen:condicional:009dd13e,GEN-1115
+G2:F-0195,GEN-1116
+G2:F-0205,GEN-1117
+G2:F-0258,GEN-1118
+G2:F-0266,GEN-1119
+G2:F-0270,GEN-1120
+G2:F-0273,GEN-1121
+G2:F-0274,GEN-1122
+G2:F-0288,GEN-1123
+G2:F-0359,GEN-1124
+G2:F-0364,GEN-1125
+G2:F-0371,GEN-1126
+G2:F-0406,GEN-1127
+G2:F-0416,GEN-1128
+G2:F-0437,GEN-1129
+G2:F-0448,GEN-1130
+G2:F-0528,GEN-1131
+G2:F-0581,GEN-1132
+G2:F-0601,GEN-1133
+G2:F-0653,GEN-1134
+F5:gen:pasado_rqa:6fd1d7ca,GEN-1135
+F5:gen:futuro:e03b2db6,GEN-1136
+F5:gen:futuro:f48a0b17,GEN-1137
+F5:gen:habitual_pasado:19c86e79,GEN-1138
+F5:gen:condicional:d5cd8566,GEN-1139
+F5:gen:futuro:043b1d8e,GEN-1140
+F5:gen:progresivo:2661d2ae,GEN-1141
+F5:gen:progresivo:f3beb930,GEN-1142
+F5:gen:imperativo:0c69a3ec,GEN-1143
+F5:gen:preguntas:04371507,GEN-1144
 U:QCH-0100,LEX-0001
 U:QCH-0107,LEX-0002
 U:QCH-0151,LEX-0003
@@ -2799,3 +3737,286 @@ U:QCH-1291,LEX-0542
 U:QCH-1292,LEX-0543
 U:QCH-1293,LEX-0544
 U:QCH-1328,LEX-0545
+PCS:capit:u l o i,LEX-0546
+PCS:victoria:hasta mañana la espero sra maruja,LEX-0547
+PCS:el:pay,LEX-0548
+PCS:ella:paykuna,LEX-0549
+PCS:tu:qan,LEX-0550
+PCS:usted:qamkuna,LEX-0551
+PCS:yo:nuqa,LEX-0552
+PCS:joven:wayna sipas,LEX-0553
+PCS:niño:irqi wawa,LEX-0554
+PCS:persona:runa,LEX-0555
+PCS:señor:wiraqucha tayta,LEX-0556
+PCS:señora:doña mama,LEX-0557
+PCS:ellas:paykuna,LEX-0558
+PCS:ellos:paykuna,LEX-0559
+PCS:nosotras:nuqanchis,LEX-0560
+PCS:nosotros:nuqanchis inclusivo nuqayku exclusivo,LEX-0561
+PCS:ustedes:qamkuna,LEX-0562
+PCS:grande:hatun,LEX-0563
+PCS:inteligente:yuyaysapa,LEX-0564
+PCS:paruro:paruromantan kanku,LEX-0565
+PCS:pequeño:huch uy,LEX-0566
+MJC:sientate:tiyay,LEX-0567
+PCS:cansado:sayk usqa,LEX-0568
+PCS:enfermo:unqusqa,LEX-0569
+PCS:mejor:allinpuni,LEX-0570
+PCS:palido:q illu,LEX-0571
+PCS:domingo:intichay,LEX-0572
+PCS:jueves:ch askachay,LEX-0573
+PCS:lunes:killachay,LEX-0574
+PCS:martes:antichay,LEX-0575
+PCS:mañana:paqarin,LEX-0576
+PCS:miercoles:quyllurchay,LEX-0577
+PCS:sabado:k uychichay,LEX-0578
+PCS:viernes:illapachay,LEX-0579
+MJC:ayudeme:yanapariway,LEX-0580
+MJC:inmediatamente:kunallanmi,LEX-0581
+PCS:45 kilos:tawachunka pisqayuq kilosta,LEX-0582
+PCS:el ella tiene:pay paypa kan kachkan,LEX-0583
+PCS:ellos ellas tienen:paykunaq kachkan,LEX-0584
+PCS:nosotros as tenemos:nuqanchispa kachkan,LEX-0585
+PCS:tu tienes:qampa kan achkan,LEX-0586
+PCS:ustedes tienen:qamkunaq kachkan,LEX-0587
+PCS:yo tengo:nuqaq kan kachkan,LEX-0588
+PCS:enf marta:que es lo que te preocupa,LEX-0589
+PCS:julia:creo que estoy embarazada,LEX-0590
+PCS:tiene familia:familiayki aylluykikuna kanchu,LEX-0591
+PCS:cara uya:el seno ñuñu,LEX-0592
+PCS:craneo hanq ara:la nuca much u,LEX-0593
+PCS:el diente kiru:el cabello chukcha chuqcha,LEX-0594
+PCS:el ojo ñawi:la mano maki,LEX-0595
+PCS:el pie chaki:la mejilla k aki,LEX-0596
+PCS:la pierna chaka:el labio wirp a chutu,LEX-0597
+PCS:tengo fiebre:ruphariywanmi kashani,LEX-0598
+PCS:tengo frio:chirimantan kashani,LEX-0599
+PCS:tengo mucho sueño:nishu puñuymi hapiwashan,LEX-0600
+PCS:articulaciones:sirk a kapallu cartlago,LEX-0601
+PCS:barbilla:k aki sunkha,LEX-0602
+PCS:clavicula:rikra chaka tullu,LEX-0603
+PCS:el abdomen barriga:wiqsa,LEX-0604
+PCS:el codo:maki kukuchu,LEX-0605
+PCS:el cuello:kunka,LEX-0606
+PCS:el dedo:didu rawk ana,LEX-0607
+PCS:el hueso:tullu,LEX-0608
+PCS:el nudillo:muquchu,LEX-0609
+PCS:el oido:rinriki,LEX-0610
+PCS:el ombligo:tuputi,LEX-0611
+PCS:el omoplato:qarmin,LEX-0612
+PCS:el pene:pisqu ullu,LEX-0613
+PCS:el talon:taklli,LEX-0614
+PCS:el tobillo:chaki kunka,LEX-0615
+PCS:la boca:simi,LEX-0616
+PCS:la cadera:tiqni,LEX-0617
+PCS:la canilla:chakisinqa,LEX-0618
+PCS:la cintura:wik aw,LEX-0619
+PCS:la costilla:waqta,LEX-0620
+PCS:la espalda:wasa,LEX-0621
+PCS:la espina dorsal:wasa mank alli,LEX-0622
+PCS:la garganta:tunquri tunqur,LEX-0623
+PCS:la lengua:qallu,LEX-0624
+PCS:la mandibula:waqu,LEX-0625
+PCS:la muñeca:maki mqu,LEX-0626
+PCS:la oreja:rinri ninri,LEX-0627
+PCS:la quijada:k aki,LEX-0628
+PCS:la rodilla:moqu,LEX-0629
+PCS:la tibia:chaki sinqa,LEX-0630
+PCS:la uña:sillu,LEX-0631
+PCS:una del pie:chakikiq sillun,LEX-0632
+PCS:juana tiene hemorragia:juanaqa chhulliwanmi kashan,LEX-0633
+PCS:manuela tiene escalofrios:manuela chiri ump iyuq kashan,LEX-0634
+PCS:tengo infeccion:infeccionwan kashani,LEX-0635
+PCS:tiene anemia:animyayuqmi,LEX-0636
+PCS:yo tengo fiebre:nuqa ruphariywan kashani,LEX-0637
+PCS:esta por viajar:viajanan patapi kashan,LEX-0638
+PCS:marcela tiene herida:marcelaqa q iriyuq kashan,LEX-0639
+PCS:tengo hambre:yarqaymantan kashani,LEX-0640
+PCS:tengo que curar:hanpinaymi,LEX-0641
+PCS:tiene mucha sangre:sinchi yawarmiyoq,LEX-0642
+PCS:tiene que venir:hamunanmi,LEX-0643
+PCS:tienes condones:kundunniyki kashan,LEX-0644
+PCS:tienes infeccion:inficcionwan kashanki,LEX-0645
+PCS:tienes que cuidarte:anchata cuidakunayki,LEX-0646
+PCS:tienes que orinar:hispakunaykin,LEX-0647
+PCS:abortos:sulluykuna,LEX-0648
+PCS:antecedentes:ñawpaq unquyninkuna,LEX-0649
+PCS:cancer:kansir,LEX-0650
+PCS:embarazos:wiksayakuykuna,LEX-0651
+PCS:sangre:yawar,LEX-0652
+PCS:menstruacion:kikuy,LEX-0653
+PCS:ovario:madrin,LEX-0654
+PCS:utero:madrin,LEX-0655
+PCS:vagina:chupi raka,LEX-0656
+PCS:vejiga:hispay puru,LEX-0657
+PCS:cabeza:uma,LEX-0658
+PCS:camilla:qahuana mesa,LEX-0659
+PCS:cartilla:cartilla,LEX-0660
+PCS:comer:mikuy,LEX-0661
+PCS:contracciones:q iwiy,LEX-0662
+PCS:controles:hark ay,LEX-0663
+PCS:descansar:samay,LEX-0664
+PCS:dolor:nanay,LEX-0665
+PCS:dormir:puñuy,LEX-0666
+PCS:flujo:yuraq unu,LEX-0667
+PCS:inflamacion:willkhachu,LEX-0668
+PCS:leche:liche,LEX-0669
+PCS:liquido:unu,LEX-0670
+PCS:pujar:quqmay,LEX-0671
+PCS:vacunas:vacunas,LEX-0672
+PCS:vientre:madriy,LEX-0673
+PCS:vitaminas:ancha alimento,LEX-0674
+PCS:hemorragias:yawar apay,LEX-0675
+PCS:doc:tenemos que trabajar coordinadamente,LEX-0676
+PCS:dr:buenos dias señor presidente,LEX-0677
+PCS:juan:buenos dias doctor todo esta tranquilo,LEX-0678
+PCS:presidente:buenos dias doctor,LEX-0679
+PCS:paciente:esta bien doctor,LEX-0680
+PCS:dra:vamos a ver por que esta pasando esto,LEX-0681
+PCS:juana:buenos dias señora enfermera,LEX-0682
+PCS:cuidado:qhaway watukuy,LEX-0683
+PCS:emergencia:amachay,LEX-0684
+PCS:examenes:ch uyanchay,LEX-0685
+PCS:fiebre:rupapakuy,LEX-0686
+PCS:infeccion:qiyachay,LEX-0687
+PCS:reposo:samay,LEX-0688
+PCS:sangrado:yawarchay,LEX-0689
+PCS:urgencia:usqay,LEX-0690
+PCS:desnutricion:tullupi kay,LEX-0691
+PCS:feto:sullu,LEX-0692
+PCS:cesarea:wiqsata kuchuspa wawa paq arin,LEX-0693
+PCS:gestante:wiksayuq,LEX-0694
+PCS:puerpera:chayraq wachakuq,LEX-0695
+PCS:obst:buenos dias,LEX-0696
+PCS:curan:qhaliyanmi,LEX-0697
+PCS:bacterias:huk kuru,LEX-0698
+PCS:contagiarnos:ratachikuy hapiy,LEX-0699
+PCS:infecciones:infeccion,LEX-0700
+PCS:peligro:manchay,LEX-0701
+PCS:proteccion:hark ay,LEX-0702
+PCS:retroviral:qasillasiq hampi,LEX-0703
+PCS:trasmitir:quhatay,LEX-0704
+PCS:tratamiento:hampiy,LEX-0705
+PCS:confianza:sunqu churay,LEX-0706
+PCS:cuidarse:qhawakuy,LEX-0707
+PCS:decision:hunt anata ruway,LEX-0708
+PCS:boca:simi,LEX-0709
+PCS:chequeo:qhaway,LEX-0710
+PCS:corazon:sunquyki,LEX-0711
+PCS:embarazo:unquq wiksayuq,LEX-0712
+PCS:hormonas:urmuna nisqa,LEX-0713
+PCS:ovulo:muhu,LEX-0714
+PCS:pastilla:mulp una pastilla,LEX-0715
+PCS:pequeña:uchuylla,LEX-0716
+PCS:pildora:mulp una pildora,LEX-0717
+PCS:tarde:ch isin,LEX-0718
+PCS:varices:sirq api venaykipi yawar qhunpuchakuna,LEX-0719
+PCS:mareos:uma muyuy,LEX-0720
+PCS:nauseas:millakuy kanman,LEX-0721
+PCS:clitoris:k akara,LEX-0722
+PCS:himen:llika,LEX-0723
+PCS:pene:pichiku ullu,LEX-0724
+PCS:examinar:qhawachikuy,LEX-0725
+PCS:7 dias:nisqa tupawaqchu puñuwaqchu,LEX-0726
+PCS:2 tabletas:chaymanta iskay pastillasta,LEX-0727
+PCS:4 tabletas:tawa pastillasta,LEX-0728
+PCS:fatiga:say uy,LEX-0729
+PCS:vomitos:aqtupakuy,LEX-0730
+PCS:cero:ch usaq,LEX-0731
+PCS:cinco:pisqa,LEX-0732
+PCS:cuatro:tawa,LEX-0733
+PCS:diez:chunka,LEX-0734
+PCS:dos:iskay,LEX-0735
+PCS:nueve:isqun,LEX-0736
+PCS:ocho:pusaq,LEX-0737
+PCS:seis:suqta,LEX-0738
+PCS:siete:qanchis,LEX-0739
+PCS:tres:kimsa,LEX-0740
+PCS:uno:huk,LEX-0741
+PCS:catorce:chunka tawayuq,LEX-0742
+PCS:cien:pachak,LEX-0743
+PCS:cincuenta:pisqachunka,LEX-0744
+PCS:cuarenta:tawachunka,LEX-0745
+PCS:diecinueve:chunka isquniyuq,LEX-0746
+PCS:dieciocho:chunka pusaqniyuq,LEX-0747
+PCS:dieciseis:chunka suqtayuq,LEX-0748
+PCS:diecisiete:chunka qanchisniyuq,LEX-0749
+PCS:doce:chunka iskayniyuq,LEX-0750
+PCS:noventa:isqunchunka,LEX-0751
+PCS:ochenta:pusaqchunka,LEX-0752
+PCS:once:chunka hukniyuq,LEX-0753
+PCS:quince:chunka pisqayuq,LEX-0754
+PCS:sesenta:suqtachunka,LEX-0755
+PCS:setenta:qanchischunka,LEX-0756
+PCS:trece:hunka kimsayuq,LEX-0757
+PCS:treinta:kimsachunka,LEX-0758
+PCS:veinte:iskay chunka,LEX-0759
+PCS:120 80 76 x:36ºc,LEX-0760
+PCS:abril:inka raymi killa,LEX-0761
+PCS:agosto:chakra yapuy killa,LEX-0762
+PCS:diciembre:qhapaq intiraymi killa,LEX-0763
+PCS:enero:qhaqmiy killa,LEX-0764
+PCS:febrero:hatun puquy,LEX-0765
+PCS:julio:chakra qunakuy,LEX-0766
+PCS:junio:samay killa,LEX-0767
+PCS:marzo:pacha puquy,LEX-0768
+PCS:mayo:hatun aymurau killa,LEX-0769
+PCS:noviembre:ayamarq ay killa,LEX-0770
+PCS:octubre:uma raymi killa,LEX-0771
+PCS:septiembre:quya raymi killa,LEX-0772
+PCS:hora:ura,LEX-0773
+PCS:minuto:minutu,LEX-0774
+PCS:segundo:iskay ñiqin,LEX-0775
+PCS:madrastra:madrastray,LEX-0776
+PCS:padrastro:padrastru,LEX-0777
+PCS:aprender:yachay,LEX-0778
+PCS:caminar:puriy,LEX-0779
+PCS:curar:hampiy,LEX-0780
+PCS:enseñar:yachachiy,LEX-0781
+PCS:escribir:qillqay,LEX-0782
+PCS:jugar:pukllay,LEX-0783
+PCS:llamar:wahay,LEX-0784
+PCS:necesitar:nunay,LEX-0785
+PCS:preguntar:tapuy,LEX-0786
+PCS:trabajar:llamk ay,LEX-0787
+PCS:vender:qhatuy,LEX-0788
+PCS:abrir:kichay,LEX-0789
+PCS:acostar:puñuy,LEX-0790
+PCS:amamantar:ñuñuy,LEX-0791
+PCS:avisar:willay,LEX-0792
+PCS:cerrar:wisq ay,LEX-0793
+PCS:comprar:rantiy,LEX-0794
+PCS:dar:quy,LEX-0795
+PCS:gatear:lluqhay,LEX-0796
+PCS:herir:k iri,LEX-0797
+PCS:levantar:sayariy,LEX-0798
+PCS:llorar:waqay,LEX-0799
+PCS:masajear:qhaquy,LEX-0800
+PCS:mirar:qhaway,LEX-0801
+PCS:pasar:haykuy,LEX-0802
+PCS:reir:asiy,LEX-0803
+PCS:sentar:tiyay,LEX-0804
+PCS:alergias:kusikuy,LEX-0805
+PCS:hinchazon:punkin,LEX-0806
+PCS:irritacion:pukayarun,LEX-0807
+PCS:shock:wañuruni wañuywan qahuayunakuni,LEX-0808
+PCS:dr vargas:buenos dias señora,LEX-0809
+PCS:sra flores:buenos dias dr vargas,LEX-0810
+PCS:obst maruja:mañana estaras mejor,LEX-0811
+PCS:sra ana:gracias señorita,LEX-0812
+PCS:sra cruz:buenos dias doctor yo me llamo juana cru,LEX-0813
+PCS:sra paulina:buenos dias señorita soy paulina rojas,LEX-0814
+PCS:obst marta:preparese para el examen,LEX-0815
+PCS:sra yolanda:esta bien doctora,LEX-0816
+PCS:dr javier:no se asuste,LEX-0817
+PCS:obst maria:buenos dias que le pasa,LEX-0818
+PCS:examen pelvico:qhawachikuna intirun kay matrista,LEX-0819
+PIA:niño niña:irqi,LEX-0820
+PIA:adelante señor:haykumuy wiraqucha,LEX-0821
+PIA:adelante señora:haykumuy mamita,LEX-0822
+PIA:esperen un momento:huk chikanta suyaychik,LEX-0823
+PIA:no:manam,LEX-0824
+PIA:si:ari,LEX-0825
+PIA:cuidate:sumaqlla kanki,LEX-0826
+PIA:descansa:samarikuy,LEX-0827
+PIA:gracias:añay,LEX-0828
