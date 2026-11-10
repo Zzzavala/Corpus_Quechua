@@ -369,7 +369,8 @@ def word_traductor(b: str, filas: list[dict], C: pd.DataFrame, QA: pd.DataFrame,
         for c, v in zip(celdas, (regla, si, no)):
             W.texto_celda(c, v)
     doc.add_page_break()
-    anchos = [1.2, 2.2, 2.3, 8.3, 8.6, 4.7]
+    # 7.ª columna «Vocabulario», vacía: la agregó el B01 que devolvió el equipo (v1.5); mismos anchos que ese Word
+    anchos = [1.2, 2.2, 1.76, 5.17, 5.52, 6.44, 5.01]
     por_sub = defaultdict(list)
     for f in filas:
         por_sub[f["Sublote"]].append(f)
@@ -378,7 +379,8 @@ def word_traductor(b: str, filas: list[dict], C: pd.DataFrame, QA: pd.DataFrame,
         if k > 0:
             doc.add_page_break()
         doc.add_heading(f"Sublote {k + 1} (filas {fs[0]['N°']}–{fs[-1]['N°']})", level=2)
-        tb = W.tabla(doc, ["N°", "ID", "Quién habla", "Español", "Quechua (corrija o escriba aquí)", "Observaciones"], anchos)
+        tb = W.tabla(doc, ["N°", "ID", "Quién habla", "Español", "Quechua (corrija o escriba aquí)", "Observaciones",
+                           "Vocabulario (español – quechua)"], anchos)
         for f in fs:
             r = info.loc[f["ID"]]
             fila = tb.add_row()
@@ -392,6 +394,7 @@ def word_traductor(b: str, filas: list[dict], C: pd.DataFrame, QA: pd.DataFrame,
             W.texto_celda(c[4], qu)
             av = "" if (f["ID"] in control or not r["Quechua_borrador"]) else aviso_word(avisos.get(f["ID"], []))
             W.texto_celda(c[5], av, cursiva=True, gris=True, tamano=11)
+            W.texto_celda(c[6], "")
         W.anchos_columnas(tb, anchos)
     destino = BLOQUES_DIR / b / f"{b}_traductor.docx"
     asegurar_dir(destino.parent)

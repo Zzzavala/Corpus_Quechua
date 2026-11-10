@@ -3,6 +3,17 @@
 > Cada valor por defecto usado (CLAUDE.md §4) y cada decisión propia, con su porqué. La coordinación del proyecto revisa al final.
 > Formato: **[Fase] Decisión** — porqué.
 
+## B01 v1.5 y columna «Vocabulario» (10-nov-2026) — manda sobre lo de abajo en lo que se contradiga
+
+Pedido de la coordinación: poner en el repositorio el `B01_traductor_v1_5_collao.docx` actualizado, «solo sobreponlo, nada más», y dejar vacía la parte de «Vocabulario» en los otros bloques.
+
+- **[B01] Se copió el archivo tal cual** sobre `03_bloques/B01/B01_traductor.docx` (mismo hash). La versión anterior quedó en `02_maestro/congelados/B01_original/B01_traductor_collao_antes_de_v1_5.docx`. No se corrió `congelar_bloque.py`, así que el maestro y `congelados/B01.xlsx` siguen con la versión anterior. `f6_armar_bloques.py` no rehace el Word de B01, de modo que la copia no se pierde al regenerar.
+- **[B01] Lo que trae ese archivo y no se tocó:** 190 filas (faltan 10), columna «Vocabulario» con 118 filas llenas, 148 filas distintas del B01 anterior (quechua, notas y, en muchas, también el español), y notas con fuentes en «Observaciones». Se dejó así porque el pedido fue solo sobreponerlo.
+- **[B01] Título, instrucción 1 y ortografía pasados a collao** (a pedido de la coordinación, después de sobreponer): título «Traducción al quechua de Cusco (collao)», «quechua de Cusco natural» y la tabla de ortografía de cinco vocales copiada de B02. Solo cambió ese texto; las filas siguen idénticas al archivo de Descargas. B01 no lleva la instrucción 2 de los otros bloques («el quechua es un borrador…»).
+- **[B01] Las 10 filas que faltan no se vuelven a agregar** (N° 25, 39, 43, 44, 52, 53, 56, 58, 61 y 62). La coordinación entiende que se quitaron durante la grabación y que eso es parte del proceso. B01 queda con 190 filas; al importar su respuesta, esas 10 aparecerán como ausentes y es lo esperado.
+- **[B02–B05] Columna «Vocabulario (español – quechua)» vacía** como 7.ª columna, con los anchos del B01 nuevo (`f6_armar_bloques.py`). `f7_verificacion.py` acepta ahora las 7 columnas y comprueba que esa columna esté vacía en B02–B05. `06_importar_traductor.py` usa las columnas 0 a 5, así que no se afecta; por ahora no importa el vocabulario.
+- **[F7] 153/160:** las 7 fallas son todas de B01 (no coincide con el maestro ni con su foto). No se relajaron las pruebas para taparlas.
+
 ## Segunda revisión antes de enviar (5-nov-2026, cuarta parte) — manda sobre lo de abajo
 
 Pedido de la coordinación: «¿Podrías darle una segunda revisada antes de enviar los bloques?». Detalle, fila por fila, en `04_reportes/SEGUNDA_REVISION.md`.

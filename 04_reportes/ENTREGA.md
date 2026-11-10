@@ -5,7 +5,7 @@ Para: equipo del proyecto · Fecha: 2026-11-05 · Preparado por Claude (Claude C
 ## En 5 líneas
 
 1. **Los 5 bloques están listos en quechua de Cusco (collao), con 5 vocales.** Cada uno tiene 200 oraciones: 140 generales + 60 médicas, en 4 sublotes de 50.
-2. **B01 ya no tiene nada chanka por delante.** Las filas 1 a 24, que trabajó el traductor, no se tocaron. Desde la fila 25, cada fila trae un borrador collao o la celda vacía. También dice «Soy de Cusco.» y lleva la misma tabla de ortografía que los demás bloques.
+2. **B01 es ahora el archivo `B01_traductor_v1_5_collao.docx` que devolvió el equipo (10-nov-2026), puesto tal cual.** Tiene 190 filas (faltan 10), una columna nueva «Vocabulario (español – quechua)», más quechua y notas, y español cambiado en muchas filas. Su título, su primera instrucción y su tabla de ortografía se pasaron a collao (igual que B02). B01 ya no coincide con el maestro, y por eso 7 puntos de `VERIFICACION_F7.md` marcan falla solo en B01.
 3. **B02 a B05 son nuevos:** usan borradores collao en su forma original y traen frases oficiales del Estado en quechua de Cusco (lo más cercano a «data gold» que hay).
 4. **Se extrajeron las fuentes oficiales:** Palabras clave de salud, manual de justicia, glosario PIAS Puno (49 frases de atención) y glosario COVID (135 términos). Además, hay texto paralelo para el equipo de modelo: `06_dataset/texto_paralelo_collao.csv`, 1 883 pares.
 5. **Lo que sigue:** revisar el español de B02, pasar a B01 el Word corregido y enviar B02.
@@ -45,13 +45,13 @@ Para: equipo del proyecto · Fecha: 2026-11-05 · Preparado por Claude (Claude C
 
 ## Qué enviar a quién
 
-1. **B01: pasen al traductor `03_bloques/B01/B01_traductor.docx`.**
-   - **Confirmado el 6-nov-2026:** no avanzó después de la fila 24. Debe seguir desde la fila 25 con este archivo, en lugar del anterior.
-   - Si llegara a avanzar antes de recibirlo, no le pasen este archivo. Guarden el suyo como `02_maestro/congelados/B01_original/B01_traductor_v2.docx` y corran el comando de abajo, que deja intacto lo nuevo que hizo.
-
-   ```
-   .venv\Scripts\python.exe scripts\congelar_bloque.py B01 --word 02_maestro\congelados\B01_original\B01_traductor_v2.docx
-   ```
+1. **B01: `03_bloques/B01/B01_traductor.docx` es el `B01_traductor_v1_5_collao.docx` del equipo, copiado sin cambios** (mismo hash). La versión que había antes quedó guardada en `02_maestro/congelados/B01_original/B01_traductor_collao_antes_de_v1_5.docx`.
+   - **Título, primera instrucción y tabla de ortografía (10-nov-2026):** decían «chanka» y tres vocales; se pasaron a collao y cinco vocales, igual que B02, a pedido de la coordinación. Las filas no se tocaron (siguen idénticas al archivo de Descargas).
+   - **Las 10 filas que faltan se quedan fuera (decisión de la coordinación, 10-nov-2026):** N° 25, 39, 43, 44, 52, 53, 56, 58, 61 y 62 (GEN-0132, GEN-0053, GEN-0747, GEN-0113, GEN-0741, GEN-0032, CLI-0028, GEN-0100, GEN-0796 y GEN-0006). Se entiende que se quitaron durante la grabación y no se vuelven a agregar. B01 queda con 190 filas.
+   - Las notas de «Observaciones» de este B01 citan fuentes (Calvo Pérez, MINSA, Ministerio de Cultura…). El Word de los demás bloques no las trae. Se dejaron tal cual.
+   - Este B01 no se ha pasado por `congelar_bloque.py`: el maestro y el Excel de B01 siguen con la versión anterior (con esas 10 filas y el español anterior).
+   - Ninguna frase en español de B02 a B05 repite una de este B01.
+   - **B02 a B05 ahora traen la columna «Vocabulario (español – quechua)», vacía,** con los mismos anchos de columna que este B01 (cambio en `f6_armar_bloques.py`; solo se regeneraron los Word de B02 a B05).
 
 2. **Revisen el español de B02** en `04_reportes/REVISION.md` (81 filas). No hace falta saber quechua: es ver si cada oración en español suena natural y dice lo que debe.
 3. **Envíen `B02_traductor.docx`.** El traductor siempre va un bloque adelante (D5). Yo no envié nada a nadie.

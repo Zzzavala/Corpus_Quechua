@@ -122,8 +122,12 @@ def main() -> int:
         rep_enc = all(t.rows[0]._tr.trPr is not None and t.rows[0]._tr.trPr.find(qn("w:tblHeader")) is not None for t in tablas)
         ok(b, "Word: fila de encabezado repetida en cada página", rep_enc)
         enc = [c.text for c in tablas[0].rows[0].cells] if tablas else []
-        ok(b, "Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones",
-           enc == ["N°", "ID", "Quién habla", "Español", "Quechua (corrija o escriba aquí)", "Observaciones"], str(enc))
+        ok(b, "Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | Vocabulario",
+           enc == ["N°", "ID", "Quién habla", "Español", "Quechua (corrija o escriba aquí)", "Observaciones",
+                   "Vocabulario (español – quechua)"], str(enc))
+        if b != "B01":      # B01 es el archivo que devolvió el equipo, con sus notas; los demás salen con la columna vacía
+            voc = [row.cells[6].text for t in tablas for row in t.rows[1:]]
+            ok(b, "Word: columna Vocabulario vacía en todas las filas", not any(x.strip() for x in voc), f"({len(voc)} filas)")
         filas_w = [(row.cells[1].text, row.cells[4].text, row.cells[5].text) for t in tablas for row in t.rows[1:]]
         ok(b, "Word: mismas 200 filas y en el mismo orden (por ID)", [x[0] for x in filas_w] == list(f["ID"]), f"({len(filas_w)})")
         todo = texto + "\n" + "\n".join(c.text for t in doc.tables for row in t.rows for c in row.cells)

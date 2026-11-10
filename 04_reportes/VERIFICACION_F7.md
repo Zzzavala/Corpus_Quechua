@@ -1,6 +1,6 @@
 # Verificación final (F7) — checklist de CLAUDE.md §13
 
-Generado por `scripts/f7_verificacion.py`. **156 de 156 puntos PASAN.**
+Generado por `scripts/f7_verificacion.py`. **153 de 160 puntos PASAN.**
 
 | Sección | Punto | Resultado | Detalle |
 |---|---|---|---|
@@ -24,16 +24,16 @@ Generado por `scripts/f7_verificacion.py`. **156 de 156 puntos PASAN.**
 | B01 | Word: instrucciones y convención ortográfica en la página 1 | PASA |  |
 | B01 | Word: una tabla por sublote | PASA | (4) |
 | B01 | Word: fila de encabezado repetida en cada página | PASA |  |
-| B01 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones'] |
-| B01 | Word: mismas 200 filas y en el mismo orden (por ID) | PASA | (200) |
-| B01 | Word: sin información de origen ni columnas técnicas | PASA | [] |
+| B01 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | Vocabulario | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones', 'Vocabulario (español – quechua)'] |
+| B01 | Word: mismas 200 filas y en el mismo orden (por ID) | **FALLA** | (190) |
+| B01 | Word: sin información de origen ni columnas técnicas | **FALLA** | ['MINEDU', 'Fuente'] |
 | B01 | Word: ninguna referencia al chanka ni a Ayacucho (título, instrucciones, ortografía, español y avisos) | PASA |  |
 | B01 | Word: tabla de ortografía de 5 vocales, igual en todos los bloques | PASA |  |
-| B01 | Word: las filas 1–24, ya trabajadas por el traductor, son idénticas a B01_traductor_v1.docx | PASA |  |
-| B01 | Word: mismos IDs y en el mismo orden que el archivo del traductor | PASA |  |
-| B01 | Word: filas siguientes = borrador del maestro o vacía | PASA | (distintas: []) |
-| B01 | Word: filas siguientes sin borradores chanka (solo de fuentes collao) | PASA | (7 con borrador, 169 vacías; chanka: []) |
-| B01 | Word: el español solo cambió donde se pidió | PASA | ['CLI-0020', 'GEN-0185', 'GEN-0866', 'GEN-0161'] |
+| B01 | Word: las filas 1–24, ya trabajadas por el traductor, son idénticas a B01_traductor_v1.docx | **FALLA** |  |
+| B01 | Word: mismos IDs y en el mismo orden que el archivo del traductor | **FALLA** |  |
+| B01 | Word: filas siguientes = borrador del maestro o vacía | **FALLA** | (distintas: ['GEN-0101', 'GEN-0824', 'GEN-0175', 'CLI-0019', 'CLI-0020']) |
+| B01 | Word: filas siguientes sin borradores chanka (solo de fuentes collao) | **FALLA** | (147 con borrador, 19 vacías; chanka: ['GEN-0101', 'GEN-0824', 'GEN-0175', 'CLI-0020', 'GEN-0178']) |
+| B01 | Word: el español solo cambió donde se pidió | **FALLA** | ['GEN-0101', 'GEN-0824', 'GEN-0175', 'CLI-0019', 'CLI-0020', 'GEN-0178', 'GEN-0083', 'GEN-0918', 'GEN-0135', 'CLI-0025', 'CLI-0008', 'GEN-0157', 'GEN-0998', 'GEN-0173', 'CLI-0033', 'CLI-0979', 'GEN-0189', 'CLI-0035', 'CLI-0980', 'GEN-0031', 'GEN-0919', 'GEN-0116', 'GEN-0128', 'GEN-0130', 'GEN-0916', 'CLI-0029', 'GEN-0140', 'GEN-0199', 'CLI-0042', 'CLI-0981', 'GEN-0154', 'GEN-0169', 'GEN-0867', 'GEN-0043', 'GEN-0579', 'CLI-0052', 'CLI-0982', 'GEN-0917', 'GEN-0036', 'GEN-0146', 'GEN-0145', 'GEN-0868', 'CLI-0141', 'CLI-0983', 'GEN-0049', 'GEN-0208', 'GEN-0902', 'GEN-0028', 'CLI-0061', 'CLI-0984', 'GEN-0207', 'GEN-0193', 'GEN-0825', 'GEN-0040', 'CLI-0058', 'CLI-0985', 'GEN-0171', 'GEN-0534', 'GEN-1023', 'GEN-0017', 'CLI-0069', 'CLI-0986', 'GEN-0137', 'GEN-0798', 'GEN-0015', 'GEN-0190', 'GEN-0541', 'GEN-0821', 'GEN-0021', 'GEN-0185', 'CLI-0072', 'CLI-0987', 'GEN-0996', 'GEN-0536', 'GEN-0019', 'GEN-0118', 'CLI-0127', 'CLI-0988', 'GEN-0901', 'GEN-0022', 'GEN-0538', 'GEN-0125', 'CLI-0135', 'CLI-0989', 'GEN-0743', 'GEN-0038', 'GEN-0162', 'GEN-0744', 'CLI-0375', 'CLI-0990', 'GEN-0187', 'GEN-0014', 'GEN-0147', 'GEN-0947', 'CLI-0373', 'CLI-0991', 'GEN-0532', 'GEN-0094', 'GEN-0745', 'GEN-0204', 'CLI-0387', 'CLI-0992', 'GEN-0543', 'GEN-0062', 'GEN-0869', 'GEN-0198', 'CLI-0271', 'CLI-0993', 'GEN-0034', 'GEN-0142', 'GEN-0948', 'GEN-0143', 'CLI-0193', 'GEN-0075', 'GEN-0870', 'GEN-0195', 'GEN-0124', 'GEN-0866', 'GEN-0069', 'GEN-0155', 'CLI-0229', 'GEN-1021', 'GEN-0106', 'GEN-0088', 'GEN-0138', 'CLI-0352', 'CLI-0994', 'GEN-0742', 'GEN-0087', 'GEN-0148', 'GEN-0141', 'CLI-0097', 'GEN-0967', 'GEN-0086', 'GEN-0181', 'GEN-0997', 'CLI-0254', 'CLI-0995', 'CLI-0924', 'GEN-0209', 'GEN-0016', 'GEN-0160', 'GEN-0797', 'CLI-0916', 'CLI-0996', 'GEN-0136', 'GEN-0058', 'GEN-0968', 'GEN-0161', 'CLI-0153', 'CLI-0997', 'GEN-0120', 'GEN-0066', 'GEN-0746', 'GEN-0167', 'CLI-0923', 'CLI-0998', 'GEN-0105', 'GEN-0177', 'GEN-0826', 'GEN-0179', 'CLI-0999', 'CLI-1000', 'GEN-0060', 'GEN-0969', 'GEN-0114'] |
 | B01 | Excel de trabajo: pestañas Bloque / Detalle / Resumen (Bloque activa) | PASA | ['Bloque', 'Detalle', 'Resumen'] |
 | B01 | Excel de trabajo: columnas de §8.3 | PASA | ['N°', 'ID', 'Sublote', 'Dominio', 'Rol', 'Español', 'Quechua', 'Estado', 'Grabado_ES', 'Grabado_QU', 'Notas'] |
 | B01 | Excel de trabajo: encabezado inmovilizado, autofiltro y lista en Estado | PASA |  |
@@ -47,7 +47,8 @@ Generado por `scripts/f7_verificacion.py`. **156 de 156 puntos PASAN.**
 | B02 | Word: instrucciones y convención ortográfica en la página 1 | PASA |  |
 | B02 | Word: una tabla por sublote | PASA | (4) |
 | B02 | Word: fila de encabezado repetida en cada página | PASA |  |
-| B02 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones'] |
+| B02 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | Vocabulario | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones', 'Vocabulario (español – quechua)'] |
+| B02 | Word: columna Vocabulario vacía en todas las filas | PASA | (200 filas) |
 | B02 | Word: mismas 200 filas y en el mismo orden (por ID) | PASA | (200) |
 | B02 | Word: sin información de origen ni columnas técnicas | PASA | [] |
 | B02 | Word: ninguna referencia al chanka ni a Ayacucho (título, instrucciones, ortografía, español y avisos) | PASA |  |
@@ -71,7 +72,8 @@ Generado por `scripts/f7_verificacion.py`. **156 de 156 puntos PASAN.**
 | B03 | Word: instrucciones y convención ortográfica en la página 1 | PASA |  |
 | B03 | Word: una tabla por sublote | PASA | (4) |
 | B03 | Word: fila de encabezado repetida en cada página | PASA |  |
-| B03 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones'] |
+| B03 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | Vocabulario | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones', 'Vocabulario (español – quechua)'] |
+| B03 | Word: columna Vocabulario vacía en todas las filas | PASA | (200 filas) |
 | B03 | Word: mismas 200 filas y en el mismo orden (por ID) | PASA | (200) |
 | B03 | Word: sin información de origen ni columnas técnicas | PASA | [] |
 | B03 | Word: ninguna referencia al chanka ni a Ayacucho (título, instrucciones, ortografía, español y avisos) | PASA |  |
@@ -95,7 +97,8 @@ Generado por `scripts/f7_verificacion.py`. **156 de 156 puntos PASAN.**
 | B04 | Word: instrucciones y convención ortográfica en la página 1 | PASA |  |
 | B04 | Word: una tabla por sublote | PASA | (4) |
 | B04 | Word: fila de encabezado repetida en cada página | PASA |  |
-| B04 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones'] |
+| B04 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | Vocabulario | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones', 'Vocabulario (español – quechua)'] |
+| B04 | Word: columna Vocabulario vacía en todas las filas | PASA | (200 filas) |
 | B04 | Word: mismas 200 filas y en el mismo orden (por ID) | PASA | (200) |
 | B04 | Word: sin información de origen ni columnas técnicas | PASA | [] |
 | B04 | Word: ninguna referencia al chanka ni a Ayacucho (título, instrucciones, ortografía, español y avisos) | PASA |  |
@@ -119,7 +122,8 @@ Generado por `scripts/f7_verificacion.py`. **156 de 156 puntos PASAN.**
 | B05 | Word: instrucciones y convención ortográfica en la página 1 | PASA |  |
 | B05 | Word: una tabla por sublote | PASA | (4) |
 | B05 | Word: fila de encabezado repetida en cada página | PASA |  |
-| B05 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones'] |
+| B05 | Word: columnas N° | ID | Quién habla | Español | Quechua | Observaciones | Vocabulario | PASA | ['N°', 'ID', 'Quién habla', 'Español', 'Quechua (corrija o escriba aquí)', 'Observaciones', 'Vocabulario (español – quechua)'] |
+| B05 | Word: columna Vocabulario vacía en todas las filas | PASA | (200 filas) |
 | B05 | Word: mismas 200 filas y en el mismo orden (por ID) | PASA | (200) |
 | B05 | Word: sin información de origen ni columnas técnicas | PASA | [] |
 | B05 | Word: ninguna referencia al chanka ni a Ayacucho (título, instrucciones, ortografía, español y avisos) | PASA |  |
@@ -148,15 +152,15 @@ Generado por `scripts/f7_verificacion.py`. **156 de 156 puntos PASAN.**
 | Reportes | EDA.md con conclusiones en lenguaje simple | PASA |  |
 | Reportes | DECISIONES_TOMADAS.md con los valores por defecto P1–P7 y las decisiones de cada fase | PASA |  |
 | Reportes | ENTREGA.md con: listo, qué enviar a quién, qué revisar, pendientes P1–P7, cuántos bloques | PASA | [] |
-| LibreOffice | B01_traductor.docx abre y se convierte a PDF | PASA | (16 páginas) |
+| LibreOffice | B01_traductor.docx abre y se convierte a PDF | PASA | (36 páginas) |
 | LibreOffice | B01_trabajo.xlsx abre y se convierte a PDF | PASA | (8 páginas) |
-| LibreOffice | B02_traductor.docx abre y se convierte a PDF | PASA | (9 páginas) |
+| LibreOffice | B02_traductor.docx abre y se convierte a PDF | PASA | (13 páginas) |
 | LibreOffice | B02_trabajo.xlsx abre y se convierte a PDF | PASA | (8 páginas) |
-| LibreOffice | B03_traductor.docx abre y se convierte a PDF | PASA | (10 páginas) |
+| LibreOffice | B03_traductor.docx abre y se convierte a PDF | PASA | (13 páginas) |
 | LibreOffice | B03_trabajo.xlsx abre y se convierte a PDF | PASA | (8 páginas) |
-| LibreOffice | B04_traductor.docx abre y se convierte a PDF | PASA | (9 páginas) |
+| LibreOffice | B04_traductor.docx abre y se convierte a PDF | PASA | (13 páginas) |
 | LibreOffice | B04_trabajo.xlsx abre y se convierte a PDF | PASA | (8 páginas) |
-| LibreOffice | B05_traductor.docx abre y se convierte a PDF | PASA | (9 páginas) |
+| LibreOffice | B05_traductor.docx abre y se convierte a PDF | PASA | (13 páginas) |
 | LibreOffice | B05_trabajo.xlsx abre y se convierte a PDF | PASA | (8 páginas) |
 | LibreOffice | GUIA_GRABACION.docx abre y se convierte a PDF | PASA | (1 páginas) |
 | LibreOffice | corpus_maestro.xlsx abre y se convierte a PDF | PASA | (197 páginas) |

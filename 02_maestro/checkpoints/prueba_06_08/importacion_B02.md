@@ -14,7 +14,7 @@ Archivo leído: `B02_traductor_devuelto.docx` (201 filas con ID en el Word).
 ## Métricas (Traductor_metricas)
 
 - Bloque: B02
-- Fecha_importación: 2026-11-05 22:45
+- Fecha_importación: 2026-11-10 15:33
 - Filas: 199
 - Filas_con_borrador: 183
 - Sin_cambios_%: 92.3
